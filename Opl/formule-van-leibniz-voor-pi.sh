@@ -1,0 +1,1 @@
+xargs seq -f '4/%g' 1 2 | paste -sd-+|bc -l
