@@ -1,11 +1,20 @@
-Give the titles of the albums from the year 1994 in alphabetic order (from a to z). At least expecting column: 'title'.	SELECT Title FROM Album WHERE Year=1994 ORDER BY Title;
-Give a list of albums of which the year of release is unknown. At least expecting columns: 'albumid' and 'title'.	SELECT Albumid,Title FROM Album WHERE Year IS NULL;
-Give a list of albumtitles that are longer than 30 characters. At least expecting column: 'title'.	SELECT Title FROM Album WHERE length(Title) > 30;
-Give a list of artists of whom the name begins with a 'P'. Mention at the very least this column: 'name'.	SELECT Name FROM Artist WHERE Name LIKE 'P%'
-Give all presenters whose names are not 'Dave Peters'. Mention at the very least this column: 'presenterid'.	SELECT * FROM Presenter WHERE Firstname NOT LIKE 'Dave' AND Lastname NOT LIKE 'Peters';
-Give the names of all male presenters and present them in a column 'fullname'. This column combines the firstname and the lastname, with a space in between and the lastname in capital letters (example: 'Dave PETERS'). Order alphabetically on lastname and firstname, respectively. At least expecting column: 'fullname'.	SELECT FIRSTNAME ||' '|| upper(LASTNAME) AS fullname FROM Presenter WHERE Sex='m' ORDER BY LASTNAME;
-Give the firstname, lastname and sex of all the presenters. Display sex as 'Male' and 'Female' respectively, instead of the internal 'm' and 'f' representation. At least expecting columns: 'firstname', 'lastname', 'sex'	SELECT firstname, lastname , CASE WHEN Sex = 'm' THEN 'Male' WHEN Sex='f' THEN 'Female' END AS Sex FROM Presenter;
-Give a list of artistnames. Whenever the name of the artist starts with the word(!) 'the' (make sure this is checked in a case insensitive way), place the word 'THE' behind the rest of the group name, with a comma in between (for example: 'Beatles, THE'). Name the resulting column 'name' and sort it alphabetically. At least expecting column: 'name'. Warning: spaces are not always shown correctly in the web tool, make sure you get the indices correct when you're faced with an error.	SELECT CASE WHEN Name ILIKE 'the %' THEN substr(Name, 5)||', THE' ELSE Name END AS Name FROM Artist ORDER BY Name;
-SELECT CASE WHEN Name ILIKE 'the %' THEN substr(Name, 5)||''||', THE' ELSE Name END AS Name FROM Artist ORDER BY Name;
-Give a list of albums of which the release year is known. Round the year down to its decade and order the results according to that column (name it 'decade') and title respectively. At least expecting columns: 'decade', 'title'.	SELECT Title, Year / 10 * 10 AS decade FROM ALbum WHERE Year IS NOT NULL ORDER BY decade,Title;
-Give the albums released between 2000 and 2003 (both inclusive) of which the title does not start with a 'T'. At least expecting column: 'albumid'.	SELECT * FROM Album WHERE Title NOT LIKE 'T%' AND year <= '2003' AND year >= '2000'
+Give the titles of the albums from the year 1994 in alphabetic order (from a to z). At least expecting column: 'title'.	
+  SELECT Title FROM Album WHERE Year=1994 ORDER BY Title;
+Give a list of albums of which the year of release is unknown. At least expecting columns: 'albumid' and 'title'.	
+  SELECT Albumid,Title FROM Album WHERE Year IS NULL;
+Give a list of albumtitles that are longer than 30 characters. At least expecting column: 'title'.	
+  SELECT Title FROM Album WHERE length(Title) > 30;
+Give a list of artists of whom the name begins with a 'P'. Mention at the very least this column: 'name'.	
+  SELECT Name FROM Artist WHERE Name LIKE 'P%'
+Give all presenters whose names are not 'Dave Peters'. Mention at the very least this column: 'presenterid'.	
+  SELECT * FROM Presenter WHERE Firstname NOT LIKE 'Dave' AND Lastname NOT LIKE 'Peters';
+Give the names of all male presenters and present them in a column 'fullname'. This column combines the firstname and the lastname, with a space in between and the lastname in capital letters (example: 'Dave PETERS'). Order alphabetically on lastname and firstname, respectively. At least expecting column: 'fullname'.	
+  SELECT FIRSTNAME ||' '|| upper(LASTNAME) AS fullname FROM Presenter WHERE Sex='m' ORDER BY LASTNAME;
+Give the firstname, lastname and sex of all the presenters. Display sex as 'Male' and 'Female' respectively, instead of the internal 'm' and 'f' representation. At least expecting columns: 'firstname', 'lastname', 'sex'	
+  SELECT firstname, lastname , CASE WHEN Sex = 'm' THEN 'Male' WHEN Sex='f' THEN 'Female' END AS Sex FROM Presenter;
+Give a list of artistnames. Whenever the name of the artist starts with the word(!) 'the' (make sure this is checked in a case insensitive way), place the word 'THE' behind the rest of the group name, with a comma in between (for example: 'Beatles, THE'). Name the resulting column 'name' and sort it alphabetically. At least expecting column: 'name'. Warning: spaces are not always shown correctly in the web tool, make sure you get the indices correct when you're faced with an error.	
+  SELECT CASE WHEN Name ILIKE 'the %' THEN substr(Name, 5)||', THE' ELSE Name END AS Name FROM Artist ORDER BY Name;
+Give a list of albums of which the release year is known. Round the year down to its decade and order the results according to that column (name it 'decade') and title respectively. At least expecting columns: 'decade', 'title'.	
+  SELECT Title, Year / 10 * 10 AS decade FROM ALbum WHERE Year IS NOT NULL ORDER BY decade,Title;
+Give the albums released between 2000 and 2003 (both inclusive) of which the title does not start with a 'T'. At least expecting column: 'albumid'.	
+  SELECT * FROM Album WHERE Title NOT LIKE 'T%' AND year <= '2003' AND year >= '2000'
