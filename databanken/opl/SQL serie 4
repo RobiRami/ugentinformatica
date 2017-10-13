@@ -1,0 +1,8 @@
+1.Give the amount of male presenters. At least expecting column: 'amount'.
+  SELECT COUNT(*) AS amount FROM presenter WHERE sex LIKE 'm'
+2.Give the amount of different program genres. At least expecting column: 'amount'.
+  SELECT COUNT (DISTINCT genre) AS amount FROM radioprogram
+3.Give the birthyear of the oldest presenter in the database. At least expecting column: 'year'.
+  SELECT cast(EXTRACT('year' from birthdate) AS int) AS Year FROM presenter pr WHERE birthdate = (SELECT MIN(birthdate) FROM presenter)
+4.Calculate the average age of all presenters, based on their age expressed in years (e.g., 32 years instead of 32.8 years). Round the calculated average down to 2 decimals. At least expecting column 'avg_age'.
+  Round the calculated average down to 2 decimals. At least expecting column 'avg_age'.	SELECT cast(avg(date_part('year', age(birthdate))) as decimal(5,2)) as avg_age FROM presenter
