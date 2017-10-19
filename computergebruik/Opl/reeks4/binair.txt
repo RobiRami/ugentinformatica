@@ -1,0 +1,13 @@
+### Commando 1 ###
+grep "00$" binair.txt
+### Commando 2 ###
+grep "^1.*1$" binair.txt
+
+### Commando 3 ###
+grep ".*110.*" binair.txt
+
+### Commando 4 ###
+grep ".*1.*1.*1.*" binair.txt
+
+### Commando 5 ###
+grep ".*111.*" binair.txt

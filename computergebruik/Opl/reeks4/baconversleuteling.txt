@@ -1,0 +1,32 @@
+### Alpha ###
+
+egrep -i "^[^bacon]*b[^bacon]*a[^bacon]*c[^bacon]*o[^bacon]*n[^bacon]* " bacon.txt
+
+### Beta ###
+
+egrep ".*([a-z])[A-Z]{4,}\1.*" bacon.txt
+
+### Gamma ###
+
+# plaats hier je code:
+
+### Delta ###
+
+# plaats hier je code:
+
+
+### Eerste woord ###
+
+# plaats hier je code:
+
+### Tweede woord ###
+
+# plaats hier je code:
+
+### Derde woord ###
+
+# plaats hier je code:
+
+### Vierde woord ###
+
+# plaats hier je code:
