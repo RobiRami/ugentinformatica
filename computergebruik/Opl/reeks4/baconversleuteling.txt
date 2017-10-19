@@ -8,7 +8,7 @@ egrep "([a-z])[A-Z]{4,}\1" bacon.txt
 
 ### Gamma ###
 
-# plaats hier je code:
+egrep -i "^([aeiou]{2})?([^aeiuo]{2}[aeiou]{2})*([^aeiou]{2})? " bacon.txt
 
 ### Delta ###
 
