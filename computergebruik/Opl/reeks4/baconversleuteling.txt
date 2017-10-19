@@ -4,7 +4,7 @@ egrep -i "^[^bacon]*b[^bacon]*a[^bacon]*c[^bacon]*o[^bacon]*n[^bacon]* " bacon.t
 
 ### Beta ###
 
-egrep ".*([a-z])[A-Z]{4,}\1.*" bacon.txt
+egrep "([a-z])[A-Z]{4,}\1" bacon.txt
 
 ### Gamma ###
 
