@@ -1,0 +1,34 @@
+### Alpha ###
+cat kaarten.txt | egrep "[^JQK]{26} "
+
+# [^JQK] zegt dat er geen prentkaart mag zijn, en de {26} zorgt ervoor dat deze voorwaarde 26 keer herhaald wordt (dus voor de13 kaarten met elk 2 karakters om duidelijk te maken welke kaart het voorstelt)
+
+### Beta ###
+cat kaarten.txt | egrep  "^.*([23456789ATKJQ]).*\1.*\1.*\1.* "
+
+#door de 3 herhalingen wordt het noodzakelijk dat 1 van de 13 voorgaande tekens 4 keer herhaald worden, en aangezien er geen 5 mogelijk zijn, is dit voldoende
+#let op dat er een "^" staat vlak achter het " teken, dit versnelt de functie waardoor dodona niet meer vastloopt
+
+### Gamma ###
+cat kaarten.txt | egrep ".*s.*s.*s.* " | egrep ".*c.*c.*c.* " |egrep ".*h.*h.*h.* " | egrep ".*d.*d.*d.* " 
+
+#voor alle handen met 3 schoppen wordt getest of ze ook 3 klaveren bezitten, de resultaten daarvan worden getest op harten en uiteindelijk op ruiten
+
+### Delta ###
+cat kaarten.txt | egrep -v "^.*s.*[cdh].*s.* " | egrep -v "^.*c.*[sdh].*c.* " | egrep -v "^.*d.*[sch].*d.* " | egrep -v "^.*h.*[scd].*h.* "
+
+#gelijkaardige werkwijze als bij gamma, maar nu om te kijken of er de kaarten op soort gesorteerd zijn
+
+### Eerste woord ###
+cat kaarten.txt | egrep "[^JQK]{26} " | egrep  "^.*([23456789ATKJQ]).*\1.*\1.*\1.* " | cut -d " " -f 2
+
+#telkens 2 groepen achter elkaar gezet (wel opgelet dat beta altijd achteraan staat, want deze test duurt het langst, en als die achteraan staat moet die op minder lijnen worden toegepast, omdat de eerste snelle test er al een aantal uit gefiltert heeft) en dan nog met cut aangeduid dat de velden moeten gesplitst worden door een " " en dan het 2e veld geselecteerd om enkel het woord over te houden
+
+### Tweede woord ###
+cat kaarten.txt | egrep ".*s.*s.*s.* " | egrep ".*c.*c.*c.* " |egrep ".*h.*h.*h.* " | egrep ".*d.*d.*d.* " | egrep  "^.*([23456789ATKJQ]).*\1.*\1.*\1.* " | cut -d " " -f 2
+
+### Derde woord ###
+cat kaarten.txt | egrep ".*s.*s.*s.* " | egrep ".*c.*c.*c.* " |egrep ".*h.*h.*h.* " | egrep ".*d.*d.*d.* " | egrep -v "^.*s.*[cdh].*s.* " | egrep -v "^.*c.*[sdh].*c.* " | egrep -v "^.*d.*[sch].*d.* " | egrep -v "^.*h.*[scd].*h.* " | cut -d " " -f 2
+
+### Vierde woord ###
+cat kaarten.txt | egrep -v "^.*s.*[cdh].*s.* " | egrep -v "^.*c.*[sdh].*c.* " | egrep -v "^.*d.*[sch].*d.* " | egrep -v "^.*h.*[scd].*h.* " | egrep "[^JQK]{26} " | cut -d " " -f 2
