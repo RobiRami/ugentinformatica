@@ -1,0 +1,2 @@
+vi heeft meeste functualiteit
+pico heeft beperkte functualiteit en is vergelijkbaar met de nano editor

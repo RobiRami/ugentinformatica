@@ -1,0 +1,23 @@
+### Deel 1 ###
+
+:%s/||[0-9] /|unclimbed|0 /g
+
+### Deel 2 ###
+
+
+:%s/ (\(failed attempts\))/|failed attempts/g
+:%s/ (\([0-9]*\))/|\1/g
+:%s/\([0-9]\)||/\1|||/g
+:%s/\(Many\)|/\1||/g
+
+### Deel 3 ###
+
+:%s/,//g
+
+### Deel 4 ###
+
+:sort /|[0-9]|/
+
+### Deel 5 ###
+
+#plaats hieronder je oplossing:
