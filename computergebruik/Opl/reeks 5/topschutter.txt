@@ -1,0 +1,17 @@
+### Deel 1 ###
+2,$s/\t/;/g
+
+### Deel 2 ###
+#plaats hieronder je oplossing:
+
+
+### Deel 3 ###
+#plaats hieronder je oplossing:
+
+
+### Deel 4 ###
+#plaats hieronder je oplossing:
+
+
+### Deel 5 ###
+#plaats hieronder je oplossing:

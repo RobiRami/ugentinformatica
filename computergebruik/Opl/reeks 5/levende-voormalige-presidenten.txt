@@ -26,4 +26,6 @@
 
 
 ### Deel 5 ###
-#plaats hieronder je oplossing:
+%s/[0-9]*;//
+2,$!sort -t ';' -k9nr -k1
+2,$!nl -w1 -s';'
