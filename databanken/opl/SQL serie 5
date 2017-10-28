@@ -43,4 +43,11 @@ Give, for songs played on the 5th of October 2011, the artist name and track tit
 select art.name, t.title from playlistitem pl inner join (select radiobroadcastid, max(timestamp) as timestamp From playlistitem group by radiobroadcastid) as suba on pl.radiobroadcastid = suba.radiobroadcastid and pl.timestamp = suba.timestamp inner join track t on t.trackid = pl.trackid inner join artist art on t.artistid = art.artistid WHERE to_char(pl.timestamp, 'DD/MM/YYYY') LIKE '05/10/2011'
 
 Give the presenters that never present a show alone. At least expecting column: 'presenterid'.
-SELECT DISTINCT pr.presenterid, pr.firstname,pr.lastname FROM presenter pr INNER JOIN radioprogram_presenter rapr1 ON pr.presenterid = rapr1.presenterid WHERE pr.firstname NOT LIKE 'Peter' AND pr.firstname NOT LIKE 'Elke' AND pr.firstname NOT LIKE 'Bart' AND EXISTS (SELECT * FROM presenter pr2 INNER JOIN radioprogram_presenter rapr2 ON pr2.presenterid = rapr2.presenterid WHERE pr.presenterid != pr2.presenterid AND rapr2.radioprogramid = rapr1.radioprogramid)
+
+select presenterid from presenter p where presenterid not in
+(select presenterid from RADIOPROGRAM_PRESENTER rp1 where not exists 
+(select * from RADIOPROGRAM_PRESENTER rp2 where p.presenterid <> presenterid and rp1.radioprogramid = rp2.radioprogramid ))
+
+Give the title and the albumid of the albums of which all the songs were made by the same artist. At least expecting columns: 'albumid', 'title'.
+
+select title, albumid from album a where (select count(distinct artistid) from track where a.albumid= albumid) =1
