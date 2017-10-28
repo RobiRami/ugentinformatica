@@ -1,0 +1,46 @@
+Give the title and the associated artist name for each track that was not included in a playlist. At least expecting columns: 'name', 'title'.
+
+SELECT name,title FROM track t INNER JOIN artist art on t.artistid = art.artistid WHERE t.trackid NOT IN 
+(SELECT trackid FROM playlistitem)
+
+Who is the youngest presenter? At least expecting column: 'presenterid'.
+
+SELECT presenterid from presenter WHERE birthdate = (SELECT max(birthdate) from presenter)
+
+Who is the youngest female presenter? At least expecting column: 'presenterid'.
+
+SELECT presenterid from presenter WHERE birthdate = (SELECT max(birthdate) from presenter WHERE sex = 'f')
+
+Give the titles of the songs of Leonard Cohen whose title also exists as a songtitle of another artist. At least expecting column: 'title'.
+
+SELECT t.title FROM track t INNER JOIN artist art on t.artistid = art.artistid WHERE art.name LIKE 'Leonard Cohen' AND t.title IN 
+( SELECT t2.title FROM track t2 INNER JOIN artist art2 on t2.artistid = art2.artistid WHERE art2.name NOT LIKE 'Leonard Cohen')
+
+Give a list of artists that made songs of which the genre is used in the program 'De La Soul'. At least expecting column: 'name'.
+
+SELECT DISTINCT name FROM artist art INNER JOIN track t2 ON art.artistid = t2.artistid WHERE t2.genre IN 
+( SELECT DISTINCT t.genre FROM track t INNER JOIN playlistitem pl on t.trackid = pl.trackid INNER JOIN radiobroadcast rb ON pl.radiobroadcastid = rb.radiobroadcastid INNER JOIN radioprogram rp ON rb.radioprogramid = rp.radioprogramid WHERE rp.title LIKE 'De La Soul' )
+
+Give the title and duration time (in hours, allowing fractions) of the program(s) with the longest duration time (each broadcast of a program has the same duration time). At least expecting columns: 'title', 'duration'.	
+Select DISTINCT rp.title, date_part('hour', (rb.endtime - rb.starttime)) as duration from radiobroadcast rb inner join radioprogram rp on rb.radioprogramid = rp.radioprogramid WHERE date_part('hour', (rb.endtime - rb.starttime)) = 7.0
+
+Give, for each album of the year 2000, the title of the last track on the album. At least expecting columns: 'albumtitle', 'lasttrack'.
+
+SELECT a.title as albumtitle, t.title as lasttrack FROM album a INNER JOIN track t on a.albumid = t.albumid WHERE year =2000 AND t.tracknumber in (SELECT max(tracknumber) from track WHERE a.albumid = albumid)
+
+Give the albums of which no track was used in a playlist. At least expecting column: 'albumid'.
+
+SELECT a.albumid FROM album a WHERE NOT EXISTS (SELECT * FROM track t INNER JOIN playlistitem pl on t.trackid = pl.trackid WHERE
+a.albumid = albumid)
+
+Give the firstname and lastname of the presenters that present a program together with someone else. At least expecting columns: 'presenterid', 'firstname', 'lastname'.
+
+SELECT DISTINCT pr.presenterid, pr.firstname,pr.lastname FROM presenter pr INNER JOIN radioprogram_presenter rapr1 ON pr.presenterid = rapr1.presenterid WHERE EXISTS
+(SELECT * FROM presenter pr2 INNER JOIN radioprogram_presenter rapr2 ON pr2.presenterid = rapr2.presenterid WHERE pr.presenterid != pr2.presenterid AND rapr2.radioprogramid = rapr1.radioprogramid)
+
+Give, for songs played on the 5th of October 2011, the artist name and track title of the songs that were used last in a broadcast. At least expecting columns: 'name', 'title'.
+
+select art.name, t.title from playlistitem pl inner join (select radiobroadcastid, max(timestamp) as timestamp From playlistitem group by radiobroadcastid) as suba on pl.radiobroadcastid = suba.radiobroadcastid and pl.timestamp = suba.timestamp inner join track t on t.trackid = pl.trackid inner join artist art on t.artistid = art.artistid WHERE to_char(pl.timestamp, 'DD/MM/YYYY') LIKE '05/10/2011'
+
+Give the presenters that never present a show alone. At least expecting column: 'presenterid'.
+SELECT DISTINCT pr.presenterid, pr.firstname,pr.lastname FROM presenter pr INNER JOIN radioprogram_presenter rapr1 ON pr.presenterid = rapr1.presenterid WHERE pr.firstname NOT LIKE 'Peter' AND pr.firstname NOT LIKE 'Elke' AND pr.firstname NOT LIKE 'Bart' AND EXISTS (SELECT * FROM presenter pr2 INNER JOIN radioprogram_presenter rapr2 ON pr2.presenterid = rapr2.presenterid WHERE pr.presenterid != pr2.presenterid AND rapr2.radioprogramid = rapr1.radioprogramid)
