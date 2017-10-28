@@ -1,0 +1,26 @@
+Give tracks of which the titles can be found as album names. Don't show duplicate titles! At least expecting column: 'title'.
+
+(select distinct t.title from track t) intersect (SELECT distinct a.title from album a)
+
+Give an overview of all the names in the database (presenters and artists). 
+Use a separate field to indicate the name concerns a presenter or an artist (possible values for this column: 'presenter' and 'artist').
+The name of the presenter is the combination of firstname and lastname (with a space in between). At least expecting column: 'name', 'type'.
+
+select name,'artist' as type from artist UNION select concat(firstname, ' ',lastname) as name, 'presenter' as type from presenter
+
+Give the dates on which there was a broadcast of the program 'Night vibe' but not of the program 'What's up?'.
+Base yourself on the startdates of the broadcasts. The accuracy of the dates needs to be limited to 'day'. At least expecting column: 'day'.
+
+(select date_trunc('day', rb.starttime) as day from radiobroadcast rb inner join
+radioprogram rp on rp.radioprogramid = rb.radioprogramid WHERE rp.title like 'Night vibe')
+EXCEPT (select date_trunc('day', rb.starttime) as day from radiobroadcast rb inner join
+radioprogram rp on rp.radioprogramid = rb.radioprogramid WHERE rp.title like 'What''s up?')
+
+Give the genres that have been offered in both the programs Hitstorm and Disco Stoops. At least expecting columns: 'genre'.
+
+(SELECT DISTINCT t.genre from track t inner join playlistitem pl on t.trackid = pl.trackid 
+inner join radiobroadcast rb on pl.radiobroadcastid = rb.radiobroadcastid inner join radioprogram rp on rb.radioprogramid = rp.radioprogramid
+WHERE rp.title LIKE 'Hitstorm' ) 
+intersect 
+(SELECT DISTINCT t.genre from track t inner join playlistitem pl on t.trackid = pl.trackid inner join radiobroadcast rb on pl.radiobroadcastid = rb.radiobroadcastid 
+inner join radioprogram rp on rb.radioprogramid = rp.radioprogramid WHERE rp.title LIKE 'Disco Stoops')
