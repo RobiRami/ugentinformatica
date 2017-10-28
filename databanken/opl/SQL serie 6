@@ -1,0 +1,35 @@
+Give for each presenter the amount of shows that he/she presents. At least expecting columns: 'presenterid', 'amount'.
+
+select presenterid, COUNT(radioprogramid) as amount from radioprogram_presenter group by presenterid
+
+Give the albums that contain more than 10 'Rock' songs. At least expecting column: 'albumid'.
+
+select a.albumid from album a inner join track t on a.albumid = t.albumid 
+where t.genre LIKE 'Rock' group by a.albumid having count (*) > 10
+
+Give the maximum amount of different genres that can be found on a single album. At least expecting column: 'amount'.
+
+select a.albumid,count(distinct(t.genre)) as amount from album a inner join track t on a.albumid = t.albumid
+group by a.albumid having count (distinct(t.genre)) >2
+of
+(SELECT MAX(amount) as amount from (select count(distinct(t2.genre)) as amount from track t2 inner join album a2 on a2.albumid = t2.albumid group by a2.albumid) as amount)
+
+Give the starttime of the broadcast with the longest playlist (measured in amount of songs). Mention the amount of songs. At least expecting columns: 'starttime', 'amount'.
+
+select rb.starttime, count(pl.playlistitemid) as amount from radiobroadcast rb inner join playlistitem pl on pl.radiobroadcastid = rb.radiobroadcastid group by rb.radiobroadcastid having count(*) = (SELECT max(C) from (SELECT count(pl2.playlistitemid) as c from radiobroadcast rb2 inner join playlistitem pl2 on pl2.radiobroadcastid = rb2.radiobroadcastid group by rb2.radiobroadcastid) as Q)
+
+Give for every genre the amount of tracks that were used at least once in the playlist. At least expecting columns: 'genre', 'amount'
+
+select genre, count(distinct(pl.trackid)) as amount from track t inner join playlistitem pl on t.trackid = pl.trackid group by genre
+
+Give for every artist the amount of 'Pop' tracks. Also take into account the artists without 'Pop' songs. Order the list according to the amount of 'Pop' tracks, with the highest amount on top. 
+For ex-aequo results, sort according to the artist name. At least expecting columns: 'name', 'amount'.
+
+select a.name, case when amount is null then 0 else amount end as amount from artist a left join (select artistid, count(artistid) as amount from track 
+where genre='Pop' group by artistid) as x on x.artistid = a.artistid group by x.amount,a.name order by amount desc, a.name
+
+Give the program(s) with the lowest average amount of songs per broadcast. At least expecting columns: 'title', 'avg_amount'.
+
+select rp.title,cast(cast(count(pl.playlistitemid) as numeric) / cast(count(distinct rb.radiobroadcastid) as numeric) as NUMERIC) as avg_amount 
+from playlistitem pl inner join radiobroadcast rb on pl.radiobroadcastid = rb.radiobroadcastid inner join radioprogram rp on rp.radioprogramid = rb.radioprogramid
+group by rp.radioprogramid order by avg_amount ASC limit 1
