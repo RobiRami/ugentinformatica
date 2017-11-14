@@ -1,0 +1,197 @@
+==================== Class Vloer ====================
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
+import java.util.Arrays;
+/**
+ * Write a description of class Vloer here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Vloer extends World
+{
+
+    /**
+     * Constructor for objects of class Vloer.
+     * 
+     */
+    public Vloer()
+    {    
+        // Create a new world with 57x41 cells with a cell size of 8x8 pixels.
+        super(57, 41, 8); 
+        setPaintOrder(Bulldozer.class, Kist.class, Doel.class, Muur.class);
+                
+        //Array with coordinates all objects
+        // "*" is the symbol for Muur
+        // " " is the symbol for nothing
+        // "+" is the symbol for Doel
+        // "-" is the symbol for Kist
+        // "/" is the symbol for Bulldozer
+        String[] lijstje = {
+            "************  ",
+            "*++  *     ***",
+            "*++  * -  -  *",
+            "*++  *-****  *",
+            "*++    / **  *",
+            "*++  * *  - **",
+            "****** **- - *",
+            "  * -  - - - *",
+            "  *    *     *",
+            "  ************",};
+        for (int i=0; i<=9; i+=1) {
+            for (int j=0; j<=13; j+=1) {
+                if ("*".equals(lijstje[i].substring(j,j+1))) {
+                    addObject(new Muur(),j*4+2 , i*4+2);
+                }else if("+".equals(lijstje[i].substring(j,j+1))){
+                    addObject(new Doel(), j*4+2 , i*4+2);
+                }else if("-".equals(lijstje[i].substring(j,j+1))){
+                    addObject(new Kist(), j*4+2 , i*4+2);
+                }else if("/".equals(lijstje[i].substring(j,j+1))) {
+                     addObject(new Bulldozer(), j*4 +2, i*4+2);
+                }
+            }
+        }       
+    }
+}
+
+
+
+
+
+
+
+
+======================= Class Bulldozer ======================
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.util.Arrays;
+import java.util.ArrayList;
+
+
+/**
+ * Write a description of class Bulldozer here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Bulldozer extends Actor
+{
+    List<Muur> murenlijst = new ArrayList();
+      
+    
+    
+    List<Kist> kistenlijst;
+    
+    /**
+     * Act - do whatever the Bulldozer wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        // Add your action code here.
+        if (Greenfoot.isKeyDown("right")) {
+             move(4,0,1,0);
+        }     
+        if (Greenfoot.isKeyDown("down")) {
+             move(0,4,2,90);
+        }
+        if (Greenfoot.isKeyDown("left")) {
+            move(-4,0,3,180);
+        }
+        if (Greenfoot.isKeyDown("up")) {
+            move(0,-4,4,270);
+        }
+    }    
+    
+    
+    /**
+     * Bulldozer tries to move in a given direction.
+     * If there are 2 consecutive items in said direction, it will not be able to move..
+     * If there is a Muur in said direction, it will not be able to move.
+     * If there is a Kist in said direction, it will atempt to move it and itsself 1 tile.
+     * @param xCo: The xCoordinate relative to the Bulldozer's position where it tries to move to.
+     * @param yCo: The yCoordinate relative to the Bulldozer's position where it tries to move to.
+     * @param direction: The direction the Bulldozer is trying to move to.
+     *                   "1" indicates going to the right.
+     *                   "2" indicates going down.
+     *                   "3" indicates going to the left.
+     *                   "4" indicates going up.
+     * @param rotation: The rotation in degrees it needs to rotate to make movement look realistic.
+     */
+    public void move(int xCo, int yCo, int direction, int rotation) {
+        //If the method below finds no object of given type, a "null" will be stored in the variable.
+        Actor muur1 = getOneObjectAtOffset(xCo,yCo,Muur.class);
+        Actor muur2 = getOneObjectAtOffset(2*xCo,2*yCo,Muur.class);
+        Actor kist1 = getOneObjectAtOffset(xCo,yCo,Kist.class);
+        Actor kist2 = getOneObjectAtOffset(2*xCo,2*yCo,Kist.class);
+        if(muur1 == null && kist1 == null) {
+            setLocation(getX()+xCo, getY()+yCo);
+        }else if(kist1 != null && kist2 == null && muur2 == null) {
+            setLocation(getX()+xCo, getY()+yCo);
+            kist1.move(direction);
+        }         
+        setRotation(rotation);        
+    }
+    
+}
+
+
+
+
+
+
+================================= Class Kist ===============================
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class Kist here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Kist extends Actor
+{
+    /**
+     * Act - do whatever the Kist wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        // Add your action code here.
+        Actor doel = getOneObjectAtOffset(0,0,Doel.class);
+        if(doel == null) {
+            setImage("kist.png");
+            
+        }else{
+            setImage("kist-donker.png");
+        }
+    }   
+    
+    
+    /**
+     * Kist tries to move in a given direction 
+     * and should always be able to do so when this method is called.
+     * @param direction: The direction the Kist is trying to move to.
+     *                   "1" indicates going to the right.
+     *                   "2" indicates going down.
+     *                   "3" indicates going to the left.
+     *                   "4" indicates going up.
+     */
+    public void move(int direction) {
+        //direction "1" indicates right
+        //direction "2" indicates down
+        //direction "3" indicates left
+        //direction "4" indicates up
+        if(direction == 1) {
+            setLocation(getX()+4, getY());
+        }else if(direction == 2) {
+            setLocation(getX(), getY()+4);
+        }else if(direction == 3) {
+            setLocation(getX()-4, getY());
+        }else if(direction == 4) {
+            setLocation(getX(), getY()-4);
+        }
+        
+    }
+}
+
