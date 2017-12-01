@@ -1,0 +1,77 @@
+Broncode
+
+find $1 -type f | grep $2 | xargs grep -n "$3"
+
+
+Narcistische getallen
+
+echo $1 | fold -w1 |tr '\n' '.' | sed 's/\./^'$2'+/g' | sed 's/\+$/\n/' | bc
+
+
+Zeg het met Adele
+
+paste -d "@" $1 $2 | sed 's/@/\n>>>/g' | sed 's/^\(>.*\)/\1<<</g'
+
+
+Woordkubus
+
+paste -d "@" words words | egrep -i "^([a-z]){4,9}@" | sort | egrep -i "$5" > tempwords
+for letter in "$@"
+do
+cat tempwords | sed 's/'$letter'\(.*@\)/\1/I' > tempwords2
+cat tempwords2 > tempwords
+done
+cat tempwords | egrep "^@" | sed 's/@//' | sort --ignore-case
+rm tempwords*
+exit 0
+
+
+Vrienden bezoeken
+
+if [ $(($1%4)) -eq 1 ]
+then
+echo "A"
+elif [ $(($1%4)) -eq 2 ]
+then
+echo "C"
+elif [ $(($1%4)) -eq 3 ]
+then
+echo "B"
+elif [ $(($1%4)) -eq 0 ]
+then
+echo "D"
+fi
+exit 0
+
+
+Maya-getallen (deze code is het meest trash, want die dollarteken-numerieke expressie syntax is funky, dus als iemand dit wil refactoren
+doe gerust ;) )
+
+sum=0
+factor=$#
+stuksom=0
+for maya in "$@"; do
+waarde=1
+stuksom=$(echo -n "$maya" |sed 's/S//g' | sed 's/\./1\+/g' | sed 's/\-/5\+/g' | sed 's/\(.*\)+$/\1/' | xargs echo | bc)
+i=$factor
+while(( $i > 3 ))
+do
+waarde=$(($waarde * 20))
+i=$((i-1))
+done
+if [ $(($i%3)) -eq 0 ]
+then
+waarde=$(($waarde * 360))
+i=$((i*0))
+elif [ $(($i%2)) -eq 0 ]
+then
+waarde=$(($waarde*20))
+fi
+if [ "$stuksom" \> 0 ]
+then
+sum=$(($waarde * $stuksom + $sum))
+fi
+factor=$((factor-1))
+done
+echo "$sum"
+exit 0
