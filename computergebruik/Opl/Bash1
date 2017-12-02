@@ -73,4 +73,15 @@ for maya in "$@"; do
         done
 echo "$sum"
 exit 0
+    <--alternatieve versie van mayagetallen-->
+    aantal=$(($#-1))
+    array=( 1 20 360 7200 144000 2880000 )
+    som=0
+    for argument in $@
+    do
+    tussenResultaat=$(echo $argument | tr 'S' '0' | sed "s/\./1\+/g" | sed "s/\-/5\+/g" | sed "s/\+$//" | bc)
+    som=$(echo "$som + (${array[$aantal]} * $tussenResultaat)" | bc)
+    aantal=$((aantal-1))
+    done
+    echo $som
 
