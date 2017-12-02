@@ -51,28 +51,26 @@ exit 0
 Maya-getallen (deze code is het meest trash, want die dollarteken-numerieke expressie syntax is funky, dus als iemand dit wil refactoren
 doe gerust ;) )
 
+#! /bin/bash
 sum=0
 factor=$#
-stuksom=0
+stuksom=0   #stuksom=waarde van argument voor vermenigvuldiging met bepaalde factor
 for maya in "$@"; do
-waarde=1
-stuksom=$(echo -n "$maya" |sed 's/S/0/g' | sed 's/\./1\+/g' | sed 's/\-/5\+/g' | sed 's/\(.*\)+$/\1/' | xargs echo | bc)
-i=$factor
-while(( i > 3 ))
-do
-waarde=$((waarde * 20))
-i=$((i-1))
-done
-if [ $((i%3)) -eq 0 ]
-then
-waarde=$((waarde * 360))
-i=$((i*0))
-elif [ $((i%2)) -eq 0 ]
-then
-waarde=$((waarde*20))
-fi
-sum=$((waarde * stuksom + sum))
-factor=$((factor-1))
-done
+        waarde=1
+        stuksom=$(echo -n "$maya" |tr "S" "0" | sed 's/\./1\+/g' | sed 's/\-/5\+/g' | sed 's/\(.*\)+$/\1/' | xargs echo | bc) #bepalen van waarde van argument
+        i=$factor
+        while(( i > 3 )) ; do
+                waarde=$((waarde * 20))
+                i=$((i-1))  #waarde * 20 tenzij het 'plaats' 3 heeft
+        done
+        if [ $((i%3)) -eq 0 ] ; then
+                waarde=$((waarde * 360)) #'plaats' => * 360
+        elif [ $((i%2)) -eq 0 ] ; then
+                waarde=$((waarde*20)) #'plaats' 2 => slechts *20
+        fi
+        sum=$((waarde * stuksom + sum)) #correcte factor toepassen op waarde en bijtellen bij de som
+        factor=$((factor-1)) #volgende argument staat 1 'dichter'
+        done
 echo "$sum"
 exit 0
+
