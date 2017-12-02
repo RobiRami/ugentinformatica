@@ -6,25 +6,53 @@ find $1 -type f | grep $2 | xargs grep -n "$3"
 Narcistische getallen
 
 echo $1 | fold -w1 |tr '\n' '.' | sed 's/\./^'$2'+/g' | sed 's/\+$/\n/' | bc
-
+    #hier moeten we nog een tr gebruiken omdat we merkten dan de \n niet in de sed werkte
+    #fold -w{getal} is op width {getal} splitsen met \n's
+    #de bc op het einde maakt een calculatie van de voorgaande tekst
 
 Zeg het met Adele
 
 paste -d "@" $1 $2 | sed 's/@/\n>>>/g' | sed 's/^\(>.*\)/\1<<</g'
-
+    #het commando paste 'plakt' 2 bestanden aan elkaar, lijn per lijn gescheiden door een TAB
+        #de flag -d geeft (een of meerdere) karakters mee om ipv de TAB te zetten
+        #hier gebruiken we een @, maar andere tekens zonder speciale betekenissen in Bash
+        #konden ook makkelijk werken
+    #de eerste sed voegt ipv de @ een \n en een >>> toe,
+        #de 2e maakt bij die ^>.* op het einde nog een <<<
 
 Woordkubus
 
 #! /bin/bash
-paste -d "@" words words | egrep -i "^([a-z]){4,9}@" | egrep -i "$5" > tempwords
-for letter in "$@" ; do
-    cat tempwords | sed 's/'$letter'\(.*@\)/\1/I' > tempwords2
-    cat tempwords2 > tempwords
-done
-cat tempwords | egrep "^@" | sed 's/@//' | sort --ignore-case
-rm tempwords*
+paste -d "@" words words | egrep -i "^([a-z]){4,9}@" | egrep -i "$5" > temp_file
+    #het commando paste 'plakt' 2 bestanden aan elkaar, lijn per lijn gescheiden door een TAB
+        #de flag -d geeft (een of meerdere) karakters mee om ipv de TAB te zetten
+        #hier gebruiken we een @, maar andere tekens zonder speciale betekenissen in Bash
+        #konden ook makkelijk werken
+    #het 1e greppen gebeurt op 4-9 letters met er net na een @
+    #het 2e greppen gebeurt op de 5e letter (diegene die in het midden van het vierkant staat)
+        #omdat deze in elke oplossing mmoet zitten
+        #al het greppen gebeurt met de flag -i, om case-insensitive te greppen
+    #dit word voor later in het script uitgeschreven naar een temp_file
+    for letter in "$@" ;
+        #deze for gaat over alle argumenten, $@ stijgt elke keer de lus doorlopen wordt
+            #we hernoemen het argument dat we gebruiken naar letter omdat $@ in de for kan veranderen
+        do
+            cat temp_file | sed 's/'$letter'\(.*@\)/\1/I' > temp_file2
+                #verwijdert elk eerste voorkomen van de huidige letter voor de @ en
+                    #schrijft het resultaat uit naar een nieuwe temp_file
+            cat temp_file2 > temp_file
+                #schrijft het veranderde bestand uit naar de eerste temp_file
+                    #die opnieuw gebruikt wordt op het begin van de lus
+        done
+cat temp_file | egrep "^@" | sed 's/@//' | sort --ignore-case
+    #de eerste temp_file wordt uitgeschreven, dan worden de lijnen gegrept (is dit zelfs een woord)
+        #die beginnen met een @ (waar dus alle letters verwijdert waren en dus het antwoord klopt)
+        #die @ verwijderen we erna met een sed omdat het niet meer nodig is
+    #op het einde doen we een sort met als flag --ignore-case, om hoofdlettergevoeligheid uit te schakelen
+rm temp_file*
+    #we verwijderen het tijdelijk bestand omdat het tijdelijk is
 exit 0
-
+    #we sluiten af met een exit status 0 om het script te sluiten
 
 Vrienden bezoeken
 
