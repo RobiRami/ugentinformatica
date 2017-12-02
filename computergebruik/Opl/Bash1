@@ -15,7 +15,7 @@ paste -d "@" $1 $2 | sed 's/@/\n>>>/g' | sed 's/^\(>.*\)/\1<<</g'
 
 Woordkubus
 
-paste -d "@" words words | egrep -i "^([a-z]){4,9}@" | sort | egrep -i "$5" > tempwords
+paste -d "@" words words | egrep -i "^([a-z]){4,9}@" | egrep -i "$5" > tempwords
 for letter in "$@"
 do
 cat tempwords | sed 's/'$letter'\(.*@\)/\1/I' > tempwords2
