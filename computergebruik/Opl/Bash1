@@ -56,25 +56,22 @@ factor=$#
 stuksom=0
 for maya in "$@"; do
 waarde=1
-stuksom=$(echo -n "$maya" |sed 's/S//g' | sed 's/\./1\+/g' | sed 's/\-/5\+/g' | sed 's/\(.*\)+$/\1/' | xargs echo | bc)
+stuksom=$(echo -n "$maya" |sed 's/S/0/g' | sed 's/\./1\+/g' | sed 's/\-/5\+/g' | sed 's/\(.*\)+$/\1/' | xargs echo | bc)
 i=$factor
-while(( $i > 3 ))
+while(( i > 3 ))
 do
-waarde=$(($waarde * 20))
+waarde=$((waarde * 20))
 i=$((i-1))
 done
-if [ $(($i%3)) -eq 0 ]
+if [ $((i%3)) -eq 0 ]
 then
-waarde=$(($waarde * 360))
+waarde=$((waarde * 360))
 i=$((i*0))
-elif [ $(($i%2)) -eq 0 ]
+elif [ $((i%2)) -eq 0 ]
 then
-waarde=$(($waarde*20))
+waarde=$((waarde*20))
 fi
-if [ "$stuksom" \> 0 ]
-then
-sum=$(($waarde * $stuksom + $sum))
-fi
+sum=$((waarde * stuksom + sum))
 factor=$((factor-1))
 done
 echo "$sum"
