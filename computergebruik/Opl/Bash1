@@ -42,6 +42,10 @@ then
 echo "D"
 fi
 exit 0
+    <--Kortere notatie, leunt wel opdezelfde techniek. we gaan gewoon met een array werken waardoor al de if clauses wegvallen-->
+    var=$(echo "($1%4)-1" | bc)
+    array=(A C B D)
+    echo ${array["$var"]}
 
 
 Maya-getallen (deze code is het meest trash, want die dollarteken-numerieke expressie syntax is funky, dus als iemand dit wil refactoren
