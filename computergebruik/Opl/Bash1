@@ -64,7 +64,7 @@ for maya in "$@"; do
                 i=$((i-1))  #waarde * 20 tenzij het 'plaats' 3 heeft
         done
         if [ $((i%3)) -eq 0 ] ; then
-                waarde=$((waarde * 360)) #'plaats' => * 360
+                waarde=$((waarde * 360)) #'plaats' 3 => * 360
         elif [ $((i%2)) -eq 0 ] ; then
                 waarde=$((waarde*20)) #'plaats' 2 => slechts *20
         fi
