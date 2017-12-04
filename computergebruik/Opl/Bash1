@@ -54,6 +54,20 @@ rm temp_file*
 exit 0
     #we sluiten af met een exit status 0 om het script te sluiten
 
+<---> Alternatieve woordkubus zonder temp files <--->
+
+#!/bin/bash
+while read line
+do
+        for letter in $@
+        do
+        line=$(echo "$line" | sed "s/\([^$letter]*\)$letter\(.*\) \(.*\)/\1\2 \3/I")
+        done
+        echo $line | egrep -v ' '
+done <<< "$(egrep -i "$5" words | egrep -i ".....*" | egrep -i "^[$1$2$3$4$5$6$7$8$9]*$" | sed 's/^\(.*\)$/\1 \1/Ig' | sort -f )"
+exit 0
+
+
 Vrienden bezoeken
 
 if [ $(($1%4)) -eq 1 ]
