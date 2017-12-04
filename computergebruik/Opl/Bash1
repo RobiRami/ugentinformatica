@@ -57,6 +57,9 @@ exit 0
 <---> Alternatieve woordkubus zonder temp files <--->
 
 #!/bin/bash
+# De output van het commando dat volgt op de "done <<<" (onderaan de while loop) wordt de input van de while loop.
+# Door het "read" commando vooraan leest de loop telkens één regel in van standaard input
+# en kent deze regel toe aan de variabele "line".
 while read line
 do
         for letter in $@
