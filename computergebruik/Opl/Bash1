@@ -4,7 +4,7 @@ find $1 -type f | grep $2 | xargs grep -n "$3"
 <--juist versie-->
     find $1 -type f -print | grep "\.$2" | xargs grep -Hn $3
 
-find "$1" -name "*$2" -type f | xargs grep -Hn "$3"
+find "$1" -name "*\.$2" -type f | xargs grep -Hn "$3"
 ipv grep op juiste naam, deze onmiddellijk verwerken, vervolgens met grep -Hn(H = filename printen, n = regelnummer uitprinten)
 
 
@@ -26,6 +26,16 @@ paste -d "@" $1 $2 | sed 's/@/\n>>>/g' | sed 's/^\(>.*\)/\1<<</g'
         #konden ook makkelijk werken
     #de eerste sed voegt ipv de @ een \n en een >>> toe,
         #de 2e maakt bij die ^>.* op het einde nog een <<<
+        <---alternatief met file descriptor (even effeicient)-->
+        exec 3<$1
+        exec 4<$2
+
+        while read regel1 0<&3
+        do
+        echo $regel1
+        read regel2 0<&4
+        echo ">>>"$regel2"<<<"
+        done
 
 Woordkubus
 
