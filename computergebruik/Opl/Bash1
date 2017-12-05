@@ -2,8 +2,13 @@ Broncode
 
 find $1 -type f | grep $2 | xargs grep -n "$3"
 
+find "$1" -name "*$2" -type f | xargs grep -Hn "$3"
+ipv grep op juiste naam, deze onmiddellijk verwerken, vervolgens met grep -Hn(H = filename printen, n = regelnummer uitprinten)
+
 
 Narcistische getallen
+echo $1 | sed 's/./&^$2+/g' | sed 's/+$//' | bc
+    #elk digit vervangen door zichelf tot de macht $2 met een +, de laatste ten slotte verwijderen en vervolgens uitrekenen
 
 echo $1 | fold -w1 |tr '\n' '.' | sed 's/\./^'$2'+/g' | sed 's/\+$/\n/' | bc
     #hier moeten we nog een tr gebruiken omdat we merkten dan de \n niet in de sed werkte
@@ -32,7 +37,7 @@ paste -d "@" words words | egrep -i "^([a-z]){4,9}@" | egrep -i "$5" > temp_file
     #het 2e greppen gebeurt op de 5e letter (diegene die in het midden van het vierkant staat)
         #omdat deze in elke oplossing mmoet zitten
         #al het greppen gebeurt met de flag -i, om case-insensitive te greppen
-    #dit word voor later in het script uitgeschreven naar een temp_file
+    #dit wordt voor later in het script uitgeschreven naar een temp_file
     for letter in "$@" ;
         #deze for gaat over alle argumenten, $@ stijgt elke keer de lus doorlopen wordt
             #we hernoemen het argument dat we gebruiken naar letter omdat $@ in de for kan veranderen
