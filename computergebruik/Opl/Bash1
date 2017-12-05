@@ -1,6 +1,8 @@
 Broncode
-
+<--verkeerd-->
 find $1 -type f | grep $2 | xargs grep -n "$3"
+<--juist versie-->
+    find $1 -type f -print | grep "\.$2" | xargs grep -Hn $3
 
 find "$1" -name "*$2" -type f | xargs grep -Hn "$3"
 ipv grep op juiste naam, deze onmiddellijk verwerken, vervolgens met grep -Hn(H = filename printen, n = regelnummer uitprinten)
