@@ -35,3 +35,43 @@ else
         exit 1
 fi
 
+--Alternatieve versie, met minder lussen en if's, sneller op dodona (dubbel)--
+    omgekeerd(){
+        echo "$1" | rev | tr ACTG TGAC
+        }
+
+    palindroom() {
+        string="$1"
+        index=0
+        length=${#string}
+        stringLength=${#string}
+        match=""
+        longestmatch=""
+
+        while [[ "$index" -lt ${#string} ]]
+            do
+                while [ "$length" -gt ${#longestmatch} ]
+                do
+                    if [ ${string:$index:$length} = $( omgekeerd "${string:$index:$length}") ]
+                    then
+                        longestmatch=${string:$index:$length}
+                        maxLength=${#longestmatch}
+                    fi
+                    ((length --))
+                done
+                ((index++))
+                ((length = stringLength - index))
+            done
+        echo $longestmatch
+    }
+
+    if [ $1 = 'omgekeerd' ]
+        then
+        omgekeerd $2
+    elif [ $1 = 'langstePalindroom' ]
+        then
+        palindroom $2
+    else
+        echo 'Ongeldige functie' 1>&2
+        exit 1
+    fi
