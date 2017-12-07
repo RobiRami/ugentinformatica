@@ -75,3 +75,19 @@ fi
         echo 'Ongeldige functie' 1>&2
         exit 1
     fi
+== De schat van Fenn ==
+stop=$1
+dir=$2
+nextFile=$3
+line=$4
+
+cd $dir
+while [[ "$lastWord" != "$stop" ]]
+do
+    file=$nextFile
+    sentence="${sentence} ${lastWord}"
+    lastWord=$(sed -n ${line}p $file| cut -d " " -f1)
+    nextFile=$(sed -n ${line}p $file| cut -d " " -f2)
+    line=$(sed -n ${line}p $file| cut -d " " -f3)
+done
+echo "$sentence" | xargs
