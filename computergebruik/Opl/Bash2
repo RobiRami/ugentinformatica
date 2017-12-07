@@ -1,0 +1,36 @@
+== Palindroom ==
+# Refactoren is wel nog beetje nodig. 
+# something something spaghetti code...
+
+#!/bin/bash
+string="$2"
+index="0"
+counter=${#string}
+match=""
+if [ "$1" == "omgekeerd" ]
+then
+        echo "$2" | rev | tr "ATGC" "TACG"
+elif [ "$1" == "langstePalindroom" ]
+then
+        while [ "$index" -lt ${#string} ]
+        do
+                while [ "$counter" -gt "0" ]
+                do
+                        if [ ${string:$index:$counter} = $(bash "$0" "omgekeerd" "${string:$index:$counter}") ]
+                        then
+                                match=${string:$index:$counter}
+                                if [ ${#match} -gt ${#longestmatch} ]
+                                then
+                                        longestmatch=$match
+                                fi
+                        fi
+                        counter=$(($counter - 1))
+                done
+                index=$(($index + 1))
+                counter=$((${#string} - $index))
+        done
+        echo $longestmatch
+else
+        echo "Ongeldige functie" 1>&2
+fi
+
