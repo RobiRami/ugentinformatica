@@ -32,5 +32,6 @@ then
         echo $longestmatch
 else
         echo "Ongeldige functie" 1>&2
+        exit 1
 fi
 
