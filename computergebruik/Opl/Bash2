@@ -131,12 +131,12 @@ then                    # alle output naar /dev/null via &> /dev/null
                         git checkout -b $naam &> /dev/null
                 fi
                 while (( i < $amount )) ; do
-                        wget whatthecommit.com -q                      #site downloaden, gaat in index.html bestand, filteren voor de random message
-                        mesg=$(cat index.html | sed '/<p>.*/!d' | sed 's/<p>//')        #mesg opslaan en gebruiken in commit en dergelijk
+                        wget whatthecommit.com/index.txt -q                   #site downloaden, gaat in index.txt bestand
+                        mesg=$(cat index.txt )                                #mesg opslaan en gebruiken in commit en dergelijk
                         ((i++))
                         echo "$i) $mesg" >> README.md
                         git commit -a -m "$mesg" &> /dev/null
-                        rm index.html                           #index-bestand verwijderen want in volgende doorloop van lus maak je een nieuw
+                        rm index.txt                           #index-bestand verwijderen want in volgende doorloop van lus maak je een nieuw
                         done
                 if [ $merge -eq 2 ] ; then
                         git checkout master &> /dev/null               #branch mergen met master als branch bestaat EN merge vlag werd meegegeven.
