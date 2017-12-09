@@ -234,12 +234,32 @@ do
                 exit 1
         fi
 done
+
+# String1 is header 1. (NAAM ACTEUR...)
+# String2 is header 2. (==== ======...)
+# Verander alle @'s in de strings naar tabs. Ik had @'s gebruikt als scheidingsteken voor het gemak.
+
 string1=$(echo "$string1" | tr '@' '\t')
 string2=$(echo "$string2" | tr '@' '\t')
+
+# Neem de laatste tab weg, want op na de laatste kolom moet geen tab
+
 string1=$(echo -e "${string1}" | sed -e 's/[[:blank:]]*$//')
 string2=$(echo -e "${string2}" | sed -e 's/[[:blank:]]*$//')
+
+# Schrijf de header uit naar standaard output
+
 echo "$string1"
 echo "$string2"
+
+# in de fileArray zitten de namen van de files waarvan de jaarkolom moet worden afgeprint. 
+# Als er 4 opties meegegeven zijn dan wordt het eerste algoritme gebruikte etc...
+# de "-t$'\t' zorgt er voor dat het scheidingsteken een tab is.
+# de "-" in de tweede en derde join geef aan dat daar de output van het vorige commando wordt gebruikt om te joinen.
+# wanneer de command "bash uitslover.txt -EGOT" is wordt dus hetvolgende gedaan:
+# join (met tabs) emmy.txt grammy.txt | join (met tabs) J(emmy.txtgrammy.txt) oscar.txt | join (met tabs) J(emmy.txtgrammy.txt.oscar.txt) tony.txt
+# als dat voorbeeld het duidelijker maakt.
+
 if [ "$optionamount" -eq "4" ]
 then
         join -t$'\t' "${fileArray[1]}" "${fileArray[2]}" | join -t$'\t' - "${fileArray[3]}" | join -t$'\t' - "${fileArray[4]}"
