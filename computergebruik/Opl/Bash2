@@ -91,3 +91,64 @@ do
     line=$(sed -n ${line}p $file| cut -d " " -f3)
 done
 echo "$sentence" | xargs
+
+Repogen (git generator) mannekes wat een zooi was dat, miss is refactoren mogelijk maar idk
+
+#! /bin/bash
+i=0
+merge=0
+naam=''
+amount=3
+while getopts ":c:b:m" opt; do
+        case "$opt" in
+        c )     if [ $OPTARG !=  3 ]
+                then
+                        amount=$OPTARG
+                fi
+                ;;
+        b ) naam=$OPTARG
+            ((merge++))
+                ;;
+        m ) ((merge++))
+                ;;
+        \? ) echo "Syntaxis: repogen [-b <string>] [-c <integer>] [-m] dirname" 1>&2
+                exit 1
+        esac
+done
+shift $((OPTIND -1))
+if [ $# -eq 1 ]
+then
+
+        if [ -d $1 ]
+        then
+                echo "repogen: bestandsnaam bestaat reeds" 1>&2
+                exit 2
+        else
+                git init $1 &> /dev/null
+                cd $1
+                touch README.md
+                git add README.md &> /dev/null
+                git commit -m "initial commit" &> /dev/null
+                if [[ ! -z $naam ]]
+                then
+                        git checkout -b $naam &> /dev/null
+                fi
+                while (( i < $amount )) ; do
+                        wget whatthecommit.com -q
+                        mesg=$(cat index.html | sed '/<p>.*/!d' | sed 's/<p>//')
+                        ((i++))
+                        echo "$i) $mesg" >> README.md
+                        git commit -a -m "$mesg" &> /dev/null
+                        rm index.html
+                        done
+                if [ $merge -eq 2 ] ; then
+                        git checkout master &> /dev/null
+                        git merge $naam &> /dev/null
+                fi
+        fi
+else
+echo "Syntaxis: repogen [-b <string>] [-c <integer>] [-m] dirname" 1>&2
+exit 1
+fi
+exit 0
+
