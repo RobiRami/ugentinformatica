@@ -152,3 +152,106 @@ exit 1
 fi
 exit 0
 
+
+=== oplossing uitslover ===
+# Code wat slordig maar efficient genoeg (0.5s)
+
+#!/bin/bash
+# Initializing values
+optionamount="0"
+counter2="0"
+counter="0"
+emmy="0"
+grammy="0"
+oscar="0"
+tony="0"
+string1="NAAM ACTEUR""@"
+string2="===========""@"
+# Checking options, arguments and creating header.
+while getopts ":EGOT" option
+do
+        ((optionamount+=1))
+        case $option in
+        E )
+                ((emmy+=1))
+                ;;
+        G )
+                ((grammy+=1))
+                ;;
+        O )
+                ((oscar+=1))
+                ;;
+        T )
+                ((tony+=1))
+                ;;
+        \? )
+                echo "Syntaxis: uitslover -EGOT" 1>&2
+                exit 1
+                ;;
+        esac
+done
+shift $((OPTIND-1))
+if  [ "$optionamount" -le "1" ]
+then
+        echo "uitslover: minder dan twee awards opgegeven" 1>&2
+        exit 2
+elif [ "$1" != "" ]
+then
+        echo "Syntaxis: uitslover -EGOT" 1>&2
+        exit 1
+fi
+for option in $emmy $grammy $oscar $tony
+do
+        ((counter+=1))
+        case $counter in
+        1 )
+                name="emmy"
+                ;;
+        2 )
+                name="grammy"
+                ;;
+        3 )
+                name="oscar"
+                ;;
+        4 )
+                name="tony"
+                ;;
+        esac
+        if [ "$option" -eq 1 ]
+        then
+                ((counter2+=1))
+                fileArray[$counter2]="$name"".txt"
+                sort "${fileArray[$counter2]}" -o "${fileArray[$counter2]}"
+                string1+="$(echo $name | tr 'a-z' 'A-Z')""@"
+                for value in $(seq 1 "${#name}")
+                do
+                        string2+="="
+                done
+                string2+=$"@"
+        elif [ "$option" -ge "2" ]
+        then
+                echo "Syntaxis: uitslover -EGOT" 1>&2
+                exit 1
+        fi
+done
+string1=$(echo "$string1" | tr '@' '\t')
+string2=$(echo "$string2" | tr '@' '\t')
+string1=$(echo -e "${string1}" | sed -e 's/[[:blank:]]*$//')
+string2=$(echo -e "${string2}" | sed -e 's/[[:blank:]]*$//')
+echo "$string1"
+echo "$string2"
+if [ "$optionamount" -eq "4" ]
+then
+        join -t$'\t' "${fileArray[1]}" "${fileArray[2]}" | join -t$'\t' - "${fileArray[3]}" | join -t$'\t' - "${fileArray[4]}"
+elif [ "$optionamount" -eq "3" ]
+then
+        join -t$'\t' "${fileArray[1]}" "${fileArray[2]}" | join -t$'\t' - "${fileArray[3]}"
+elif [ "$optionamount" -eq "2" ]
+then
+        join -t$'\t' "${fileArray[1]}" "${fileArray[2]}"
+fi
+exit 0
+
+
+
+
