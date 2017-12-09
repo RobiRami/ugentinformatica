@@ -101,23 +101,20 @@ naam=''
 amount=3
 while getopts ":c:b:m" opt; do
         case "$opt" in
-        c )     if [ $OPTARG !=  3 ]
-                then
-                        amount=$OPTARG
-                fi
+        c ) amount=$OPTARG #basisaantal commits is 3, indien c-vlag opgegeven wordt, moet het nummer aangepast worden
                 ;;
-        b ) naam=$OPTARG
+        b ) naam=$OPTARG   #branchnaam opslaan, ik hou een teller bij voor als iemand zou willen mergen zonder branch op te geven
             ((merge++))
                 ;;
-        m ) ((merge++))
+        m ) ((merge++))   #kwestie dat de m-vlag iets doet lel
                 ;;
-        \? ) echo "Syntaxis: repogen [-b <string>] [-c <integer>] [-m] dirname" 1>&2
+        \? ) echo "Syntaxis: repogen [-b <string>] [-c <integer>] [-m] dirname" 1>&2  #error uitschrijven als syntax fout is
                 exit 1
         esac
 done
 shift $((OPTIND -1))
-if [ $# -eq 1 ]
-then
+if [ $# -eq 1 ]    #er moet een naam meegegeven worden om de git-directory mee te initialiseren, maar zo'n directory mag nog niet bestaan
+then                    # alle output naar /dev/null via &> /dev/null
 
         if [ -d $1 ]
         then
@@ -129,20 +126,20 @@ then
                 touch README.md
                 git add README.md &> /dev/null
                 git commit -m "initial commit" &> /dev/null
-                if [[ ! -z $naam ]]
+                if [[ ! -z $naam ]]                             #als een branchnaam werd meegegeven, deze aanmaken en daarop committen
                 then
                         git checkout -b $naam &> /dev/null
                 fi
                 while (( i < $amount )) ; do
-                        wget whatthecommit.com -q
-                        mesg=$(cat index.html | sed '/<p>.*/!d' | sed 's/<p>//')
+                        wget whatthecommit.com -q                      #site downloaden, gaat in index.html bestand, filteren voor de random message
+                        mesg=$(cat index.html | sed '/<p>.*/!d' | sed 's/<p>//')        #mesg opslaan en gebruiken in commit en dergelijk
                         ((i++))
                         echo "$i) $mesg" >> README.md
                         git commit -a -m "$mesg" &> /dev/null
-                        rm index.html
+                        rm index.html                           #index-bestand verwijderen want in volgende doorloop van lus maak je een nieuw
                         done
                 if [ $merge -eq 2 ] ; then
-                        git checkout master &> /dev/null
+                        git checkout master &> /dev/null               #branch mergen met master als branch bestaat EN merge vlag werd meegegeven.
                         git merge $naam &> /dev/null
                 fi
         fi
