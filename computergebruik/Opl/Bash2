@@ -92,6 +92,20 @@ do
 done
 echo "$sentence" | xargs
 
+##sneller alternatief met set --
+#! /bin/bash
+stop=$1
+schat=''
+cd "$2"
+shift
+while [ "$1" != "$stop" ]
+do
+        set -- $(sed -n "$3"p "$2")
+        schat+="$1 "
+done
+echo "$schat" | sed 's/ '$stop' //'
+exit 0
+
 Repogen (git generator) mannekes wat een zooi was dat, miss is refactoren mogelijk maar idk
 
 #! /bin/bash
