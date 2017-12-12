@@ -100,10 +100,10 @@ cd "$2"
 shift
 while [ "$1" != "$stop" ]
 do
-        set -- $(sed -n "$3"p "$2")
-        schat+="$1 "
-done
-echo "$schat" | sed 's/ '$stop' //'
+        set -- $(sed -n "$3"p "$2")             ## alternatief met while-lus met 1 iteratie @Hackerman if [ "$1" != "$stop" ] ; then
+         schat+="$1 "                                                                             ##             schat+="$1 "
+done                                                                                              ##    fi
+echo "$schat" | sed 's/ '$stop' //'                             dan moet enkel spatie op einde weg##echo "$schat" | sed 's/ $//'
 exit 0
 
 Repogen (git generator) mannekes wat een zooi was dat, miss is refactoren mogelijk maar idk
