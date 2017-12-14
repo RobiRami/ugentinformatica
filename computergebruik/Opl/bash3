@@ -8,6 +8,30 @@ echo
 
 echo $QUERY_STRING | tr "&" "\n" | sed 's/\([^&]*\)=/De waarde van \1 is /g'
 
+    <--alternatief zonder tr of sed-->
+    //Deze manier gevolgd omdat ik jullie opl al gezien had (zelf ook eens proberen)
+    #!/bin/bash //standaard shit
+
+    # send content type: plain text
+    echo "Content-type: text/plain"
+
+    # send empty line
+    echo
+
+    saveIFS=$IFS //backup van de systeemvariable
+    IFS='=&' //verander systeemvar
+    parm=($QUERY_STRING) //steek alles in een array ( a=b )is het hezelfde als ( a b ) door veranderen field seperator
+    IFS=$saveIFS //zet backup terug
+
+    i=0
+    while [ $i != ${#parm[@]}  ]
+    do
+       echo De waarde van ${parm[i]} is ${parm[((i+1))]}
+       ((i+=2))
+    done
+    <--/einde-->
+  
+
 ==gegroet==
 #!/bin/bash
 
