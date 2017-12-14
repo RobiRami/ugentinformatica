@@ -1,0 +1,25 @@
+==introductie==
+#!/bin/bash
+
+echo "Content-type: text/plain"
+
+echo
+
+
+echo $QUERY_STRING | tr "&" "\n" | sed 's/\([^&]*\)=/De waarde van \1 is /g'
+
+==gegroet==
+#!/bin/bash
+
+echo "Content-type: text/plain"
+
+echo
+
+for p in ${QUERY_STRING//&/ };do
+kvp=( ${p/=/ } );
+k=${kvp[0]}
+v=${kvp[1]}
+eval $k=$v
+done
+
+echo Gegroet, $naam
