@@ -23,3 +23,108 @@ eval $k=$v
 done
 
 echo Gegroet, $naam
+
+#! /bin/bash
+
+echo "Content-type: text/plain"
+echo ""
+
+echo "$QUERY_STRING" | sed 's/naam=\([a-zA-Z]\+\)/Gegroet, \1/g' | tr "&" "\n" | sed '/^[^nG]/d'
+ 
+exit 0
+
+Inkleuren
+#! /bin/bash
+
+bestand=$(echo "$1" | sed 's/.svg/.png/')
+
+# defineer de error messages
+function error() {
+        echo "Syntaxis: inkleuren svg-bestand csv-bestand" 1>&2
+}
+
+function error_svg() {
+        echo "Fout: onbestaand, onleesbaar of ongeldig svg-bestand: $1" 1>&2
+}
+function error_csv() {
+        echo "Fout: onbestaand, onleesbaar of ongeldig csv-bestand: $1" 1>&2
+}
+
+# bekijk de argumenten en doe iets
+case $# in
+        2)
+                if [[ ! -f $1 || ! -r $1 ]]
+                then
+                error_svg $1
+        error
+        exit 2
+        else
+                var1=$(file -b $1)
+                        if [[ $var1 != "SVG Scalable Vector Graphics image" || "$1" != *.svg ]]
+                        then
+                        error_svg $1
+                        error
+                        exit 2
+        fi
+fi
+        if [[ ! -f $2 || ! -r $2 ]]
+        then
+                error_csv $2
+                error
+                exit 3
+        else
+        var2=$(file -b $2)
+        if [[ $var2 != "ASCII text" || "$2" != *.csv ]]
+        then
+                error_csv $2
+                error
+                exit 3
+        fi
+fi
+;;
+        *)
+        error
+        exit 1
+;;
+esac
+cp $1 tempkleurenbestand.svg
+# skip de eerste lijn van het bestand kleuren.csv
+lines=$(echo "$(cat $2 | wc -l) - 1" | bc)
+
+# voor elke lijn in kleuren.csv neem de id en kleur variabelen
+# en voeg ze toe in de amerika.svg bestand
+for line in $(cat $2 | tail -$lines)
+do
+        id=$(echo $line | sed 's/,.*//')
+        kleur=$(echo $line | sed 's/.*,//')
+        sed -i 's/\(id="'$id'"\)/\1 style="fill:'$kleur';"/' tempkleurenbestand.svg
+done
+convert svg:tempkleurenbestand.svg png:$bestand
+rm tempkleurenbestand.svg
+exit 0
+
+
+
+
+Inkleuren CGI
+
+#! /bin/bash 
+
+echo "Content-type: text/html"
+echo
+
+cp amerika.svg tempkleurenbestand.svg
+echo "$QUERY_STRING" | tr "&" "\n" > tempkleur
+
+lines=$(cat tempkleur | wc -l)
+
+for line in $(cat tempkleur | tail -$lines)
+do
+        id=$(echo $line | sed 's/=.*//')
+        kleur=$(echo $line | sed 's/.*=//')
+        sed -i 's/\(id="'$id'"\)/\1 style="fill:'$kleur'"/I' tempkleurenbestand.svg
+done
+cat tempkleurenbestand.svg
+rm tempkleurenbestand.svg
+rm tempkleur
+exit 0
