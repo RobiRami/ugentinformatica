@@ -1,0 +1,70 @@
+fold -w(getal)
+    splitst op de breedte "getal" met \n's
+
+bc van een tekstbestand geeft de berekening terug
+
+tr "A" "B"
+    vervangt A (kan een regex of lettercombinatie zijn) door B
+    bv. tr "0123" "ABCD" (vervangt 0 door A, 1 door B etc...)
+
+sed 's/A/B/d'
+    A wordt vervangen door B op lijn d, om globaal te vervangen gebruikt men ook wel g
+    B kan \t bevatten waar 1 een nummer is van de t-de regex in A
+
+paste file1 file2
+    met -d wordt een argument meegegeven wat tussen de 2 files wordt gezet (lijn per lijn)
+    by default is het argument op -d (als er geen wordt meegegeven) een TAB
+
+for each in bash: for a in "$@" (voor alle a in de argumenten $@)
+    do
+    #statements
+    done
+
+exit n
+    maakt de exit status n (0,1,2...)
+
+if [ conditie ] !!!LET OP MET DE SPATIES, NODIG BIJ DE HAAKJES ROND DE CONDITIE
+        then
+        #statements
+    elif [ conditie ]
+        then
+        #statements
+    else
+        #statements
+    fi
+
+variabele declaratie !!! LET OP MET DE SPATIES, HIER MOGEN ZE NIET!
+    var=$(something) (alles is string based in bash)
+
+functie_naam(){
+    #statements
+    }
+function naam {
+    #statements
+    }
+
+while [ conditie ] !!!LET OP MET DE SPATIES, NODIG BIJ DE HAAKJES ROND DE CONDITIE
+    do
+    #statements
+    done
+
+xargs kan gebruikt worden om de beginspatie te verwijderen
+
+getopts ":a:bc:"
+    neemt alle opties a b en c waar a en c een argument hebben
+
+case "$opt" in
+    a ) #statements
+        ;;
+    b ) #statements
+        ;;
+    c ) #statements
+        ;;
+    \? ) #statements (als er een optie wordt gegeven die niet abc is)
+
+    esac
+    shift $((OPTIND -1))
+        schuift de opties op na de case
+
+join -t $'\t' file1 file2
+    joint de 2 bestanden op de \t
