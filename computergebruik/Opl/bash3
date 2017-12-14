@@ -29,7 +29,7 @@ echo Gegroet, $naam
 echo "Content-type: text/plain"
 echo ""
 
-echo "$QUERY_STRING" | sed 's/naam=\([a-zA-Z]\+\)/Gegroet, \1/g' | tr "&" "\n" | sed '/^[^nG]/d'
+echo "$QUERY_STRING" | sed 's/naam=\([a-zA-Z]\+\)/Gegroet, \1/g' | tr "&" "\n" | sed '/^[^G]/d'
  
 exit 0
 
