@@ -1,41 +1,17 @@
 ==introductie==
 #!/bin/bash
 
-echo "Content-type: text/plain"
+echo "Content-type: text/plain" #CGI-intro voor browser
 
 echo
 
 
-echo $QUERY_STRING | tr "&" "\n" | sed 's/\([^&]*\)=/De waarde van \1 is /g'
-
-    <--alternatief zonder tr of sed-->
-    //Deze manier gevolgd omdat ik jullie opl al gezien had (zelf ook eens proberen)
-    #!/bin/bash //standaard shit
-
-    # send content type: plain text
-    echo "Content-type: text/plain"
-
-    # send empty line
-    echo
-
-    saveIFS=$IFS //backup van de systeemvariable
-    IFS='=&' //verander systeemvar
-    parm=($QUERY_STRING) //steek alles in een array ( a=b )is het hezelfde als ( a b ) door veranderen field seperator
-    IFS=$saveIFS //zet backup terug
-
-    i=0
-    while [ $i != ${#parm[@]}  ]
-    do
-       echo De waarde van ${parm[i]} is ${parm[((i+1))]}
-       ((i+=2))
-    done
-    <--/einde-->
-  
+echo $QUERY_STRING | tr "&" "\n" | sed 's/\([^&]*\)=/De waarde van \1 is /g' #argumenten splitsen regel per regel en omzetten
 
 ==gegroet==
 #!/bin/bash
 
-echo "Content-type: text/plain"
+echo "Content-type: text/plain"     #to-do : iemand die dit uitlegt
 
 echo
 
@@ -50,10 +26,11 @@ echo Gegroet, $naam
 
 #! /bin/bash
 
-echo "Content-type: text/plain"
+echo "Content-type: text/plain"   #CGI-intro
 echo ""
 
-echo "$QUERY_STRING" | sed 's/naam=\([a-zA-Z]\+\)/Gegroet, \1/g' | tr "&" "\n" | sed '/^[^G]/d'
+echo "$QUERY_STRING" | sed 's/naam=\([a-zA-Z]\+\)/Gegroet, \1/g' | tr "&" "\n" | sed '/^[^G]/d'  
+#argumenten omzetten naar Gegroet, splitsen regel per regel, als ze niet beginnen met G(egroet) moeten ze weg
  
 exit 0
 
@@ -77,28 +54,28 @@ function error_csv() {
 # bekijk de argumenten en doe iets
 case $# in
         2)
-                if [[ ! -f $1 || ! -r $1 ]]
+                if [[ ! -f $1 || ! -r $1 ]] #bestand 1 is niet leesbaar of bestaat niet
                 then
                 error_svg $1
         error
         exit 2
         else
-                var1=$(file -b $1)
-                        if [[ $var1 != "SVG Scalable Vector Graphics image" || "$1" != *.svg ]]
+                var1=$(file -b $1)  
+                        if [[ $var1 != "SVG Scalable Vector Graphics image" || "$1" != *.svg ]] #bestand1 is geen SVG-file
                         then
                         error_svg $1
                         error
                         exit 2
         fi
 fi
-        if [[ ! -f $2 || ! -r $2 ]]
+        if [[ ! -f $2 || ! -r $2 ]] #bestand 2 bestaat niet of is niet leesbaar
         then
                 error_csv $2
                 error
                 exit 3
         else
         var2=$(file -b $2)
-        if [[ $var2 != "ASCII text" || "$2" != *.csv ]]
+        if [[ $var2 != "ASCII text" || "$2" != *.csv ]] #bestand bevat geen leesbare tekst of is geen csv-bestand
         then
                 error_csv $2
                 error
@@ -111,19 +88,19 @@ fi
         exit 1
 ;;
 esac
-cp $1 tempkleurenbestand.svg
+cp $1 tempkleurenbestand.svg  #kopieer svg.bestand om in aan te passen, oorspronkelijk mag niet veranderd worden
 # skip de eerste lijn van het bestand kleuren.csv
 lines=$(echo "$(cat $2 | wc -l) - 1" | bc)
 
 # voor elke lijn in kleuren.csv neem de id en kleur variabelen
-# en voeg ze toe in de amerika.svg bestand
+# en voeg ze toe in het gekopieerde bestand
 for line in $(cat $2 | tail -$lines)
 do
         id=$(echo $line | sed 's/,.*//')
         kleur=$(echo $line | sed 's/.*,//')
-        sed -i 's/\(id="'$id'"\)/\1 style="fill:'$kleur';"/' tempkleurenbestand.svg
+        sed -i 's/\(id="'$id'"\)/\1 style="fill:'$kleur';"/' tempkleurenbestand.svg  #sed -i vervangt in het bestand zelf
 done
-convert svg:tempkleurenbestand.svg png:$bestand
+convert svg:tempkleurenbestand.svg png:$bestand #omzetten naar png file
 rm tempkleurenbestand.svg
 exit 0
 
@@ -134,13 +111,13 @@ Inkleuren CGI
 
 #! /bin/bash 
 
-echo "Content-type: text/html"
+echo "Content-type: text/html"  #CGI intro zoals nodig is
 echo
 
-cp amerika.svg tempkleurenbestand.svg
-echo "$QUERY_STRING" | tr "&" "\n" > tempkleur
+cp amerika.svg tempkleurenbestand.svg  #werkwijze analoog aan hierboven, bestand kopiëren om te gebruiken
+echo "$QUERY_STRING" | tr "&" "\n" > tempkleur #argumenten splitsen regel per regel in apart bestand
 
-lines=$(cat tempkleur | wc -l)
+lines=$(cat tempkleur | wc -l)  #analoog werken zoals hierboven, regel per regel id en kleur bepalen en aanpassen
 
 for line in $(cat tempkleur | tail -$lines)
 do
@@ -148,7 +125,7 @@ do
         kleur=$(echo $line | sed 's/.*=//')
         sed -i 's/\(id="'$id'"\)/\1 style="fill:'$kleur'"/I' tempkleurenbestand.svg
 done
-cat tempkleurenbestand.svg
+cat tempkleurenbestand.svg  #html-bestand openenen voor dodona, garbage cleanup erna
 rm tempkleurenbestand.svg
 rm tempkleur
 exit 0
