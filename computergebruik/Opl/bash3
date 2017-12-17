@@ -15,14 +15,14 @@ echo "Content-type: text/plain"     #to-do : iemand die dit uitlegt
 
 echo
 
-for p in ${QUERY_STRING//&/ };do
-kvp=( ${p/=/ } );
-k=${kvp[0]}
+for p in ${QUERY_STRING//&/ };do             #splits input op basis van &'s en doe voor elk:
+kvp=( ${p/=/ } );                            #maak array op basis van =-teken, deel ervoor op pos0, deel erna op pos 1
+k=${kvp[0]}                                  #steek waarden in een variabele, k wordt bijvoorbeeld naam, v is de naam die gebruikt werd
 v=${kvp[1]}
-eval $k=$v
+eval $k=$v                                   #doet naam-expansie, de zin wordt dan naam=Dieter, door eval wordt die waarde in de variabele gestoken
 done
 
-echo Gegroet, $naam
+echo Gegroet, $naam                          #die $naam wordt dan hier gebruikt(kan dus geen 2 juiste namen displayen maar werd niet getest op Dodona
 
 #! /bin/bash
 
