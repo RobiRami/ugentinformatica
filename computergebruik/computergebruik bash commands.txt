@@ -43,6 +43,7 @@ zie ook http://wiki.bash-hackers.org/commands/classictest voor alle mogelijke te
 
 variabele declaratie !!! LET OP MET DE SPATIES, HIER MOGEN ZE NIET!
     var=iets (alles is string based in bash)
+    declare -i var=0 #bash ziet nu deze variabele als een integer, var+=42 is nu geldig en geeft 42 als output
 echo "$var" geeft 'iets' , je kan ook commando output in een variabele steken: var=$(commando | commando...)
 via set -- $(commando | commando... ) geeft $1, $2,.. de waarde van de output gesplit op spaties 
 bv set -- $(sed -n "$3"p "$2") , het sed commando geeft 3 velden V1 V2 V3 met spaties tussen, dan wordt $1 V1, $2 V2, $3 V3
