@@ -39,9 +39,11 @@ Inkleuren
 
 bestand=$(echo "$1" | sed 's/.svg/.png/')
 
+#door refactoring zijn error_svg en error_csv niet nuttig om apart te definiëren maar ik laat ze staan als voorbeeld voor functies
+
 # defineer de error messages
 function error() {
-        echo "Syntaxis: inkleuren svg-bestand csv-bestand" 1>&2
+        echo "Syntaxis: $(basename $0) svg-bestand csv-bestand" 1>&2
 }
 
 function error_svg() {
@@ -54,54 +56,36 @@ function error_csv() {
 # bekijk de argumenten en doe iets
 case $# in
         2)
-                if [[ ! -f $1 || ! -r $1 ]] #bestand 1 is niet leesbaar of bestaat niet
+                if [ ! -r $1 ] #checkt zowel op bestaan als op leesbaarheid
                 then
-                error_svg $1
-        error
-        exit 2
-        else
-                var1=$(file -b $1)  
-                        if [[ $var1 != "SVG Scalable Vector Graphics image" || "$1" != *.svg ]] #bestand1 is geen SVG-file
-                        then
-                        error_svg $1
-                        error
-                        exit 2
-        fi
-fi
-        if [[ ! -f $2 || ! -r $2 ]] #bestand 2 bestaat niet of is niet leesbaar
-        then
-                error_csv $2
-                error
-                exit 3
-        else
-        var2=$(file -b $2)
-        if [[ $var2 != "ASCII text" || "$2" != *.csv ]] #bestand bevat geen leesbare tekst of is geen csv-bestand
-        then
-                error_csv $2
-                error
-                exit 3
-        fi
-fi
+                    error_svg $1
+                    error
+                    exit 2
+                fi
+                if [ ! -r $2 ] #checkt zowel op bestaan als op leesbaarheid
+                then
+                     error_csv $2
+                     error
+                     exit 3
+                fi
 ;;
         *)
         error
         exit 1
 ;;
 esac
-cp $1 tempkleurenbestand.svg  #kopieer svg.bestand om in aan te passen, oorspronkelijk mag niet veranderd worden
-# skip de eerste lijn van het bestand kleuren.csv
-lines=$(echo "$(cat $2 | wc -l) - 1" | bc)
 
-# voor elke lijn in kleuren.csv neem de id en kleur variabelen
-# en voeg ze toe in het gekopieerde bestand
-for line in $(cat $2 | tail -$lines)
+cp $1 tempkleurenbestand.svg #opslaan in temp-bestand om oorspronkelijk niet aan te passen
+
+while read line
 do
-        id=$(echo $line | sed 's/,.*//')
-        kleur=$(echo $line | sed 's/.*,//')
-        sed -i 's/\(id="'$id'"\)/\1 style="fill:'$kleur';"/' tempkleurenbestand.svg  #sed -i vervangt in het bestand zelf
-done
-convert svg:tempkleurenbestand.svg png:$bestand #omzetten naar png file
-rm tempkleurenbestand.svg
+    id=$(echo $line | sed 's/,.*//')
+    kleur=$(echo $line | sed 's/.*,//')
+    sed -i 's/\(id="'$id'"\)/\1 style="fill:'$kleur';"/' tempkleurenbestand.svg  #in-file substitution
+done <<< "$(tail -n +2 $2)"  #alles behalve eerste regel inlezen
+
+convert svg:tempkleurenbestand.svg png:$bestand  #omzetten naar png #captain obvious
+rm tempkleurenbestand.svg  #garbage cleanup
 exit 0
 
 
