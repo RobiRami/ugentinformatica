@@ -117,27 +117,26 @@ do
                 echo "Fout: bestand $file bestaat niet of kan niet gelezen worden"
                 syntaxis
                 exit 3
+        else
+                cat $file >> temppept
         fi
 done
-for file in "$@"
-do
 
-        COMMANDO="egrep '^(.){$min,$max}$' $file"
+COMMANDO="egrep '^(.){$min,$max}$' temppet"
 
-        for ((i=0 ; i< ${#pept[@]} ; i++)); do
+for ((i=0 ; i< ${#pept[@]} ; i++)); do
 
-                COMMANDO+=" | egrep '${pept[i]}'"
-                #letters die erin moeten toevoegen
-        done
-
-        for ((i=0 ; i< ${#niet[@]} ; i++)); do
-
-                COMMANDO+=" | egrep -v '${niet[i]}'"
-                #letters die niet mogen eruithalen
-        done
-        echo "$COMMANDO" | bash
+        COMMANDO+=" | egrep '${pept[i]}'"
+        #letters die erin moeten toevoegen
 done
+
+for ((i=0 ; i< ${#niet[@]} ; i++)); do
+COMMANDO+=" | egrep -v '${niet[i]}'"    #letters die niet mogen eruithalen
+done
+echo "$COMMANDO" | bash
+rm temppept
 exit 0
+
 
 WWGEN Hackerman
 examen 20150817: opgave 4
@@ -223,7 +222,8 @@ examen 20150817: opgave 4
         #vertaal het aantal \n1's door hoe sterk het ww is
     
     WWGEN van le Winnie
-    #! /bin/bash
+    
+#! /bin/bash
 
 function syntaxis() {
         echo "Syntaxis: $(basename $0) [-c] [-p aantal ] [-l lengte ] patroon bestand..."
@@ -269,9 +269,8 @@ patroon=$1
 if [ $lengte -eq 0 ] ; then
         lengte=${#patroon}
 fi
-#bestaat het patroo enkel uit L T en C?
-geldig=$(echo $patroon | tr -d "LTC")
-if [ ! -z $geldig ] ; then
+#bestaat het patroon enkel uit L T en C?
+if [ ! -z $(echo $patroon | tr -d "LTC") ] ; then
         echo "Het patroon mag enkel bestaan uit L, T en C"
         exit 1
 fi
@@ -287,6 +286,8 @@ for file in "$@" ; do
         if [ ! -r $file ] ; then
                 echo "Ongeldig, onleesbaar of onbestaand bestand: $file"
                 exit 2
+        else
+                cat $file >> tempwords
         fi
 done
 #criteria voor wachtwoordscore berekenen
@@ -318,16 +319,16 @@ for (( j=0 ; j< $aantal ; j++)) ; do
         fi
         declare -i punten=0
         declare -i matches=0
-        for file in "$@" ; do
-                if [ grep -q '$pwd' $file &> /dev/null ] ; then
-                        matches+=1 #komt het wachtwoord voor in de bestanden?
-                fi
-        done
+        if [ grep -q '$pwd' tempwords &> /dev/null ] ; then
+                matches+=1 #komt het wachtwoord voor in de bestanden?
+        fi
         if [ $matches -eq 0 ] ; then
                 punten+=1
         fi
         scoreberekening $pwd
         echo "$pwd ${score[$punten]}"
 done
+rm tempwords
 exit 0
+
 
