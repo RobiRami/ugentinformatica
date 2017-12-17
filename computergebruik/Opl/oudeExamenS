@@ -58,6 +58,74 @@ examen 20150108: opgave 5
     cat tempFile
     rm tempFile
 
+PEPFILTER alternatief 
+#! /bin/bash
+
+#lokale variabelen en error-msg
+function syntaxis() {
+        echo "Syntaxis : $(basename $0) [-m arg ] [-M arg] [-c arg] [-l arg] file ..."
+}
+min=1
+max=100
+pept=()
+niet=() #pept: welke moeten, niet:welke mogen niet
+while getopts ":m:M:c:l:" opt; do
+        case "$opt" in
+                m)  min=$OPTARG
+                ;;
+                M) max=$OPTARG
+                        ;;
+                c)for (( i=0 ; i < ${#OPTARG} ; i++ )); do
+                        pept[i]=${OPTARG:i:1};
+                        #karakter per karakter opslaan in array
+                        done
+                        ;;
+                l)for (( i=0 ; i < ${#OPTARG} ; i++ )); do
+                        niet[i]=${OPTARG:i:1};
+                        #analoog aan pept
+                        done
+                        ;;
+                \?) echo "Fout: onbekende optie: $OPTARG"
+                        syntaxis
+                        exit 1
+                        ;;
+        esac
+done
+shift $((OPTIND -1))
+if [ $# -eq 0 ] ; then
+        echo "Fout: er werden geen bestanden opgegeven"
+        syntaxis
+        exit 2
+fi
+for file in "$@"
+do
+        if [ ! -r $file ] ; then
+                echo "Fout: bestand $file bestaat niet of kan niet gelezen worden"
+                syntaxis
+                exit 3
+        fi
+done
+for file in "$@"
+do
+
+        COMMANDO="egrep '^(.){$min,$max}$' $file"
+
+        for ((i=0 ; i< ${#pept[@]} ; i++)); do
+
+                COMMANDO+=" | egrep '${pept[i]}'"
+                #letters die erin moeten toevoegen
+        done
+
+        for ((i=0 ; i< ${#niet[@]} ; i++)); do
+
+                COMMANDO+=" | egrep -v '${niet[i]}'"
+                #letters die niet mogen eruithalen
+        done
+        echo "$COMMANDO" | bash
+done
+exit 0
+
+WWGEN Hackerman
 examen 20150817: opgave 4
     #!bin/bash
     head /dev/random | tr -dc 'A-Za-z0-9,.!@#$%^&*()][{};":?-_+=' | head -c 250 >> pwList
@@ -127,6 +195,7 @@ examen 20150817: opgave 4
     sed 's/[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*(\n1){4}[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*/ sterk/g'
     sed 's/[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*(\n1){5}[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*/ zeer sterk/g'
     
+    WWGEN van le me
     #! /bin/bash
 
 function syntaxis() {
