@@ -24,7 +24,7 @@ examen 20150108: opgave 3
 examen 20150108: opgave 5
 
     #!bin\bash
-    for $file in $@
+    for $file in $@   #eerst opties verwerken, dan files via shift, dit gaat niet runnen
     do
         if [ ! -r $file ] ; then
             echo "Fout bestand $file bestaat niet of kan niet gelezen worden" 1>&2
@@ -40,7 +40,7 @@ examen 20150108: opgave 5
 
     while getopts ':m:M:c:l:'
     do
-        case "$opt" in
+        case "$opt" in      #tempfile bestaat dus nog niet, dit gaat niet lukken :/
             c ) index=0
                 while [[ index < ${#OPTARG} ]]; do
                     subString=${string:$index:1}
@@ -144,13 +144,13 @@ examen 20150817: opgave 4
     #!bin/bash
     head /dev/random | tr -dc 'A-Za-z0-9,.!@#$%^&*()][{};":?-_+=' | head -c 250 >> pwList
         #geeft een aantal random chars, delete alles wat niet A-Za-z0-9,.!@#$%^&*()][{};":?-_+= is en neem dan de eerste 250 chars als
-    negaties=5
+    negaties=5 
         #zet de default negaties op 5
     numberOfL=$(cat $1 | grep -c 'L')
     numberOfT=$(cat $1 | grep -c 'T')
     numberOfC=$(cat $1 | grep -c 'C')
         #geeft het aantal CTL's terug
-
+        #gaat niet met cat, $1 is een string, je moet ze anders tellen en eerst opties verwerken, hier krijg je 100% errors
     while getopts ':cl:p:'
     do
         case "$opt" in
@@ -169,7 +169,7 @@ examen 20150817: opgave 4
         #het aantal dat we moeten hebben na de eerste x negaties, dus tail van dat aantal
     tail -n $aantal >> pwList
 
-    for $file in $@
+    for $file in $@             #geen idee of dit werkt er moet sws een shift gebeuren na de opties wel
     do
         cat $@ >> words
             #alle bestanden in een tempfile genaamd words steken
