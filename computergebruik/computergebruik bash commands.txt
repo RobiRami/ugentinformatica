@@ -92,3 +92,6 @@ case "$opt" in
 
 join -t $'\t' file1 file2
     joint de 2 bestanden op de \t
+
+input redirection to file
+    tee testFile &>/dev/null
