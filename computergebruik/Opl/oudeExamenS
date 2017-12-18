@@ -331,4 +331,58 @@ done
 rm tempwords
 exit 0
 
+Donald "Donut" Knuth
+
+#! /bin/bash
+
+declare -i case=0
+declare -i min=0
+declare -i max=100
+syntaxis="Syntaxis: gebruikersnamen naam -i -m <int> -M <int> [woordenlijst]"
+while getopts ":im:M:" opt ; do
+        case "$opt" in
+                i) case+=1
+                        ;;
+                m) min=$OPTARG
+                        ;;
+                M)max=$OPTARG
+                        ;;
+                \?) echo "$syntaxis" 1>&2
+                        exit 1
+                        ;;
+        esac
+done
+shift $((OPTIND -1))
+if [ $# -ne 2 -a $# -ne 1 ] ; then #geen patroon of te veel argumenten
+        echo "$syntaxis" 1>&2
+        exit 1
+fi
+patroon=$(echo $1 | tr -cd "a-zA-Z"| sed 's/./&?/g') #naam omzetten naar letter?letter?...
+
+if [ $case -eq 1 ] ; then
+command="egrep -i '^$patroon$' tmpwd"  #case insensitive greppen
+else
+command="egrep '^$patroon$' tmpwd" #niet case-sensitive
+fi
+if [ $# -eq 1 ] ; then
+        tee tmpwd &> /dev/null #stdin redirecten
+elif [ $# -eq 2 ] ; then
+
+        if [ $# -eq 2 -a ! -r $2 ] ; then
+                echo "$(basename $0): bestand \"$2\" bestaat niet of is onleesbaar" 1>&2
+                exit 2
+        else
+                cat $2 >> tmpwd
+        fi
+fi
+echo "$command" | bash | sort | egrep "^.{$min,$max}$" > final #alles naar tempfile voor laatste check
+rm tmpwd
+if [ $(cat final | wc -l) -eq 0 ] ; then
+        echo "$(basename $0): geen gebruikersnamen gevonden voor \"$1\"" 1>&2
+        exit 3
+else
+cat final
+fi
+rm final
+exit 0
 
