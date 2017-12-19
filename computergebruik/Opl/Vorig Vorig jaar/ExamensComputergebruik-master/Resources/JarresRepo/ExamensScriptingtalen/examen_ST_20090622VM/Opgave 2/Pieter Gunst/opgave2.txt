@@ -1,0 +1,78 @@
+##### Opgave 2: srt_one_line.sed #####
+
+/[A-Za-z]/{
+:label
+N
+s/\(.\)[ \t]*\n[ \t]*\(.\)/\1 \2/
+t label
+}
+
+
+
+##### Opgave 2: code srt_adjust_time #####
+#!/bin/bash
+
+# grootste problemen hier is werken met die getallen
+# ze worden doorgeven met komma's ma intern werken ze met .
+# als getal afgerond is valt komma/punt ook weg
+# aanpak: opsplitsen in velden in array hms = hour 1 minute 2 second 3
+# daarna gwn prutswerk voor optellen aftrekken en 0'en plaatsen
+
+gawk -v time=$2 '
+/-->/ {
+a=1
+split($0,tijden," --> ")
+for( tijd in tijden ){
+        split(tijden[tijd],hms,":")
+        gsub(",",".",hms[3])
+        hms[3]+=time
+        if (hms[3] >= 60){
+                hms[3]-=60
+                hms[2]++
+                if (hms[2] >= 60){
+                        hms[2]-=60
+                        hms[1]++
+                }
+        }
+        if (hms[3] < 0){
+                hms[2]--
+                hms[3]=60+hms[3]
+        }
+        if (hms[2] < 0){
+                hms[1]--
+                hms[2]=60+hms[2]
+        }
+        if (hms[1] < 0){
+                hms[1]="00"
+                hms[2]="00"
+                hms[3]="00"
+        }
+        gsub(/\./,",",hms[3])
+        if (length(substr(hms[3],1,match(hms[3],",")-1)) == 1){
+                hms[3]="0" hms[3]
+        }
+        if (length(hms[3]) == 1){
+                hms[3]="0" hms[3]
+        }
+        if (match(hms[3],",")){
+                hms[3]=hms[3] "00"
+        }else{
+                hms[3]=hms[3] ",000"
+        }
+        if (length(hms[2]) == 1){
+                hms[2]="0" hms[2]
+        }
+        if (length(hms[1]) == 1){
+                hms[1]="0" hms[1]
+        }
+
+        tijdstring[a]=hms[1] ":" hms[2] ":" hms[3]
+        a++
+}
+print tijdstring[1] " --> " tijdstring[2]
+next
+}
+{ print }
+' $1
+
+

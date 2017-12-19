@@ -1,0 +1,84 @@
+Bash Programming Cheat Sheet
+##1)Conditions
+⦁	if [test]; then supports
+⦁	  file based-conditions
+⦁	  string-based conditions
+⦁	  arithmetic conditions
+⦁	if [[test]]; then supports
+⦁	  shell globbing: if [[$v == *[sS]tr]]
+		  returns true if v ends in string or String
+⦁	  prevents word splitting
+		  v= "Hello World"
+		  if [[ $v == "Hello World" ]]; then works
+⦁	  NO fileame expansion= *.sh
+		  means litterally *.sh (note : does work in [], but if multiple files ==> 			errors;crash)
+⦁	  || and &&
+⦁	  str = ~ regex: true if str match regex pattern
+⦁	if ((test)) ; then supports only:
+⦁	  n==n'
+⦁	  n!=n'
+⦁	  n>n'
+⦁	  n<n'
+⦁	  n>=n'
+⦁	  n<=n'
+⦁	  || and &&
+
+##2) For loops 
+	2 methods for for loops 1; for var in list 2; for (( i=0; i<xi, i++))
+1.for var in val1 val2 val 3; do
+	<Commando>
+  done
+2.values ="val1 val2 val3"
+  for var in $values ;do 
+	<Commando>
+  done
+3.Idem dito aan 2?
+4.for var; do
+	<commando>
+  done
+5.for file in *;do
+	<Commando>
+  done
+6.break;
+7.continue;
+8.for var in {1..5};do
+	<Commando>
+  done
+9.for var in {1...5...2};do
+	<Commando>
+  done
+  
+##Arrays
+1.Creating arrays:
+	arr= ("val1" "val2" "val3")
+2.Put all files from working dir in array
+	arr=(*)
+DO NOTE USE LS	
+3.Adding/changing values
+	arr[0]="new"
+4.using in for:
+	for val in "${arr[0]}"; do
+5.getting values:
+	val =${arr[0]}
+
+##Getopts
+while getopts ":ab:c" opt;do
+	case $opt in
+		a) #verwerk
+		;;
+		b) #verwerk;$OPTARG= argumenten van die flag (vb -c10)
+		;;
+		c) #verwerk
+		;;
+		\?) echo "syntax: $0 [-a] [-b arg] [-c] args" 1>&2
+		exit 1
+	esac
+shift $((OPTIND-1))
+==> Dubbelpunt in begin v. optstring ondrukt meldingen v getopts;
+	: na opt geeft verplicht argument
+	\?) verwerkt unknown argument
+	$OPTIND bevat pos v volgende arg; na while best dit pos v eerste argument.
+
+$* geeft d rest van de tekst weer die na de arguments kwam.
+		
+	

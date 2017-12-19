@@ -1,0 +1,26 @@
+### OPGAVE 3 ##########################################################
+
+1.a) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+1.b) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+1.c) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+1.d) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+
+2.a) commando: <plaats hier het gebruikte commando>
+     woord: <plaats hier het gevonden woord>
+
+2.b) commando: <plaats hier het gebruikte commando>
+     woord: <plaats hier het gevonden woord>
+
+2.c) commando: <plaats hier het gebruikte commando>
+     woord: <plaats hier het gevonden woord>
+
+2.d) commando: <plaats hier het gebruikte commando>
+     woord: <plaats hier het gevonden woord>

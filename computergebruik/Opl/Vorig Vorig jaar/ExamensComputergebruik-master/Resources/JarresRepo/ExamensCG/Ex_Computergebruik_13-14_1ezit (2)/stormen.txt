@@ -1,0 +1,85 @@
+| Year | # | Name | Date | Wind | Pres | Cat |
+| 2013 | 1 | Tropical Storm ANDREA | 05-07 JUN |  55 |  |  - |
+| 2013 | 2 | Tropical Storm BARRY | 17-20 JUN |  40 | 1003 |  - |
+| 2013 | 3 | Tropical Storm CHANTAL | 08-10 JUL |  55 | 1005 |  - |
+| 2013 | 4 | Tropical Storm DORIAN | 24 JUL-03 AUG |  50 |  999 |  - |
+| 2013 | 5 | Tropical Storm ERIN | 15-18 AUG |  35 | 1006 |  - |
+| 2013 | 6 | Tropical Storm FERNAND | 25-26 AUG |  45 | 1001 |  - |
+| 2013 | 7 | Tropical Storm GABRIELLE | 04-13 SEP |  50 |  |  - |
+| 2013 | 8 | Tropical Depression EIGHT | 06-07 SEP |  30 |  |  - |
+| 2013 | 9 | Hurricane-1 HUMBERTO | 08-19 SEP |  75 |  982 |  1 |
+| 2013 | 10 | Hurricane-1 INGRID | 12-17 SEP |  75 |  983 |  1 |
+| 2013 | 11 | Tropical Storm JERRY | 29 SEP-03 OCT |  45 | 1005 |  - |
+| 2013 | 12 | Tropical Storm KAREN | 03-06 OCT |  55 |  999 |  - |
+| 2013 | 13 | Tropical Storm LORENZO | 21-24 OCT |  45 | 1003 |  - |
+| 2013 | 14 | Tropical Storm MELISSA | 18-21 NOV |  55 |  980 |  - |
+| 2012 | 1 | Tropical Storm ALBERTO | 19-22 MAY |  45 |  998 |  - |
+| 2012 | 2 | Tropical Storm BERYL | 26-30 MAY |  60 |  992 |  - |
+| 2012 | 3 | Hurricane-1 CHRIS | 19-22 JUN |  65 |  987 |  1 |
+| 2012 | 4 | Tropical Storm DEBBY | 23-27 JUN |  50 |  990 |  - |
+| 2012 | 5 | Hurricane-1 ERNESTO | 01-10 AUG |  75 |  980 |  1 |
+| 2012 | 6 | Tropical Storm FLORENCE | 04-06 AUG |  50 | 1000 |  - |
+| 2012 | 7 | Hurricane-2 GORDON | 15-20 AUG |  95 |  965 |  2 |
+| 2012 | 8 | Tropical Storm HELENE | 09-18 AUG |  40 | 1004 |  - |
+| 2012 | 9 | Hurricane-1 ISAAC | 21 AUG-01 SEP |  70 |  968 |  1 |
+| 2012 | 10 | Tropical Storm JOYCE | 22-24 AUG |  35 | 1006 |  - |
+| 2012 | 11 | Hurricane-2 KIRK | 28 AUG-02 SEP |  90 |  970 |  2 |
+| 2012 | 12 | Hurricane-1 LESLIE | 30 AUG-11 SEP |  65 | 968 |  1 |
+| 2012 | 13 | Hurricane-3 MICHAEL | 03-11 SEP | 100 |  964 |  3 |
+| 2012 | 14 | Hurricane-1 NADINE | 11 SEP-04 OCT |  80 |  978 |  1 |
+| 2012 | 15 | Tropical Storm OSCAR | 03-05 OCT |  45 |  997 |  - |
+| 2012 | 16 | Tropical Storm PATTY | 11-13 OCT |  40 | 1005 |  - |
+| 2012 | 17 | Hurricane-1 RAFAEL | 12-17 OCT |  80 |  969 |  1 |
+| 2012 | 18 | Hurricane-2 SANDY | 22-29 OCT |  95 |  940 |  2 |
+| 2012 | 19 | Tropical Storm TONY | 22-25 OCT |  45 | 1000 |  - |
+| 2011 | 1 | Tropical Storm ARLENE | 29 JUN-01 JUL |  55 |  993 |  - |
+| 2011 | 2 | Tropical Storm BRET | 17-22 JUL |  55 |  996 |  - |
+| 2011 | 3 | Tropical Storm CINDY | 20-22 JUL |  50 | 1000 |  - |
+| 2011 | 4 | Tropical Storm DON | 27-30 JUL |  45 |  998 |  - |
+| 2011 | 5 | Tropical Storm EMILY | 01-07 AUG |  45 |  |  - |
+| 2011 | 6 | Tropical Storm FRANKLIN | 12-13 AUG |  40 | 1004 |  - |
+| 2011 | 7 | Tropical Storm GERT | 14-16 AUG |  50 | 1000 |  - |
+| 2011 | 8 | Tropical Storm HARVEY | 19-22 AUG |  50 |  994 |  - |
+| 2011 | 9 | Hurricane-3 IRENE | 20-29 AUG | 105 |  942 |  3 |
+| 2011 | 10 | Tropical Depression TEN | 25-26 AUG |  30 | 1007 |  - |
+| 2011 | 11 | Tropical Storm JOSE | 28-29 AUG |  40 | 1007 |  - |
+| 2011 | 12 | Hurricane-4 KATIA | 29 AUG-10 SEP | 115 |  |  4 |
+| 2011 | 13 | Tropical Storm LEE | 02-05 SEP |  50 |  986 |  - |
+| 2011 | 14 | Hurricane-1 MARIA | 06-16 SEP |  70 |  979 |  1 |
+| 2011 | 15 | Tropical Storm NATE | 07-11 SEP |  60 |  994 |  - |
+| 2011 | 16 | Hurricane-4 OPHELIA | 21 SEP-03 OCT | 120 |  940 |  4 |
+| 2011 | 17 | Hurricane-1 PHILIPPE | 24 SEP-08 OCT |  80 |  976 |  1 |
+| 2011 | 18 | Hurricane-2 RINA | 23-28 OCT |  95 |  966 |  2 |
+| 2011 | 19 | Tropical Storm SEAN | 08-11 NOV |  55 |  983 |  - |
+| 2010 | 1 | Hurricane-2 ALEX | 25 JUN-02 JUL |  85 |  947 |  2 |
+| 2010 | 2 | Tropical Depression TWO | 08-09 JUL |  30 | 1005 |  - |
+| 2010 | 3 | Tropical Storm BONNIE | 22-24 JUL |  35 | 1006 |  - |
+| 2010 | 4 | Tropical Storm COLIN | 02-08 AUG |  50 |  |  - |
+| 2010 | 5 | Tropical Depression FIVE | 10-11 AUG |  30 | 1007 |  - |
+| 2010 | 6 | Hurricane-4 DANIELLE | 21-31 AUG | 115 |  942 |  4 |
+| 2010 | 7 | Hurricane-4 EARL | 25 AUG-05 SEP | 125 |  928 |  4 |
+| 2010 | 8 | Tropical Storm FIONA | 30 AUG-04 SEP |  50 |  997 |  - |
+| 2010 | 9 | Tropical Storm GASTON | 01-02 SEP |  35 | 1005 |  - |
+| 2010 | 10 | Tropical Storm HERMINE | 06-09 SEP |  55 |  991 |  - |
+| 2010 | 11 | Hurricane-4 IGOR | 08-21 SEP | 135 |  |  4 |
+| 2010 | 12 | Hurricane-4 JULIA | 12-20 SEP | 115 |  950 |  4 |
+| 2010 | 13 | Hurricane-3 KARL | 14-18 SEP | 105 |  956 |  3 |
+| 2010 | 14 | Hurricane-1 LISA | 21-26 SEP |  70 |  987 |  1 |
+| 2010 | 15 | Tropical Storm MATTHEW | 23-26 SEP |  45 |  998 |  - |
+| 2010 | 16 | Tropical Storm NICOLE | 28-29 SEP |  35 |  996 |  - |
+| 2010 | 17 | Hurricane-1 OTTO | 06-10 OCT |  75 |  972 |  1 |
+| 2010 | 18 | Hurricane-2 PAULA | 11-15 OCT |  85 |  |  2 |
+| 2010 | 19 | Tropical Storm RICHARD | 21-26 OCT |  40 | 1004 |  - |
+| 2010 | 20 | Hurricane-1 SHARY | 29-30 OCT |  65 |  989 |  1 |
+| 2010 | 21 | Hurricane-2 TOMAS | 29 OCT-07 NOV |  85 |  982 |  2 |
+| 2009 | 1 | Tropical Depression ONE | 28-29 MAY |  30 | 1006 |  - |
+| 2009 | 2 | Tropical Storm ANA | 11-17 AUG |  35 |  |  - |
+| 2009 | 3 | Hurricane-4 BILL | 15-24 AUG | 115 |  |  4 |
+| 2009 | 4 | Tropical Storm CLAUDETTE | 16-18 AUG |  45 |  |  - |
+| 2009 | 5 | Tropical Storm DANNY | 26-29 AUG |  50 |  |  - |
+| 2009 | 6 | Tropical Storm ERIKA | 01-04 SEP |  50 | 1004 |  - |
+| 2009 | 7 | Hurricane-3 FRED | 07-12 SEP | 105 |  958 |  3 |
+| 2009 | 8 | Tropical Depression EIGHT | 25-26 SEP |  30 | 1008 |  - |
+| 2009 | 9 | Tropical Storm GRACE | 05-06 OCT |  60 |  986 |  - |
+| 2009 | 10 | Tropical Storm HENRI | 06-08 OCT |  45 | 1005 |  - |
+| 2009 | 11 | Hurricane-2 IDA | 04-10 NOV |  90 |  |  2 |

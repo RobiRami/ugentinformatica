@@ -1,0 +1,16 @@
+
+1)
+
+<plaats hier je commando>
+
+2)
+
+<plaats hier je commando>
+
+3)
+
+<plaats hier je commando>
+
+4)
+
+<plaats hier de inhoud van het shell script deelbaar>

@@ -1,0 +1,18 @@
+
+1)
+
+<plaats hier je commando>
+
+2)
+
+    a) <plaats hier je commando>
+
+    b) <plaats hier je commando>
+
+3)
+
+<plaats hier de inhoud van het shell script narcistisch>
+
+4)
+
+<plaats hier de inhoud van het shell script woordkubus>

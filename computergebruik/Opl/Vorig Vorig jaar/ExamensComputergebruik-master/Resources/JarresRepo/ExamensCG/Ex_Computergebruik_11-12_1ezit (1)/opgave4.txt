@@ -1,0 +1,29 @@
+### OPGAVE 4 #######################
+
+1.a) 
+
+i) <plak hier je shell script caps>
+
+ii) <plak hier je shell script drop>
+
+iii) <plak hier je shell script lines>
+
+1.b)
+
+i) <plak hier je commando>
+
+ii) <plak hier je commando>
+
+iii) <plak hier je commando>
+
+2.a) 
+
+i) <plak hier je shell script combine>
+
+ii) <plak hier je shell script chains>
+
+2.b)
+
+i) <plak hier je commando>
+
+ii) <plak hier je commando>

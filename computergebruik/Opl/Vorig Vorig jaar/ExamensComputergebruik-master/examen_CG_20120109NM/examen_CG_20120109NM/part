@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cat > temp_part
+length=$(cat temp_part| wc -l)
+cat temp_part | tail -n $(($length+1-$1))
+rm temp_part

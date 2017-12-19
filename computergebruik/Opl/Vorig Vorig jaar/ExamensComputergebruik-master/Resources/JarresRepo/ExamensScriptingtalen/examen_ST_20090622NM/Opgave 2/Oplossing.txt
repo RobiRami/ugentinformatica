@@ -1,0 +1,57 @@
+#!/bin/bash
+function is_integer() {
+        if [ "$1" -eq "$1" ]
+                then
+                return 1
+        else
+                return 0
+        fi
+}
+if [ ! -f $1 -o ! -r $1 ]
+        then
+        echo "Bestand $1 is niet bruikbaar"
+        exit 1
+fi
+min=3
+max=7
+if [ $# > 1 ]
+then
+        if [ $2 -ge 0 -a $2 -eq $2 ] 2> /dev/null
+                then
+                min=$2
+        fi
+fi
+if [ $# > 2 ]
+then
+        if [ $3 -ge 0 -a $3 -eq $3 ] 2> /dev/null
+                then
+                if [ $3 -le $2 ]
+                then
+                        echo "Minimum moet kleiner zijn dan maximum"
+                else
+                        max=$3
+                fi
+        fi
+fi
+gawk -v min="$min" -v max="$max" '
+BEGIN {
+        counter = 0
+}
+{
+        woord[counter] = $0
+        counter++
+ }
+END{
+        for(wrd=0;wrd<counter;wrd++){
+                for(i=min;i<=max;i++) {
+                        zoekstring = substr(woord[wrd],length(woord[wrd])-i+1,i)
+                        for(j=0;j<counter;j++) {
+                                if(match(woord[j],zoekstring)==1 && woord[j] != woord[wrd] && length(zoekstring) == i && woord[wrd] != zoekstring && woord[j] != zoekstring) {
+                                        eerstedeel=substr(woord[wrd],0,length(woord[wrd])-i)
+                                        tweededeel=substr(woord[j],i+1,length(woord[j])-1)
+                                        print eerstedeel"-"toupper(zoekstring)"-"tweededeel
+                                }
+                        }
+                }
+        }
+}' $1

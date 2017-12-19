@@ -1,0 +1,60 @@
+### OPGAVE 2 #########################################################
+
+#n
+
+1{h;n}
+
+2{s/.*/    &/;p}
+
+3{
+s/Su/Sun/;s/Mo/Mon/;s/Tu/Tue/
+s/We/Wed/;s/Th/Thu/;s/Fr/Fri/
+s/Sa/Sat/
+p
+}
+
+4,${
+s/   /    /
+# marker voor en na de regel plaatsen
+s/.*/\n&\n/
+# resterende configuratie opvragen
+G
+:done
+# regel wijzigen zolang niet alle dagen bijhorend symbool gekregen hebben
+# indeling bij begin is:
+# \n regel \n\n config
+# bij elke wijzigen verschijft voorste marker en laatste marker, middelste verplaats niet
+s/\(.*\)\n\( *\)\([0-9]\+\)\(.*\)\n\(.*\)\n\([0-9]\+\)\(.\)\(.*\)$/\1\2\3\7\n\4\n\5\6\7\n\8/
+t done
+# print de regel trg met symbolen
+P
+# snij in alles tot en met laatste marker af, die bevat regel en config die we al gebruikt hebben
+# dingen die we niet meer nodig hebben dus, daarna trg plaatsen naar holdspace
+s/.*\n//
+h
+}
+
+
+zonder commentaar:
+
+#n
+
+1{h;n}
+2{s/.*/    &/;p}
+3{
+s/Su/Sun/;s/Mo/Mon/;s/Tu/Tue/
+s/We/Wed/;s/Th/Thu/;s/Fr/Fri/
+s/Sa/Sat/
+p
+}
+4,${
+s/   /    /
+s/.*/\n&\n/
+G
+:done
+s/\(.*\)\n\( *\)\([0-9]\+\)\(.*\)\n\(.*\)\n\([0-9]\+\)\(.\)\(.*\)$/\1\2\3\7\n\4\n\5\6\7\n\8/
+t done
+P
+s/.*\n//
+h
+}

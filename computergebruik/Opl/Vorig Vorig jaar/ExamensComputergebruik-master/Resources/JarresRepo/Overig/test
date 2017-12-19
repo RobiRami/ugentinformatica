@@ -1,0 +1,5 @@
+read input 
+while [ "$input" != "$paswoord" ]
+do
+read poging
+done

@@ -1,0 +1,1 @@
+paste -d "" $@ | sort | uniq -c | sort -nr | head -26

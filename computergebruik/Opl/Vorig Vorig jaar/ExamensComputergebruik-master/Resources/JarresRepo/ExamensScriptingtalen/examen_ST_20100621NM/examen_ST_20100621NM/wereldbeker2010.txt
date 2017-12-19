@@ -1,0 +1,54 @@
+# eerste ronde
+South Africa,Mexico,2-1,A
+Uruguay,France,1-2,A
+Argentina,Nigeria,2-1,B
+South Korea,Greece,0-1,B
+England,USA,1-1,C
+Algeria,Slovenia,2-4,C
+Germany,Australia,0-1,D
+Serbia,Ghana,0-0,D
+Netherlands,Denmark,1-0,E
+Japan,Cameroon,0-0,E
+Italy,Paraguay,0-2,F
+New Zealand,Slovakia,1-1,F
+Ivory Coast,Portugal,2-1,G
+Brazil,North Korea,1-0,G
+Honduras,Chile,1-2,H
+Spain,Switzerland,1-1,H
+
+# tweede ronde
+South Africa,Uruguay,0-2,A
+France,Mexico,3-0,A
+Greece,Nigeria,1-0,B
+Argentina,South Korea,1-0,B
+Germany,Serbia,2-0,D
+Slovenia,USA,0-2,C
+England,Algeria,1-1,C
+Ghana,Australia,3-0,D
+Netherlands,Japan,1-0,E
+Cameroon,Denmark,3-1,E
+Slovakia,Paraguay,1-1,F
+Italy,New Zealand,3-0,F
+Ivory Coast,Brazil,0-1,G
+North Korea,Portugal,0-0,G
+Switzerland,Chile,2-1,H
+Honduras,Spain,0-0,H
+
+# derde ronde
+Mexico,Uruguay,0-0,A
+South Africa,France,1-1,A
+Nigeria,South Korea,1-0,B
+Argentina,Greece,0-1,B
+England,Slovenia,2-2,C
+USA,Algeria,2-0,C
+Germany,Ghana,3-0,D
+Australia,Serbia,2-3,D
+Italy,Slovakia,1-1,F
+Paraguay,New Zealand,2-1,F
+Denmark,Japan,2-0,E
+Netherlands,Cameroon,1-1,E
+Portugal,Brazil,0-1,G
+Ivory Coast,North Korea,1-2,G
+Chile,Spain,0-0,H
+Honduras,Switzerland,0-0,H
+

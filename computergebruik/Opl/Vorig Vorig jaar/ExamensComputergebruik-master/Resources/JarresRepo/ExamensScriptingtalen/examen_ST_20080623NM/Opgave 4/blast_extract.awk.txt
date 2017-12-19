@@ -1,0 +1,15 @@
+$1 ~ />/ {
+        counter++
+}
+counter == hit && pr != 1 {
+        pr = 1
+        ab = NR
+        counter++
+}
+NR > ab+5 && $1 ~ /Score/ {
+        pr = 0
+}
+pr == 1 {
+        print last
+        last = $0
+}

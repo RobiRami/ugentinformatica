@@ -1,0 +1,76 @@
+
+1)
+
+tr 'qwertasdfgzxcvyuiophjkl;bnm,QWERTASDFGZXCVYUIOPHJKL;BNM,' 'yuiophjkl;bnm,qwertasdfgzxcvYUIOPHJKL;BNM,QWERTASDFGZXCV'
+(deze oefening hebben we gemaakt in het werkcollege)
+
+2)
+
+#### NISTRIJB: alternatieve oplossingen
+
+    a)	find -name "*_*" -type f -print | rename 's/\/([^_]*)_([^_]*)$/\/$1$2/g'
+    of
+    a) find -name "*_*" -type f -print | sed 'p;'s/\/\([^_]*\)_\([^_]*\)$/\/\1\2/g' | xargs -n2 mv
+    
+    b) find -name "*_*" -print | sed 'p;'s/_//g' | xargs -n2 mv
+    
+#### NISTRIJB ####  
+
+    a) find testdir -regex '.*/.*_[^/]*$' -type f  | sed 's,^\(.*\)/\([^/]*\)_\([^/]*\)$,mv \1/\2_\3 \1/\2\3,' | bash
+		Mlucouss: Is het mijne niet simpeler? find . -type f| sed 's/_//g'
+    b) find testdir | sed 's/_//g' 
+
+3)
+
+#! /bin/bash
+
+#Controleer of er 2 argumenten meegegeven werden
+if [ $# -ne 2 ]
+then
+	echo "Gebruik: $0 k n"
+	exit 1
+fi
+echo "$1" | sed 's/\(.\)/\1\n/g' | sed '/^$/d' | sed "s/^\(.*\)$/(\1)^$2/" | paste -sd+ | bc
+
+#### NISTRIJB : alternatief voor, is net iets korter nog.
+
+echo $1 | grep -o '.' | sed "s/./ & ^ $2 +/" | tr -d '\n' | sed 's/.$/\n/' | bc
+
+#### NISTRIJB ####
+
+Mathieu's oplossing:
+	#!bin/bash
+	#De argumenten checken
+
+	if [ $# -ne 2 ]
+	then
+   		echo "Usage: bash narcistisch <Argument 1><Argument 2>"
+        	exit 1
+	fi
+
+	#Opslaan vd variablen
+	input1=$1
+	input2=$2
+	
+	#Berekeningen
+	x=0
+	y=${#input1}
+	tempsum=0
+	while [ $x -lt $y ]
+	do
+        	x=$((x+1))
+        	number=$(echo "$1" | cut -c $x)
+
+	        tempX=$(echo "$number^$input2" | bc)
+        	tempsum=$(echo "$tempsum + $tempX" | bc)
+
+	done
+
+	echo $tempsum
+
+4)
+
+#!/bin/bash
+paste <(cat /usr/share/dict/words | sed "s/$1//I;s/$2//I;s/$3//I;s/$4//I;s/$5//I;s/$6//I;s/$7//I;s/$8//I;s/$9//I") /usr/share/dict/words | grep -P '^\t' | grep -i "$5" | tr -d '\t' | grep '....'
+
+#Thnx to Jaques

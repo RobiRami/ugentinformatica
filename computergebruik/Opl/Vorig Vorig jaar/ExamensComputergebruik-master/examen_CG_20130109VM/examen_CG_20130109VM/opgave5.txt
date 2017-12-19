@@ -1,0 +1,2 @@
+
+<plaats hier de code van het shell script logstroken>

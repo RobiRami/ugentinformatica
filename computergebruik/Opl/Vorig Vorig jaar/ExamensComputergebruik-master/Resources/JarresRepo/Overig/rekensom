@@ -1,0 +1,66 @@
+#!/bin/bash
+####FUNCTIES####
+max () {
+oldlength=0
+for line in $@
+do
+length=`echo $line | wc -c`
+if [ $length -gt $oldlength ]; then
+oldlength=`echo $(($length-1))`
+fi
+done
+echo $oldlength
+}
+########
+opmaak () {
+max=`max $1 $2 $3`
+echo -n " "; printf "%*s\n" $max "$1"
+echo -n "+"; printf "%*s\n" $max "$2"
+while [ $max -gt -1 ]; do
+echo -n "-"
+max=`expr $max - 1`
+done
+echo
+echo -n "="; printf "%*s\n" $max "$3"
+}
+########
+controleer_som () {
+if [ $# -lt 2 ]; then
+echo "Minstens 2 argumenten moeten meegegeven worden"
+fi
+for num in $@
+do
+sommatie=`expr $sum1 + $num`
+echo $sommatie
+done
+if [ $(($sommatie-${!#})) -eq ${!#} ]; then
+echo "Correct som!"
+else
+echo "Foutieve som!"
+fi
+}
+############################
+#####CONTROLE ARG###########
+############################
+usage () { echo "Syntax: $0: ARG1 ARG2 ARG3 CODE"; exit 1; }
+if [ ! $# -eq  4 ]; then
+usage
+fi
+arg1=$(echo $1 | egrep -c "^[A-Z]+$")
+arg2=$(echo $2 | egrep -c "^[A-Z]+$")
+arg3=$(echo $3 | egrep -c "^[A-Z]+$")
+if [ ! $arg1 = 1 -o ! $arg2 -eq 1 -o ! $arg3 -eq 1 ]; then
+usage
+fi
+tmp=`echo "$1$2$3" | sed 's/[A-z]/&\n/g' | sort | uniq | tr -d '\n'`
+if [ ! $(echo $tmp |wc -c) -eq $(echo $4 | wc -c) ]; then
+usage
+fi
+num1=`echo "$1" | tr "$tmp" "$4"`
+num2=`echo "$2" | tr "$tmp" "$4"`
+sum1=`echo "$(($num1+$num2))"`
+sum2=`echo "$3" | tr "$tmp" "$4"`
+#PROGRAMMA
+opmaak $1 $2 $3
+opmaak $num1 $num2 $sum1
+controleer_som $num1 $num2 $sum2

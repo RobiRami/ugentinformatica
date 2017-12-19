@@ -1,0 +1,117 @@
+# Simon Houbracken
+
+function hash(woord,    hashcode,str) {
+        hashcode = 1;
+        for(i=1;i<=length(woord);i++) {
+                char = tolower(substr(woord,i,1))
+                if(char in array) {
+                        hashcode *= array[char];
+                }
+        }
+        return hashcode;
+}
+
+function createhash(    i,counter) {
+        split("a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z",letters,",");
+        counter = 1;
+        for(i=2;counter<=26;i++) {
+                if(isprime(i)) {
+                        array[letters[counter]] = i;
+                        counter++;
+                }
+        }
+}
+
+function isprime(getal  ,i) {
+        for(i=2;i<=sqrt(getal);i++){
+                if(getal%i == 0){
+                        return 0;
+                }
+        }
+        return 1
+}
+
+BEGIN {
+        createhash()
+}
+(NR == FNR) {
+        hashcode = hash($0)
+        hashcodes[hashcode]= $0","hashcodes[hashcode]
+}
+END {
+        counter = 1
+        for(string in hashcodes) {
+                split(hashcodes[string],temparray,",")
+                if(length(temparray)>2) {
+                        printf("%4d: %s\n",counter,substr(hashcodes[string], 1, length(hashcodes[string]) -1))
+                        counter++;
+                        aantalwoorden +=length(temparray)-1
+                }
+                if(length(temparray) > longestlength) {
+                        longest = hashcodes[string]
+                        longestlength = length(temparray)
+                }
+                if(length(temparray[1])>longestwordlength) {
+                        longestword = hashcodes[string];
+bash-3.00$ cat anagram.awk
+function hash(woord,    hashcode,str) {
+        hashcode = 1;
+        for(i=1;i<=length(woord);i++) {
+                char = tolower(substr(woord,i,1))
+                if(char in array) {
+                        hashcode *= array[char];
+                }
+        }
+        return hashcode;
+}
+
+function createhash(    i,counter) {
+        split("a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z",letters,",");
+        counter = 1;
+        for(i=2;counter<=26;i++) {
+                if(isprime(i)) {
+                        array[letters[counter]] = i;
+                        counter++;
+                }
+        }
+}
+
+function isprime(getal  ,i) {
+        for(i=2;i<=sqrt(getal);i++){
+                if(getal%i == 0){
+                        return 0;
+                }
+        }
+        return 1
+}
+
+BEGIN {
+        createhash()
+}
+(NR == FNR) {
+        hashcode = hash($0)
+        hashcodes[hashcode]= $0","hashcodes[hashcode]
+}
+END {
+        counter = 1
+        for(string in hashcodes) {
+                split(hashcodes[string],temparray,",")
+                if(length(temparray)>2) {
+                        printf("%4d: %s\n",counter,substr(hashcodes[string], 1, length(hashcodes[string]) -1))
+                        counter++;
+                        aantalwoorden +=length(temparray)-1
+                }
+                if(length(temparray) > longestlength) {
+                        longest = hashcodes[string]
+                        longestlength = length(temparray)
+                }
+                if(length(temparray[1])>longestwordlength) {
+                        longestword = hashcodes[string];
+                        longestwordlength = length(temparray[1]);
+                }
+        }
+        printf("#anagrammen: %d\n",counter-1);
+        printf("#woorden: %d\n",aantalwoorden);
+        printf("langste woord: %s\n",longestword);
+        printf("meeste woorden: %s\n",longest);
+}

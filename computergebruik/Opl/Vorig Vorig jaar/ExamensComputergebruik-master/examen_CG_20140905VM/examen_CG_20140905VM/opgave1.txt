@@ -1,0 +1,78 @@
+### OPGAVE 1 ##########################################################
+
+1)
+
+wget -qO- www.randomfunfacts.com | grep -Eo '"4"><strong><i>.*</i>' | sed 's/^.*><strong><i>\(.*\)<\/i>/\1/' | cowsay -f tux.cow
+
+(haalt info van website en stuurt dit naar stdout, grep zoekt het patroon waar de tip in voorkomt en sed zorgt ervoor dat enkel de zin overblijft, daarna gewoon cowsay het laten zeggen)
+
+2)
+
+#!/bin/bash
+
+
+padnaam=$1
+
+if [ ! -d $1 ]; then
+        echo "syntaxis: $0 <padnaam>" 1>&2
+        exit 1
+fi
+
+ls -lR $padnaam | grep '^.[r-][w-][x-][r-][-w][-x][r-][-w][-x]' |  cut -c1 | sort | uniq -c | sort -r
+
+(controleert of opgegeven variabele een padnaam is, gebruikt het commando ls om alle bestanden te zoeken, grep zoekt naar het patroon van de bestandstypes en knipt
+eerste letter er uit, sorteren, alle unieke karakters tellen en nog eens sorteren)
+
+3)
+
+echo "`cat /usr/share/dict/words | egrep -o '^[a-z]{4,8}$' | sort -R | head -n4 | sed '2,4s/^\(.\)/\u\1/' | tr -d '\n'`"
+
+(het staat in echo zodat er een newline na de output van het commando komt)
+(ik open het bestand words, zoek alle 4-8 letterwoorden, sorteer ze random, pak de bovenste 4, geef de woorden op rij 2-4 een hoofdletter en verwijder daarna de newlines)
+
+4)
+
+#bin/bash
+#Controle argumenten
+
+
+read input
+inputlines=$(echo $input | tr " " "\n")
+length=$(echo $input | tr " " "\n" | wc -l)
+
+#echo "$inputlines"  ## <== Dit moeten toch n lijnen zijn met 1 woord op elke l$
+#echo $length
+output=""
+for (( i=1 ; i<=$length ; i++ ))
+do
+#       echo $i
+        firstAmount=$(echo "$inputlines" | sed -n ''$i'p' |  wc -c)
+        (( firstAmount-- ))
+        output="$output$firstAmount"
+done
+echo $output | sed 's/10/0/g'
+
+#########################
+#ANDERE OPLOSSING VOOR 4#
+#########################
+
+
+#!/bin/bash
+
+zin=$1
+
+#kweet dat de controle van mijn argument nie helemaal sjust is, maar et werkt
+
+if [ -z "$zin" ]
+then
+        echo "Syntaxis: $0 \"<string>\"" 1>&2
+        exit 1
+fi
+
+echo `echo -n "$zin" | tr -d '\"' | tr -d \' | sed 's/-/ /g' | tr ' ' '\n' | sed 's/[^a-zA-z]//g' |  sed 's/^\(.*\)$/echo -n "\1" | wc -c/g' | bash | sed 's/10/0/g' | tr -d '\n' 
+
+#### NISTRIJB: Iets andere oplossing dan hierboven, maar het komt op hetzelfde neer.
+
+sed "s/'//g;s/[^A-Za-z]/ /g" <(echo $1)| tr ' ' '\n' | sed '/^$/d' | sed 's/.*/echo -n "&" | wc -m/' | bash | sed 's/10/0/' | tr -d '\n' && echo
+
+#### NISTRIJB ###

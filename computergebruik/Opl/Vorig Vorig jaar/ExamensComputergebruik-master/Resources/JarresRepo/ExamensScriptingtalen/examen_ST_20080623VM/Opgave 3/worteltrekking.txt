@@ -1,0 +1,25 @@
+Option Explicit
+Dim lengte As Integer
+
+Sub InitialiseerWortel()
+    Sheets(1).Cells.Clear
+    setText 1, 2, "="
+    setText 1, 4, "^2"
+    setText 1, 5, "+"
+    With Sheets(1).Range("G1")
+        .Formula = "=(A1=C1^2+F1)"
+        .FormatConditions.Add Type:=xlExpression, Formula1:="=(A1=C1^2+F1)"
+        With .FormatConditions(1).Interior
+            .PatternColorIndex = xlAutomatic
+            .Color = 5287936
+        End With
+        .FormatConditions(1).StopIfTrue = False
+        .FormatConditions.Add Type:=xlExpression, Formula1:="=(A1<>C1^2+F1)"
+        With .FormatConditions(2).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 255
+        End With
+    End With
+End Sub
+
+'Niet af -_-

@@ -1,0 +1,4 @@
+##### Opgave 2: scrabble #####
+
+<Plaats hier code van shell script scrabble>
+

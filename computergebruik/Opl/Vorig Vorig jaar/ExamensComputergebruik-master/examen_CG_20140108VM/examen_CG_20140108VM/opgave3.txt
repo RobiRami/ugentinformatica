@@ -1,0 +1,26 @@
+### OPGAVE 3 ##########################################################
+
+1.a) commando: egrep -v '(([KR][^P].* )|([^KR] ))[A-Z]*$' eiwitten.txt 
+     aantal: 2051
+
+1.b) commando: egrep -v '(([GALVI][DENQ])|([DENQ][GALVI])).* [A-Z]*$' eiwitten.txt
+     aantal: 419
+
+1.c) commando: egrep -v '(([A-Z])\2.* [A-Z]*$)|(([A-Z]).\4.* [A-Z]*$)' eiwitten.txt
+     aantal: 2017
+
+1.d) commando: egrep '(([GALVI][DENQ][GALVI][DENQ][GALVI][DENQ][GALVI])|([DENQ][GALVI][DENQ][GALVI][DENQ][GALVI][DENQ]))+.* [A-Z]*$' eiwitten.txt
+     aantal: 2012
+
+
+2.a) commando: egrep -v '(([KR][^P].* )|([^KR] ))[A-Z]*$' eiwitten.txt | egrep -v '(([GALVI][DENQ])|([DENQ][GALVI])).* [A-Z]*$'
+     woord: EARTH
+
+2.b) commando: egrep -v '(([GALVI][DENQ])|([DENQ][GALVI])).* [A-Z]*$' eiwitten.txt | egrep -v '(([A-Z])\2.* [A-Z]*$)|(([A-Z]).\4.* [A-Z]*$)'
+     woord: LAUGHS
+
+2.c) commando: egrep -v '(([A-Z])\2.* [A-Z]*$)|(([A-Z]).\4.* [A-Z]*$)' eiwitten.txt | egrep -v '(([A-Z])\2.* [A-Z]*$)|(([A-Z]).\4.* [A-Z]*$)' eiwitten.txt
+     woord: IN
+
+2.d) commando: egrep '(([GALVI][DENQ][GALVI][DENQ][GALVI][DENQ][GALVI])|([DENQ][GALVI][DENQ][GALVI][DENQ][GALVI][DENQ]))+.* [A-Z]*$' eiwitten.txt | egrep -v '(([KR][^P].* )|([^KR] ))[A-Z]*$'
+     woord: FLOWERS

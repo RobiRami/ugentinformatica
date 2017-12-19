@@ -1,0 +1,27 @@
+### OPGAVE 1 #########################################################
+
+# slechte poging om op voorhand alles tussen \*'s dubbel te escapen                   
+s/\\\*\(.*\)\\\(.*\)\\\*/\1\\\\\2/g
+
+# \s verwijderen en getal dat erachter staat (evt inclusief .), enkel als er niet nog 
+# een \ voor staat, en als het niet tussen \*'s staat
+# Ook houden we er rekening mee dat de opmaakaanduiding aan het begin van de regel kan s$
+/\\\*.*\\s.*\\\*/!{
+                s/\([^\\]\)\\s[0-9.]*/\1/g
+                s/^\\s[0-9.]*//g
+}
+
+# \b en \i samen verwerken (hebben dezelfde syntax)
+/\\\*.*\\[ib].*\\\*/!{
+                s/\([^\\]\)\\[ib]/\1/g
+                s/^\\[ib]//g
+}
+
+/\\\\\*/!{
+        s/\([^\\]*\)\\\*/\1/g
+}
+
+# 2 \'en moeten er één worden
+ 
+s/\\\\/\\/g
+

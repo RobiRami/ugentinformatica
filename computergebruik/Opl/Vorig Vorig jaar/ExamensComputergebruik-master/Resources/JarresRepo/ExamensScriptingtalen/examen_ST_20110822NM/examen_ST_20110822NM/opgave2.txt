@@ -1,0 +1,4 @@
+### OPGAVE 2 #########################################################
+
+<plak hier je code van het awk script woordenwolk.awk>
+

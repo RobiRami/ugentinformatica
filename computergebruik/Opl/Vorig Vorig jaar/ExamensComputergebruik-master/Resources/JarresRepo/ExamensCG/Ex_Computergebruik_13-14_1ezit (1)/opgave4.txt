@@ -1,0 +1,13 @@
+### OPGAVE 4 ##########################################################
+
+1)
+
+<plaats hier de inhoud van het bestand template.tex>
+
+2)
+
+<plaats hier de inhoud van het shell script vervang>
+
+3)
+
+<plaats hier de inhoud van het shell script televisieserie>

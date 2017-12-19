@@ -1,0 +1,9 @@
+### OPGAVE 2 #########################################################
+
+1)
+
+<plak hier je code van het sed script reduceer.sed>
+
+2)
+
+<plak hier je code van het sed script vervang.sed>

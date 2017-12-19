@@ -1,0 +1,6 @@
+### OPGAVE 4 ##########################################################
+
+<plaats hier de inhoud van het LaTeX bestand>
+
+OPMERKING: vergeet niet om de gecompileerde PDF versie van het LaTeX 
+           bestand toe te voegen aan het ingediende ZIP bestand

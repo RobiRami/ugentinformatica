@@ -1,0 +1,152 @@
+#!/usr/bin/bash
+# hrf - Björn De Vogelaere
+# script dat getallen van standaardinvoer omzet in een 'user readable form'
+# controles niet volledig geïmplementeerd, afronding gebeurt met functie, 
+# waarschijnlijk zou het ook kunnen met printf
+
+# functie voor foute argumenten/opties
+syntaxis(){
+        echo "Syntaxis: [-t -f <veld1,...,veldn> -d <delimiter> -s <natuurlijk getal>] " 2>&1
+        exit 1
+}
+
+
+grondtal=1000
+
+velden=""
+
+delimiter=" "
+
+beginregel=1
+
+# opties verwerken
+while getopts ":tf:d:s:" opt; do
+case $opt in
+    t  ) # verwerk optie -t
+	grondtal=1024 
+         ;;
+    f  ) # verwerk optie -f
+        velden=$OPTARG 
+	;;
+    d  ) # verwerk optie -d
+     	delimiter=$OPTARG    
+	;;
+    s  ) # verwerk optie -s
+        beginregel=$OPTARG
+        ;;
+
+    \? ) echo "U heeft een foute optie meegegeven."
+	syntaxis		
+esac
+done
+shift `expr $OPTIND - 1`
+
+
+#controles op argumenten... (niet geïmplementeerd)
+
+
+
+gawk -F"$delimiter" -v velden="$velden" -v grondtal="$grondtal" -v beginregel="$beginregel" '
+
+#bron : http://www.gnu.org/software/gawk/manual/html_node/Round-Function.html#Round-Function
+function round(x,   ival, aval, fraction)
+     {
+        ival = int(x)    # integer part, int() truncates
+     
+        # see if fractional part
+        if (ival == x)   # no fraction
+           return ival   # ensure no decimals
+     
+        if (x < 0) {
+           aval = -x     # absolute value
+           ival = int(aval)
+           fraction = aval - ival
+           if (fraction >= .5)
+              return int(x) - 1   # -2.5 --> -3
+           else
+              return int(x)       # -2.3 --> -2
+        } else {
+           fraction = x - ival
+           if (fraction >= .5)
+              return ival + 1
+           else
+              return ival
+        }
+     }
+
+# zet de nummers van de te bewerken velden in een lijst
+function initfields(str){
+	split(str,fieldlist,",")
+}
+
+#zet een bepaald getal om in verkort formaat
+function evaluate(getal     ,i,uitkomst){
+	i=0
+	while((grondtal^i)<getal && i<9){
+		i++
+	}
+	i--
+	uitkomst = round(getal/(grondtal^i)*10)/10
+	uitkomst = uitkomst""tabel[i]
+	return uitkomst
+}
+
+
+BEGIN {
+	if(velden!=""){
+		initfields(velden)
+		allevelden=0
+	}
+	else{
+		allevelden=1
+	}
+
+	#tabellen maken
+	if(grondtal==1000){
+		tabel[0]=""
+		tabel[1]="K"
+		tabel[2]="M"
+		tabel[3]="G"
+		tabel[4]="T"
+		tabel[5]="P"
+		tabel[6]="E"
+		tabel[7]="Z"
+		tabel[8]="Y"
+	}
+	else{
+		tabel[0]=""
+		tabel[1]="Ki"
+		tabel[2]="Mi"
+		tabel[3]="Gi"
+		tabel[4]="Ti"
+		tabel[5]="Pi"
+		tabel[6]="Ei"
+		tabel[7]="Zi"
+		tabel[8]="Yi"
+	}
+	OFS=FS
+}
+
+(NR>=beginregel){
+	if(allevelden!=1){
+		for(veld in fieldlist){
+			if(match($fieldlist[veld],/[0-9]/)){# we hebben te maken met een getal
+                                $fieldlist[veld]=evaluate($fieldlist[veld]) # veld bewerken
+	                }
+                }
+	}
+	else{
+		for(i=1;i<=NF;i++){
+			if(match($i,/[0-9]/)){ # we hebben te maken met een getal
+				$i=evaluate($i)	# veld bewerken
+			}
+		}
+	}
+	print($0) # ganse lijn met eventueel bewerkte velden uitschrijven
+}
+(NR<beginregel){ # lijnen gewoon uitschrijven
+	print($0)
+}
+'
+
+

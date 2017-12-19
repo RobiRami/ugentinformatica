@@ -1,0 +1,164 @@
+### OPGAVE 4 #######################
+
+################################################################################################################Rien:
+
+1.a) 
+
+i)
+
+#!/bin/bash
+
+cat > temp_part
+length=$(cat temp_part| wc -l)
+cat temp_part | tail -n $(($length+1-$1))
+rm temp_part
+
+--- PVERSCHA: Zou dit ook niet werken? Is een beetje efficiënter ;)
+
+#!/bin/bash
+
+cat /dev/stdin | sed -n "$1,\$p"
+
+--- PVERSCHA
+
+
+ii)
+
+#!/bin/bash
+cat | sed 's/./&\n/g'
+
+
+iii)
+
+#!/bin/bash
+cat | sed 's/./\L&/g'
+
+
+1.b)
+
+i) cat TEX.txt | ./tolower
+
+ii) cat TEX.txt | ./tolower | ./tolines
+
+iii) cat tex1.txt | ./part 2
+
+2.a) 
+
+i)
+#!/bin/bash
+
+cat>temp_fuse
+files=($* temp_fuse)
+
+i=1
+x=1
+while test $x -eq 1
+do
+        j=0 
+        newline=""
+        while test $j -lt ${#files[*]}
+        do
+                o=$i
+                o+="p"
+                new=$(cat ${files[$j]} | sed -n "$o")
+                if [ "$new" ]
+                then
+                        new+="  "
+                fi
+        newline+=$new
+        j=$(($j+1))
+        done
+        newline=`echo "$newline" | sed 's/      $//g'`
+if [ "$newline" ]
+then
+        echo "$newline" >> temp_result
+else
+        x=0
+fi
+i=$(($i+1))
+done
+
+
+cat temp_result
+rm temp_result
+rm temp_fuse
+
+--- PVERSCHA: Ik denk dat ik ook voor dit script iets efficiënter gevonden heb (Ik zet het er gewoon bij)
+
+#! /bin/bash
+
+if [ dev/stdin != "" ]
+then
+paste - $@
+else
+paste $@
+fi
+
+--- PVERSCHA
+
+ii)
+#!/bin/bash
+paste -d"\0" $* | sort | uniq -c | sort -nr | head -n26 | cut -c9-
+
+2.b)
+
+i) cat ALPHABET.txt | ./fuse sequences.txt | ./replace tex.txt
+
+ii) ./sequences tex1.txt tex2.txt | ./fuse ALPHABET.txt | ./replace tex_c.txt
+
+################################################################################################################Niko:
+
+1.a) 
+
+i) tail -n +$(($1+1))
+
+ii) fold -w1
+
+iii) tr '[A-Z]' '[a-z]'
+
+1.b)
+
+i) cat TEX.txt | bash tolower >tex.txt
+
+
+ii) cat TEX.txt | bash tolines >tex1.txt
+
+iii) cat tex1.txt | bash tolines | bash part 1 >tex2.txt
+
+2.a) 
+
+i)	paste $@ -
+OF
+first=$1
+shift
+number=$(echo $first | wc -l)
+
+for file in $@
+do
+        temp=$(echo $file | wc -l)
+        if [[ $temp -lt $number ]]
+        then
+                number=$temp
+        fi
+done
+
+paste $first $@ - | head -n $number
+
+
+ii) 
+previous=$(paste -d'\0' <(cat $1 | bash tolines) <(cat $2 | bash tolines))
+shift 2
+
+while (( "$#" ))
+do
+        previous=$(paste -d'\0' <(echo -e "$previous") <(cat $1 |  bash tolines))
+        shift
+done
+echo -e "$previous" | sort | uniq -c | sort -rn | head -n 26 | sed '1,$s/^ *[0-9]* //'
+
+2.b)
+
+i) echo -e "$(paste sequences.txt ALPHABET.txt)" | bash replace tex.txt >tex_c.txt
+
+ii) echo -e "$(paste ALPHABET.txt <(bash sequence tex1.txt tex2.txt) )" | bash replace tex_c.txt
+

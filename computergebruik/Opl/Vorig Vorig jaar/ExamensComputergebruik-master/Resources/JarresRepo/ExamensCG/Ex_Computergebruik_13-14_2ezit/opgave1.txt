@@ -1,0 +1,17 @@
+### OPGAVE 1 ##########################################################
+
+1)
+
+<plaats hier je commando>
+
+2)
+
+<plaats hier de inhoud van het shell script bestandstypes>
+
+3)
+
+<plaats hier je commando>
+
+4)
+
+<plaats hier de inhoud van het shell script pilish>

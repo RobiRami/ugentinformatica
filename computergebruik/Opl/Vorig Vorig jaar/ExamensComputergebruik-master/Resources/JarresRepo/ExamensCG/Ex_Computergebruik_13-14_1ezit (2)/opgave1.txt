@@ -1,0 +1,21 @@
+### OPGAVE 1 ##########################################################
+
+1)
+
+<plaats hier je commando>
+
+2.a)
+
+<plaats hier je commando>
+
+2.b)
+
+<plaats hier de inhoud van het shell script acrostichon>
+
+3)
+
+<plaats hier de inhoud van het shell script tandenstokers>
+
+4)
+
+<plaats hier de inhoud van het shell script broncode>

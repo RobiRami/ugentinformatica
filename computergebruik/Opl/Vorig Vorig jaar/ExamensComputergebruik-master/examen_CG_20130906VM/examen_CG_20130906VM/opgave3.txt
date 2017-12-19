@@ -1,0 +1,29 @@
+
+1.a) grep '^\(\.*-\.*-\.*\)*-\.* '
+     aantal: 43548
+
+1.b) grep '^\(\(\.-\)*\.\{,1\}\|\(-\.\)*-\{,1\}\) '
+     aantal: 5
+
+1.c) commando: grep '^\(.*\)\1 '
+     aantal: 37
+
+1.d) commando: grep -v '\.\.--\|--\.\.'
+     aantal: 8158
+
+
+1.a) commando: cat morse.txt | grep -n '^\(\.*-\.*-\.*\)*-\.* ' | grep ':\(\(\.-\)*\.\{,1\}\|\(-\.\)*-\{,1\}\) '
+     regel: 33054
+     woord: durf
+
+1.b) commando: cat morse.txt | grep -n '^\(.*\)\1 ' | grep ':\(\(\.-\)*\.\{,1\}\|\(-\.\)*-\{,1\}\) '
+     regel: 74578
+     woord: denken
+
+1.c) commando: cat morse.txt | grep -n -v '\.\.--\|--\.\.' | grep ':\(.*\)\1 '
+     regel: 74578
+     woord: denken
+
+1.d) commando: cat morse.txt | grep -n -v '\.\.--\|--\.\.' | grep ':\(\.*-\.*-\.*\)*-\.* '
+     regel: 33054
+     woord: durf

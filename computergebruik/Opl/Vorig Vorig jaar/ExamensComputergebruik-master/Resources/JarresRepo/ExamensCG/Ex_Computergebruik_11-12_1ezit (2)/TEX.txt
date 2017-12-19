@@ -1,0 +1,24 @@
+TEX (meestal geschreven als TeX, uitgesproken als tech, dus met een de 
+Griekse chi) is een opmaaktaal voor teksten en formules die als 
+programmeertaal met uitbreidingsmogelijkheden te gebruiken is. Met TeX is 
+het mogelijk om een ingewikkelde lay-out op een relatief eenvoudige manier 
+te beschrijven.
+
+TeX, geschreven door Donald Knuth, is populair in de wetenschappelijke 
+wereld, vooral bij wiskundigen, natuurkundigen en informatici. In deze 
+vakgebieden wordt het algemeen beschouwd als de beste manier om complexe 
+wiskundige formules te zetten. Veel wetenschappelijke tijdschriften in 
+deze disciplines ontvangen bijdragen bij voorkeur in TeX, of een 
+TeX-gerelateerd formaat.
+
+Door het gebruik van geneste structuren kunnen complexe wiskundige 
+formules in TeX op intuitieve wijze opgebouwd worden. Omdat TeX niet 
+afhankelijk is van het Latijnse schrift, kunnen ook andere schriftsoorten 
+(bestaande maar ook antieke) met TeX gepresenteerd worden, mits de 
+karakters daarvoor beschikbaar zijn. Met behulp van het programma METAFONT 
+kan in principe ieder gewenst schrift ontworpen worden.
+
+Naast een benaming voor het opmaaksysteem, is de naam TeX ook in gebruik 
+voor de (standaard)verzameling macro's die geladen worden door het 
+programma. Deze verzameling wordt beter aangeduid met Plain TeX. Een 
+andere verzameling macro's die veel gebruikt wordt is LaTeX.

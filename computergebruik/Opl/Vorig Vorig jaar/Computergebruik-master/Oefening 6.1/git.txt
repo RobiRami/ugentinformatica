@@ -1,0 +1,164 @@
+--------------
+|Oefening 6.1|
+--------------
+-Level 1
+git commit
+git commit
+
+-Level 2
+git branch bugfix
+git checkout bugfix
+
+-Level 3
+git branch bugFix
+git checkout bugFix
+git commit
+git checkout master
+git commit
+git merge bugFix
+
+-Level4
+git checkout -b bugFix
+git commit
+git checkout master
+git commit
+git checkout bugFix
+git rebase master
+
+-Level5
+git checkout C4
+
+-Level6
+git checkout bugFix^
+
+
+-Level7
+git branch -f master C6
+git branch -f bugFix bugFix~3
+git checkout master~3
+
+-Level8
+git reset local~1
+git checkout pushed
+git revert pushed
+
+-Level9
+git cherry-pick bugFix side^ another
+
+-Level10
+git rebase -i HEAD~4
+
+-Level11
+git rebase -i HEAD~2
+git branch -f master bugFix
+
+-Level12
+git rebase -i HEAD~2
+git commit --amend
+git rebase -i HEAD~2
+git branch -f master HEAD
+
+-Level13
+git checkout master
+git cherry-pick newImage
+git commit --amend
+git cherry-pick caption
+
+-Level14
+git checkout HEAD^
+git tag v1 HEAD
+git tag v0 HEAD^
+
+-Level15
+git commit
+
+-Level16
+git checkout bugFix
+git rebase master
+git checkout side
+git rebase bugFix
+git checkout another
+git rebase side
+git branch -f master another
+
+-Level17
+git branch bugWork HEAD^^2^
+
+-Level18
+git checkout one
+git cherry-pick C4 C3 C2
+git checkout two
+git cherry-pick C5 C4 C3 C2
+git checkout three
+git rebase C2
+
+--REMOTE
+
+-Level1
+git clone
+
+-Level2
+git commit
+git checkout o/master
+git commit
+
+-Level3
+git fetch
+
+-Level4
+git pull
+
+-Level5
+git clone
+git fakeTeamwork 2
+git commit
+git pull
+
+-Level6
+git clone
+git commit
+git commit
+git push
+
+-Level7
+git clone
+git fakeTeamwork
+git commit
+git pull --rebase
+git push
+
+-Level8
+git checkout master
+git pull
+git rebase master side1
+git rebase side1 side2
+git rebase side2 side3
+git branch -f master side3
+git checkout master
+git push
+
+-Level9
+git fetch
+git checkout o/master
+git merge side1
+git merge side2
+git merge side3
+git branch -f master HEAD
+git checkout master
+git push
+
+-Level10
+git checkout -b side o/master
+git pull --rebase
+git push
+
+-Level11
+git push origin master
+git push origin foo
+
+-Level12
+
+
+
+
+

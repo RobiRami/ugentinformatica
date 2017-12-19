@@ -1,0 +1,83 @@
+#!/bin/bash
+# woordritsen - Björn De Vogelaere
+# normaal werkt alles, tzou kunnen dat ik iets over het hoofd heb gezien
+
+syntaxis(){
+	echo "syntaxis: $0 <woordenbestand> [aantal opeenvolgende correcte antwoorden]"
+	exit 1
+}
+
+generateQuestion(){
+	nummer=$RANDOM
+	let "nummer %= $maxnummer"
+	let "nummer++"
+	woord=$(gsed -n $nummer'p' $bestand)
+	gezocht=$(echo $woord|gsed 's/[^A-Z]//g'|tr '[A-Z]' '[a-z]')
+	nieuwwoord=$(echo $woord|gsed 's/[A-Z]/./g')
+	echo "Opgave: $nieuwwoord"
+}
+
+getAnswer(){
+	echo -n "Geef de oplossing van deze opgave? "
+	read antwoord
+	str=$(echo $antwoord|tr '[A-Z]' '[a-z]')
+	if [ $str == $gezocht ]
+	then
+		echo "Juist! Het antwoord was inderdaad \"$gezocht\"."
+		let "teller++"
+		if [ $teller -eq $(($limiet-1)) ]
+		then
+			echo "je bent er bijna!"
+			generateQuestion
+
+		elif [ $teller -eq $(($limiet)) ]
+		then
+			echo "Je mag jezelf vanaf nu Meester in het Woordritsen noemen."
+		else
+			generateQuestion
+		fi
+	else
+		echo "Ongeldige oplossing!"
+		let "teller=0"
+	fi
+}
+
+
+if [ $# -lt 1 ]
+then
+	echo "U moet ten minste 1 argument opgeven."
+	syntaxis
+fi
+
+if [ $# -gt 2 ]
+then
+	echo "U mag ten hoogste 2 argumenten opgeven."
+	syntaxis
+fi
+
+if [ ! -f $1 ]
+then
+	echo "De woordenlijst die u heeft opgegeven is geen geldig bestand."
+	syntaxis
+fi
+
+if [ $# -eq 1 ]
+then
+	limiet=5
+else
+	limiet=$2
+fi
+
+bestand=$1
+maxnummer=$(cat $bestand|wc -l)
+
+teller=0
+
+generateQuestion
+
+while [ $teller -lt $limiet ]
+do
+	getAnswer
+done
+
+exit 0

@@ -1,0 +1,16 @@
+#!/bin/bash
+words=$(egrep -i "^[$*]{4,9}$" words.txt | sed 's/./\L&/g' | egrep "$5")
+letters=$(echo $* | tr " " "\n" | sort | tr -d "\n")
+
+array=( $(echo -e $words) )
+i=0
+while test $i -lt ${#array[@]}
+do
+if test -z $(echo "${array[$i]}" | sed "s/$1//" | sed "s/$2//" | sed "s/$3//" | sed "s/$4//" | sed "s/$5//" | sed "s/$6//" | sed "s/$7//" | sed "s/$8//" | sed "s/$9//")
+then
+	list+=${array[$i]}
+	list+="\n"
+fi
+i=$(($i+1))
+done
+echo -en "$list" | sort

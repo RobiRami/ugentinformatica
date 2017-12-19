@@ -1,0 +1,8 @@
+# lijst van verjaardagen
+
+# formaat: 
+# voornaam,familienaam,geboortedatum (DD/MM/JJJJ),emailadres,verwittigen (J|N)
+Donald,Knuth,10/01/1938,Donald.Knuth@UGent.be,J
+Linus,Torvalds,28/12/1969,Linus.Torvalds@UGent.be,N
+Bill,Gates,28/10/1955,Bill.Gates@UGent.be,J
+Steve,Jobs,24/02/1955,Steve.Jobs@UGent.be,J

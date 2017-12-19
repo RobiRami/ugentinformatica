@@ -1,0 +1,46 @@
+### OPGAVE 4 #######################
+
+1.a) 
+
+i)
+#!/bin/bash
+cat | sed 's/./\U&/g
+
+ii)
+#!/bin/bash
+cat | sed -n "$1,\$p"
+
+iii)
+#!/bin/bash
+cat | sed 's/./&\n/g'
+
+
+
+1.b)
+
+i)
+cat latex.txt | ./caps
+
+ii) cat latex.txt | ./caps | ./lines
+
+iii) cat LATEX1.txt | ./drop 2
+
+2.a) 
+
+i)
+
+#!/bin/bash
+
+if [[ -t 0 ]]; then
+	paste -d'\t' $@
+else
+	paste -d'\t' - $@
+fi
+
+ii) paste -d '\0' $@ | sort | uniq -c | sort -nr | head -n 26 | cut -c9-
+
+2.b)
+
+i) ./chains LATEX1.txt LATEX2.txt | ./combine alphabet.txt | ./replace LATEX.txt > NEWFILE
+
+ii) ./combine alphabet.txt chains.txt | ./replace LATEX_c.txt

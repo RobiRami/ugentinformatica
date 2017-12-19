@@ -1,0 +1,76 @@
+#!/usr/bin/bash
+# srt_adjust_time - Björn De Vogelaere
+# script dat van een bepaalde ondertiteling het aantal minuten 
+# verhoogt met een bepaald geheel getal
+# waarschijnlijk is de snelheid niet zo goed,
+# maar ik vind het wel overzichtelijk... 
+
+cat $1| gawk -v stap=$2 '
+
+function verhoog(str    ,getal){
+	gsub(" ","",str)
+	mill=substr(str,10,3)
+	sec=substr(str,7,2)
+	min=substr(str,4,2)
+	uur=substr(str,1,2)
+	sec+=increment
+	if(stap<0){
+		if(sec==60){
+			min++
+			sec="00"
+		}
+		if(min==60){
+			uur++
+			min="00"
+		}
+	}
+	else{
+		if(sec<0){
+			sec="59"
+			min--
+		}
+		if(min<0){
+			min="59"
+			uur--
+		}
+	}
+	sec=check(sec)
+	min=check(min)
+	uur=check(uur)
+	return uur":"min":"sec","mill
+}
+
+#hulpfunctie om voorlopnul te bepalen
+function check(str    ,res){
+	if (length(str)<2){
+		res="0"str
+	}
+	else{
+		res=str
+	}
+	return res
+}
+
+BEGIN{
+	FS=" *--> *"
+	OFS=" --> "
+	if(stap<0){
+		increment=-1
+	}
+	else{
+		increment=1
+	}
+}
+
+(NR%4==2){
+	for(i=1;i<=stap;i++){
+		$1=verhoog($1)
+		$2=verhoog($2)
+	}
+	print($0)
+}
+
+(NR%4!=2){
+	print($0)
+}
+'

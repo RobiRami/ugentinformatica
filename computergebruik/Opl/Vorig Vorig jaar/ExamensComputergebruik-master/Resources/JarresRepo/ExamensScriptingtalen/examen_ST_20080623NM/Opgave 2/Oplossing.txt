@@ -1,0 +1,72 @@
+Option Explicit
+Dim counter As Integer
+Dim lengte As Long
+Dim getal As Long
+Dim deler As Long
+
+' Simon Houbracken zijn versie
+' Kan zijn dat het nog fouten bevat, maar klopt algemeen wel
+
+Sub InitialiseerDeling()
+    setText 1, 2, "="
+    setText 1, 4, "*"
+    setText 1, 6, "+"
+    With (Cells(1, 8))
+    .FormulaR1C1 = "=(RC[-7]=RC[-5]*RC[-3]+RC[-1])"
+    .FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=(A1=C1*E1+G1)"
+    .FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With .FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 5287936
+        .TintAndShade = 0
+    End With
+    .FormatConditions(1).StopIfTrue = False
+    
+    .FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=(A1<>C1*E1+G1)"
+    .FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With .FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 255
+        .TintAndShade = 0
+    End With
+    End With
+    
+End Sub
+
+Sub setText(rij, kolom, tekst)
+    ActiveSheet.Cells(rij, kolom) = tekst
+End Sub
+
+Sub StaartDeling()
+    ActiveSheet.Range(Cells(2, 1), Cells(100, 100)).Clear
+    lengte = Len(Cells(1, 1))
+    getal = Cells(1, 1)
+    deler = Cells(1, 3)
+    For counter = 1 To lengte
+        setText 3, counter, Mid(Cells(1, 1), counter, 1)
+    Next counter
+    
+    setText 3, counter, Cells(1, 3)
+    Range(Cells(3, lengte + 1), Cells(3 * (lengte + 1), lengte + 1)).Borders(xlEdgeLeft).Weight = xlThick
+    Cells(3, lengte + 1).Borders(xlEdgeBottom).Weight = xlThick
+    
+    Deel 1, 0
+End Sub
+
+Sub Deel(kolom, rest)
+    Dim gedeeld As Integer
+    Dim eencijfer As Integer
+    eencijfer = Mid(getal, kolom, 1)
+    gedeeld = (eencijfer + rest) \ deler
+    setText (3 * kolom), kolom, rest + eencijfer
+    setText (3 * kolom) + 1, kolom, gedeeld * deler
+    Cells((3 * kolom) + 1, kolom).Borders(xlEdgeBottom).Weight = xlThin
+    setText (3 * kolom) + 2, kolom, (rest + eencijfer) - (gedeeld * deler)
+   
+    setText 4, lengte + 1, Cells(4, lengte + 1) * 10 + gedeeld
+    If (kolom < lengte) Then
+        Deel kolom + 1, ((rest + eencijfer) - (gedeeld * deler)) * 10
+    End If
+End Sub

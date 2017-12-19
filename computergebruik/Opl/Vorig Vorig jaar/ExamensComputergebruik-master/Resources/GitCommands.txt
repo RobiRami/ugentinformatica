@@ -1,0 +1,89 @@
+Handig: http://git-scm.com/docs/ (voor elke documentatie staat er wel iets)
+
+git config --global
+	user.name "NAAM"
+	user.email "EMAIL
+	core.editor "EDITOR OM TAGS EN COMMITS TE MAKEN"
+	aias.ALIAS "COMMAND" (vb: alias.shortstatus "status -s")
+	credential.helper cache (Zorgt ervoor dat je credentials tijdelijk worden opgeslagen zodat je niet heel de tijd moet opnieuw inloggen)
+
+
+init		nieuwe git repo aanmaken of nieuwe herinitialiseren
+
+add		untracked en gewijzigde bestanden toevoegen aan de staged area
+
+commit		aanpassingen van de repo recorden
+		-a : + add
+		-m : + message
+		--amend : aanpassen laatste commit ( top van branch ) met nieuwe commit
+			  (als er niets in staged area zit, kan je ook enkel naam veranderen)
+
+branch		branches maken/wijzigen/deleten/...	
+		-u : upstream
+		-d : delete branch ( moet volledig gemerged zijn met upstream branch )
+		-D : delete branch ( onafhankelijk van gemergde status ) 
+		-f  : branch komt op je huidige branch te staan. 
+		-m : hernoemen of verplaatsen van branch
+		-v : toont de laatste commit op iedere branch
+		Enkele overige opties: --merged, --no-merged
+
+checkout	een branch laden in je working directory
+		-b : maakt een nieuwe branch en zet je op die branch
+		--track
+		git checkout -b [branch] [remotenaam]/[branch]
+
+log		toon je commit geshiedenis
+		--oneline
+		--graph: mooiere visualisatie
+		Er zijn hier zeer veel opties voor! (It's so pwetty :3 )
+		Zie ook: http://git-scm.com/book/nl/v1/De-basis-van-Git-De-commit-geschiedenis-bekijken
+
+diff		toon verschillen tussen bestanden van je working directory en de HEAD
+		--cached: toont verschillen tussen staging area en laatste commit. 
+
+fetch		download van een remote
+
+merge		twee commits samenvoegen
+
+rebase		Forward-port local commits to the updated upstream head
+		Bv. git rebase master server: plaatst server op master
+		--onto <destination> <branch1> <branch2>
+
+mv		bestanden verplaatsen of naam wijzigen
+		-f: force
+
+clone		kloont een repository van het internet lokaal op je computer. 
+
+pull		combinatie van fetch en merge: synchroniseert als het ware jouw branch met de remote branch.
+		--rebase: rebase gebruiken ipv merge
+
+push		lokale commits naar de remote schrijven (enkel mogelijk wanneer je bestanden up-to-date zijn, anders eerst pullen)
+		git push <remote> <branch> 
+		--force (overschrijft de remote door je lokale versie, enkel gebruiken wanneer je weet wat je doet)
+		--delete: of via : voor branch
+		(problemen om te pushen? git push --set-upstream origin master)
+
+reset		Reset current HEAD to the specified state
+
+revert		equivalent van reset maar op je remote branch
+
+rm		bestanden uit de index verwijderen
+		--cached FILE (remove from staged area)
+
+show		Objecten tonen (default: toon laatste commit)
+
+status		Toon de status van je working directory
+		-s: short (korte notatie)
+
+tag		tags maken, oplijsten ov verwijderen
+
+cherry-pick	een soort van rebase waar je de commits (met hun sha) zelf kiest
+		(goed uitgelegd op http://think-like-a-git.net/sections/rebase-from-the-ground-up/cherry-picking-explained.html)
+
+diff		toon de verschillende lijntjes tussen de working directory en de HEAD
+		--staged: toont het verschil tussen de staged area en de HEAD
+
+remote		acties doen met de remote
+		-v: alles tonen
+		rename NAAM NIEUWENAAM: neiuwe naam geven
+		rm NAAM:verwijderen

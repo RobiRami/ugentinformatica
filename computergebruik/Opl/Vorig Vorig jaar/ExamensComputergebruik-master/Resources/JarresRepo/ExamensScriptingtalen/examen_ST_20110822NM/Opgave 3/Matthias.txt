@@ -1,0 +1,197 @@
+### OPGAVE 3 #########################################################
+
+#!/bin/bash
+
+# mogelijkheden in arrays zetten
+tekens=(a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 \, \. \! \@ \# \$ \% \^ \& \* \( \) \[ \] \{ \} \; \" \: \? \- \_ \+ \=)
+letters=(a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z )
+cijfers=(0 1 2 3 4 5 6 7 8 9)
+leestekens=(\, \. \! \@ \# \$ \% \^ \& \* \( \) \[ \] \{ \} \; \" \: \? \- \_ \+ \=)
+# commandolijn-opties opvangen en verwerken
+while getopts ":cp:l:" opt
+do
+	case $opt in
+	c)	tekens=(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \, \. \! \@ \# \$ \% \^ \& \* \( \) \[ \] \{ \} \; \" \: \? \- \_ \+ \= 0 1 2 3 4 5 6 7 8 9)
+		;;
+	p)	aantal=$OPTARG
+		;;
+	l)	lengte=$OPTARG
+		if [ $lengte -gt 0 ]
+		then
+			echo -n
+		else
+			echo een fout argument werd meegegeven aan de optie l. RTFM.
+			exit 1
+		fi
+		;;
+	\?)	echo Er werd een verkeerde optie meegegeven. RTFM.
+		exit 1
+	esac
+done
+
+# Doorschuiven naar argumenten, ze controleren en ze in variabelen zetten
+shift `expr $OPTIND - 1`
+if [ $# -gt 1 ]
+then
+	patroon=$1
+	shift
+fi
+
+for x in $@
+do
+	if [ -f $x -a -r $x ]
+	then
+		cat $x >> allewoorden.txt
+	else
+		echo Eén van de opgegeven bestanden is onleesbaar of bestaat niet.
+		exit 1
+	fi
+done 		
+
+# Alternatieve lengte en aantal instellen, eventueel opgegeven lengte controleren met lengte v patr
+if [ -z $lengte ]
+then
+	lengte=${#patroon}
+elif [ $lengte -lt ${#patroon} ]
+then
+	echo Het patroon is langer dan de opgegeven lengte. RTFM.
+	exit 1
+fi
+
+if [ -z $aantal ]
+then
+	aantal=5
+fi
+
+# L, C, en T's tellen in patroon en controleren of patroon klopt
+L=0
+C=0
+T=0
+for ((y=0;y<${#patroon};y++))
+do
+	letter=${patroon:$y:1}
+	case $letter in
+	L)	L=`echo $L + 1 | bc`
+		continue
+		;;
+	C)	C=`echo $C + 1 | bc`
+		continue
+		;;
+	T)	T=`echo $T + 1 | bc`
+		continue
+		;;
+	?)	echo Een fout patroon werd meegegeven. Het patroon mag enkel letters L, C, T bevatten.
+		exit 1
+		;;
+	esac
+done
+
+# Paswoord genereren en score berekenen
+aantaltekens=${#tekens[*]}
+for ((n=1;n<=$aantal;n++))
+do
+# Paswoord genereren
+	for ((z=0;z<=$lengte;z++))
+	do
+		hoeveelsteteken=`echo $RANDOM % $aantaltekens | bc`
+		teken=${tekens[$hoeveelsteteken]}
+		paswoord=$paswoord$teken
+	done
+
+# Variabelen voor paswoord-voorwaarden berekenen
+	paswdL=0
+	for a in ${letters[*]}
+	do
+		for ((b=0;b<$lengte;b++))
+		do
+			if [ $a = "${paswoord:b:1}" ]
+			then
+				paswdL=`echo $paswdL + 1 | bc`
+			fi
+		done
+	done
+
+	paswdC=0
+        for a in ${cijfers[*]}
+        do
+                for ((b=0;b<$lengte;b++))
+                do
+                        if [ $a = "${paswoord:b:1}" ]
+                        then
+                                paswdC=`echo $paswdC + 1 | bc`
+                        fi
+                done
+        done
+
+	paswdT=0
+        for a in ${leestekens[*]}
+        do
+                for ((b=0;b<$lengte;b++))
+                do
+                        if [ $a = "${paswoord:b:1}" ]
+                        then
+                                paswdT=`echo $paswdT + 1 | bc`
+                        fi
+                done
+        done
+
+	uitlijst=0
+	while read line
+	do
+		if [ $line = $paswoord ]
+		then
+			uitlijst=1
+		fi
+	done < allewoorden.txt
+
+# Score berekenen
+	score=0
+	if [ $paswdL -lt $L ]
+	then
+		echo -n
+	else
+		score=`echo $score + 1 | bc`
+	fi
+	if [ $paswdC -lt $C ]
+	then
+		echo -n
+	else
+		score=`echo $score + 1 | bc`
+	fi
+	if [ $paswdT -lt $T ]
+        then
+                echo -n
+        else
+                score=`echo $score + 1 | bc`
+        fi
+	if [ $uitlijst = 0 ]
+	then
+		score=`echo $score + 1 | bc`
+	fi
+
+	if [ $score = 0 ]
+	then
+		sterkte="zeer zwak"
+	elif [ $score = 1 ]
+	then
+		sterkte="zwak"
+	elif [ $score = 2 ]
+	then
+		sterkte="normaal"
+	elif [ $score = 3 ]
+	then
+		sterkte="sterk"
+	elif [ $score = 4 ]
+	then
+		sterkte="zeer sterk"
+	fi
+
+	echo $paswoord $sterkte
+	
+	unset score
+	unset paswdL
+	unset paswdC
+	unset paswdT
+	unset paswoord
+done
+rm allewoorden.txt

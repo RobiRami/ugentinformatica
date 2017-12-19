@@ -1,0 +1,64 @@
+# bloemblaadjesscript - Bjorn De Vogelaere
+# normaal werkt alles, tzou natuurlijk kunnen dat ik iets over thoofd heb gezien
+
+
+generateQuestion(){
+        nummer=$RANDOM
+	let "nummer %= $maxnummer"
+        let "nummer++"	
+	reeks=$(cat bloemblaadjes.txt|gsed -n $nummer'p')
+        getallen=$(echo $reeks|gsed 's/[^0-9][0-9][0-9]*[^0-9]*$//')
+        gezocht=$(echo $reeks|gsed 's/.*[^0-9]\([0-9][0-9]*\)[^0-9]*$/\1/')
+        echo "Worp: $getallen"
+}
+
+getAnswer(){
+	echo -n "Hoeveel bloemblaadjes staan er rond de roos? "
+	read antwoord
+
+	if [ $antwoord == "e" ] || [ $antwoord == "E" ]
+	then	
+		exit 0
+	fi
+
+	if [ $antwoord -eq $gezocht ]
+	then
+		echo "Juist! Het antwoord was inderdaad \"$gezocht\"."
+		let "teller++"
+		if [ $teller -eq $(($limiet-1)) ]
+		then
+			echo "je bent er bijna!"
+			generateQuestion
+
+		elif [ $teller -eq $(($limiet)) ]
+		then
+			echo "Je bent toegetreden tot het Potentaat van de Roos !!"
+			echo "(bij deze ben je gebonden aan strikte geheimhouding)"
+		else
+			generateQuestion
+		fi
+	elif [ $antwoord -gt -1 ] && [ $(($antwoord%2)) -eq 0 ]
+	then
+		echo "Fout! Er staan $gezocht bloemblaadjes rond de roos."
+		let "teller=0"
+	else	
+		echo "Ongeldige oplossing!"
+	fi
+}
+
+if [ ! -f bloemblaadjes.txt ] 
+then
+	echo "bb bestand niet gevonden"
+	exit 1
+fi	
+
+maxnummer=$(cat bloemblaadjes.txt|wc -l)
+limiet=$1
+teller=0
+generateQuestion 
+
+while [ $teller -lt $limiet ] 
+do
+	getAnswer 
+done
+exit 0

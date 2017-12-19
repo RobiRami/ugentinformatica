@@ -1,0 +1,737 @@
+ #naam,   land,   rugnummer,   positie,   geboortedatum,   aantal gespeelde interlands,   ploeg
+ Alireza Jahanbakhsh,  Iran,  9,  FW,  1993-08-11,  7,  NEC
+   Marcelo Brozovic,  Croatia,  14,  MF,  1992-10-16,  1,  Dinamo Zagreb
+ Samuel Inkoom,   Ghana ,   2,  DF,  1989-06-01,  46,  Platanias
+ Kostas Manolas,  Greece,  4,  DF,  1991-06-14,  9,  Olympiacos
+ Danny Welbeck,  England,  11,  FW,  1990-11-26,  24,  Manchester United
+ Claudio Bravo,  Chile,  1,  GK,  1983-04-13,  79,  Real Sociedad
+ Camilo Vargas,  Colombia ,  12,  GK,  1989-03-09,  0,  Santa Fe
+ Sulley Muntari,   Ghana,  11,  MF,  1984-08-27,  82,  Milan
+ Mickael Landreau,  France,  23,  GK,  1979-05-14,  11,  Bastia
+ Nicolas Lodeiro,  Uruguay,  14,  MF,  1989-03-21,  26,  Corinthians
+ Eduardo,  Portugal,   1,  GK,  1982-09-19,   34,  Braga
+ Salomon Kalou,   Ivory Coast,  8,  FW,  1985-08-05,  67,  Lille
+ Austin Ejide,  Nigeria,  16,  GK,  1984-04-08,  31,  Hapoel Be'er Sheva
+ Christoph Kramer,  Germany,  23,  MF,  1991-02-19,  2,  Borussia Monchengladbach
+ Emilio Izaguirre,  Honduras,  7,  DF,  1986-05-10,  68,  Celtic
+ Edin Visca,  Bosnia and Herzegovina,  19,  FW,  1990-02-17,  10,  Istanbul Basaksehir
+ Nani,  Portugal,  17,  MF,  1986-11-17,  75,  Manchester United
+ Christian Stuani,  Uruguay,  11,  FW,  1986-10-12,  10,  Espanyol
+ Yasuyuki Konno,  Japan,  15,  DF,  1983-01-25,  81,  Gamba Osaka
+ Egidio Arevalo Rios,  Uruguay,  17,  MF,  1982-01-01,  55,  Morelia
+ Mamadou Sakho,  France,  5,  DF,  1990-02-13,  19,  Liverpool
+ Jason Davidson,  Australia,  3,  DF,  1991-06-29,  7,  Heracles Almelo
+ Fernando Torres,  Spain,  9,  FW,  1984-03-20,  107,  Chelsea
+ Charles Aranguiz,  Chile,  20,  MF,  1989-04-17,  21,  Internacional
+ Gaston Ramirez,  Uruguay,  18,  MF,  1990-12-02,  29,  Southampton
+ Javier Aquino,  Mexico,  20,  MF,  1990-02-11,  22,  Villarreal
+ Enner Valencia,  Ecuador,  13,  FW,  1989-04-11,  10,  Pachuca
+ Mark Milligan,  Australia,  5,  MF,  1985-08-04,  29,  Melbourne Victory
+ Abdelmoumene Djabou,  Algeria,  18,  MF,  1987-01-31,  8,  Club Africain
+ Marouane Fellaini,  Belgium,  8,  MF,  1987-11-22,  50,  Manchester United
+ Paulinho,  Brazil,  8,  MF,  1988-07-25,  26,  Tottenham Hotspur
+ Kenneth Omeruo,  Nigeria,  22,  DF,  1993-10-17,  17,  Middlesbrough
+ Georgios Samaras,  Greece,  7,  FW,  1985-02-21,  74,  Celtic
+ Jaime Ayovi,  Ecuador,  17,  FW,  1988-02-21,  30,  Tijuana
+ Giorgos Karagounis,  Greece,  10,  MF,  1977-03-06,  135,  Fulham
+ Diego Forlan,  Uruguay,  10,  FW,  1979-05-19,  110,  Cerezo Osaka
+ Hector Herrera,  Mexico,  6,  MF,  1990-04-19,  13,  Porto
+ Daniel Sturridge,  England,  9,  FW,  1989-09-01,  12,  Liverpool
+ Mattia Perin,  Italy,  13,  GK,  1992-11-10,  0,  Genoa
+ Keylor Navas,  Costa Rica,  1,  GK,  1986-12-15,  53,  Levante
+ Walter Gargano,  Uruguay,  5,  MF,  1984-07-23,  63,  Parma
+ Benoit Assou-Ekotto,  Cameroon,  2,  DF,  1984-03-24,  22,  Queens Park Rangers
+ Diego Godin,  Uruguay,  3,  DF,  1986-02-16,  77,  Atletico Madrid
+ Nigel de Jong,  Netherlands,  6,  MF,  1984-11-13,  71,  Milan
+ Hugo Campagnaro,  Argentina,  3,  DF,  1980-06-27,  15,  Internazionale
+ Andrey Yeshchenko,  Russia,  22,  DF,  1984-02-09,  12,  Anzhi Makhachkala
+ Panagiotis Kone,  Greece,  8,  MF,  1987-07-26,  16,  Bologna
+ Hotaru Yamaguchi,  Japan,  16,  MF,  1990-10-06,  12,  Cerezo Osaka
+ Stephen Adams,  Ghana,  1,  GK,  1989-09-28,  7,  Aduana Stars
+ Fabio Coentrao,  Portugal,  5,  DF,  1988-03-11,  45,  Real Madrid
+ Hiroshi Kiyotake,  Japan,  8,  MF,  1989-11-12,  25,  1. FC Nurnberg
+ Alfredo Talavera,  Mexico,  12,  GK,  1982-09-18,  14,  Toluca
+ Carlos Pena,  Mexico,  21,  MF,  1990-03-29,  16,  Leon
+ Simon Mignolet,  Belgium,  12,  GK,  1988-08-06,  14,  Liverpool
+ Ivan Franjic,  Australia,  2,  DF,  1987-09-10,  9,  Brisbane Roar
+ Aleksei Kozlov,  Russia,  2,  DF,  1986-11-16,  11,  Dynamo Moscow
+ Mario Gotze,  Germany,  19,  MF,  1992-06-03,  29,  Bayern Munich
+ Graham Zusi,  United States,  19,  MF,  1986-08-18,  23,  Sporting Kansas City
+ Rickie Lambert,  England,  18,  FW,  1982-02-16,  6,  Southampton
+ Ahmed Musa,  Nigeria,  7,  FW,  1992-10-14,  35,  CSKA Moscow
+ Asmir Begovic,  Bosnia and Herzegovina,  1,  GK,  1987-06-20,  30,  Stoke City
+ Gervinho,  Ivory Coast,  10,  FW,  1987-05-27,  53,  Roma
+ Thibaut Courtois,  Belgium,  1,  GK,  1992-05-11,  17,  Atletico Madrid
+ Jose Juan Vazquez,  Mexico,  23,  MF,  1988-03-14,  5,  Leon
+ Vedran Corluka,  Croatia,  5,  DF,  1986-02-05,  72,  Lokomotiv Moscow
+ Ante Rebic,  Croatia,  16,  FW,  1993-09-21,  5,  Fiorentina
+ Mario Martinez,  Honduras,  10,  MF,  1989-07-30,  37,  Real Espana
+ Henri Bedimo,  Cameroon,  12,  DF,  1984-06-04,  31,  Lyon
+ Alberto Aquilani,  Italy,  14,  MF,  1984-07-07,  35,  Fiorentina
+ Gelson Fernandes,  Switzerland,  16,  MF,  1986-09-02,  47,  SC Freiburg
+ Kostas Katsouranis,  Greece,  21,  MF,  1979-06-21,  111,  PAOK
+ Jasper Cillessen,  Netherlands,  1,  GK,  1989-04-22,  8,  Ajax
+ Cheick Tiote,  Ivory Coast,  9,  MF,  1986-06-21,  43,  Newcastle United
+ Sergio Busquets,  Spain,  16,  MF,  1988-07-16,  65,  Barcelona
+ Kevin De Bruyne,  Belgium,  7,  MF,  1991-06-28,  21,  VfL Wolfsburg
+ Axel Witsel,  Belgium,  6,  MF,  1989-01-12,  48,  Zenit Saint Petersburg
+ Jorge Fucile,  Uruguay,  4,  DF,  1984-11-19,  42,  Porto
+ Atsuto Uchida,  Japan,  2,  DF,  1988-03-27,  68,  Schalke 04
+ Enzo Perez,  Argentina,  8,  MF,  1986-02-22,  7,  Benfica
+ Emmanuel Emenike,  Nigeria,  9,  FW,  1987-05-10,  23,  Fenerbahçe
+ Steven Beitashour,  Iran,  20,  DF,  1987-02-01,  6,  Vancouver Whitecaps FC
+ Mateo Kovacic,  Croatia,  20,  MF,  1994-05-06,  10,  Internazionale
+ Hernanes,  Brazil,  18,  MF,  1985-05-29,  24,  Internazionale
+ William Carvalho,  Portugal,  6,  MF,  1992-04-07,  4,  Sporting CP
+ Edgar Salli,  Cameroon,  20,  MF,  1992-08-17,  9,  Lens
+ Maxwell,  Brazil,  14,  DF,  1981-08-27,  9,  Paris Saint-Germain
+ Alexander Dominguez,  Ecuador,  22,  GK,  1987-06-05,  18,  LDU Quito
+ Yun Suk-young,  South Korea,  3,  DF,  1990-02-13,  4,  Queens Park Rangers
+ Esteban Granados,  Costa Rica,  13,  MF,  1985-10-25,  11,  Herediano
+ Jean Makoun,  Cameroon,  11,  MF,  1983-05-29,  66,  Rennes
+ Ousmane Viera,  Ivory Coast,  2,  DF,  1986-12-21,  1,  Çaykur Rizespor
+ Alexander Mejia,  Colombia,  15,  MF,  1988-07-11,  8,  Atletico Nacional
+ Haris Medunjanin,  Bosnia and Herzegovina,  18,  MF,  1985-03-08,  35,  Gaziantepspor
+ Didier Ya Konan,  Ivory Coast,  13,  FW,  1984-05-22,  25,  Hannover 96
+ Paul Aguilar,  Mexico,  22,  DF,  1986-03-06,  30,  America
+ Eduardo Vargas,  Chile,  11,  FW,  1989-11-20,  30,  Valencia
+ Chris Smalling,  England,  12,  DF,  1989-11-22,  12,  Manchester United
+ Sejad Salihovic,  Bosnia and Herzegovina,  23,  MF,  1984-10-08,  42,  1899 Hoffenheim
+ David Silva,  Spain,  21,  MF,  1986-01-08,  80,  Manchester City
+ Luka Modric,  Croatia,  10,  MF,  1985-09-09,  75,  Real Madrid
+ Johan Djourou,  Switzerland,  20,  DF,  1987-01-18,  44,  Hamburger SV
+ Mauricio Isla,  Chile,  4,  MF,  1988-06-12,  47,  Juventus
+ Toby Alderweireld,  Belgium,  2,  DF,  1989-03-02,  34,  Atletico Madrid
+ Jose Pedro Fuenzalida,  Chile,  19,  MF,  1985-02-22,  23,  Colo-Colo
+ Fabian Johnson,  United States,  23,  DF,  1987-12-11,  22,  1899 Hoffenheim
+ Ismael Diomande,  Ivory Coast,  14,  MF,  1992-08-28,  2,  Saint-Etienne
+ Andres Iniesta,  Spain,  6,  MF,  1984-05-11,  97,  Barcelona
+ Luiz Gustavo,  Brazil,  17,  MF,  1987-07-23,  19,  VfL Wolfsburg
+ Miralem Pjanic,  Bosnia and Herzegovina,  8,  MF,  1990-04-02,  48,  Roma
+ Yuya Osako,  Japan,  18,  FW,  1990-05-18,  9,  1860 Munchen
+ Jorge Guagua,  Ecuador,  2,  DF,  1981-09-28,  59,  Emelec
+ Chigozie Agbim,  Nigeria,  21,  GK,  1984-11-28,  11,  Gombe United
+ Gerard Pique,  Spain,  3,  DF,  1987-02-02,  60,  Barcelona
+ Antonio Valencia,  Ecuador,  16,  MF,  1985-08-04,  71,  Manchester United
+ Raul Jimenez,  Mexico,  9,  FW,  1991-05-05,  25,  America
+ Joe Hart,  England,  1,  GK,  1987-04-19,  41,  Manchester City
+ Joel Veltman,  Netherlands,  13,  DF,  1992-01-15,  2,  Ajax
+ Yacine Brahimi,  Algeria,  11,  MF,  1990-02-08,  6,  Granada
+ Medhi Lacen,  Algeria,  8,  MF,  1984-05-15,  30,  Getafe
+ Ehsan Hajsafi,  Iran,  3,  MF,  1990-02-25,  62,  Sepahan
+ Park Chu-young,  South Korea,  10,  FW,  1985-07-10,  64,  Watford
+ Jose Maria Basanta,  Argentina,  23,  DF,  1984-04-03,  10,  Monterrey
+ Rodrigo Munoz,  Uruguay,  12,  GK,  1982-01-22,  0,  Libertad
+ Serey Die,  Ivory Coast,  20,  MF,  1984-11-07,  7,  Basel
+ Luis Lopez,  Honduras,  1,  GK,  1993-09-13,  0,  Real Espana
+ Asamoah Gyan,  Ghana,  3,  FW,  1985-11-22,  79,  Al-Ain
+ Alejandro Bedoya,  United States,  11,  MF,  1987-04-29,  28,  Nantes
+ Daryl Janmaat,  Netherlands,  7,  DF,  1989-07-22,  16,  Feyenoord
+ Vieirinha,  Portugal,  10,  MF,  1986-01-24,  9,  VfL Wolfsburg
+ Frickson Erazo,  Ecuador,  3,  DF,  1988-05-05,  37,  Flamengo
+ Alexis Sanchez,  Chile,  7,  FW,  1988-12-19,  67,  Barcelona
+ Haris Seferovic,  Switzerland,  9,  FW,  1992-02-22,  11,  Real Sociedad
+ Giancarlo Gonzalez,  Costa Rica,  3,  DF,  1988-02-08,  35,  Columbus Crew
+ Peter Odemwingie,  Nigeria,  8,  FW,  1981-07-15,  61,  Stoke City
+ Anel Hadzic,  Bosnia and Herzegovina,  21,  MF,  1989-08-16,  2,  Sturm Graz
+ Stephan Lichtsteiner,  Switzerland,  2,  DF,  1984-01-16,  63,  Juventus
+ Thomas Vermaelen,  Belgium,  3,  DF,  1985-11-14,  47,  Arsenal
+ Pedro,  Spain,  11,  FW,  1987-07-28,  40,  Barcelona
+ Philipp Lahm,  Germany,  16,  DF,  1983-11-11,  106,  Bayern Munich
+ Luis Neto,  Portugal,  14,  DF,  1988-05-26,  9,  Zenit Saint Petersburg
+ Michael Barrantes,  Costa Rica,  11,  MF,  1983-10-04,  50,  Aalesund
+ Steven Gerrard,  England,  4,  MF,  1980-05-30,  111,  Liverpool
+ Marco Fabian,  Mexico,  8,  MF,  1989-07-21,  15,  Cruz Azul
+ Yuri Lodygin,  Russia,  12,  GK,  1990-05-26,  3,  Zenit Saint Petersburg
+ Phil Jones,  England,  16,  DF,  1992-02-21,  10,  Manchester United
+ Panagiotis Tachtsidis,  Greece,  23,  MF,  1991-02-15,  6,  Torino
+ Lee Bum-young,  South Korea,  23,  GK,  1989-04-02,  0,  Busan IPark
+ Eder,  Portugal,  11,  FW,  1987-12-22,  8,  Braga
+ Leonardo Bonucci,  Italy,  19,  DF,  1987-05-01,  37,  Juventus
+ Essaid Belkalem,  Algeria,  4,  DF,  1989-01-01,  13,  Watford
+ Reza Haghighi,  Iran,  8,  MF,  1989-02-01,  8,  Persepolis
+ Martin Demichelis,  Argentina,  15,  DF,  1980-12-20,  38,  Manchester City
+ Granit Xhaka,  Switzerland,  10,  MF,  1992-09-27,  26,  Borussia Monchengladbach
+ Luke Shaw,  England,  23,  DF,  1995-07-12,  2,  Southampton
+ Leighton Baines,  England,  3,  DF,  1984-12-11,  24,  Everton
+ Javier Mascherano,  Argentina,  14,  MF,  1984-06-08,  98,  Barcelona
+ Godfrey Oboabona,  Nigeria,  14,  DF,  1990-08-16,  35,  Çaykur Rizespor
+ Danijel Pranjic,  Croatia,  3,  DF,  1981-12-02,  50,  Panathinaikos
+ Karim Ansarifard,  Iran,  10,  FW,  1990-04-03,  42,  Tractor Sazi
+ Jô,  Brazil,  21,  FW,  1987-03-20,  17,  Atletico Mineiro
+ Oswaldo Minda,  Ecuador,  14,  MF,  1983-07-26,  18,  Chivas USA
+ Arjen Robben,  Netherlands,  11,  FW,  1984-01-23,  75,  Bayern Munich
+ Jermaine Jones,  United States,  13,  MF,  1981-11-03,  42,  Besiktas
+ John Brooks,  United States,  6,  DF,  1993-01-28,  4,  Hertha BSC
+ Oscar Boniek Garcia,  Honduras,  14,  MF,  1984-09-04,  92,  Houston Dynamo
+ David Villa,  Spain,  7,  FW,  1981-12-03,  96,  Atletico Madrid
+ Cedric Djeugoue,  Cameroon,  4,  DF,  1992-08-28,  3,  Coton Sport
+ Kim Seung-gyu,  South Korea,  21,  GK,  1990-09-30,  5,  Ulsan Hyundai
+ Francisco Silva,  Chile,  5,  MF,  1986-02-11,  12,  Osasuna
+ Marco Urena,  Costa Rica,  21,  FW,  1990-03-05,  24,  Kuban Krasnodar
+ Neymar,  Brazil,  10,  FW,  1992-02-05,  49,  Barcelona
+ Renato Ibarra,  Ecuador,  5,  MF,  1991-01-20,  18,  Vitesse
+ Alex Wilkinson,  Australia,  22,  DF,  1984-08-13,  3,  Jeonbuk Hyundai Motors
+ Diego Perez,  Uruguay,  15,  MF,  1980-05-18,  89,  Bologna
+ Sofiane Feghouli,  Algeria,  10,  MF,  1989-12-26,  19,  Valencia
+ Madjid Bougherra,  Algeria,  2,  DF,  1982-10-07,  62,  Lekhwiya
+ Angel di Maria,  Argentina,  7,  MF,  1988-02-14,  47,  Real Madrid
+ Daley Blind,  Netherlands,  5,  DF,  1990-03-09,  12,  Ajax
+ Ignazio Abate,  Italy,  7,  DF,  1986-11-12,  20,  Milan
+ Willian,  Brazil,  19,  MF,  1988-08-09,  7,  Chelsea
+ Liassine Cadamuro-Bentaiba,  Algeria,  17,  DF,  1988-03-05,  7,  Mallorca
+ Ricardo Costa,  Portugal,  13,  DF,  1981-05-16,  19,  Valencia
+ Lee Yong,  South Korea,  12,  DF,  1986-12-24,  12,  Ulsan Hyundai
+ Antonio Candreva,  Italy,  6,  MF,  1987-02-28,  20,  Lazio
+ Nick Rimando,  United States,  22,  GK,  1979-06-17,  14,  Real Salt Lake
+ Maynor Figueroa,  Honduras,  3,  DF,  1983-05-02,  105,  Hull City
+ Jalal Hosseini,  Iran,  4,  DF,  1982-02-03,  85,  Persepolis
+ Sol Bamba,  Ivory Coast,  22,  DF,  1985-01-13,  43,  Trabzonspor
+ Aleksandr Kerzhakov,  Russia,  11,  FW,  1982-11-27,  80,  Zenit Saint Petersburg
+ Ruben Amorim,  Portugal,  20,  MF,  1985-01-27,  13,  Benfica
+ Edinson Cavani,  Uruguay,  21,  FW,  1987-02-14,  62,  Paris Saint-Germain
+ Isaac Brizuela,  Mexico,  17,  MF,  1990-08-28,  7,  Toluca
+ Johnny Herrera,  Chile,  23,  GK,  1981-05-09,  8,  Universidad de Chile
+ Eduardo,  Croatia,  22,  FW,  1983-02-25,  63,  Shakhtar Donetsk
+ Pablo Armero,  Colombia,  7,  DF,  1986-11-02,  53,  West Ham United
+ Raheem Sterling,  England,  19,  MF,  1994-12-08,  4,  Liverpool
+ Carlo Costly,  Honduras,  13,  FW,  1982-07-18,  70,  Real Espana
+ Phil Jagielka,  England,  6,  DF,  1982-08-17,  26,  Everton
+ Cesar Azpilicueta,  Spain,  22,  DF,  1989-08-28,  6,  Chelsea
+ Alireza Haghighi,  Iran,  12,  GK,  1988-05-02,  6,  Sporting Covilha
+ Juan Pablo Montes,  Honduras,  4,  DF,  1985-10-26,  11,  Motagua
+ Timothy Chandler,  United States,  21,  DF,  1990-03-29,  13,  1. FC Nurnberg
+ Maksim Kanunnikov,  Russia,  6,  FW,  1991-07-14,  2,  Amkar Perm
+ Roger Espinoza,  Honduras,  15,  MF,  1986-10-25,  42,  Wigan Athletic
+ Jung Sung-ryong,  South Korea,  1,  GK,  1985-01-04,  61,  Suwon Bluewings
+ Charles Itandje,  Cameroon,  16,  GK,  1982-11-02,  9,  Konyaspor
+ Avdija Vrsajevic,  Bosnia and Herzegovina,  2,  DF,  1986-03-06,  13,  Hajduk Split
+ Diego Benaglio,  Switzerland,  1,  GK,  1983-09-08,  57,  VfL Wolfsburg
+ Fernando Muslera,  Uruguay,  1,  GK,  1986-06-16,  58,  Galatasaray
+ Felipe Caicedo,  Ecuador,  11,  FW,  1988-09-05,  50,  Al-Jazira
+ Zvjezdan Misimovic,  Bosnia and Herzegovina,  10,  MF,  1982-06-05,  81,  Guizhou Renhe
+ Mark Bresciano,  Australia,  23,  MF,  1980-02-11,  74,  Al-Gharafa
+ Jose Holebas,  Greece,  20,  DF,  1984-06-27,  22,  Olympiacos
+ Silvestre Varela,  Portugal,  18,  MF,  1985-02-02,  24,  Porto
+ Raul Meireles,  Portugal,  16,  MF,  1983-03-17,  74,  Fenerbahçe
+ Ermin Bicakcic,  Bosnia and Herzegovina,  3,  DF,  1990-01-24,  7,  Eintracht Braunschweig
+ Mattia De Sciglio,  Italy,  2,  DF,  1992-10-20,  11,  Milan
+ Santi Cazorla,  Spain,  20,  MF,  1984-12-13,  64,  Arsenal
+ Eugene Galekovic,  Australia,  18,  GK,  1981-06-12,  8,  Adelaide United
+ Alex Song,  Cameroon,  6,  MF,  1987-09-09,  47,  Barcelona
+ Federico Fernandez,  Argentina,  17,  DF,  1989-02-21,  26,  Napoli
+ Aissa Mandi,  Algeria,  20,  DF,  1991-10-22,  2,  Reims
+ James Holland,  Australia,  16,  MF,  1989-05-15,  14,  Austria Wien
+ Ogenyi Onazi,  Nigeria,  17,  MF,  1992-12-25,  21,  Lazio
+ Eder Alvarez Balanta,  Colombia,  16,  DF,  1993-02-28,  3,  River Plate
+ Jean-Daniel Akpa-Akpro,  Ivory Coast,  7,  DF,  1992-10-11,  1,  Toulouse
+ Xherdan Shaqiri,  Switzerland,  23,  MF,  1991-10-10,  33,  Bayern Munich
+ Didier Drogba,  Ivory Coast,  11,  FW,  1978-03-11,  101,  Galatasaray
+ Tim Cahill,  Australia,  4,  FW,  1979-12-06,  69,  New York Red Bulls
+ Ben Halloran,  Australia,  10,  MF,  1992-06-14,  2,  Fortuna Dusseldorf
+ Brad Guzan,  United States,  12,  GK,  1984-09-09,  25,  Aston Villa
+ Dirk Kuyt,  Netherlands,  15,  FW,  1980-07-22,  98,  Fenerbahçe
+ Stefan de Vrij,  Netherlands,  3,  DF,  1992-02-05,  12,  Feyenoord
+ Nikica Jelavic,  Croatia,  9,  FW,  1985-08-27,  33,  Hull City
+ Ognjen Vukojevic,  Croatia,  8,  MF,  1983-12-20,  55,  Dynamo Kyiv
+ Clint Dempsey,  United States,  8,  FW,  1983-03-09,  105,  Seattle Sounders FC
+ Rahman Ahmadi,  Iran,  1,  GK,  1980-07-30,  10,  Sepahan
+ Masato Morishige,  Japan,  6,  DF,  1987-05-21,  10,  F.C. Tokyo
+ Ross Barkley,  England,  21,  MF,  1993-12-05,  6,  Everton
+ Edison Mendez,  Ecuador,  8,  MF,  1979-03-15,  110,  Santa Fe
+ Rashid Sumaila,  Ghana,  15,  DF,  1992-12-18,  6,  Mamelodi Sundowns
+ Mario Balotelli,  Italy,  9,  FW,  1990-08-12,  30,  Milan
+ Kim Bo-kyung,  South Korea,  7,  MF,  1989-10-06,  28,  Cardiff City
+ Alvaro Gonzalez,  Uruguay,  20,  MF,  1984-10-29,  43,  Lazio
+ Julian Draxler,  Germany,  14,  MF,  1993-09-20,  11,  Schalke 04
+ Stefanos Kapino,  Greece,  13,  GK,  1994-03-18,  2,  Panathinaikos
+ Celso Borges,  Costa Rica,  5,  MF,  1988-05-27,  63,  AIK
+ Julian Green,  United States,  16,  MF,  1995-06-06,  2,  Bayern Munich
+ Fernando Gago,  Argentina,  5,  MF,  1986-04-10,  49,  Boca Juniors
+ Jerry Bengtson,  Honduras,  11,  FW,  1987-04-08,  44,  New England Revolution
+ Paul Verhaegh,  Netherlands,  12,  DF,  1983-09-01,  2,  FC Augsburg
+ Reza Ghoochannejhad,  Iran,  16,  FW,  1987-09-20,  14,  Charlton Athletic
+ Panagiotis Glykos,  Greece,  12,  GK,  1986-06-03,  2,  PAOK
+ Marco Verratti,  Italy,  23,  MF,  1992-11-05,  6,  Paris Saint-Germain
+ Cedric Si Mohamed,  Algeria,  1,  GK,  1985-01-09,  1,  CS Constantine
+ Maxim Choupo-Moting,  Cameroon,  13,  FW,  1989-03-23,  26,  Mainz 05
+ Walter Ayovi,  Ecuador,  10,  DF,  1979-08-11,  90,  Pachuca
+ Jack Wilshere,  England,  7,  MF,  1992-01-01,  18,  Arsenal
+ Javi Martinez,  Spain,  4,  MF,  1988-09-02,  17,  Bayern Munich
+ Michael Arroyo,  Ecuador,  15,  MF,  1987-04-23,  21,  Atlante
+ Andrea Pirlo,  Italy,  21,  MF,  1979-05-19,  109,  Juventus
+ Henrique,  Brazil,  15,  DF,  1986-10-14,  5,  Napoli
+ Blerim Dzemaili,  Switzerland,  15,  MF,  1986-04-12,  34,  Napoli
+ Uche Nwofor,  Nigeria,  19,  FW,  1991-09-17,  6,  Heerenveen
+ Masoud Shojaei,  Iran,  7,  MF,  1984-06-09,  50,  Las Palmas
+ Han Kook-young,  South Korea,  14,  MF,  1990-04-19,  10,  Kashiwa Reysol
+ Juan Fernando Quintero,  Colombia,  20,  MF,  1993-01-18,  4,  Porto
+ DaMarcus Beasley,  United States,  7,  DF,  1982-05-24,  116,  Puebla
+ Mehdi Mostefa,  Algeria,  22,  MF,  1983-08-30,  23,  Ajaccio
+ Adam Lallana,  England,  20,  MF,  1988-05-10,  6,  Southampton
+ Tommy Oar,  Australia,  11,  MF,  1991-12-10,  15,  Utrecht
+ Mitchell Langerak,  Australia,  12,  GK,  1988-08-22,  3,  Borussia Dortmund
+ Alan Pulido,  Mexico,  11,  FW,  1991-03-08,  6,  UANL
+ Massimo Luongo,  Australia,  21,  MF,  1992-09-25,  1,  Swindon Town
+ Terence Kongolo,  Netherlands,  14,  DF,  1994-02-14,  1,  Feyenoord
+ Robin van Persie,  Netherlands,  9,  FW,  1983-08-06,  85,  Manchester United
+ Romelu Lukaku,  Belgium,  9,  FW,  1993-05-13,  29,  Everton
+ Christian Bolanos,  Costa Rica,  7,  MF,  1984-05-17,  55,  Copenhagen
+ Arthur Boka,  Ivory Coast,  3,  DF,  1983-04-02,  78,  VfB Stuttgart
+ Sammy Bossut,  Belgium,  13,  GK,  1985-08-11,  0,  Zulte Waregem
+ Thiago Silva,  Brazil,  3,  DF,  1984-09-22,  46,  Paris Saint-Germain
+ Mile Jedinak,  Australia,  15,  MF,  1984-08-03,  44,  Crystal Palace
+ Fraser Forster,  England,  22,  GK,  1988-03-17,  2,  Celtic
+ Bernard,  Brazil,  20,  FW,  1992-09-08,  11,  Shakhtar Donetsk
+ Manabu Saito,  Japan,  20,  FW,  1990-04-04,  5,  Yokohama F. Marinos
+ Miiko Albornoz,  Chile,  3,  DF,  1990-11-30,  2,  Malmo FF
+ Philippe Senderos,  Switzerland,  4,  DF,  1985-02-14,  53,  Valencia
+ Koke,  Spain,  17,  MF,  1992-01-08,  8,  Atletico Madrid
+ Fabian Orellana,  Chile,  14,  MF,  1986-01-27,  26,  Celta Vigo
+ Shola Ameobi,  Nigeria,  23,  FW,  1981-10-12,  7,  Newcastle United
+ Landry N'Guemo,  Cameroon,  7,  MF,  1985-11-28,  40,  Bordeaux
+ Oliver Zelenika,  Croatia,  12,  GK,  1993-05-14,  0,  Lokomotiva
+ Giovanni Sio,  Ivory Coast,  21,  FW,  1989-03-31,  7,  Basel
+ Sime Vrsaljko,  Croatia,  2,  DF,  1992-01-10,  7,  Genoa
+ El Arbi Hillel Soudani,  Algeria,  15,  FW,  1987-11-25,  22,  Dinamo Zagreb
+ Josip Drmic,  Switzerland,  19,  FW,  1992-08-08,  7,  1. FC Nurnberg
+ Daniel Davari,  Iran,  22,  GK,  1988-01-06,  4,  Eintracht Braunschweig
+ Stephane Ruffier,  France,  16,  GK,  1986-09-27,  2,  Saint-Etienne
+ Juan Camilo Zuniga,  Colombia,  18,  DF,  1985-12-14,  50,  Napoli
+ Bailey Wright,  Australia,  8,  DF,  1992-07-28,  0,  Preston North End
+ Ghasem Haddadifar,  Iran,  11,  MF,  1983-07-12,  17,  Zob Ahan
+ David Myrie,  Costa Rica,  8,  DF,  1988-06-01,  10,  Herediano
+ Raul Albiol,  Spain,  2,  DF,  1985-09-04,  46,  Napoli
+ Yoichiro Kakitani,  Japan,  11,  FW,  1990-01-03,  12,  Cerezo Osaka
+ Edin Dzeko,  Bosnia and Herzegovina,  11,  FW,  1986-03-17,  62,  Manchester City
+ Nicolas Lombaerts,  Belgium,  18,  DF,  1985-03-20,  25,  Zenit Saint Petersburg
+ Cristian Gamboa,  Costa Rica,  16,  DF,  1989-10-24,  25,  Rosenborg
+ Dejan Lovren,  Croatia,  6,  DF,  1989-07-05,  25,  Southampton
+ Aron Johannsson,  United States,  9,  FW,  1990-11-10,  8,  AZ
+ Gonzalo Higuain,  Argentina,  9,  FW,  1987-12-10,  36,  Napoli
+ Joel Campbell,  Costa Rica,  9,  FW,  1992-06-26,  33,  Olympiacos
+ Kostas Mitroglou,  Greece,  9,  FW,  1988-03-12,  32,  Fulham
+ Fredy Guarin,  Colombia,  13,  MF,  1986-06-30,  49,  Internazionale
+ Juan Carlos Paredes,  Ecuador,  4,  DF,  1987-07-08,  38,  Barcelona
+ Efe Ambrose,  Nigeria,  5,  DF,  1988-10-18,  37,  Celtic
+ Juan Guillermo Cuadrado,  Colombia,  11,  MF,  1988-05-26,  28,  Fiorentina
+ Mathieu Valbuena,  France,  8,  MF,  1984-09-28,  34,  Marseille
+ Kim Young-gwon,  South Korea,  5,  DF,  1990-02-27,  21,  Guangzhou Evergrande
+ Danijel Subasic,  Croatia,  23,  GK,  1984-10-27,  6,  AS Monaco
+ Daniel Opare,  Ghana,  4,  DF,  1990-10-18,  16,  Standard Liege
+ Blaise Matuidi,  France,  14,  MF,  1987-04-09,  23,  Paris Saint-Germain
+ Wilson Palacios,  Honduras,  8,  MF,  1984-07-29,  95,  Stoke City
+ Kyle Beckerman,  United States,  15,  MF,  1982-04-23,  37,  Real Salt Lake
+ Mathis Bolly,  Ivory Coast,  6,  FW,  1990-11-14,  4,  Fortuna Dusseldorf
+ Andrea Barzagli,  Italy,  15,  DF,  1981-05-08,  47,  Juventus
+ Nabil Bentaleb,  Algeria,  14,  MF,  1994-11-24,  3,  Tottenham Hotspur
+ Eden Hazard,  Belgium,  10,  MF,  1991-01-07,  45,  Chelsea
+ Ivan Rakitic,  Croatia,  7,  MF,  1988-03-10,  62,  Sevilla
+ Aleksei Ionov,  Russia,  21,  FW,  1989-02-18,  5,  Dynamo Moscow
+ Hector Moreno,  Mexico,  15,  DF,  1988-01-17,  53,  Espanyol
+ Bakhtiar Rahmani,  Iran,  18,  MF,  1991-09-23,  4,  Foolad
+ Donis Escober,  Honduras,  22,  GK,  1980-02-03,  26,  Olimpia
+ Loic Remy,  France,  20,  FW,  1987-01-02,  25,  Newcastle United
+ Admir Mehmedi,  Switzerland,  18,  FW,  1991-03-16,  21,  SC Freiburg
+ Maya Yoshida,  Japan,  22,  DF,  1988-08-24,  41,  Southampton
+ Sead Kolasinac,  Bosnia and Herzegovina,  5,  DF,  1993-06-20,  4,  Schalke 04
+ Ahmad Alenemeh,  Iran,  17,  DF,  1982-10-10,  9,  Naft Tehran
+ Matt McKay,  Australia,  17,  MF,  1983-01-11,  47,  Brisbane Roar
+ Divock Origi,  Belgium,  17,  FW,  1995-04-18,  2,  Lille
+ Igor Akinfeev,  Russia,  1,  GK,  1986-04-08,  68,  CSKA Moscow
+ Domagoj Vida,  Croatia,  21,  DF,  1989-04-29,  23,  Dynamo Kyiv
+ Sergio Ramos,  Spain,  15,  DF,  1986-03-30,  117,  Real Madrid
+ Juanfran,  Spain,  5,  DF,  1985-01-09,  8,  Atletico Madrid
+ Sokratis Papastathopoulos,  Greece,  19,  DF,  1988-06-09,  47,  Borussia Dortmund
+ Muhamed Besic,  Bosnia and Herzegovina,  7,  DF,  1992-09-10,  9,  Ferencvaros
+ Alvaro Pereira,  Uruguay,  6,  MF,  1985-11-28,  57,  Sao Paulo
+ Pepe Reina,  Spain,  23,  GK,  1982-08-31,  32,  Napoli
+ Hong Jeong-ho,  South Korea,  20,  DF,  1989-08-12,  25,  FC Augsburg
+ Pepe,  Portugal,  3,  DF,  1983-02-26,  58,  Real Madrid
+ Fatau Dauda,  Ghana,  16,  GK,  1985-04-06,  18,  Orlando Pirates
+ Esteban Paredes,  Chile,  22,  FW,  1980-08-01,  35,  Colo-Colo
+ Mathew Leckie,  Australia,  7,  FW,  1991-02-04,  8,  FSV Frankfurt
+ Martin Caceres,  Uruguay,  22,  DF,  1987-04-07,  57,  Juventus
+ Islam Slimani,  Algeria,  13,  FW,  1988-06-18,  20,  Sporting CP
+ Khosro Heydari,  Iran,  2,  MF,  1983-09-14,  49,  Esteghlal
+ Rais M'Bolhi,  Algeria,  23,  GK,  1986-04-25,  28,  CSKA Sofia
+ Michael Lang,  Switzerland,  6,  DF,  1991-02-08,  6,  Grasshopper
+ Wilfried Bony,  Ivory Coast,  12,  FW,  1988-12-10,  24,  Swansea City
+ Oleg Shatov,  Russia,  17,  MF,  1990-07-29,  7,  Zenit Saint Petersburg
+ Mariano Andujar,  Argentina,  21,  GK,  1983-07-30,  10,  Catania
+ Cristian Rodriguez,  Uruguay,  7,  MF,  1985-09-30,  73,  Atletico Madrid
+ Johnny Acosta,  Costa Rica,  2,  DF,  1983-07-21,  25,  Alajuelense
+ Michael Babatunde,  Nigeria,  18,  MF,  1992-12-24,  5,  Volyn Lutsk
+ Andreas Samaris,  Greece,  22,  MF,  1989-06-13,  4,  Olympiacos
+ Azubuike Egwuekwe,  Nigeria,  6,  DF,  1989-07-16,  31,  Warri Wolves
+ Andrei Semyonov,  Russia,  5,  DF,  1989-03-24,  1,  Terek Grozny
+ Fernandinho,  Brazil,  5,  MF,  1985-05-04,  7,  Manchester City
+ Serge Aurier,  Ivory Coast,  17,  DF,  1992-12-24,  8,  Toulouse
+ Ricardo Rodriguez,  Switzerland,  13,  DF,  1992-08-25,  21,  VfL Wolfsburg
+ Andranik Teymourian,  Iran,  14,  MF,  1983-03-06,  79,  Esteghlal
+ Jose Maria Gimenez,  Uruguay,  13,  DF,  1995-01-20,  6,  Atletico Madrid
+ Osman Chavez,  Honduras,  2,  DF,  1984-07-29,  54,  Qingdao Jonoon
+ Lukas Podolski,  Germany,  10,  FW,  1985-06-04,  114,  Arsenal
+ Yeltsin Tejeda,  Costa Rica,  17,  MF,  1992-03-17,  22,  Saprissa
+ Giannis Maniatis,  Greece,  2,  MF,  1986-10-12,  30,  Olympiacos
+ Carlos Salcido,  Mexico,  3,  DF,  1980-04-02,  122,  UANL
+ Aurelien Chedjou,  Cameroon,  14,  DF,  1985-06-20,  31,  Galatasaray
+ Valon Behrami,  Switzerland,  11,  MF,  1985-04-19,  48,  Napoli
+ Francisco Javier Rodriguez,  Mexico,  2,  DF,  1981-10-20,  95,  America
+ Nacer Chadli,  Belgium,  22,  MF,  1989-10-02,  20,  Tottenham Hotspur
+ Faryd Mondragon,  Colombia,  22,  GK,  1971-06-21,  50,  Deportivo Cali
+ Gary Cahill,  England,  5,  DF,  1985-12-19,  24,  Chelsea
+ Jasmin Fejzic,  Bosnia and Herzegovina,  12,  GK,  1986-05-15,  0,  VfR Aalen
+ Vangelis Moras,  Greece,  5,  DF,  1981-08-26,  19,  Verona
+ Senad Lulic,  Bosnia and Herzegovina,  16,  MF,  1986-01-18,  33,  Lazio
+ Ciro Immobile,  Italy,  17,  FW,  1990-02-20,  2,  Torino
+ Jefferson Montero,  Ecuador,  7,  MF,  1989-09-01,  40,  Morelia
+ Jackson Martinez,  Colombia,  21,  FW,  1986-10-03,  27,  Porto
+ Geoff Cameron,  United States,  20,  DF,  1985-07-11,  27,  Stoke City
+ Pejman Montazeri,  Iran,  15,  DF,  1983-09-06,  22,  Umm Salal
+ Sergio Romero,  Argentina,  1,  GK,  1987-02-22,  47,  AS Monaco
+ Juan Mata,  Spain,  13,  MF,  1988-04-28,  33,  Manchester United
+ Ezequiel Lavezzi,  Argentina,  22,  FW,  1985-05-03,  31,  Paris Saint-Germain
+ Kunle Odunlami,  Nigeria,  12,  DF,  1991-04-30,  11,  Sunshine Stars
+ Marcelo,  Brazil,  6,  DF,  1988-05-12,  31,  Real Madrid
+ Joao Moutinho,  Portugal,  8,  MF,  1986-09-08,  68,  AS Monaco
+ Sammir,  Croatia,  19,  MF,  1987-04-23,  6,  Getafe
+ Adnan Januzaj,  Belgium,  20,  MF,  1995-02-05,  1,  Manchester United
+ Andre Schurrle,  Germany,  9,  MF,  1990-11-06,  33,  Chelsea
+ Dani Alves,  Brazil,  2,  DF,  1983-05-06,  75,  Barcelona
+ Javier Hernandez,  Mexico,  14,  FW,  1988-06-01,  62,  Manchester United
+ Hossein Mahini,  Iran,  13,  DF,  1986-09-16,  22,  Persepolis
+ Gotoku Sakai,  Japan,  3,  DF,  1991-03-14,  12,  VfB Stuttgart
+ Vincent Kompany,  Belgium,  4,  DF,  1986-04-10,  59,  Manchester City
+ Antonio Cassano,  Italy,  10,  FW,  1982-07-12,  37,  Parma
+ Shkodran Mustafi,  Germany,  21,  DF,  1992-04-17,  1,  Sampdoria
+ Miguel Angel Ponce,  Mexico,  16,  DF,  1989-04-12,  8,  Toluca
+ Mensur Mujdza,  Bosnia and Herzegovina,  13,  DF,  1984-03-28,  24,  SC Freiburg
+ Gary Medel,  Chile,  17,  DF,  1987-08-03,  61,  Cardiff City
+ Loukas Vyntra,  Greece,  11,  DF,  1981-02-05,  50,  Levante
+ Chris Wondolowski,  United States,  18,  FW,  1983-01-28,  21,  San Jose Earthquakes
+ Patrick Pemberton,  Costa Rica,  18,  GK,  1982-04-24,  21,  Alajuelense
+ Eliaquim Mangala,  France,  13,  DF,  1991-02-13,  3,  Porto
+ Michael Uchebo,  Nigeria,  20,  FW,  1990-02-02,  4,  Cercle Brugge
+ Hashem Beikzadeh,  Iran,  19,  DF,  1984-01-22,  17,  Esteghlal
+ Alan Dzagoev,  Russia,  10,  MF,  1990-06-17,  32,  CSKA Moscow
+ Gordon Schildenfeld,  Croatia,  13,  DF,  1985-03-18,  21,  Panathinaikos
+ Matteo Darmian,  Italy,  4,  DF,  1989-12-02,  1,  Torino
+ Eugenio Mena,  Chile,  2,  DF,  1988-07-18,  25,  Santos
+ Denis Glushakov,  Russia,  8,  MF,  1987-01-27,  26,  Spartak Moscow
+ Faouzi Ghoulam,  Algeria,  3,  DF,  1991-02-01,  6,  Napoli
+ Dario Vidosic,  Australia,  20,  MF,  1987-04-08,  23,  Sion
+ Masahiko Inoha,  Japan,  19,  DF,  1983-08-28,  21,  Jubilo Iwata
+ Adam Taggart,  Australia,  9,  FW,  1993-06-02,  5,  Newcastle Jets
+ Rony Martinez,  Honduras,  16,  FW,  1988-10-16,  12,  Real Sociedad
+ Yaya Toure,  Ivory Coast,  19,  MF,  1983-05-13,  82,  Manchester City
+ Albert Adomah,  Ghana,  14,  MF,  1987-12-13,  15,  Middlesbrough
+ Hiroki Sakai,  Japan,  21,  DF,  1990-04-12,  18,  Hannover 96
+ Senijad Ibricic,  Bosnia and Herzegovina,  17,  MF,  1985-09-26,  42,  Kayseri Erciyesspor
+ Omar Gonzalez,  United States,  3,  DF,  1988-10-11,  20,  Los Angeles Galaxy
+ Nabil Ghilas,  Algeria,  9,  FW,  1990-04-20,  5,  Porto
+ Georgi Shchennikov,  Russia,  3,  DF,  1991-04-27,  4,  CSKA Moscow
+ Tim Krul,  Netherlands,  23,  GK,  1988-04-03,  5,  Newcastle United
+ Maicon,  Brazil,  23,  DF,  1981-07-26,  72,  Roma
+ Christian Noboa,  Ecuador,  6,  MF,  1985-04-09,  42,  Dynamo Moscow
+ Wakaso Mubarak,  Ghana,  22,  MF,  1990-07-25,  17,  Rubin Kazan
+ Ha Dae-sung,  South Korea,  8,  MF,  1985-03-02,  13,  Beijing Guoan
+ Roy Miller,  Costa Rica,  19,  DF,  1984-11-24,  48,  New York Red Bulls
+ Diego Lugano,  Uruguay,  2,  DF,  1980-11-02,  94,  West Bromwich Albion
+ Abel Aguilar,  Colombia,  8,  MF,  1985-01-06,  49,  Toulouse
+ Viktor Fayzulin,  Russia,  20,  MF,  1986-04-22,  19,  Zenit Saint Petersburg
+ Marcelo Diaz,  Chile,  21,  MF,  1986-12-30,  21,  Basel
+ Lee Chung-yong,  South Korea,  17,  MF,  1988-07-02,  55,  Bolton Wanderers
+ Giovani dos Santos,  Mexico,  10,  FW,  1989-05-11,  76,  Villarreal
+ DeAndre Yedlin,  United States,  2,  DF,  1993-07-09,  4,  Seattle Sounders FC
+ Hwang Seok-ho,  South Korea,  6,  DF,  1989-06-27,  3,  Sanfrecce Hiroshima
+ Dany Nounkeu,  Cameroon,  5,  DF,  1986-04-11,  16,  Besiktas
+ Oscar Bagui,  Ecuador,  18,  DF,  1982-12-10,  21,  Emelec
+ Karim Benzema,  France,  10,  FW,  1987-12-19,  66,  Real Madrid
+ Paul Pogba,  France,  19,  MF,  1993-03-15,  11,  Juventus
+ Beto,  Portugal,  22,  GK,  1982-05-01,  7,  Sevilla
+ Nicolas N'Koulou,  Cameroon,  3,  DF,  1990-03-27,  48,  Marseille
+ Dmitri Kombarov,  Russia,  23,  DF,  1987-01-22,  22,  Spartak Moscow
+ Iker Casillas,  Spain,  1,  GK,  1981-05-20,  154,  Real Madrid
+ Daniel Van Buyten,  Belgium,  15,  DF,  1978-02-07,  79,  Bayern Munich
+ Gonzalo Jara,  Chile,  18,  DF,  1985-08-29,  65,  Nottingham Forest
+ James Milner,  England,  17,  MF,  1986-01-04,  47,  Manchester City
+ Anthony Vanden Borre,  Belgium,  21,  DF,  1987-10-24,  25,  Anderlecht
+ Helder Postiga,  Portugal,  23,  FW,  1982-08-02,  69,  Lazio
+ Michael Umana,  Costa Rica,  4,  DF,  1982-07-16,  83,  Saprissa
+ Michel Vorm,  Netherlands,  22,  GK,  1983-10-03,  14,  Swansea City
+ Valentin Stocker,  Switzerland,  14,  MF,  1989-04-12,  24,  Basel
+ Alex Oxlade-Chamberlain,  England,  15,  MF,  1993-08-15,  15,  Arsenal
+ Didier Zokora,  Ivory Coast,  5,  DF,  1980-12-14,  119,  Trabzonspor
+ Augusto Fernandez,  Argentina,  13,  MF,  1986-04-10,  9,  Celta Vigo
+ Carlos Gruezo,  Ecuador,  23,  MF,  1995-04-19,  3,  VfB Stuttgart
+ Andres Guardado,  Mexico,  18,  DF,  1986-09-28,  104,  Bayer Leverkusen
+ Lucas Biglia,  Argentina,  6,  MF,  1986-01-30,  18,  Lazio
+ Arturo Vidal,  Chile,  8,  MF,  1987-05-22,  54,  Juventus
+ Vasili Berezutski,  Russia,  14,  DF,  1982-06-20,  78,  CSKA Moscow
+ Mario Yepes,  Colombia,  3,  DF,  1976-01-13,  98,  Atalanta
+ Sergio Aguero,  Argentina,  20,  FW,  1988-06-02,  51,  Manchester City
+ Constant Djakpa,  Ivory Coast,  18,  DF,  1986-10-17,  5,  Eintracht Frankfurt
+ Gabriel Achilier,  Ecuador,  21,  DF,  1985-03-24,  23,  Emelec
+ Kwadwo Asamoah,  Ghana,  20,  MF,  1988-12-09,  62,  Juventus
+ Ricardo Alvarez,  Argentina,  19,  MF,  1988-04-12,  7,  Internazionale
+ Sebastian Coates,  Uruguay,  19,  DF,  1990-10-07,  15,  Nacional
+ Vladimir Granat,  Russia,  13,  DF,  1987-05-22,  5,  Dynamo Moscow
+ Jordan Henderson,  England,  14,  MF,  1990-06-17,  11,  Liverpool
+ Allan Nyom,  Cameroon,  22,  DF,  1988-05-10,  10,  Granada
+ Saphir Taider,  Algeria,  19,  MF,  1992-02-29,  11,  Internazionale
+ Ezequiel Garay,  Argentina,  2,  DF,  1986-10-10,  18,  Benfica
+ Jonathan de Guzman,  Netherlands,  8,  MF,  1987-09-13,  10,  Swansea City
+ Roman Weidenfeller,  Germany,  22,  GK,  1980-08-06,  3,  Borussia Dortmund
+ Vincent Enyeama,  Nigeria,  1,  GK,  1982-08-29,  91,  Lille
+ Djamel Mesbah,  Algeria,  6,  DF,  1984-10-09,  26,  Livorno
+ Toni Kroos,  Germany,  18,  MF,  1990-01-04,  44,  Bayern Munich
+ Loic Feudjou,  Cameroon,  1,  GK,  1992-04-14,  2,  Coton Sport
+ Lorenzo Insigne,  Italy,  22,  FW,  1991-06-04,  5,  Napoli
+ Morgan Schneiderlin,  France,  22,  MF,  1989-11-08,  1,  Southampton
+ Ron-Robert Zieler,  Germany,  12,  GK,  1989-02-12,  3,  Hannover 96
+ Yuri Zhirkov,  Russia,  18,  FW,  1983-08-20,  60,  Dynamo Moscow
+ Luis Suarez,  Uruguay,  9,  FW,  1987-01-24,  77,  Liverpool
+ Diego Costa,  Spain,  19,  FW,  1988-10-07,  2,  Atletico Madrid
+ Jorge Claros,  Honduras,  20,  MF,  1986-01-08,  49,  Motagua
+ Mohamed Zemmamouche,  Algeria,  16,  GK,  1985-03-19,  7,  USM Alger
+ Yasuhito Endo,  Japan,  7,  MF,  1980-01-28,  144,  Gamba Osaka
+ Lionel Messi,  Argentina,  10,  FW,  1987-06-24,  86,  Barcelona
+ Rafael Marquez,  Mexico,  4,  DF,  1979-02-13,  120,  Leon
+ Thiago Motta,  Italy,  5,  MF,  1982-08-28,  20,  Paris Saint-Germain
+ Stephane Mbia,  Cameroon,  17,  MF,  1986-05-20,  49,  Sevilla
+ Sayouba Mande,  Ivory Coast,  23,  GK,  1993-06-15,  1,  Stabæk
+ Glen Johnson,  England,  2,  DF,  1984-08-23,  52,  Liverpool
+ Oscar,  Brazil,  11,  MF,  1991-09-09,  31,  Chelsea
+ Jordy Clasie,  Netherlands,  16,  MF,  1991-06-27,  8,  Feyenoord
+ Michael Essien,  Ghana,  5,  MF,  1982-12-03,  57,  Milan
+ Mathew Ryan,  Australia,  1,  GK,  1992-04-08,  7,  Club Brugge
+ Mathieu Debuchy,  France,  2,  DF,  1985-07-28,  21,  Newcastle United
+ Georginio Wijnaldum,  Netherlands,  20,  MF,  1990-11-11,  5,  PSV
+ Daniel Cambronero,  Costa Rica,  23,  GK,  1987-12-01,  4,  Herediano
+ Alexandros Tziolis,  Greece,  6,  MF,  1985-02-13,  49,  Kayserispor
+ Victor,  Brazil,  22,  GK,  1983-01-21,  6,  Atletico Mineiro
+ Xavi,  Spain,  8,  MF,  1980-01-25,  132,  Barcelona
+ James Rodriguez,  Colombia,  10,  MF,  1991-07-12,  22,  AS Monaco
+ Cesc Fabregas,  Spain,  10,  MF,  1987-05-04,  89,  Barcelona
+ Carlos Carbonero,  Colombia,  5,  MF,  1990-07-25,  1,  River Plate
+ Randall Brenes,  Costa Rica,  14,  FW,  1983-08-13,  39,  Cartagines
+ Ognjen Vranjes,  Bosnia and Herzegovina,  6,  DF,  1989-10-24,  13,  Elazığspor
+ David de Gea,  Spain,  12,  GK,  1990-11-07,  1,  Manchester United
+ Joao Rojas,  Ecuador,  9,  MF,  1989-06-14,  30,  Cruz Azul
+ Santiago Arias,  Colombia,  4,  DF,  1992-01-13,  6,  PSV
+ Sammy N'Djock,  Cameroon,  23,  GK,  1990-02-25,  3,  Fethiyespor
+ Oscar Duarte,  Costa Rica,  6,  DF,  1989-06-03,  11,  Club Brugge
+ Salvatore Sirigu,  Italy,  12,  GK,  1987-01-12,  8,  Paris Saint-Germain
+ Edder Delgado,  Honduras,  12,  MF,  1986-11-20,  26,  Real Espana
+ Riyad Mahrez,  Algeria,  21,  MF,  1991-02-21,  2,  Leicester City
+ Carlos Valdes,  Colombia,  23,  DF,  1985-05-22,  14,  San Lorenzo
+ Michael Bradley,  United States,  4,  MF,  1987-07-31,  86,  Toronto FC
+ Pablo Zabaleta,  Argentina,  4,  DF,  1985-01-16,  36,  Manchester City
+ Jose Miguel Cubero,  Costa Rica,  22,  MF,  1987-02-14,  35,  Herediano
+ Wesley Sneijder,  Netherlands,  10,  MF,  1984-06-09,  99,  Galatasaray
+ Toni Sunjic,  Bosnia and Herzegovina,  15,  DF,  1988-12-15,  8,  Zorya Luhansk
+ Mario Gavranovic,  Switzerland,  17,  FW,  1989-11-24,  11,  Zurich
+ Marco Parolo,  Italy,  18,  MF,  1985-01-25,  4,  Parma
+ Ki Sung-yueng,  South Korea,  16,  MF,  1989-01-24,  58,  Sunderland
+ Cristiano Ronaldo,  Portugal,  7,  FW,  1985-02-05,  111,  Real Madrid
+ Vedad Ibisevic,  Bosnia and Herzegovina,  9,  FW,  1984-08-06,  55,  VfB Stuttgart
+ Pierre Webo,  Cameroon,  15,  FW,  1982-01-20,  56,  Fenerbahçe
+ Jordan Ayew,  Ghana,  13,  FW,  1991-09-11,  13,  Sochaux
+ Ashkan Dejagah,  Iran,  21,  MF,  1986-07-05,  14,  Fulham
+ Lucas Digne,  France,  17,  DF,  1993-07-20,  2,  Paris Saint-Germain
+ Yann Sommer,  Switzerland,  12,  GK,  1988-12-17,  6,  Basel
+ Orestis Karnezis,  Greece,  1,  GK,  1985-07-11,  19,  Granada
+ Yohan Cabaye,  France,  6,  MF,  1986-01-14,  30,  Paris Saint-Germain
+ Giorgos Tzavellas,  Greece,  3,  DF,  1987-11-26,  13,  PAOK
+ Hugo Lloris,  France,  1,  GK,  1986-12-26,  57,  Tottenham Hotspur
+ Steven Defour,  Belgium,  16,  MF,  1988-04-15,  43,  Porto
+ Afriyie Acquah,  Ghana,  6,  MF,  1992-01-05,  5,  Parma
+ Andre Almeida,  Portugal,  19,  DF,  1990-09-10,  5,  Benfica
+ Milan Badelj,  Croatia,  15,  MF,  1989-02-25,  9,  Hamburger SV
+ Jan Vertonghen,  Belgium,  5,  DF,  1987-04-24,  56,  Tottenham Hotspur
+ Adrian Ramos,  Colombia,  19,  FW,  1986-01-22,  26,  Hertha BSC
+ Darijo Srna,  Croatia,  11,  DF,  1982-05-01,  112,  Shakhtar Donetsk
+ Sergey Ryzhikov,  Russia,  16,  GK,  1980-09-19,  1,  Rubin Kazan
+ Aleksandr Samedov,  Russia,  19,  FW,  1984-07-19,  17,  Lokomotiv Moscow
+ Julio Cesar,  Brazil,  12,  GK,  1979-09-03,  80,  Toronto FC
+ Shinji Kagawa,  Japan,  10,  MF,  1989-03-17,  57,  Manchester United
+ Shūichi Gonda,  Japan,  23,  GK,  1989-03-03,  2,  F.C. Tokyo
+ Christian Atsu,  Ghana,  7,  MF,  1992-01-10,  23,  Vitesse
+ Martin Silva,  Uruguay,  23,  GK,  1983-03-25,  4,  Vasco da Gama
+ Claudio Marchisio,  Italy,  8,  MF,  1986-01-19,  44,  Juventus
+ Remy Cabella,  France,  7,  MF,  1990-03-08,  1,  Montpellier
+ Jorge Valdivia,  Chile,  10,  MF,  1983-10-03,  57,  Palmeiras
+ Jozy Altidore,  United States,  17,  FW,  1989-11-06,  70,  Sunderland
+ Mauricio Pinilla,  Chile,  9,  FW,  1984-02-04,  27,  Cagliari
+ Kevin Grosskreutz,  Germany,  2,  DF,  1988-07-19,  5,  Borussia Dortmund
+ Moussa Sissoko,  France,  18,  MF,  1989-08-16,  17,  Newcastle United
+ Ron Vlaar,  Netherlands,  2,  DF,  1985-02-16,  24,  Aston Villa
+ Miguel Layun,  Mexico,  7,  DF,  1988-06-25,  15,  America
+ Matthias Ginter,  Germany,  3,  DF,  1994-01-19,  2,  SC Freiburg
+ Olivier Giroud,  France,  9,  FW,  1986-09-30,  30,  Arsenal
+ Carl Medjani,  Algeria,  12,  DF,  1985-05-15,  26,  Valenciennes
+ Victor Moses,  Nigeria,  11,  MF,  1990-12-12,  22,  Liverpool
+ Park Jong-woo,  South Korea,  15,  MF,  1989-03-10,  10,  Guangzhou R&amp;F
+ Gabriel Paletta,  Italy,  20,  DF,  1986-02-15,  2,  Parma
+ Memphis Depay,  Netherlands,  21,  FW,  1994-02-13,  6,  PSV
+ Bastian Schweinsteiger,  Germany,  7,  MF,  1984-08-01,  102,  Bayern Munich
+ David Luiz,  Brazil,  4,  DF,  1987-04-22,  36,  Chelsea
+ Jerôme Boateng,  Germany,  20,  DF,  1988-09-03,  39,  Bayern Munich
+ Teofilo Gutierrez,  Colombia,  9,  FW,  1985-05-17,  30,  River Plate
+ Kim Shin-wook,  South Korea,  18,  FW,  1988-04-14,  27,  Ulsan Hyundai
+ Steve von Bergen,  Switzerland,  5,  DF,  1983-06-10,  41,  Young Boys
+ Lee Keun-ho,  South Korea,  11,  FW,  1985-04-11,  63,  Sangju Sangmu
+ John Obi Mikel,  Nigeria,  10,  MF,  1987-04-22,  59,  Chelsea
+ Manuel Neuer,  Germany,  1,  GK,  1986-03-27,  45,  Bayern Munich
+ Benjamin Moukandjo,  Cameroon,  8,  FW,  1988-11-12,  17,  Nancy
+ Victor Bernardez,  Honduras,  5,  DF,  1982-05-24,  78,  San Jose Earthquakes
+ Rodrigo Palacio,  Argentina,  18,  FW,  1982-02-05,  22,  Internazionale
+ Ramires,  Brazil,  16,  MF,  1987-03-24,  42,  Chelsea
+ Laurent Ciman,  Belgium,  23,  DF,  1985-08-05,  8,  Standard Liege
+ Marvin Chavez,  Honduras,  23,  MF,  1983-11-03,  42,  Chivas USA
+ Roman Burki,  Switzerland,  21,  GK,  1990-11-14,  0,  Grasshopper
+ Eiji Kawashima,  Japan,  1,  GK,  1983-03-20,  56,  Standard Liege
+ Miroslav Klose,  Germany,  11,  FW,  1978-06-09,  132,  Lazio
+ Jordi Alba,  Spain,  18,  DF,  1989-03-21,  26,  Barcelona
+ Juan Carlos Garcia,  Honduras,  6,  DF,  1988-03-08,  34,  Wigan Athletic
+ Koo Ja-cheol,  South Korea,  13,  MF,  1989-02-27,  37,  Mainz 05
+ Mix Diskerud,  United States,  10,  MF,  1990-10-02,  20,  Rosenborg
+ Cristopher Toselli,  Chile,  12,  GK,  1988-06-22,  4,  Universidad Catolica
+ Adam Kwarasey,  Ghana,  12,  GK,  1987-12-12,  21,  Strømsgodset
+ Igor Denisov,  Russia,  7,  MF,  1984-05-17,  43,  Dynamo Moscow
+ Abel Hernandez,  Uruguay,  8,  FW,  1990-08-08,  12,  Palermo
+ Aleksandr Kokorin,  Russia,  9,  FW,  1991-03-19,  21,  Dynamo Moscow
+ Ivica Olic,  Croatia,  18,  FW,  1979-09-14,  92,  VfL Wolfsburg
+ Amir Hossein Sadeghi,  Iran,  5,  DF,  1981-09-06,  17,  Esteghlal
+ Son Heung-min,  South Korea,  9,  FW,  1992-07-08,  25,  Bayer Leverkusen
+ Wayne Rooney,  England,  10,  FW,  1985-10-24,  92,  Manchester United
+ Junior Diaz,  Costa Rica,  15,  DF,  1983-09-12,  62,  Mainz 05
+ Giorgio Chiellini,  Italy,  3,  DF,  1984-08-14,  68,  Juventus
+ Ejike Uzoenyi,  Nigeria,  3,  MF,  1988-03-23,  21,  Enugu Rangers
+ Emir Spahic,  Bosnia and Herzegovina,  4,  DF,  1980-08-18,  74,  Bayer Leverkusen
+ Gokhan Inler,  Switzerland,  8,  MF,  1984-06-27,  73,  Napoli
+ Mario Mandzukic,  Croatia,  17,  FW,  1986-05-21,  50,  Bayern Munich
+ Tino-Sven Susic,  Bosnia and Herzegovina,  14,  MF,  1992-02-13,  2,  Hajduk Split
+ Harrison Afful,  Ghana,  23,  DF,  1986-06-24,  41,  Esperance
+ Agustin Orion,  Argentina,  12,  GK,  1981-07-26,  3,  Boca Juniors
+ Rui Patricio,  Portugal,  12,  GK,  1988-02-15,  30,  Sporting CP
+ Benedikt Howedes,  Germany,  4,  DF,  1988-02-29,  21,  Schalke 04
+ John Boye,  Ghana,  21,  DF,  1987-04-23,  30,  Rennes
+ Jonathan Mensah,  Ghana,  19,  DF,  1990-07-13,  27,  Evian
+ Ivan Perisic,  Croatia,  4,  MF,  1989-02-02,  29,  VfL Wolfsburg
+ Yoshito Ōkubo,  Japan,  13,  FW,  1982-06-09,  57,  Kawasaki Frontale
+ Erik Durm,  Germany,  15,  DF,  1992-05-12,  1,  Borussia Dortmund
+ Oribe Peralta,  Mexico,  19,  FW,  1984-01-12,  33,  Santos Laguna
+ Raphael Varane,  France,  4,  DF,  1993-04-25,  6,  Real Madrid
+ Jerry Palacios,  Honduras,  9,  FW,  1981-11-01,  24,  Alajuelense
+ Mehrdad Pouladi,  Iran,  23,  DF,  1987-02-26,  20,  Persepolis
+ James Troisi,  Australia,  14,  MF,  1988-07-03,  11,  Melbourne Victory
+ Bryan Ruiz,  Costa Rica,  10,  FW,  1985-08-18,  63,  PSV
+ Theofanis Gekas,  Greece,  17,  FW,  1980-05-23,  72,  Konyaspor
+ Keisuke Honda,  Japan,  4,  MF,  1986-06-13,  56,  Milan
+ Felipe Gutierrez,  Chile,  16,  MF,  1990-10-08,  18,  Twente
+ Jefferson,  Brazil,  1,  GK,  1983-01-02,  9,  Botafogo
+ Max Gradel,  Ivory Coast,  15,  FW,  1987-11-30,  26,  Saint-Etienne
+ Dimitris Salpingidis,  Greece,  14,  FW,  1981-08-18,  76,  PAOK
+ Joseph Yobo,  Nigeria,  2,  DF,  1980-09-06,  97,  Norwich City
+ Mousa Dembele,  Belgium,  19,  MF,  1987-07-16,  57,  Tottenham Hotspur
+ Fabrice Olinga,  Cameroon,  19,  FW,  1996-05-12,  8,  Zulte Waregem
+ Asmir Avdukic,  Bosnia and Herzegovina,  22,  GK,  1981-05-13,  3,  Borac Banja Luka
+ Park Joo-ho,  South Korea,  22,  DF,  1987-01-16,  14,  Mainz 05
+ Bruno Alves,  Portugal,  2,  DF,  1981-11-27,  72,  Fenerbahçe
+ Javad Nekounam,  Iran,  6,  MF,  1980-10-07,  140,  Al-Kuwait
+ Brayan Beckeles,  Honduras,  21,  DF,  1985-11-28,  23,  Olimpia
+ Reto Ziegler,  Switzerland,  3,  DF,  1986-01-16,  35,  Sassuolo
+ Ryan McGowan,  Australia,  19,  DF,  1989-08-15,  9,  Shandong Luneng Taishan
+ Per Mertesacker,  Germany,  17,  DF,  1984-09-29,  98,  Arsenal
+ Thomas Muller,  Germany,  13,  MF,  1989-09-13,  49,  Bayern Munich
+ Dante,  Brazil,  13,  DF,  1983-10-18,  12,  Bayern Munich
+ Joel Matip,  Cameroon,  21,  MF,  1991-08-08,  23,  Schalke 04
+ Kwak Tae-hwi,  South Korea,  4,  DF,  1981-07-08,  35,  Al-Hilal
+ Rafik Halliche,  Algeria,  5,  DF,  1986-09-02,  29,  Academica
+ Maxi Pereira,  Uruguay,  16,  DF,  1984-06-08,  90,  Benfica
+ Mesut Özil,  Germany,  8,  MF,  1988-10-15,  55,  Arsenal
+ Dries Mertens,  Belgium,  14,  FW,  1987-05-06,  25,  Napoli
+ Victor Ibarbo,  Colombia,  14,  FW,  1990-05-19,  9,  Cagliari
+ Kolo Toure,  Ivory Coast,  4,  DF,  1981-03-19,  107,  Liverpool
+ Andre Ayew,  Ghana,  10,  MF,  1989-12-17,  49,  Marseille
+ Shusaku Nishikawa,  Japan,  12,  GK,  1986-06-18,  13,  Urawa Red Diamonds
+ Pavel Mogilevets,  Russia,  15,  MF,  1993-01-25,  1,  Rubin Kazan
+ Waylon Francis,  Costa Rica,  12,  DF,  1990-09-20,  1,  Columbus Crew
+ Sergei Ignashevich,  Russia,  4,  DF,  1979-07-14,  96,  CSKA Moscow
+ Marcos Rojo,  Argentina,  16,  DF,  1990-03-20,  22,  Sporting CP
+ Izet Hajrovic,  Bosnia and Herzegovina,  20,  MF,  1991-08-04,  7,  Galatasaray
+ David Ospina,  Colombia,  1,  GK,  1988-08-31,  44,  Nice
+ Toshihiro Aoyama,  Japan,  14,  MF,  1986-02-22,  6,  Sanfrecce Hiroshima
+ Emmanuel Agyemang-Badu,  Ghana,  8,  MF,  1990-12-02,  49,  Udinese
+ Xabi Alonso,  Spain,  14,  MF,  1981-11-25,  111,  Real Madrid
+ Tim Howard,  United States,  1,  GK,  1979-03-06,  100,  Everton
+ Lazaros Christodoulopoulos,  Greece,  16,  MF,  1986-12-19,  19,  Bologna
+ Carlos Sanchez,  Colombia,  6,  MF,  1986-02-06,  44,  Elche
+ Jeremain Lens,  Netherlands,  17,  FW,  1987-11-24,  22,  Dynamo Kyiv
+ Rio Mavuba,  France,  12,  MF,  1984-03-08,  12,  Lille
+ Jose de Jesus Corona,  Mexico,  1,  GK,  1981-01-26,  34,  Cruz Azul
+ Hugo Almeida,  Portugal,  9,  FW,  1984-05-23,  55,  Besiktas
+ Laurent Koscielny,  France,  21,  DF,  1985-09-10,  17,  Arsenal
+ Joao Pereira,  Portugal,  21,  DF,  1984-02-25,  36,  Valencia
+ Diego Calvo,  Costa Rica,  20,  MF,  1991-03-25,  10,  Vålerenga
+ Samuel Eto'o,  Cameroon,  9,  FW,  1981-03-10,  117,  Chelsea
+ Fred,  Brazil,  9,  FW,  1983-10-03,  33,  Fluminense
+ Matt Besler,  United States,  5,  DF,  1987-02-11,  17,  Sporting Kansas City
+ Kevin Mirallas,  Belgium,  11,  MF,  1987-10-05,  44,  Everton
+ Yuto Nagatomo,  Japan,  5,  DF,  1986-09-12,  70,  Internazionale
+ Andy Najar,  Honduras,  17,  MF,  1993-03-16,  17,  Anderlecht
+ Ji Dong-won,  South Korea,  19,  FW,  1991-05-28,  28,  FC Augsburg
+ Hulk,  Brazil,  7,  FW,  1986-07-25,  35,  Zenit Saint Petersburg
+ Sami Khedira,  Germany,  6,  MF,  1987-04-04,  46,  Real Madrid
+ Mohammed Rabiu,  Ghana,  17,  MF,  1989-12-31,  17,  Kuban Krasnodar
+ Fabian Schar,  Switzerland,  22,  DF,  1991-12-20,  6,  Basel
+ Carlos Carmona,  Chile,  6,  MF,  1987-02-21,  44,  Atalanta
+ Alessio Cerci,  Italy,  11,  FW,  1987-07-23,  12,  Torino
+ Juwon Oshaniwa,  Nigeria,  13,  DF,  1990-09-14,  10,  Ashdod
+ Giannis Fetfatzidis,  Greece,  18,  MF,  1990-12-21,  19,  Genoa
+ Cristian Zapata,  Colombia,  2,  DF,  1986-09-30,  24,  Milan
+ Rafa Silva,  Portugal,  15,  MF,  1993-05-17,  3,  Braga
+ Ramon Azeez,  Nigeria,  15,  MF,  1992-12-12,  2,  Almeria
+ Eyong Enoh,  Cameroon,  18,  MF,  1986-03-23,  38,  Antalyaspor
+ Mats Hummels,  Germany,  5,  DF,  1988-12-16,  30,  Borussia Dortmund
+ Stipe Pletikosa,  Croatia,  1,  GK,  1979-01-08,  111,  Rostov
+ Makoto Hasebe,  Japan,  17,  MF,  1984-01-18,  78,  1. FC Nurnberg
+ Maximo Banguera,  Ecuador,  1,  GK,  1985-12-16,  25,  Barcelona
+ Tranquillo Barnetta,  Switzerland,  7,  MF,  1985-05-22,  74,  Eintracht Frankfurt
+ Patrice Evra,  France,  3,  DF,  1981-05-15,  58,  Manchester United
+ Ben Foster,  England,  13,  GK,  1983-05-03,  7,  West Bromwich Albion
+ Carlos Bacca,  Colombia,  17,  FW,  1986-09-08,  11,  Sevilla
+ Adrian Bone,  Ecuador,  12,  GK,  1988-09-08,  3,  El Nacional
+ Gianluigi Buffon,  Italy,  1,  GK,  1978-01-28,  140,  Juventus
+ Majeed Waris,  Ghana,  18,  FW,  1991-09-19,  13,  Valenciennes
+ Klaas-Jan Huntelaar,  Netherlands,  19,  FW,  1983-08-12,  62,  Schalke 04
+ Vasilis Torosidis,  Greece,  15,  DF,  1985-06-10,  66,  Roma
+ Maxi Rodriguez,  Argentina,  11,  MF,  1981-01-02,  55,  Newell's Old Boys
+ Vincent Aboubakar,  Cameroon,  10,  FW,  1992-01-22,  24,  Lorient
+ Bruno Martins Indi,  Netherlands,  4,  DF,  1992-02-08,  16,  Feyenoord
+ Luis Saritama,  Ecuador,  19,  MF,  1983-10-20,  49,  Barcelona
+ Frank Lampard,  England,  8,  MF,  1978-06-20,  105,  Chelsea
+ Reuben Gabriel,  Nigeria,  4,  MF,  1990-09-25,  11,  Waasland-Beveren
+ Noel Valladares,  Honduras,  18,  GK,  1977-05-03,  122,  Olimpia
+ Jean Beausejour,  Chile,  15,  MF,  1984-06-03,  59,  Wigan Athletic
+ Oliver Bozanic,  Australia,  13,  MF,  1989-01-08,  3,  Luzern
+ Boubacar Barry,  Ivory Coast,  1,  GK,  1979-12-30,  77,  Lokeren
+ Daniele De Rossi,  Italy,  16,  MF,  1983-07-24,  95,  Roma
+ Shinji Okazaki,  Japan,  9,  FW,  1986-04-16,  76,  Mainz 05
+ Antoine Griezmann,  France,  11,  MF,  1991-03-21,  4,  Real Sociedad
+ Kevin-Prince Boateng,  Ghana,  9,  FW,  1987-03-06,  13,  Schalke 04
+ Sylvain Gbohouo,  Ivory Coast,  16,  GK,  1988-10-29,  2,  Sewe Sport
+ Luis Garrido,  Honduras,  19,  MF,  1990-11-05,  20,  Olimpia
+ Leroy Fer,  Netherlands,  18,  MF,  1990-01-05,  6,  Norwich City
+ Bacary Sagna,  France,  15,  DF,  1983-02-14,  41,  Arsenal
+ Kim Chang-soo,  South Korea,  2,  DF,  1985-09-12,  9,  Kashiwa Reysol
+ Guillermo Ochoa,  Mexico,  13,  GK,  1985-07-13,  59,  Ajaccio
+ Hassan Yebda,  Algeria,  7,  MF,  1984-05-14,  25,  Udinese
+ Jose Manuel Rojas,  Chile,  13,  DF,  1983-06-03,  19,  Universidad de Chile
+ Brad Davis,  United States,  14,  MF,  1981-11-08,  16,  Houston Dynamo
+ Matthew Spiranovic,  Australia,  6,  DF,  1988-06-27,  18,  Western Sydney Wanderers
+ Miguel Veloso,  Portugal,  4,  MF,  1986-05-11,  49,  Dynamo Kyiv
+ Fidel Martinez,  Ecuador,  20,  MF,  1990-02-15,  8,  Tijuana
+ Diego Reyes,  Mexico,  5,  DF,  1992-09-19,  14,  Porto

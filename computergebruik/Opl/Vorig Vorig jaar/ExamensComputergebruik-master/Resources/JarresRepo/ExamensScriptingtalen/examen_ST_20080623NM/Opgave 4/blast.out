@@ -1,0 +1,4919 @@
+National Center for Biotechnology Information (NCBI)
+
+Experimental GENINFO(R) BLAST Network Service (Cruncher)
+
+Wed Jan 15 14:33:31 EST 1997, Up 22:32, load: 14.29, 11.73, 11.62
+
+  If results of this search are reported or published, please mention that
+  the computation was performed at the NCBI using the BLAST network service.
+  Problems with the service should be reported to a local system administrator.
+
+
+PEPTIDE SEQUENCE DATABASES
+
+ nr	   Non-redundant GenBank CDS translations+PDB+SwissProt+PIR
+ pdb       PDB protein sequences
+ kabat     Kabat Sequences of Proteins of Immunological Interest
+ alu *     Translations of Select Alu Repeats from REPBASE
+ month     All new or revised GenBank CDS translation+PDB+SwissProt+PIR 
+           sequences released in the last 30 days
+ swissprot SwissProt sequences
+
+
+NUCLEOTIDE SEQUENCE DATABASES
+
+ nr       Non-redundant GenBank+EMBL+DDBJ+PDB sequences (but no EST's or 
+          STS's)
+ est +    Non-redundant Database of GenBank+EMBL+DDBJ EST Division
+ sts +    Non-redundant Database of GenBank+EMBL+DDBJ STS Division
+ pdb      PDB nucleotide sequences
+ vector   Vector subset of GenBank
+ mito *   Database of mitochondrial sequences, Rel. 1.0, July 1995
+ kabat    Kabat Sequences of Nucleic Acid of Immunological Interest
+ epd      Eukaryotic Promoter Database
+ alu *+   Select Alu Repeats from REPBASE
+ month    All new or revised GenBank+EMBL+DDBJ+PDB sequences released in 
+          the last 30 days
+ 
+  * Databases that are not accessible through the NCBI Retrieve E-mail server.
+  + The TBLASTX program is restricted to searching these databases.
+==============================================================================
+ You can obtain the BLAST documentation files, send a message consisting of
+ just the word ``help'' (without the quotes) to: blast@ncbi.nlm.nih.gov
+ Last modification dates: August 10th 95 for the E-mail server help, January 
+ 19th 94 for the BLAST manual and February 7th 95 for the BLAST FAQ.
+==============================================================================
+ For a free subscription to "NCBI News", the NCBI newsletter, send a request
+ along with your name and postal mailing address to: info@ncbi.nlm.nih.gov
+==============================================================================
+ A new GenBank sequence submission tool, called BankIt, is now available
+ through the NCBI's home page on the World Wide Web. The URL is 
+ http://www.ncbi.nlm.nih.gov/
+==============================================================================
+
+
+Waiting for 14 of 15 other BLAST requests on the system to finish.
+Still waiting
+Still waiting
+Still waiting
+Still waiting
+BLASTP 1.4.9MP [26-March-1996] [Build 14:27:01 Apr  1 1996]
+
+Reference:  Altschul, Stephen F., Warren Gish, Webb Miller, Eugene W. Myers,
+and David J. Lipman (1990).  Basic local alignment search tool.  J. Mol. Biol.
+215:403-10.
+
+
+Query=  TITLE Swissprot:Nrdc_Rat
+        (1161 letters)
+
+Database:  All GenBank CDS translations+PDB+SwissProt+SPupdate+PIR released in
+           the last month
+           4840 sequences; 1,477,235 total letters.
+Searching..................................................done
+
+WARNING:  Descriptions of 124 database sequences were not reported due to the
+          limiting value of parameter V = 20.
+
+
+
+>gnl|PID|e288614 (Z83122) R11A5.h [Caenorhabditis elegans]
+            Length = 906
+
+ Score = 173 (79.1 bits), Expect = 1.3e-14, Sum P(2) = 1.3e-14
+ Identities = 27/73 (36%), Positives = 58/73 (79%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E K  ++ +EE++++E+EEE E+EEEE+ED++D+++E++ +E +++D+E  + EEE D++
+Sbjct:   576 ELKLDDSDEEEDDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEE 635
+
+Query:   191 EHDDDDLDNEENE 203
+             + ++++ D+ E E
+Sbjct:   636 DEEEEEEDDSEPE 648
+
+ Score = 170 (77.8 bits), Expect = 3.3e-14, Sum P(2) = 3.3e-14
+ Identities = 28/77 (36%), Positives = 56/77 (72%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +EEE++++E+E E+E+EEEED+D++D+E+   E ++++E+  D+E E + DE D+++ + 
+Sbjct:   583 DEEEDDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEEDEEEEEE 642
+
+Query:   200 EENELEELEERVEARKK 216
+             +++E EE      + KK
+Sbjct:   643 DDSEPEEKPNPKPSTKK 659
+
+ Score = 164 (75.0 bits), Expect = 2.1e-13, Sum P(2) = 2.1e-13
+ Identities = 26/63 (41%), Positives = 49/63 (77%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D+++E+EEE+E+ EEE+E+EED++++++E    E  D+DEE  ++ +E D++E ++DD +
+Sbjct:   587 DDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEEDEEEEEEDDSE 646
+
+Query:   199 NEE 201
+              EE
+Sbjct:   647 PEE 649
+
+ Score = 151 (69.1 bits), Expect = 1.2e-11, Sum P(2) = 1.2e-11
+ Identities = 24/85 (28%), Positives = 56/85 (65%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEE 201
+             ++ +EEE++ +E+EEE+ED++++D+++   E ++++ E  ++++E ++ E + D+ D EE
+Sbjct:   580 DDSDEEEDDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEEDEEE 639
+
+Query:   202 NELEELEERVEARKKTTEKQSAAAL 226
+              E ++ E   +   K + K+ A  L
+Sbjct:   640 EEEDDSEPEEKPNPKPSTKKQALIL 664
+
+ Score = 149 (68.2 bits), Expect = 2.3e-11, Sum P(2) = 2.3e-11
+ Identities = 23/64 (35%), Positives = 48/64 (75%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D+E+EEE+E+EE E+E+EE+E++++++ E+   + +D++ E   DEE+ +++E DD + +
+Sbjct:   589 DDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEEDEEEEEEDDSEPE 648
+
+Query:   199 NEEN 202
+              + N
+Sbjct:   649 EKPN 652
+
+ Score = 148 (67.7 bits), Expect = 3.1e-11, Sum P(2) = 3.1e-11
+ Identities = 27/70 (38%), Positives = 48/70 (68%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             D S+ E    +  +EE+E+EEEE+E EE+EEEEE++ ++++ED   E  +++ +  D+EE
+Sbjct:   580 DDSDEEEDDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEEDEEE 639
+
+Query:   186 EFDDDEHDDD 195
+             E +DD   ++
+Sbjct:   640 EEEDDSEPEE 649
+
+ Score = 144 (65.9 bits), Expect = 1.1e-10, Sum P(2) = 1.1e-10
+ Identities = 26/72 (36%), Positives = 46/72 (63%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             +E     E + ++ +EEE+DDD+D++ED   E +D+DEE  ++EE   ++E +DD+ +  
+Sbjct:   569 KEAHAPNELKLDDSDEEEDDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEES 628
+
+Query:   201 ENELEELEERVE 212
+             E E +E +E  E
+Sbjct:   629 EEESDEEDEEEE 640
+
+ Score = 143 (65.4 bits), Expect = 1.5e-10, Sum P(2) = 1.5e-10
+ Identities = 25/73 (34%), Positives = 47/73 (64%)
+
+Query:   122 LLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGF 181
+             L + D    E       +E+E+EEEE+E+ E+EEEEE + ++++++D   E +++ +E  
+Sbjct:   577 LKLDDSDEEEDDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEED 636
+
+Query:   182 DDEEEFDDDEHDD 194
+             ++EEE DD E ++
+Sbjct:   637 EEEEEEDDSEPEE 649
+
+ Score = 137 (62.7 bits), Expect = 9.6e-10, Sum P(2) = 9.6e-10
+ Identities = 21/63 (33%), Positives = 46/63 (73%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D++E+EEE+E+E EE+E+EE++++++++ +   E  +D+E   + +EE +++E +DD   
+Sbjct:   588 DDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEEDEEEEEEDDSEP 647
+
+Query:   199 NEE 201
+              E+
+Sbjct:   648 EEK 650
+
+ Score = 119 (54.4 bits), Expect = 2.5e-07, Sum P(2) = 2.5e-07
+ Identities = 21/61 (34%), Positives = 39/61 (63%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             D    E +     DE+EE+EEEEE   EEEEE+++D++ ++E    + ++++E+  + EE
+Sbjct:   590 DEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEESEEESDEEDEEEEEEDDSEPEE 649
+
+Query:   186 E 186
+             +
+Sbjct:   650 K 650
+
+ Score = 109 (49.9 bits), Expect = 5.4e-06, Sum P(2) = 5.4e-06
+ Identities = 19/77 (24%), Positives = 46/77 (59%)
+
+Query:   147 EEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEE 206
+             +E     E + ++ D+++DD+D   E  +D+EE  +DEE+ +++E++ ++ + ++ + E 
+Sbjct:   569 KEAHAPNELKLDDSDEEEDDDDEDEEEDEDEEEEDEDEEDEEEEENESEEEEEDDEDEES 628
+
+Query:   207 LEERVEARKKTTEKQSA 223
+              EE  E  ++  E+  +
+Sbjct:   629 EEESDEEDEEEEEEDDS 645
+
+ Score = 74 (33.9 bits), Expect = 0.21, Sum P(2) = 0.19
+ Identities = 14/39 (35%), Positives = 25/39 (64%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDS 169
+             E +  +  +E EEE +EE+E EEEE++ E ++  + + S
+Sbjct:   618 EEEEDDEDEESEEESDEEDEEEEEEDDSEPEEKPNPKPS 656
+
+ Score = 36 (16.5 bits), Expect = 1.3e-14, Sum P(2) = 1.3e-14
+ Identities = 14/60 (23%), Positives = 25/60 (41%)
+
+Query:   979 NTSGILGFSVTVGTQATKYNSETVDKKIEEFLSSFEEKIENLTEDAFNTQVTALIKLKEC 1038
+             N S I  F     +  T +  +T  +K    L+  E+ IE   +++   ++ A    K C
+Sbjct:   847 NPSSIALFVNAFSSDLTIFTCQTRSRKDVCILTVSEKSIECCCDNSVIGRMLAFSVSKNC 906
+
+
+>gi|1763275 (U73478) acidic nuclear phosphoprotein pp32 [Mus musculus]
+            Length = 247
+
+ Score = 134 (61.3 bits), Expect = 8.4e-11, P = 8.4e-11
+ Identities = 29/86 (33%), Positives = 51/86 (59%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             + K    +D E   E+++EE E+EEE +E     +DE+   E ++ +EE    EEE D++
+Sbjct:   151 DNKEAPDSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEE 210
+
+Query:   191 EHDDDDLDNEENELEELEERVEARKK 216
+              ++D ++D+EE+E E  EE    ++K
+Sbjct:   211 GYNDGEVDDEEDEEEAGEEEGSQKRK 236
+
+ Score = 121 (55.4 bits), Expect = 2.6e-10, Sum P(2) = 2.6e-10
+ Identities = 24/63 (38%), Positives = 39/63 (61%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             E+EEEE EEEEGEEE+   E+++D++  + G    ++DEE   +EE     + + DD   
+Sbjct:   185 EDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEEGSQKRKREPDDEGE 244
+
+Query:   200 EEN 202
+             E++
+Sbjct:   245 EDD 247
+
+ Score = 115 (52.6 bits), Expect = 3.9e-08, P = 3.9e-08
+ Identities = 22/81 (27%), Positives = 51/81 (62%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEF 187
+             S+VEG   +  +E+E+EEE +E  +  E+EEE+ ++++ E+     +++++E   ++ E 
+Sbjct:   158 SDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEV 217
+
+Query:   188 DDDEHDDDDLDNEENELEELE 208
+             DD+E +++  + E ++  + E
+Sbjct:   218 DDEEDEEEAGEEEGSQKRKRE 238
+
+ Score = 112 (51.2 bits), Expect = 4.6e-09, Sum P(2) = 4.6e-09
+ Identities = 22/74 (29%), Positives = 44/74 (59%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             DE+EEE +E  +  E+EEEE ++++ ++ED   E ++D+E   D E + ++DE +  + +
+Sbjct:   171 DEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEE 230
+
+Query:   199 NEENELEELEERVE 212
+               +    E ++  E
+Sbjct:   231 GSQKRKREPDDEGE 244
+
+ Score = 105 (48.0 bits), Expect = 4.3e-08, Sum P(2) = 4.3e-08
+ Identities = 21/63 (33%), Positives = 38/63 (60%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             E+EEEE EEE  EEE+   ++++D++  +  E+ D+++E    EEE       + D + E
+Sbjct:   185 EDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEEGSQKRKREPDDEGE 244
+
+Query:   201 ENE 203
+             E++
+Sbjct:   245 EDD 247
+
+ Score = 103 (47.1 bits), Expect = 8.0e-08, Sum P(2) = 8.0e-08
+ Identities = 20/63 (31%), Positives = 37/63 (58%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             ++EEEE EEEE  EE+   EE++D++   D   + ++D+EE  ++E         DD+ +
+Sbjct:   185 EDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEEGSQKRKREPDDEGE 244
+
+Query:   199 NEE 201
+              ++
+Sbjct:   245 EDD 247
+
+ Score = 101 (46.2 bits), Expect = 1.5e-07, Sum P(2) = 1.5e-07
+ Identities = 19/84 (22%), Positives = 48/84 (57%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D + +E  + +     E+++E+D+D+++ D  A++ +D+EE  ++EE  ++D   +++ D
+Sbjct:   149 DRDNKEAPDSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEED 208
+
+Query:   199 NEENELEELEERVEARKKTTEKQS 222
+              E     E+++  +  +   E+ S
+Sbjct:   209 EEGYNDGEVDDEEDEEEAGEEEGS 232
+
+ Score = 98 (44.8 bits), Expect = 3.9e-07, Sum P(2) = 3.9e-07
+ Identities = 22/78 (28%), Positives = 45/78 (57%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             E+++EE+ +EEE +E     +D+E+   E + ++E+   +EEE ++  +D +  D E+ E
+Sbjct:   165 EDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEE 224
+
+Query:   204 LEELEERVEARKKTTEKQ 221
+                 EE  + RK+  + +
+Sbjct:   225 EAGEEEGSQKRKREPDDE 242
+
+ Score = 96 (43.9 bits), Expect = 7.4e-07, Sum P(2) = 7.4e-07
+ Identities = 23/68 (33%), Positives = 36/68 (52%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             DE  +  E+EEE  EEEE EE+D   ++E+      D + +  +DEEE  ++E       
+Sbjct:   178 DEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEEGSQKRKR 237
+
+Query:   199 NEENELEE 206
+               ++E EE
+Sbjct:   238 EPDDEGEE 245
+
+ Score = 94 (43.0 bits), Expect = 3.4e-05, P = 3.4e-05
+ Identities = 18/58 (31%), Positives = 35/58 (60%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             ++   EG+  + + EEEE+EE   +GE ++EE+E++  +++     + + DDE   DD
+Sbjct:   190 EVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEEGSQKRKREPDDEGEEDD 247
+
+ Score = 91 (41.6 bits), Expect = 3.6e-06, Sum P(2) = 3.6e-06
+ Identities = 19/71 (26%), Positives = 40/71 (56%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             DEE+E+EEE +E  +  E+EE++ ++++ +      +++E+     +   DDE D+++  
+Sbjct:   168 DEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAG 227
+
+Query:   199 NEENELEELEE 209
+              EE   +   E
+Sbjct:   228 EEEGSQKRKRE 238
+
+ Score = 85 (38.9 bits), Expect = 0.00062, P = 0.00062
+ Identities = 20/64 (31%), Positives = 33/64 (51%)
+
+Query:   130 VEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDD 189
+             VE +     +EE EEE+   E EE+EE   D + DD+ED     +++  +    E + + 
+Sbjct:   184 VEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEEGSQKRKREPDDEG 243
+
+Query:   190 DEHD 193
+             +E D
+Sbjct:   244 EEDD 247
+
+ Score = 84 (38.4 bits), Expect = 3.2e-05, Sum P(2) = 3.2e-05
+ Identities = 18/76 (23%), Positives = 42/76 (55%)
+
+Query:   135 GNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDD 194
+             G   D++EE+E+EEE  E  +  E+++++ ++E+   E    +EE  ++     + + ++
+Sbjct:   162 GYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEE 221
+
+Query:   195 DDLDNEENELEELEER 210
+             D+ +  E E  +  +R
+Sbjct:   222 DEEEAGEEEGSQKRKR 237
+
+ Score = 83 (38.0 bits), Expect = 4.4e-05, Sum P(2) = 4.4e-05
+ Identities = 18/78 (23%), Positives = 44/78 (56%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             E+++EE+E EEE +E     +D++E+   E  ++++   ++EE+ +     + D + +E 
+Sbjct:   165 EDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEE 224
+
+Query:   203 ELEELEERVEARKKTTEK 220
+             E  E E   + +++  ++
+Sbjct:   225 EAGEEEGSQKRKREPDDE 242
+
+ Score = 78 (35.7 bits), Expect = 0.00021, Sum P(2) = 0.00021
+ Identities = 17/65 (26%), Positives = 34/65 (52%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D  + + +E  + + E   E+DD++D+DE+   E     E+  ++ EE + +E D    +
+Sbjct:   146 DGYDRDNKEAPDSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEE 205
+
+Query:   199 NEENE 203
+              E+ E
+Sbjct:   206 EEDEE 210
+
+ Score = 75 (34.3 bits), Expect = 0.00053, Sum P(2) = 0.00053
+ Identities = 16/82 (19%), Positives = 45/82 (54%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             E  + + E    +++EE+E++++ D+      + +++ EE   +EE+   +E +D++  N
+Sbjct:   154 EAPDSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYN 213
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             +    +E +E     ++ ++K+
+Sbjct:   214 DGEVDDEEDEEEAGEEEGSQKR 235
+
+ Score = 72 (32.9 bits), Expect = 0.041, P = 0.040
+ Identities = 15/62 (24%), Positives = 35/62 (56%)
+
+Query:   135 GNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDD 194
+             G   D +E  + + E   E+++EE++D+++ DE +     +++E   ++ EE D    ++
+Sbjct:   147 GYDRDNKEAPDSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEE 206
+
+Query:   195 DD 196
+             +D
+Sbjct:   207 ED 208
+
+ Score = 63 (28.8 bits), Expect = 0.022, Sum P(2) = 0.021
+ Identities = 17/48 (35%), Positives = 26/48 (54%)
+
+Query:   162 DDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             D  D ++  A   D +    DD+EE +D+E  D+     E+E EE+EE
+Sbjct:   146 DGYDRDNKEAPDSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEE 193
+
+ Score = 63 (28.8 bits), Expect = 0.75, P = 0.53
+ Identities = 15/66 (22%), Positives = 32/66 (48%)
+
+Query:   121 ALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEG 180
+             A L+ D      +     ++   EEEE+EEG  + E ++++D+++  +     +   E  
+Sbjct:   181 AQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGEVDDEEDEEEAGEEEGSQKRKREPD 240
+
+Query:   181 FDDEEE 186
+              + EE+
+Sbjct:   241 DEGEED 246
+
+ Score = 56 (25.6 bits), Expect = 0.18, Sum P(2) = 0.17
+ Identities = 15/54 (27%), Positives = 25/54 (46%)
+
+Query:   163 DDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKK 216
+             D  D D+      D E   +D++E D+DE + D+      + EE  E  E  ++
+Sbjct:   146 DGYDRDNKEAPDSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEE 199
+
+ Score = 56 (25.6 bits), Expect = 0.18, Sum P(2) = 0.17
+ Identities = 16/82 (19%), Positives = 41/82 (50%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             + + E   E++ EE+E+EEE D+     +   E  +++E   +D    ++++ +  +   
+Sbjct:   157 DSDVEGYVEDDDEEDEDEEEYDEYAQLVEDEEEEVEEEEGEEEDVSGEEEEDEEGYNDGE 216
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+              ++E +E E   E   +  +++
+Sbjct:   217 VDDEEDEEEAGEEEGSQKRKRE 238
+
+ Score = 49 (22.4 bits), Expect = 2.6e-10, Sum P(2) = 2.6e-10
+ Identities = 10/27 (37%), Positives = 17/27 (62%)
+
+Query:   119 LQALLISDLSNVEGKTGNATDEEEEEE 145
+             ++ L++ +  ++EGK    TDE EE E
+Sbjct:    19 VKELVLDNCKSIEGKIEGLTDEFEELE 45
+
+
+>gi|1769451 (X69465) ryanodine receptor 1 [Sus scrofa]
+            Length = 1850
+
+ Score = 130 (59.5 bits), Expect = 1.2e-09, Sum P(2) = 1.2e-09
+ Identities = 23/50 (46%), Positives = 39/50 (78%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEF 187
+             T+EEEEEEEEEEE EE+EEE+E+D++++  +   E ++++E    ++EE+
+Sbjct:   745 TEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEY 794
+
+ Score = 120 (54.9 bits), Expect = 2.6e-08, Sum P(2) = 2.6e-08
+ Identities = 22/54 (40%), Positives = 40/54 (74%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDL 197
+             EEEEEEE EEEEEEE++++ ++DE+  A  ++D+E+  ++  E + +E+ ++ L
+Sbjct:   746 EEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEYLEEGL 799
+
+ Score = 116 (53.1 bits), Expect = 8.8e-08, Sum P(2) = 8.8e-08
+ Identities = 22/51 (43%), Positives = 36/51 (70%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDD 189
+             +EEEEEEEEEEE E+EEE+EED++++  E    E ++++    + EE  ++
+Sbjct:   747 EEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEYLEE 797
+
+ Score = 116 (53.1 bits), Expect = 8.8e-08, Sum P(2) = 8.8e-08
+ Identities = 22/54 (40%), Positives = 37/54 (68%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHD 193
+             E E   EEEEE EEEEEEEE+D+++ +ED   E ++ ++E  ++EE  + ++ +
+Sbjct:   740 EPEVFTEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEE 793
+
+ Score = 111 (50.8 bits), Expect = 4.1e-07, Sum P(2) = 4.1e-07
+ Identities = 21/58 (36%), Positives = 39/58 (67%)
+
+Query:   127 LSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDE 184
+             L  +E +     +EEEEEEEEEEE +EEE+EE+++++  +++   + +++  EG  +E
+Sbjct:   736 LKMIEPEVFTEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEE 793
+
+ Score = 103 (47.1 bits), Expect = 4.7e-06, Sum P(2) = 4.7e-06
+ Identities = 19/42 (45%), Positives = 32/42 (76%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEG 180
+             +EEE+EEE+EE+ EEE  E+ED++ +++E +  E ++  EEG
+Sbjct:   757 EEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEYLEEG 798
+
+ Score = 97 (44.4 bits), Expect = 2.9e-05, Sum P(2) = 2.9e-05
+ Identities = 21/53 (39%), Positives = 34/53 (64%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             T    +EEEEEEEEEE+ EE+EE+EE++  + +++   E +  + E  +  EE
+Sbjct:   745 TEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEYLEE 797
+
+ Score = 92 (42.1 bits), Expect = 0.00013, Sum P(2) = 0.00013
+ Identities = 17/54 (31%), Positives = 36/54 (66%)
+
+Query:   148 EEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEE 201
+             E E   EEEEEE+++++++E+   E ++D+EE   ++E+ + +E +  + + EE
+Sbjct:   740 EPEVFTEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEE 793
+
+ Score = 89 (40.7 bits), Expect = 0.00033, Sum P(2) = 0.00033
+ Identities = 17/52 (32%), Positives = 34/52 (65%)
+
+Query:   155 EEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEE 206
+             EEEEE+++++++E+   E +++DEE    E+E ++ E ++     +E  LEE
+Sbjct:   746 EEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEYLEE 797
+
+ Score = 86 (39.3 bits), Expect = 0.0037, Sum P(2) = 0.0036
+ Identities = 19/59 (32%), Positives = 34/59 (57%)
+
+Query:   166 DEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAA 224
+             DED    ++  + E F +EEE +++E ++++ D EE E +E EE  E   +  E++  A
+Sbjct:   729 DEDVKQILKMIEPEVFTEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETA 787
+
+ Score = 84 (38.4 bits), Expect = 0.0015, Sum P(2) = 0.0015
+ Identities = 17/57 (29%), Positives = 35/57 (61%)
+
+Query:   156 EEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVE 212
+             E E   +++++E+   E +++DEE  +++EE +  E +D++ + EE    E EE +E
+Sbjct:   740 EPEVFTEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEYLE 796
+
+ Score = 76 (34.8 bits), Expect = 0.016, Sum P(2) = 0.016
+ Identities = 16/54 (29%), Positives = 33/54 (61%)
+
+Query:   155 EEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELE 208
+             E E   ++++++E+   E ++D+EE  +DEEE   ++ D++  + E  E E+ E
+Sbjct:   740 EPEVFTEEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEE 793
+
+ Score = 74 (33.9 bits), Expect = 0.13, Sum P(2) = 0.12
+ Identities = 15/48 (31%), Positives = 30/48 (62%)
+
+Query:   172 EIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTE 219
+             E ++++EE  ++EEE ++++ +D++ +  E E EE EE   A  +  E
+Sbjct:   746 EEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEE 793
+
+ Score = 74 (33.9 bits), Expect = 0.13, Sum P(2) = 0.12
+ Identities = 16/63 (25%), Positives = 35/63 (55%)
+
+Query:   177 DEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAAALCVGVGSFADP 236
+             +EE  ++EEE +++E +++  ++EE E  E E+  +  ++T E +    L  G+     P
+Sbjct:   746 EEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEEYLEEGLLQMKLP 805
+
+Query:   237 DDL 239
+             + +
+Sbjct:   806 ESV 808
+
+ Score = 73 (33.4 bits), Expect = 0.17, Sum P(2) = 0.16
+ Identities = 15/47 (31%), Positives = 29/47 (61%)
+
+Query:   175 DDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQ 221
+             +++EE  ++EEE ++DE + ++ + EE   +E EE+ E      EK+
+Sbjct:   746 EEEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKE 792
+
+ Score = 66 (30.2 bits), Expect = 0.31, Sum P(2) = 0.26
+ Identities = 14/29 (48%), Positives = 19/29 (65%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEE 159
+             E +     ++EE+EEEE  EGE+EE  EE
+Sbjct:   769 EEEEAREKEDEEKEEEETAEGEKEEYLEE 797
+
+ Score = 66 (30.2 bits), Expect = 1.3, Sum P(2) = 0.72
+ Identities = 12/47 (25%), Positives = 29/47 (61%)
+
+Query:   174 QDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEK 220
+             ++++EE  ++EEE D++E ++D+ +    + +E +E  E  +   E+
+Sbjct:   747 EEEEEEEEEEEEEEDEEEKEEDEEEEAREKEDEEKEEEETAEGEKEE 793
+
+ Score = 45 (20.6 bits), Expect = 1.2e-09, Sum P(2) = 1.2e-09
+ Identities = 14/42 (33%), Positives = 17/42 (40%)
+
+Query:   201 ENELEELEERVEARKKTTEKQSAAALCVGVGSFADPDDLPGL 242
+             E   E  EE+ E +K     QSA       G    P DL G+
+Sbjct:  1697 EKAREGEEEKTEKKKTRKISQSAQTYDAREGYNPQPPDLSGV 1738
+
+ Score = 40 (18.3 bits), Expect = 5.5e-09, Sum P(2) = 5.5e-09
+ Identities = 7/17 (41%), Positives = 10/17 (58%)
+
+Query:   349 HPMGKFFWGNAETLKHE 365
+             H   K FWG  ++L H+
+Sbjct:  1546 HLTRKLFWGIFDSLAHK 1562
+
+ Score = 38 (17.4 bits), Expect = 1.0e-08, Sum P(2) = 1.0e-08
+ Identities = 8/22 (36%), Positives = 12/22 (54%)
+
+Query:  1058 QYLFDRLAHEIEALKSFSKSDL 1079
+             Q+L  RL  ++  L  F+K  L
+Sbjct:  1493 QHLLRRLVFDVPILNEFAKMPL 1514
+
+ Score = 36 (16.5 bits), Expect = 1.9e-08, Sum P(2) = 1.9e-08
+ Identities = 9/34 (26%), Positives = 17/34 (50%)
+
+Query:   803 TMITEQLKKTYFNILIKPETLAKDVRLLILEYSR 836
+             +M+   L++  F++ I  E     ++LL   Y R
+Sbjct:  1490 SMLQHLLRRLVFDVPILNEFAKMPLKLLTNHYER 1523
+
+ Score = 34 (15.6 bits), Expect = 8.2e-08, Sum P(3) = 8.2e-08
+ Identities = 9/35 (25%), Positives = 17/35 (48%)
+
+Query:   186 EFDDDEHDDDDLDNEENELEELEERVEARKKTTEK 220
+             + + +E + ++     + L  L E+V   KK  EK
+Sbjct:   918 QLEGEEEEPEEEATLGSRLMSLLEKVRLVKKKEEK 952
+
+ Score = 34 (15.6 bits), Expect = 1.5e-07, Sum P(3) = 1.5e-07
+ Identities = 7/15 (46%), Positives = 10/15 (66%)
+
+Query:   876 VTSTESMDFLRYVVD 890
+             V   E+ DFL +V+D
+Sbjct:  1382 VYGIENQDFLLHVLD 1396
+
+ Score = 34 (15.6 bits), Expect = 1.5e-07, Sum P(3) = 1.5e-07
+ Identities = 9/30 (30%), Positives = 17/30 (56%)
+
+Query:   598 LFEYKPEVIAEALNQLVPQKANLVLLSGAN 627
+             L E   ++ +  + Q+ PQ+ NL++ S  N
+Sbjct:  1028 LLECLGQIRSLLIVQMGPQEENLMIQSIGN 1057
+
+
+>gi|1752736 (D83006) gene required for phosphoylation of oligosaccharides/ has
+            high homology with YJR061w [Saccharomyces cerevisiae]
+            Length = 1178
+
+ Score = 121 (55.4 bits), Expect = 8.5e-09, P = 8.5e-09
+ Identities = 23/84 (27%), Positives = 56/84 (66%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             +EEE++++EEEE +++EEEE+   +++++    E +   +E  + +++ + ++  ++D +
+Sbjct:  1062 EEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEE 1121
+
+Query:   199 NEENELEELEERVEARKKTTEKQS 222
+             N++NE EE ++  E  KK  E+++
+Sbjct:  1122 NKKNEDEEKKKNEEEEKKKQEEKN 1145
+
+ Score = 119 (54.4 bits), Expect = 1.6e-08, P = 1.6e-08
+ Identities = 22/83 (26%), Positives = 53/83 (63%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             +EEE++++EEEE +++EEEE+   +++++    E +   +E  +  +  D++   ++D +
+Sbjct:  1070 EEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEE 1129
+
+Query:   199 NEENELEELEERVEARKKTTEKQ 221
+              ++NE EE +++ E  KK  +++
+Sbjct:  1130 KKKNEEEEKKKQEEKNKKNEDEE 1152
+
+ Score = 118 (54.0 bits), Expect = 2.2e-08, P = 2.2e-08
+ Identities = 23/82 (28%), Positives = 53/82 (64%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             EEEE++++EEE ++++EEEE    ++ E    E +++ +   +++++ +++E    +  N
+Sbjct:  1086 EEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKN 1145
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             ++NE EE +++ E  KK  E++
+Sbjct:  1146 KKNEDEEKKKQEEEEKKKNEEE 1167
+
+ Score = 115 (52.6 bits), Expect = 5.7e-08, P = 5.7e-08
+ Identities = 23/82 (28%), Positives = 53/82 (64%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +++EEEE++++ EEE++++E+ +   +ED   +  +D+E+  ++EEE    E  +   ++
+Sbjct:  1091 KKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKNKKNED 1150
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             EE + +E EE+ +  ++  +KQ
+Sbjct:  1151 EEKKKQEEEEKKKNEEEEKKKQ 1172
+
+ Score = 115 (52.6 bits), Expect = 5.7e-08, P = 5.7e-08
+ Identities = 20/92 (21%), Positives = 57/92 (61%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E K     +++++EEEE+++ EEEE++++++++   ++ G +++++DEE   +E+E    
+Sbjct:  1073 EKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKK 1132
+
+Query:   191 EHDDDDLDNEENELEELEERVEARKKTTEKQS 222
+               +++    EE   +  +E  + +++  +K++
+Sbjct:  1133 NEEEEKKKQEEKNKKNEDEEKKKQEEEEKKKN 1164
+
+ Score = 113 (51.7 bits), Expect = 1.1e-07, P = 1.1e-07
+ Identities = 25/114 (21%), Positives = 61/114 (53%)
+
+Query:   108 KQYRYIKLQNGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDE 167
+             + Y Y KL    +          E K     +++++EEEE+++ EEEE++++++++   +
+Sbjct:  1026 EDYAYAKLLEERKRREKKKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKK 1085
+
+Query:   168 DSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQ 221
+             +   + + ++EE    EEE    + + + + NE+ E ++ E+  + + +  EK+
+Sbjct:  1086 EEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKK 1139
+
+ Score = 111 (50.8 bits), Expect = 2.0e-07, P = 2.0e-07
+ Identities = 21/82 (25%), Positives = 55/82 (67%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             ++EEEE++++E EE++++EE++    +E+   + ++++++  ++EE+   +E +    ++
+Sbjct:  1060 KKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNED 1119
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             EEN+  E EE+ +  ++  +KQ
+Sbjct:  1120 EENKKNEDEEKKKNEEEEKKKQ 1141
+
+ Score = 108 (49.4 bits), Expect = 5.3e-07, P = 5.3e-07
+ Identities = 22/86 (25%), Positives = 52/86 (60%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E K     +E++++EEEE++ +EE E+ +++D+++ ++   E + ++EE    +EE +  
+Sbjct:  1088 EEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKNKK 1147
+
+Query:   191 EHDDDDLDNEENELEELEERVEARKK 216
+               D++    EE E ++ EE  + +++
+Sbjct:  1148 NEDEEKKKQEEEEKKKNEEEEKKKQE 1173
+
+ Score = 107 (49.0 bits), Expect = 7.3e-07, P = 7.3e-07
+ Identities = 22/86 (25%), Positives = 52/86 (60%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E K     +E++++EEEE++ +EEEE+++ ++++  +    E +  +EE    +EE +  
+Sbjct:  1056 EEKKKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKM 1115
+
+Query:   191 EHDDDDLDNEENELEELEERVEARKK 216
+             +++D++    E+E ++  E  E +K+
+Sbjct:  1116 KNEDEENKKNEDEEKKKNEEEEKKKQ 1141
+
+ Score = 106 (48.5 bits), Expect = 1.0e-06, P = 1.0e-06
+ Identities = 21/81 (25%), Positives = 51/81 (62%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             EEEE++++EEE ++++EE E   ++D+E+   E ++  +   +++++ ++    ++D + 
+Sbjct:  1094 EEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKNKKNEDEEK 1153
+
+Query:   200 EENELEELEERVEARKKTTEK 220
+             ++ E EE ++  E  KK  E+
+Sbjct:  1154 KKQEEEEKKKNEEEEKKKQEE 1174
+
+ Score = 106 (48.5 bits), Expect = 1.0e-06, P = 1.0e-06
+ Identities = 20/83 (24%), Positives = 52/83 (62%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             +EE++++EEEE+ ++EEEE++  ++++ +    E +   EEG   + E ++++ ++D+  
+Sbjct:  1071 EEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEK 1130
+
+Query:   199 NEENELEELEERVEARKKTTEKQ 221
+              +  E E+ ++  + +K   E++
+Sbjct:  1131 KKNEEEEKKKQEEKNKKNEDEEK 1153
+
+ Score = 105 (48.0 bits), Expect = 1.4e-06, P = 1.4e-06
+ Identities = 17/82 (20%), Positives = 54/82 (65%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             ++EEEE++++E EE++++EE++    +E+   + ++++++  ++ E+  +++ ++   ++
+Sbjct:  1068 KKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNED 1127
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             EE +  E EE+ +  +K  + +
+Sbjct:  1128 EEKKKNEEEEKKKQEEKNKKNE 1149
+
+ Score = 105 (48.0 bits), Expect = 1.4e-06, P = 1.4e-06
+ Identities = 18/82 (21%), Positives = 54/82 (65%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             ++EEEE++++E EE++++EE +   ++++   + +D++++  ++EE+   +E +  + D 
+Sbjct:  1092 KQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKNKKNEDE 1151
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             E+ + EE E++    ++  +++
+Sbjct:  1152 EKKKQEEEEKKKNEEEEKKKQE 1173
+
+ Score = 100 (45.8 bits), Expect = 6.8e-06, P = 6.8e-06
+ Identities = 20/79 (25%), Positives = 46/79 (58%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E K     +E++++EE E+   E+EE ++++D++  ++   E +  +E+   +E+E    
+Sbjct:  1096 EEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKNKKNEDEEKKK 1155
+
+Query:   191 EHDDDDLDNEENELEELEE 209
+             + +++   NEE E ++ EE
+Sbjct:  1156 QEEEEKKKNEEEEKKKQEE 1174
+
+ Score = 99 (45.3 bits), Expect = 9.4e-06, P = 9.4e-06
+ Identities = 17/82 (20%), Positives = 51/82 (62%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             ++EEEE++++E EE++++EE++    +E    + +D++ +  +DEE+  ++E +    + 
+Sbjct:  1084 KKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEE 1143
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             +  + E+ E++ +  ++  + +
+Sbjct:  1144 KNKKNEDEEKKKQEEEEKKKNE 1165
+
+ Score = 93 (42.5 bits), Expect = 6.3e-05, P = 6.3e-05
+ Identities = 17/81 (20%), Positives = 52/81 (64%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +++EEEE++++ EEE++++E+++    E+   + ++++E+   +E E   +E +++  + 
+Sbjct:  1067 KKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNE 1126
+
+Query:   200 EENELEELEERVEARKKTTEK 220
+             +E + +  EE  + +++  +K
+Sbjct:  1127 DEEKKKNEEEEKKKQEEKNKK 1147
+
+ Score = 92 (42.1 bits), Expect = 8.7e-05, P = 8.7e-05
+ Identities = 18/82 (21%), Positives = 49/82 (59%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +++EEEE++++ EEE++++E+++    E+   + Q+++E+   +EEE    E  +   + 
+Sbjct:  1059 KKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNE 1118
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             +E   +  +E  +  ++  +K+
+Sbjct:  1119 DEENKKNEDEEKKKNEEEEKKK 1140
+
+ Score = 92 (42.1 bits), Expect = 8.7e-05, P = 8.7e-05
+ Identities = 19/83 (22%), Positives = 48/83 (57%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             +EE++++EEEE+ ++EEEE++  ++ +   +  E    +E+    + E ++ +  ++   
+Sbjct:  1087 EEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKNK 1146
+
+Query:   199 NEENELEELEERVEARKKTTEKQ 221
+               E+E ++ +E  E +K   E++
+Sbjct:  1147 KNEDEEKKKQEEEEKKKNEEEEK 1169
+
+ Score = 91 (41.6 bits), Expect = 0.00012, P = 0.00012
+ Identities = 16/82 (19%), Positives = 49/82 (59%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +EEEE++++EE E++++EEE+    ++ +      +++++  D+E++ +++E      + 
+Sbjct:  1085 KEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEK 1144
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+              +   +E +++ E  +K   ++
+Sbjct:  1145 NKKNEDEEKKKQEEEEKKKNEE 1166
+
+ Score = 91 (41.6 bits), Expect = 0.00012, P = 0.00012
+ Identities = 17/83 (20%), Positives = 50/83 (60%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +++EEEE++++ EEE++++E+++    E+   + ++++E+   +EEE    E ++     
+Sbjct:  1051 KKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQE 1110
+
+Query:   200 EENELEELEERVEARKKTTEKQS 222
+             E  +++  +E  +  +   +K++
+Sbjct:  1111 EGEKMKNEDEENKKNEDEEKKKN 1133
+
+ Score = 89 (40.7 bits), Expect = 0.00023, P = 0.00023
+ Identities = 16/82 (19%), Positives = 51/82 (62%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +EEEE++++EE E++++EEE+    ++E+   + +++ ++  ++E++  ++     + D 
+Sbjct:  1061 KEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDE 1120
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             E  + E+ E++    ++  +++
+Sbjct:  1121 ENKKNEDEEKKKNEEEEKKKQE 1142
+
+ Score = 85 (38.9 bits), Expect = 0.00081, P = 0.00081
+ Identities = 16/60 (26%), Positives = 37/60 (61%)
+
+Query:   127 LSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             + N + +     DEE+++ EEEE+ ++EE+ ++++D++  +    E + ++EE    +EE
+Sbjct:  1115 MKNEDEENKKNEDEEKKKNEEEEKKKQEEKNKKNEDEEKKKQEEEEKKKNEEEEKKKQEE 1174
+
+ Score = 83 (38.0 bits), Expect = 0.0015, P = 0.0015
+ Identities = 16/82 (19%), Positives = 49/82 (59%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             E++++EEEE+ ++EEEE++  ++++ +    E +   EE    ++E ++ +  +++   +
+Sbjct:  1041 EKKKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKKEEEEKKKQEEEEKKK 1100
+
+Query:   201 ENELEELEERVEARKKTTEKQS 222
+             + E E+ ++    + K  ++++
+Sbjct:  1101 KEEEEKKKQEEGEKMKNEDEEN 1122
+
+ Score = 82 (37.5 bits), Expect = 0.0021, P = 0.0021
+ Identities = 12/55 (21%), Positives = 38/55 (69%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDD 194
+             + E+EE+++ E EE++++EE +  ++DE+   + +++ ++  ++E++  ++ H +
+Sbjct:  1124 KNEDEEKKKNEEEEKKKQEEKNKKNEDEEKKKQEEEEKKKNEEEEKKKQEEGHSN 1178
+
+ Score = 73 (33.4 bits), Expect = 0.037, P = 0.036
+ Identities = 13/50 (26%), Positives = 31/50 (62%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEG 180
+             E +     +EEE++++EE+  + E+EE++  ++++ + +  E +   EEG
+Sbjct:  1126 EDEEKKKNEEEEKKKQEEKNKKNEDEEKKKQEEEEKKKNEEEEKKKQEEG 1175
+
+ Score = 66 (30.2 bits), Expect = 0.34, P = 0.29
+ Identities = 19/96 (19%), Positives = 42/96 (43%)
+
+Query:    84 ESEEEGRSLSNVGDPEIIKSPSDPKQYRYIKLQNGLQALLISDLSNVEGKTGNATDEEEE 143
+             + EEE +        +  +     K+    K Q   + +   D  N + +       EEE
+Sbjct:  1077 KEEEEKKKKEEEEKKKQEEEEKKKKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEE 1136
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             E++++EE  ++ E+EE    +++E    E ++  ++
+Sbjct:  1137 EKKKQEEKNKKNEDEEKKKQEEEEKKKNEEEEKKKQ 1172
+
+ Score = 58 (26.5 bits), Expect = 4.4, P = 0.99
+ Identities = 17/75 (22%), Positives = 35/75 (46%)
+
+Query:    84 ESEEEGRSLSNVGDPEIIKSPSDPKQYRYIKLQNGLQALLISDLSNVEGKTGNATDEEEE 143
+             + EEE +     G+    +   + K     K +N  +     +  N + +      +EEE
+Sbjct:  1100 KKEEEEKKKQEEGEKMKNEDEENKKNEDEEKKKNEEEEKKKQEEKNKKNEDEEKKKQEEE 1159
+
+Query:   144 EEEEEEEGEEEEEEE 158
+             E+++ EE E++++EE
+Sbjct:  1160 EKKKNEEEEKKKQEE 1174
+
+
+>sp|P09741|TRT2_RABIT TROPONIN T, CARDIAC MUSCLE ISOFORMS
+            Length = 301
+
+ Score = 102 (46.7 bits), Expect = 3.8e-08, Sum P(3) = 3.8e-08
+ Identities = 20/68 (29%), Positives = 39/68 (57%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             +E EEE+E EE   EEE+  ED+D+ +  +        + E   +E + ++D  +++D +
+Sbjct:     9 EEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDGQEEEDKE 68
+
+Query:   199 NEENELEE 206
+             +E+  +EE
+Sbjct:    69 DEDGPVEE 76
+
+ Score = 96 (43.9 bits), Expect = 2.5e-07, Sum P(3) = 2.5e-07
+ Identities = 18/65 (27%), Positives = 40/65 (61%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             ++E EE   EEE   E+E+E++  ++++   G E + + EE   +E+  ++++ +D+D  
+Sbjct:    14 EQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDGQEEEDKEDEDGP 73
+
+Query:   199 NEENE 203
+              EE++
+Sbjct:    74 VEESK 78
+
+ Score = 95 (43.5 bits), Expect = 3.3e-07, Sum P(3) = 3.3e-07
+ Identities = 21/67 (31%), Positives = 39/67 (58%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             EE  EE EEE+  EE   EE+D  +D+++  A  +++   G + E E ++ + ++D  + 
+Sbjct:     5 EEVVEEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDGQEE 64
+
+Query:   200 EENELEE 206
+             E+ E E+
+Sbjct:    65 EDKEDED 71
+
+ Score = 95 (43.5 bits), Expect = 3.3e-07, Sum P(3) = 3.3e-07
+ Identities = 20/78 (25%), Positives = 42/78 (53%)
+
+Query:   124 ISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             +SDL  V  +     + EE   EEE+  E+E+E+E  ++++      AE + ++ +  +D
+Sbjct:     1 MSDLEEVVEEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEED 60
+
+Query:   184 EEEFDDDEHDDDDLDNEE 201
+              +E +D E +D  ++  +
+Sbjct:    61 GQEEEDKEDEDGPVEESK 78
+
+ Score = 93 (42.5 bits), Expect = 6.2e-07, Sum P(3) = 6.2e-07
+ Identities = 22/68 (32%), Positives = 38/68 (55%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEE 201
+             EE EEE+E  E   EEE+  +D+D++++G E +       + E E    E D  + +++E
+Sbjct:     9 EEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDGQEEEDKE 68
+
+Query:   202 NELEELEE 209
+             +E   +EE
+Sbjct:    69 DEDGPVEE 76
+
+ Score = 92 (42.1 bits), Expect = 8.4e-07, Sum P(3) = 8.4e-07
+ Identities = 22/69 (31%), Positives = 38/69 (55%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDL 197
+             +D EE  EE EEE E EE   E++D  +DED     ++++  G  + E   ++   ++D 
+Sbjct:     2 SDLEEVVEEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDG 61
+
+Query:   198 DNEENELEE 206
+               EE++ +E
+Sbjct:    62 QEEEDKEDE 70
+
+ Score = 79 (36.1 bits), Expect = 4.5e-05, Sum P(3) = 4.5e-05
+ Identities = 21/67 (31%), Positives = 33/67 (49%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             EE  EE E E+E EE   +++D  ED   +   ++EE     E   + E    + D +E 
+Sbjct:     5 EEVVEEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDGQEE 64
+
+Query:   203 ELEELEE 209
+             E +E E+
+Sbjct:    65 EDKEDED 71
+
+ Score = 69 (31.6 bits), Expect = 0.030, Sum P(2) = 0.030
+ Identities = 17/63 (26%), Positives = 33/63 (52%)
+
+Query:   148 EEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEEL 207
+             EE  EE EEE+E ++   +E+   E +D+ E G ++E     +   + +    E + +E 
+Sbjct:     5 EEVVEEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDGQEE 64
+
+Query:   208 EER 210
+             E++
+Sbjct:    65 EDK 67
+
+ Score = 66 (30.2 bits), Expect = 0.075, Sum P(2) = 0.072
+ Identities = 19/83 (22%), Positives = 39/83 (46%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             + EE + EE+ + EE++E+E+   ++        + +       D E  D D+     ++
+Sbjct:    51 ETEETQAEEDGQEEEDKEDEDGPVEESKPKPRPFMPNLVPPKIPDGERVDFDDIHRKRME 110
+
+Query:   199 NEENELEELEERVEARKKTTEKQ 221
+              + NEL+ L E     +K  E++
+Sbjct:   111 KDLNELQTLIEAHFENRKKEEEE 133
+
+ Score = 61 (27.9 bits), Expect = 0.34, Sum P(2) = 0.28
+ Identities = 17/64 (26%), Positives = 32/64 (50%)
+
+Query:   149 EEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELE 208
+             EE  EE EEE++ ++   E+      +D++E  ++EE     E + +  + +  E  + E
+Sbjct:     5 EEVVEEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQAEEDGQEE 64
+
+Query:   209 ERVE 212
+             E  E
+Sbjct:    65 EDKE 68
+
+ Score = 53 (24.2 bits), Expect = 3.6, Sum P(2) = 0.97
+ Identities = 13/50 (26%), Positives = 27/50 (54%)
+
+Query:   173 IQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQS 222
+             +++ +EE   +E   ++++  +D+ + E  E EE     EA  +T E Q+
+Sbjct:     8 VEEYEEEQEAEEAAAEEEDWREDEDEQEAGEEEEAGGGREAEAETEETQA 57
+
+ Score = 48 (22.0 bits), Expect = 0.41, Sum P(3) = 0.34
+ Identities = 14/56 (25%), Positives = 25/56 (44%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             +  E +   A ++ +EEE++E+E    EE +             +I D +   FDD
+Sbjct:    48 AEAETEETQAEEDGQEEEDKEDEDGPVEESKPKPRPFMPNLVPPKIPDGERVDFDD 103
+
+ Score = 47 (21.5 bits), Expect = 3.8e-08, Sum P(3) = 3.8e-08
+ Identities = 9/21 (42%), Positives = 14/21 (66%)
+
+Query:   200 EENELEELEERVEARKKTTEK 220
+             EE EL  L++R+E R+   E+
+Sbjct:   130 EEEELVSLKDRIEKRRADAEQ 150
+
+ Score = 43 (19.7 bits), Expect = 1.1e-06, Sum P(2) = 1.1e-06
+ Identities = 11/28 (39%), Positives = 16/28 (57%)
+
+Query:  1004 KKIEEFLSSFEEKIENLTEDAFNTQVTA 1031
+             KK EE L S +++IE    DA   ++ A
+Sbjct:   128 KKEEEELVSLKDRIEKRRADAEQLRIRA 155
+
+ Score = 42 (19.2 bits), Expect = 3.8e-08, Sum P(3) = 3.8e-08
+ Identities = 9/33 (27%), Positives = 17/33 (51%)
+
+Query:   550 KRVFEEIQKIEDNEFHYQEQTDPVEYVENMCEN 582
+             K +++ I  +E  +F  QE+    +Y  N+  N
+Sbjct:   247 KELWQSIYNLEAEKFDLQEKFKQQKYEINVLRN 279
+
+
+>gi|1754694 (U81159) magnesium-dependent calcium inhibitable phosphatase [Bos
+            taurus]
+            Length = 543
+
+ Score = 109 (49.9 bits), Expect = 2.1e-06, Sum P(2) = 2.1e-06
+ Identities = 19/52 (36%), Positives = 35/52 (67%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHD 193
+             E+ E+E +E EEEEE+ E+  +++D  S  E +++++E   +E E DD+E +
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEE 309
+
+ Score = 106 (48.5 bits), Expect = 5.3e-06, Sum P(2) = 5.3e-06
+ Identities = 18/52 (34%), Positives = 35/52 (67%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             E+ E+E  E EEEEE+ ++  ++ED  +  + ++EE  DD EE ++D+ +++
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEE 309
+
+ Score = 104 (47.6 bits), Expect = 9.8e-06, Sum P(2) = 9.8e-06
+ Identities = 21/47 (44%), Positives = 29/47 (61%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             E+E +E EEEE + EE  EE+D    +E    E +DD EE  +D+EE
+Sbjct:   261 EDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEE 307
+
+ Score = 97 (44.4 bits), Expect = 8.4e-05, Sum P(2) = 8.4e-05
+ Identities = 18/51 (35%), Positives = 32/51 (62%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDE 191
+             E+ E+E +E  EEEE+ EE  +++D   S     ++DE+  ++ EE D++E
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEE 308
+
+ Score = 95 (43.5 bits), Expect = 5.1e-06, Sum P(3) = 5.1e-06
+ Identities = 18/52 (34%), Positives = 33/52 (63%)
+
+Query:   149 EEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             E+ E+E +E E++++D +E S  E     EE  ++E+E D +E ++DD + E
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEE 309
+
+ Score = 94 (43.0 bits), Expect = 0.00021, Sum P(2) = 0.00021
+ Identities = 18/49 (36%), Positives = 31/49 (63%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             E ++  A +EEE+ EE  EE +    EE ++++D+D+   AE  D++EE
+Sbjct:   261 EDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEE 309
+
+ Score = 94 (43.0 bits), Expect = 0.00021, Sum P(2) = 0.00021
+ Identities = 16/52 (30%), Positives = 34/52 (65%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDD 194
+             E+ E+E +  EEEEE+ ++  ++++   +E  +++E+  D EE  +DDE ++
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEE 309
+
+ Score = 91 (41.6 bits), Expect = 1.3e-05, Sum P(2) = 1.3e-05
+ Identities = 15/73 (20%), Positives = 40/73 (54%)
+
+Query:   154 EEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             E+ E+E D+ +++E+   E  ++++    +E E ++DE D ++ + ++ E E +   +E 
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEEMMVPGMEG 317
+
+Query:   214 RKKTTEKQSAAAL 226
+             +++        A+
+Sbjct:   318 KEEPGSDSGTTAV 330
+
+ Score = 90 (41.2 bits), Expect = 1.8e-05, Sum P(2) = 1.8e-05
+ Identities = 18/63 (28%), Positives = 35/63 (55%)
+
+Query:   150 EGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             E  E+E +E +++++D E+   E      E  ++EE+ DD E  ++D + EE  +  +E 
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEEMMVPGMEG 317
+
+Query:   210 RVE 212
+             + E
+Sbjct:   318 KEE 320
+
+ Score = 87 (39.8 bits), Expect = 0.0018, Sum P(2) = 0.0018
+ Identities = 16/50 (32%), Positives = 29/50 (58%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDD 177
+             S  E       +E+ EE  EEE+G   EE E ++D+DD E++  + ++++
+Sbjct:   260 SEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEE 309
+
+ Score = 86 (39.3 bits), Expect = 0.00055, P = 0.00055
+ Identities = 19/52 (36%), Positives = 28/52 (53%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             D EE  EEE+    EE E EED+DD ++ +   E ++    G + +EE   D
+Sbjct:   273 DSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEEMMVPGMEGKEEPGSD 324
+
+ Score = 79 (36.1 bits), Expect = 0.020, Sum P(2) = 0.020
+ Identities = 14/49 (28%), Positives = 29/49 (59%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             E     + + EEEEE+ EE  EEE+    ++ ++++++   E  ++D+E
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDE 306
+
+ Score = 77 (35.2 bits), Expect = 0.0010, Sum P(3) = 0.0010
+ Identities = 13/51 (25%), Positives = 30/51 (58%)
+
+Query:   146 EEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDD 196
+             E+ E+  +E EEEE+D ++  E+      ++ E   D+++  + +E D+++
+Sbjct:   258 EDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEE 308
+
+ Score = 72 (32.9 bits), Expect = 0.16, Sum P(2) = 0.15
+ Identities = 14/44 (31%), Positives = 25/44 (56%)
+
+Query:   125 SDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             SD +  E +      EEE+    EE   EE+E++ ++ ++DDE+
+Sbjct:   264 SDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEE 307
+
+ Score = 63 (28.8 bits), Expect = 0.85, P = 0.57
+ Identities = 13/36 (36%), Positives = 23/36 (63%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAE 172
+             A +EE+E++ EE E ++EEEE      +  E+ G++
+Sbjct:   289 AENEEDEDDTEEAEEDDEEEEMMVPGMEGKEEPGSD 324
+
+ Score = 59 (27.0 bits), Expect = 0.078, Sum P(3) = 0.075
+ Identities = 15/61 (24%), Positives = 27/61 (44%)
+
+Query:   168 DSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAAALC 227
+             D     +D ++E  + EEE +D E   ++ D   +E  E EE  +  ++  E      + 
+Sbjct:   252 DKSKFFEDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEEMM 311
+
+Query:   228 V 228
+             V
+Sbjct:   312 V 312
+
+ Score = 52 (23.8 bits), Expect = 0.078, Sum P(3) = 0.075
+ Identities = 9/20 (45%), Positives = 16/20 (80%)
+
+Query:   150 EGEEEEEEEEDDDDDDDEDS 169
+             E E+E+E+  D+DD D+E++
+Sbjct:   123 EDEDEKEKVADEDDVDNEEA 142
+
+ Score = 49 (22.4 bits), Expect = 5.1e-06, Sum P(3) = 5.1e-06
+ Identities = 9/32 (28%), Positives = 19/32 (59%)
+
+Query:   123 LISDLSNVEGKTGNATDEEEEEEEEEEEGEEE 154
+             +I +L+ + G+     DE+E+  +E++   EE
+Sbjct:   110 VIKELAQIAGRPTEDEDEKEKVADEDDVDNEE 141
+
+ Score = 49 (22.4 bits), Expect = 0.18, Sum P(3) = 0.16
+ Identities = 8/25 (32%), Positives = 17/25 (68%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDD 176
+             +E+E+E+  D+DD D +  A + ++
+Sbjct:   124 DEDEKEKVADEDDVDNEEAALLHEE 148
+
+ Score = 49 (22.4 bits), Expect = 1.7, Sum P(2) = 0.82
+ Identities = 12/61 (19%), Positives = 26/61 (42%)
+
+Query:   176 DDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAAALCVGVGSFAD 235
+             +DE    +EEE D +E  +++      E E  E+  +  +   + +    +  G+    +
+Sbjct:   261 EDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDEDDTEEAEEDDEEEEMMVPGMEGKEE 320
+
+Query:   236 P 236
+             P
+Sbjct:   321 P 321
+
+ Score = 48 (22.0 bits), Expect = 1.8e-05, Sum P(2) = 1.8e-05
+ Identities = 8/23 (34%), Positives = 16/23 (69%)
+
+Query:   135 GNATDEEEEEEEEEEEGEEEEEE 157
+             G  T++E+E+E+  +E + + EE
+Sbjct:   119 GRPTEDEDEKEKVADEDDVDNEE 141
+
+ Score = 47 (21.5 bits), Expect = 0.31, Sum P(3) = 0.27
+ Identities = 8/19 (42%), Positives = 15/19 (78%)
+
+Query:   148 EEEGEEEEEEEEDDDDDDD 166
+             E+E E+E+  +EDD D+++
+Sbjct:   123 EDEDEKEKVADEDDVDNEE 141
+
+ Score = 43 (19.7 bits), Expect = 0.94, Sum P(3) = 0.61
+ Identities = 7/19 (36%), Positives = 15/19 (78%)
+
+Query:   149 EEGEEEEEEEEDDDDDDDE 167
+             E+ +E+E+  ++DD D++E
+Sbjct:   123 EDEDEKEKVADEDDVDNEE 141
+
+ Score = 43 (19.7 bits), Expect = 0.94, Sum P(3) = 0.61
+ Identities = 10/31 (32%), Positives = 17/31 (54%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             T EE  +E  +  G   E+E+E +   D++D
+Sbjct:   106 TTEEVIKELAQIAGRPTEDEDEKEKVADEDD 136
+
+ Score = 43 (19.7 bits), Expect = 6.3, Sum P(3) = 1.0
+ Identities = 10/44 (22%), Positives = 23/44 (52%)
+
+Query:   166 DEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             D+    E  +D+ +  ++EEE  ++  +++D  + E    E +E
+Sbjct:   252 DKSKFFEDSEDESDEAEEEEEDSEECSEEEDGYSSEEAENEEDE 295
+
+ Score = 42 (19.2 bits), Expect = 0.00011, Sum P(2) = 0.00011
+ Identities = 6/19 (31%), Positives = 15/19 (78%)
+
+Query:   142 EEEEEEEEEGEEEEEEEED 160
+             E+E+E+E+  +E++ + E+
+Sbjct:   123 EDEDEKEKVADEDDVDNEE 141
+
+ Score = 41 (18.8 bits), Expect = 0.00016, Sum P(2) = 0.00016
+ Identities = 7/19 (36%), Positives = 14/19 (73%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEE 159
+             E+E+E+E+   E++ + EE
+Sbjct:   123 EDEDEKEKVADEDDVDNEE 141
+
+ Score = 39 (17.8 bits), Expect = 0.00029, Sum P(2) = 0.00029
+ Identities = 6/19 (31%), Positives = 15/19 (78%)
+
+Query:   146 EEEEEGEEEEEEEEDDDDD 164
+             E+E+E E+  +E++ D+++
+Sbjct:   123 EDEDEKEKVADEDDVDNEE 141
+
+ Score = 39 (17.8 bits), Expect = 2.8, Sum P(3) = 0.94
+ Identities = 6/19 (31%), Positives = 15/19 (78%)
+
+Query:   147 EEEEGEEEEEEEEDDDDDD 165
+             E+E+ +E+  +E+D D+++
+Sbjct:   123 EDEDEKEKVADEDDVDNEE 141
+
+ Score = 37 (16.9 bits), Expect = 2.1e-06, Sum P(2) = 2.1e-06
+ Identities = 13/43 (30%), Positives = 20/43 (46%)
+
+Query:  1003 DKKIEEFLSSFEEKIENLTEDAFNTQVTALIKLKECEDTHLGE 1045
+             D + EE +    E  E    D+  T V ALI+ K+    + G+
+Sbjct:   304 DDEEEEMMVPGMEGKEEPGSDSGTTAVVALIRGKQLIVANAGD 346
+
+ Score = 37 (16.9 bits), Expect = 0.00053, Sum P(2) = 0.00053
+ Identities = 6/19 (31%), Positives = 14/19 (73%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEE 158
+             E+E+E+E+  + ++ + EE
+Sbjct:   123 EDEDEKEKVADEDDVDNEE 141
+
+
+>sp|Q08168|HRP_PLABE 58 KD PHOSPHOPROTEIN (HEAT SHOCK-RELATED PROTEIN) (HRP)
+            Length = 423
+
+ Score = 98 (44.8 bits), Expect = 5.1e-06, Sum P(2) = 5.1e-06
+ Identities = 18/27 (66%), Positives = 22/27 (81%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDD 165
+             D  EE+ +EEEE EEEEEEEE+DDD +
+Sbjct:    56 DSTEEKSDEEEEDEEEEEEEEEDDDPE 82
+
+ Score = 92 (42.1 bits), Expect = 3.2e-05, Sum P(2) = 3.2e-05
+ Identities = 16/28 (57%), Positives = 23/28 (82%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDE 167
+             E+  EE+ +EE E+EEEEEE+++DDD E
+Sbjct:    55 EDSTEEKSDEEEEDEEEEEEEEEDDDPE 82
+
+ Score = 92 (42.1 bits), Expect = 3.2e-05, Sum P(2) = 3.2e-05
+ Identities = 16/30 (53%), Positives = 26/30 (86%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDD 162
+             K+ ++T+E+ +EEEE+EE EEEEEE++D +
+Sbjct:    53 KSEDSTEEKSDEEEEDEEEEEEEEEDDDPE 82
+
+ Score = 88 (40.3 bits), Expect = 0.00011, Sum P(2) = 0.00011
+ Identities = 16/39 (41%), Positives = 28/39 (71%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             E+  EE+ +E EE+EEEEE++++DDD +    I+++  E
+Sbjct:    55 EDSTEEKSDEEEEDEEEEEEEEEDDDPEKLELIKEEAVE 93
+
+ Score = 84 (38.4 bits), Expect = 0.00038, Sum P(2) = 0.00038
+ Identities = 16/29 (55%), Positives = 22/29 (75%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEE 159
+             E  T   +DEEEE+EEEEEE EE+++ E+
+Sbjct:    55 EDSTEEKSDEEEEDEEEEEEEEEDDDPEK 83
+
+ Score = 68 (31.1 bits), Expect = 0.39, Sum P(2) = 0.32
+ Identities = 12/35 (34%), Positives = 24/35 (68%)
+
+Query:   175 DDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             +D  E   DEEE D++E ++++ D++  +LE ++E
+Sbjct:    55 EDSTEEKSDEEEEDEEEEEEEEEDDDPEKLELIKE 89
+
+ Score = 66 (30.2 bits), Expect = 0.088, Sum P(2) = 0.085
+ Identities = 13/29 (44%), Positives = 20/29 (68%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEE 157
+             + E K+    ++EEEEEEEEE+ + E+ E
+Sbjct:    57 STEEKSDEEEEDEEEEEEEEEDDDPEKLE 85
+
+ Score = 65 (29.7 bits), Expect = 0.12, Sum P(2) = 0.11
+ Identities = 12/21 (57%), Positives = 18/21 (85%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEE 159
+             +EE+EEEEEEEE +++ E+ E
+Sbjct:    65 EEEDEEEEEEEEEDDDPEKLE 85
+
+ Score = 64 (29.3 bits), Expect = 0.16, Sum P(2) = 0.15
+ Identities = 11/43 (25%), Positives = 27/43 (62%)
+
+Query:   146 EEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             ++++ G E+ + E+  ++  DE+   E ++++EE  DD E+ +
+Sbjct:    43 KKDKMGYEKMKSEDSTEEKSDEEEEDEEEEEEEEEDDDPEKLE 85
+
+ Score = 63 (28.8 bits), Expect = 0.22, Sum P(2) = 0.19
+ Identities = 15/32 (46%), Positives = 19/32 (59%)
+
+Query:   125 SDLSNVEGKTGNATDEEEEEEEEEEEGEEEEE 156
+             S+ S  E       DEEEEEEEEE++  E+ E
+Sbjct:    54 SEDSTEEKSDEEEEDEEEEEEEEEDDDPEKLE 85
+
+ Score = 62 (28.4 bits), Expect = 0.29, Sum P(2) = 0.25
+ Identities = 9/27 (33%), Positives = 21/27 (77%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             E+ + E+   E+ +EEEED++++++E+
+Sbjct:    50 EKMKSEDSTEEKSDEEEEDEEEEEEEE 76
+
+ Score = 60 (27.5 bits), Expect = 0.53, Sum P(2) = 0.41
+ Identities = 9/30 (30%), Positives = 22/30 (73%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             D+   E+ + E+  EE+ +EE++D++++E+
+Sbjct:    45 DKMGYEKMKSEDSTEEKSDEEEEDEEEEEE 74
+
+ Score = 58 (26.5 bits), Expect = 0.95, Sum P(2) = 0.61
+ Identities = 11/25 (44%), Positives = 18/25 (72%)
+
+Query:   167 EDSGAEIQDDDEEGFDDEEEFDDDE 191
+             EDS  E  D++EE  ++EEE ++D+
+Sbjct:    55 EDSTEEKSDEEEEDEEEEEEEEEDD 79
+
+ Score = 58 (26.5 bits), Expect = 7.3, Sum P(2) = 1.0
+ Identities = 14/47 (29%), Positives = 23/47 (48%)
+
+Query:   177 DEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSA 223
+             D+ G++  +  D  E   D+ + +E E EE EE  +  K    K+ A
+Sbjct:    45 DKMGYEKMKSEDSTEEKSDEEEEDEEEEEEEEEDDDPEKLELIKEEA 91
+
+ Score = 57 (26.1 bits), Expect = 9.7, Sum P(2) = 1.0
+ Identities = 13/48 (27%), Positives = 25/48 (52%)
+
+Query:   182 DDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAAALCVG 229
+             D  EE  D+E +D++ + EE E ++ E+    +++  E    A +  G
+Sbjct:    56 DSTEEKSDEEEEDEEEEEEEEEDDDPEKLELIKEEAVECPPLAPIIEG 103
+
+ Score = 55 (25.2 bits), Expect = 2.3, Sum P(2) = 0.90
+ Identities = 10/23 (43%), Positives = 16/23 (69%)
+
+Query:   174 QDDDEEGFDDEEEFDDDEHDDDD 196
+             +  DEE  D+EEE +++E DD +
+Sbjct:    60 EKSDEEEEDEEEEEEEEEDDDPE 82
+
+ Score = 54 (24.7 bits), Expect = 3.1, Sum P(2) = 0.95
+ Identities = 9/22 (40%), Positives = 16/22 (72%)
+
+Query:   174 QDDDEEGFDDEEEFDDDEHDDD 195
+             ++  +E  +DEEE +++E DDD
+Sbjct:    59 EEKSDEEEEDEEEEEEEEEDDD 80
+
+ Score = 44 (20.1 bits), Expect = 5.1e-06, Sum P(2) = 5.1e-06
+ Identities = 9/25 (36%), Positives = 14/25 (56%)
+
+Query:   199 NEENELEELEERVEARKKTTEKQSA 223
+             N+E E + L+   E +KK   K+ A
+Sbjct:   239 NKEEEKQRLKREKELKKKLAAKKKA 263
+
+ Score = 37 (16.9 bits), Expect = 4.4e-05, Sum P(2) = 4.4e-05
+ Identities = 13/55 (23%), Positives = 22/55 (40%)
+
+Query:   521 LTDEGYEHFYEVAHTVFQYLKMLQKLGPEKRVFEEIQKIEDNEFHYQEQTDPVEY 575
+             L  E Y+  YE         +  Q+L  EK + +++   +  E  Y+E      Y
+Sbjct:   222 LIQEKYKKIYEKRRYKINKEEEKQRLKREKELKKKLAAKKKAEKMYKENNKRENY 276
+
+
+>sp|Q10713|MPP1_HUMAN MITOCHONDRIAL PROCESSING PEPTIDASE ALPHA SUBUNIT
+            PRECURSOR (ALPHA-MPP) (P-55) (HA1523)
+            Length = 525
+
+ Score = 94 (43.0 bits), Expect = 4.2e-05, P = 4.2e-05
+ Identities = 23/102 (22%), Positives = 45/102 (44%)
+
+Query:   226 LCVGVGSFADPDDLPGLAHFLEHMVFMGSLKYPDENGFDAFLKKHGGSDNASTDCERTVF 285
+             + +  GS  +   L G+AHFLE + F  + ++  ++     L+KHGG  +  T  + T++
+Sbjct:    92 ILINSGSRYEAKYLSGIAHFLEKLAFSSTARFDSKDEILLTLEKHGGICDCQTSRDTTMY 151
+
+Query:   286 QFDVQRKYFKEALDRWAQFFIHPLMIRDAIDREVEAVDSEYQ 327
+                   K     +   A   + P +  + ++    AV  E +
+Sbjct:   152 AVSADSKGLDTVVALLADVVLQPRLTDEEVEMTRMAVQFELE 193
+
+
+>gi|1762998 (U67260) RING-finger protein [Helicoverpa armigera
+            nucleopolyhedrovirus]
+            Length = 357
+
+ Score = 92 (42.1 bits), Expect = 7.4e-05, P = 7.4e-05
+ Identities = 17/78 (21%), Positives = 37/78 (47%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             D + +   T N   E   + +         +++ +DDDDDD +   ++ D+D+   DD  
+Sbjct:   149 DTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNNDDDDDDVNDNDDVNDNDDVNDDDVN 208
+
+Query:   186 EFDDDEHDDDDLDNEENE 203
+             + + + + D+ + N  N+
+Sbjct:   209 DVNTNVNSDNQITNTTND 226
+
+ Score = 70 (32.0 bits), Expect = 0.085, P = 0.082
+ Identities = 16/90 (17%), Positives = 38/90 (42%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             N +    N  D     E+  E        + +   D+D         DD+   DD+++ +
+Sbjct:   132 NDDDNNSNCDDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNNDDDDDDVN 191
+
+Query:   189 DDEHDDDDLDNEENELEELEERVEARKKTT 218
+             D++  +D+ D  ++++ ++   V +  + T
+Sbjct:   192 DNDDVNDNDDVNDDDVNDVNTNVNSDNQIT 221
+
+ Score = 66 (30.2 bits), Expect = 0.31, P = 0.26
+ Identities = 13/68 (19%), Positives = 33/68 (48%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             N+T++ +++     +      E+  + + +  ++  E   D++   ++    DD  +DDD
+Sbjct:   127 NSTNDNDDDNNSNCDDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNNDDD 186
+
+Query:   196 DLDNEENE 203
+             D D  +N+
+Sbjct:   187 DDDVNDND 194
+
+ Score = 61 (27.9 bits), Expect = 2.5, Sum P(2) = 0.92
+ Identities = 12/58 (20%), Positives = 27/58 (46%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             K    +D   + +  + E  +E  +  + +++DD +S  +  DD+    DD    ++D
+Sbjct:    92 KRNKTSDRNSDSDNSDSEVYDEIVDVNNSNNNDDNNSTNDNDDDNNSNCDDATIHNED 149
+
+ Score = 57 (26.1 bits), Expect = 8.0, Sum P(2) = 1.0
+ Identities = 11/48 (22%), Positives = 25/48 (52%)
+
+Query:   155 EEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             +  +  D + D ++S +E+ D+  +  +     D++  +D+D DN  N
+Sbjct:    92 KRNKTSDRNSDSDNSDSEVYDEIVDVNNSNNNDDNNSTNDNDDDNNSN 139
+
+ Score = 56 (25.6 bits), Expect = 7.6, P = 1.0
+ Identities = 10/70 (14%), Positives = 33/70 (47%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             N T +   + +  +    +E  + ++ +++D+++     DDD     D+    +++  + 
+Sbjct:    94 NKTSDRNSDSDNSDSEVYDEIVDVNNSNNNDDNNSTNDNDDDNNSNCDDATIHNEDTAEL 153
+
+Query:   196 DLDNEENELE 205
+             + +   N++E
+Sbjct:   154 NTNTVNNDIE 163
+
+ Score = 56 (25.6 bits), Expect = 7.6, P = 1.0
+ Identities = 13/74 (17%), Positives = 34/74 (45%)
+
+Query:   154 EEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             E   + D   +++ +   +  DDD++  +D ++ +D++  +DD  N+ N     + ++  
+Sbjct:   163 ETTVDNDASVNNNTNVDDQNNDDDDDDVNDNDDVNDNDDVNDDDVNDVNTNVNSDNQITN 222
+
+Query:   214 RKKTTEKQSAAALC 227
+                  +    A +C
+Sbjct:   223 TTNDNDTNVDANVC 236
+
+ Score = 37 (16.9 bits), Expect = 2.5, Sum P(2) = 0.92
+ Identities = 12/57 (21%), Positives = 24/57 (42%)
+
+Query:   994 ATKYNSETVDKKIEEFLSSFEEKIENLTEDAFNTQVTALIKLKECEDTHLGEEVDRN 1050
+             AT +N +T +       +  E  ++N      NT V       + +D +  ++V+ N
+Sbjct:   143 ATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNNDDDDDDVNDNDDVNDN 199
+
+
+>sp|P02547|NFL_PIG NEUROFILAMENT TRIPLET L PROTEIN (68 KD NEUROFILAMENT
+            PROTEIN) (NF-L)
+            Length = 548
+
+ Score = 93 (42.5 bits), Expect = 0.00039, Sum P(2) = 0.00039
+ Identities = 19/59 (32%), Positives = 34/59 (57%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDD 189
+             EGK     + E E EEE  + EEE  E+E+ ++  +E+ G   Q ++ +  ++EE+ D+
+Sbjct:   478 EGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEEEGGEGEQGEETKEAEEEEKKDE 536
+
+ Score = 93 (42.5 bits), Expect = 0.00039, Sum P(2) = 0.00039
+ Identities = 22/85 (25%), Positives = 43/85 (50%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             +E  E  + EE  +E   E E +++  +++      + +EEG  +EEE  + E  ++  +
+Sbjct:   454 EETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKE 513
+
+Query:   199 NEENELEELEERVEARKKTTEKQSA 223
+              E  E E+ EE  EA ++  + + A
+Sbjct:   514 EEGGEGEQGEETKEAEEEEKKDEGA 538
+
+ Score = 91 (41.6 bits), Expect = 0.00072, Sum P(2) = 0.00072
+ Identities = 18/46 (39%), Positives = 29/46 (63%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             +EEEE  E+EE EE +EEE  + +  +E   AE ++  +EG  +E+
+Sbjct:   497 QEEEEAAEKEESEEAKEEEGGEGEQGEETKEAEEEEKKDEGAGEEQ 542
+
+ Score = 91 (41.6 bits), Expect = 0.00072, Sum P(2) = 0.00072
+ Identities = 19/86 (22%), Positives = 45/86 (52%)
+
+Query:   109 QYRYIKLQNGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             Q   I+++  ++A    +  +     G A +E +E+EE E E E EEE  +++++  +++
+Sbjct:   447 QEEQIEVEETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKE 506
+
+Query:   169 SGAEIQDDDEEGFDDEEEFDDDEHDD 194
+                E ++++    +  EE  + E ++
+Sbjct:   507 ESEEAKEEEGGEGEQGEETKEAEEEE 532
+
+ Score = 90 (41.2 bits), Expect = 0.00098, Sum P(2) = 0.00098
+ Identities = 22/77 (28%), Positives = 39/77 (50%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEH 192
+             +T  A   EE ++E   EGE EEE +E ++ + + ++  E   ++EE  + EE  +  E 
+Sbjct:   455 ETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEE 514
+
+Query:   193 DDDDLDNEENELEELEE 209
+             +  + +  E   E  EE
+Sbjct:   515 EGGEGEQGEETKEAEEE 531
+
+ Score = 89 (40.7 bits), Expect = 0.0013, Sum P(2) = 0.0013
+ Identities = 22/76 (28%), Positives = 38/76 (50%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             E E EEE +E EE E E E +++   E+  A  +++ EE  ++E    +   +  + + E
+Sbjct:   472 EGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEEEGGEGEQGEETKEAEEE 531
+
+Query:   201 ENELEELEERVEARKK 216
+             E + E   E    +KK
+Sbjct:   532 EKKDEGAGEEQATKKK 547
+
+ Score = 87 (39.8 bits), Expect = 0.0024, Sum P(2) = 0.0024
+ Identities = 20/79 (25%), Positives = 41/79 (51%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDL 197
+             T E  + EE ++E   E E EE+  + ++ ++ AE +++  +  ++  E ++ E   ++ 
+Sbjct:   456 TIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEEE 515
+
+Query:   198 DNEENELEELEERVEARKK 216
+               E  + EE +E  E  KK
+Sbjct:   516 GGEGEQGEETKEAEEEEKK 534
+
+ Score = 87 (39.8 bits), Expect = 0.0061, Sum P(3) = 0.0061
+ Identities = 20/73 (27%), Positives = 39/73 (53%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHD 193
+             T +  +E+ E EE  E  + EE ++E   + + E+ G E ++ + E   +EE   ++E  
+Sbjct:   443 TSHVQEEQIEVEETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEA 502
+
+Query:   194 DDDLDNEENELEE 206
+              +  ++EE + EE
+Sbjct:   503 AEKEESEEAKEEE 515
+
+ Score = 81 (37.1 bits), Expect = 0.015, Sum P(2) = 0.015
+ Identities = 19/62 (30%), Positives = 34/62 (54%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +E+EE E E E EEE  +EE++  + +E   A+ ++  E    +E +  ++E   D+   
+Sbjct:   480 KEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEEEGGEGEQGEETKEAEEEEKKDEGAG 539
+
+Query:   200 EE 201
+             EE
+Sbjct:   540 EE 541
+
+ Score = 78 (35.7 bits), Expect = 0.037, Sum P(2) = 0.036
+ Identities = 21/85 (24%), Positives = 39/85 (45%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             EE  E  + EE ++E   E + +++  E   AE + + EE    EEE   ++ + ++   
+Sbjct:   454 EETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKE 513
+
+Query:   200 EENELEELEERVEARKKTTEKQSAA 224
+             EE    E  E  +  ++  +K   A
+Sbjct:   514 EEGGEGEQGEETKEAEEEEKKDEGA 538
+
+ Score = 77 (35.2 bits), Expect = 0.049, Sum P(2) = 0.048
+ Identities = 20/82 (24%), Positives = 42/82 (51%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             +EE+ E EE  E  + EE  D+   + ++  E ++ +E   + E E +  + +++  + E
+Sbjct:   447 QEEQIEVEETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKE 506
+
+Query:   201 ENELEELEERVEARKKTTEKQS 222
+             E+E  + EE  E  +    K++
+Sbjct:   507 ESEEAKEEEGGEGEQGEETKEA 528
+
+ Score = 75 (34.3 bits), Expect = 0.090, Sum P(2) = 0.086
+ Identities = 19/81 (23%), Positives = 41/81 (50%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             EE ++E   E E EEE  + ++ + ++ AE +   EE    E+E  ++  +++  + E+ 
+Sbjct:   463 EEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEEEGGEGEQG 522
+
+Query:   203 ELEELEERVEARKKTTEKQSA 223
+             E  +  E  E + +   ++ A
+Sbjct:   523 EETKEAEEEEKKDEGAGEEQA 543
+
+ Score = 74 (33.9 bits), Expect = 0.12, Sum P(2) = 0.11
+ Identities = 16/53 (30%), Positives = 29/53 (54%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEG 180
+             +  E +   A +EEE  E+EE E  +EEE  E +  ++ +++  E + D+  G
+Sbjct:   487 AEAEAEEEGAQEEEEAAEKEESEEAKEEEGGEGEQGEETKEAEEEEKKDEGAG 539
+
+ Score = 74 (33.9 bits), Expect = 0.12, Sum P(2) = 0.11
+ Identities = 19/81 (23%), Positives = 40/81 (49%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEE 201
+             EE ++E     E EEE ++ ++ + E    E    +EE   ++EE ++ + ++     + 
+Sbjct:   463 EEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEEEGGEGEQG 522
+
+Query:   202 NELEELEERVEARKKTTEKQS 222
+              E +E EE  +  +   E+Q+
+Sbjct:   523 EETKEAEEEEKKDEGAGEEQA 543
+
+ Score = 71 (32.5 bits), Expect = 0.29, Sum P(2) = 0.25
+ Identities = 14/44 (31%), Positives = 25/44 (56%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQ 174
+             E +     + EE +EEE  EGE+ EE +E ++++  ++   E Q
+Sbjct:   499 EEEAAEKEESEEAKEEEGGEGEQGEETKEAEEEEKKDEGAGEEQ 542
+
+ Score = 70 (32.0 bits), Expect = 0.73, Sum P(3) = 0.52
+ Identities = 19/72 (26%), Positives = 32/72 (44%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDL 197
+             T   +EE+ E EE  E  + EE  D+   E    E   + EE   + E  ++   ++++ 
+Sbjct:   443 TSHVQEEQIEVEETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEA 502
+
+Query:   198 DNEENELEELEE 209
+               +E   E  EE
+Sbjct:   503 AEKEESEEAKEE 514
+
+ Score = 69 (31.6 bits), Expect = 0.96, Sum P(3) = 0.62
+ Identities = 15/67 (22%), Positives = 36/67 (53%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEF 187
+             S+V+ +     +  E  + EE + E   E E +++  + E++ AE + ++E   ++EE  
+Sbjct:   444 SHVQEEQIEVEETIEAAKAEEAKDEPPSEGEAEEEGKEKEEAEAEAEAEEEGAQEEEEAA 503
+
+Query:   188 DDDEHDD 194
+             + +E ++
+Sbjct:   504 EKEESEE 510
+
+ Score = 66 (30.2 bits), Expect = 1.3, Sum P(2) = 0.72
+ Identities = 13/31 (41%), Positives = 20/31 (64%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDD 161
+             EG+ G  T E EEEE+++E   EE+  ++ D
+Sbjct:   518 EGEQGEETKEAEEEEKKDEGAGEEQATKKKD 548
+
+ Score = 64 (29.3 bits), Expect = 2.3, Sum P(2) = 0.90
+ Identities = 14/33 (42%), Positives = 21/33 (63%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDS 169
+             A +EE  E E+ EE +E EEEE+ D+   +E +
+Sbjct:   511 AKEEEGGEGEQGEETKEAEEEEKKDEGAGEEQA 543
+
+ Score = 61 (27.9 bits), Expect = 5.4, Sum P(2) = 1.0
+ Identities = 16/61 (26%), Positives = 30/61 (49%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E +   A  E EEE  +EEE   E+EE E+  +++  +     +  + E  + ++E   +
+Sbjct:   481 EKEEAEAEAEAEEEGAQEEEEAAEKEESEEAKEEEGGEGEQGEETKEAEEEEKKDEGAGE 540
+
+Query:   191 E 191
+             E
+Sbjct:   541 E 541
+
+ Score = 36 (16.5 bits), Expect = 0.00039, Sum P(2) = 0.00039
+ Identities = 8/21 (38%), Positives = 10/21 (47%)
+
+Query:    12 ATGRKLRCEAGRDVTAVGRIE 32
+             A GR +    G D  A+ R E
+Sbjct:   186 AEGRLMEARKGADEAALARAE 206
+
+ Score = 34 (15.6 bits), Expect = 0.0061, Sum P(3) = 0.0061
+ Identities = 11/33 (33%), Positives = 14/33 (42%)
+
+Query:   549 EKRVFEEIQKIEDNEFHYQEQTDPVEYVENMCE 581
+             EK   EE ++ E  E    E+T   E  E   E
+Sbjct:   504 EKEESEEAKEEEGGEGEQGEETKEAEEEEKKDE 536
+
+
+>gnl|PID|e290386 (Z83731) M04C9.6b [Caenorhabditis elegans]
+            Length = 1160
+
+ Score = 64 (29.3 bits), Expect = 0.0023, Sum P(2) = 0.0023
+ Identities = 14/38 (36%), Positives = 21/38 (55%)
+
+Query:   175 DDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVE 212
+             +D+ E  D E E D+DE+  +  +N E   EE  E V+
+Sbjct:  1081 EDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVK 1118
+
+ Score = 62 (28.4 bits), Expect = 0.0023, Sum P(2) = 0.0023
+ Identities = 13/51 (25%), Positives = 25/51 (49%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             K G   D+  E    +   +E+   + D DD+D++   + + D+D+   DD
+Sbjct:   366 KLGLEDDDYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDD 416
+
+ Score = 61 (27.9 bits), Expect = 0.0031, Sum P(2) = 0.0031
+ Identities = 11/49 (22%), Positives = 23/49 (46%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFD 182
+             T   +  + + ++E+ + E+    +EDD + DD     EI+      F+
+Sbjct:   384 TDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDDSPLSIEIKSSSSSDFE 432
+
+ Score = 61 (27.9 bits), Expect = 0.061, Sum P(2) = 0.059
+ Identities = 11/46 (23%), Positives = 22/46 (47%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDE 184
+             D++  E    +   +E+   + D DD+D D       D+++G  D+
+Sbjct:   371 DDDYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDD 416
+
+ Score = 58 (26.5 bits), Expect = 4.4, P = 0.99
+ Identities = 12/40 (30%), Positives = 21/40 (52%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             N E       ++E+E   E++E  E+  EEE ++  + ED
+Sbjct:  1083 NTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTED 1122
+
+ Score = 57 (26.1 bits), Expect = 6.1, P = 1.0
+ Identities = 12/40 (30%), Positives = 22/40 (55%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDD 176
+             A D E EE+E+E   E++E  E+  +++ +     E + D
+Sbjct:  1086 AVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTEDELD 1125
+
+ Score = 57 (26.1 bits), Expect = 6.1, P = 1.0
+ Identities = 12/48 (25%), Positives = 26/48 (54%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             E+ E+  E    E EE+E+++  +  E++    +++ E   + E+E D
+Sbjct:  1078 EQFEDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTEDELD 1125
+
+ Score = 56 (25.6 bits), Expect = 0.26, Sum P(2) = 0.23
+ Identities = 16/86 (18%), Positives = 35/86 (40%)
+
+Query:   117 NGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDD 176
+             N  Q   + D +N +    + +      E++   G   +    DD      +    +++ 
+Sbjct:   319 NNPQRFPVFDSANSDSTLSSNSSNNNSSEQQNSTGIAAKCSSTDDLTKLGLEDDDYMENS 378
+
+Query:   177 DEEGFDDEEEFDDDEHDDDDLDNEEN 202
+               +   DE+  +D + DD+D D E++
+Sbjct:   379 GPKFNTDEDSTNDSDSDDEDNDFEKS 404
+
+ Score = 54 (24.7 bits), Expect = 0.045, Sum P(2) = 0.044
+ Identities = 12/34 (35%), Positives = 21/34 (61%)
+
+Query:   189 DDEHDDDDLDNEENELEELEERVEARKKTTEKQS 222
+             +D  +  D++ EE+E E   E+ E  +KT E++S
+Sbjct:  1081 EDNTEAVDMEIEEDEDENSTEKKENTEKTAEEES 1114
+
+ Score = 51 (23.3 bits), Expect = 0.061, Sum P(2) = 0.059
+ Identities = 9/34 (26%), Positives = 20/34 (58%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDD 162
+             N +  + N +D ++E+ + E+    +E++ E DD
+Sbjct:   383 NTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDD 416
+
+ Score = 51 (23.3 bits), Expect = 1.1, Sum P(2) = 0.68
+ Identities = 10/47 (21%), Positives = 22/47 (46%)
+
+Query:   150 EGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDD 196
+             E ++  E      + D++ +     DD++  F+     D+D+ + DD
+Sbjct:   370 EDDDYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDD 416
+
+ Score = 50 (22.9 bits), Expect = 0.15, Sum P(2) = 0.14
+ Identities = 11/41 (26%), Positives = 20/41 (48%)
+
+Query:   179 EGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTE 219
+             E F+D  E  D E ++D+ +N   + E  E+  E   +  +
+Sbjct:  1078 EQFEDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVK 1118
+
+ Score = 49 (22.4 bits), Expect = 0.11, Sum P(2) = 0.10
+ Identities = 9/43 (20%), Positives = 20/43 (46%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             D     G   N  ++   + + ++E  + E+    D+DD ++D
+Sbjct:   373 DYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQD 415
+
+ Score = 49 (22.4 bits), Expect = 0.20, Sum P(2) = 0.18
+ Identities = 13/51 (25%), Positives = 25/51 (49%)
+
+Query:   190 DEHDDDDLDNEENELEELEERVEARKKTTEKQSAAALCVGVGSFADPDDLP 240
+             +E  +D+ +  + E+EE E+     KK   +++A      V +  D  D+P
+Sbjct:  1077 NEQFEDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTEDELDIP 1127
+
+ Score = 43 (19.7 bits), Expect = 1.1, Sum P(2) = 0.68
+ Identities = 8/32 (25%), Positives = 18/32 (56%)
+
+Query:   189 DDEHDDDDLDNEENELEELEERVEARKKTTEK 220
+             +++ D++  + +EN  +  EE  E  K T ++
+Sbjct:  1092 EEDEDENSTEKKENTEKTAEEESENVKNTEDE 1123
+
+ Score = 40 (18.3 bits), Expect = 1.5, Sum P(2) = 0.78
+ Identities = 10/48 (20%), Positives = 21/48 (43%)
+
+Query:   119 LQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDD 166
+             L  L + D   +E        +E+   + + + E+ + E+    D+DD
+Sbjct:   364 LTKLGLEDDDYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDD 411
+
+ Score = 40 (18.3 bits), Expect = 2.7, Sum P(2) = 0.93
+ Identities = 7/34 (20%), Positives = 22/34 (64%)
+
+Query:   175 DDDEEGFDDEEEFDDDEHDDDDLDNEENELEELE 208
+             ++DE+    E++ + ++  +++ +N +N  +EL+
+Sbjct:  1092 EEDEDENSTEKKENTEKTAEEESENVKNTEDELD 1125
+
+ Score = 39 (17.8 bits), Expect = 3.0, Sum P(3) = 0.95
+ Identities = 9/18 (50%), Positives = 12/18 (66%)
+
+Query:  1014 EEKIENLTEDAFNTQVTA 1031
+             E++ EN TE   NT+ TA
+Sbjct:  1093 EDEDENSTEKKENTEKTA 1110
+
+ Score = 39 (17.8 bits), Expect = 3.0, Sum P(3) = 0.95
+ Identities = 8/21 (38%), Positives = 14/21 (66%)
+
+Query:   988 VTVGTQATKYNSETVDKKIEE 1008
+             V++  +  + N+E VD +IEE
+Sbjct:  1073 VSITNEQFEDNTEAVDMEIEE 1093
+
+ Score = 37 (16.9 bits), Expect = 2.2, Sum P(4) = 0.89
+ Identities = 9/30 (30%), Positives = 15/30 (50%)
+
+Query:   499 GGNGETGFEQNSTYSVFSISITLTDEGYEH 528
+             GG+G  G    S+ ++ +   +L  E Y H
+Sbjct:   611 GGSGSGGGGNGSSTTIATGDPSLCAETYRH 640
+
+ Score = 34 (15.6 bits), Expect = 4.6, Sum P(4) = 0.99
+ Identities = 6/11 (54%), Positives = 8/11 (72%)
+
+Query:   655 WKSNFDLNSDL 665
+             W+S F+L S L
+Sbjct:   760 WRSRFELISQL 770
+
+ Score = 34 (15.6 bits), Expect = 8.2, Sum P(2) = 1.0
+ Identities = 7/30 (23%), Positives = 15/30 (50%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEE 155
+             D +N         D E+    +E++GE+++
+Sbjct:   387 DSTNDSDSDDEDNDFEKSFVADEDDGEQDD 416
+
+
+>gnl|PID|e290387 (Z83731) M04C9.6a [Caenorhabditis elegans]
+            Length = 1286
+
+ Score = 64 (29.3 bits), Expect = 0.0034, Sum P(2) = 0.0034
+ Identities = 14/38 (36%), Positives = 21/38 (55%)
+
+Query:   175 DDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVE 212
+             +D+ E  D E E D+DE+  +  +N E   EE  E V+
+Sbjct:  1207 EDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVK 1244
+
+ Score = 64 (29.3 bits), Expect = 2.1, Sum P(3) = 0.87
+ Identities = 12/49 (24%), Positives = 29/49 (59%)
+
+Query:   154 EEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             +++E+ DDD  + ++    +++   +   DE+  +D + DD+D D E++
+Sbjct:   482 QQQEKADDDKLNTDERQQYMENSGPKFNTDEDSTNDSDSDDEDNDFEKS 530
+
+ Score = 61 (27.9 bits), Expect = 0.0034, Sum P(2) = 0.0034
+ Identities = 11/49 (22%), Positives = 23/49 (46%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFD 182
+             T   +  + + ++E+ + E+    +EDD + DD     EI+      F+
+Sbjct:   510 TDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDDSPLSIEIKSSSSSDFE 558
+
+ Score = 61 (27.9 bits), Expect = 0.067, Sum P(2) = 0.065
+ Identities = 13/64 (20%), Positives = 30/64 (46%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEH 192
+             +T N   E+ ++++   +  ++  E      + DEDS  +   DDE+   ++    D++ 
+Sbjct:   478 RTANQQQEKADDDKLNTDERQQYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDD 537
+
+Query:   193 DDDD 196
+              + D
+Sbjct:   538 GEQD 541
+
+ Score = 59 (27.0 bits), Expect = 0.12, Sum P(2) = 0.11
+ Identities = 13/55 (23%), Positives = 29/55 (52%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHD 193
+             D+++   +E ++  E    + + D+D   DS ++ +D+D E     +E D ++ D
+Sbjct:   488 DDDKLNTDERQQYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDD 542
+
+ Score = 59 (27.0 bits), Expect = 0.12, Sum P(2) = 0.11
+ Identities = 13/60 (21%), Positives = 28/60 (46%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +E+ ++++    E ++  E      + ++      D D+E  D E+ F  DE D +  D+
+Sbjct:   484 QEKADDDKLNTDERQQYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDDS 543
+
+ Score = 58 (26.5 bits), Expect = 4.4, P = 0.99
+ Identities = 12/40 (30%), Positives = 21/40 (52%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             N E       ++E+E   E++E  E+  EEE ++  + ED
+Sbjct:  1209 NTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTED 1248
+
+ Score = 57 (26.1 bits), Expect = 6.1, P = 1.0
+ Identities = 12/40 (30%), Positives = 22/40 (55%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDD 176
+             A D E EE+E+E   E++E  E+  +++ +     E + D
+Sbjct:  1212 AVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTEDELD 1251
+
+ Score = 57 (26.1 bits), Expect = 6.1, P = 1.0
+ Identities = 12/48 (25%), Positives = 26/48 (54%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             E+ E+  E    E EE+E+++  +  E++    +++ E   + E+E D
+Sbjct:  1204 EQFEDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTEDELD 1251
+
+ Score = 54 (24.7 bits), Expect = 0.067, Sum P(2) = 0.065
+ Identities = 12/34 (35%), Positives = 21/34 (61%)
+
+Query:   189 DDEHDDDDLDNEENELEELEERVEARKKTTEKQS 222
+             +D  +  D++ EE+E E   E+ E  +KT E++S
+Sbjct:  1207 EDNTEAVDMEIEEDEDENSTEKKENTEKTAEEES 1240
+
+ Score = 51 (23.3 bits), Expect = 0.067, Sum P(2) = 0.065
+ Identities = 9/34 (26%), Positives = 20/34 (58%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDD 162
+             N +  + N +D ++E+ + E+    +E++ E DD
+Sbjct:   509 NTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDD 542
+
+ Score = 50 (22.9 bits), Expect = 0.22, Sum P(2) = 0.20
+ Identities = 11/41 (26%), Positives = 20/41 (48%)
+
+Query:   179 EGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTE 219
+             E F+D  E  D E ++D+ +N   + E  E+  E   +  +
+Sbjct:  1204 EQFEDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVK 1244
+
+ Score = 49 (22.4 bits), Expect = 0.29, Sum P(2) = 0.25
+ Identities = 13/51 (25%), Positives = 25/51 (49%)
+
+Query:   190 DEHDDDDLDNEENELEELEERVEARKKTTEKQSAAALCVGVGSFADPDDLP 240
+             +E  +D+ +  + E+EE E+     KK   +++A      V +  D  D+P
+Sbjct:  1203 NEQFEDNTEAVDMEIEEDEDENSTEKKENTEKTAEEESENVKNTEDELDIP 1253
+
+ Score = 47 (21.5 bits), Expect = 3.9, Sum P(2) = 0.98
+ Identities = 11/60 (18%), Positives = 25/60 (41%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDD 196
+             ++  +  E        +++E+ +DD  + DE          +   D++   D D  D+D+
+Sbjct:   466 SSSSDHSETIPVRTANQQQEKADDDKLNTDERQQYMENSGPKFNTDEDSTNDSDSDDEDN 525
+
+ Score = 46 (21.0 bits), Expect = 0.29, Sum P(2) = 0.25
+ Identities = 15/78 (19%), Positives = 31/78 (39%)
+
+Query:    85 SEEEGRSLSNVGDPEIIKSPSDPKQYRYIKLQNGLQALLISDLSNVEGKTGNATDEEEEE 144
+             S ++G         EI  S SD  +   ++  N  Q     D  N + +     +   + 
+Sbjct:   449 SRKKGLLFDFAAPIEIKSSSSDHSETIPVRTANQQQEKADDDKLNTDERQQYMENSGPKF 508
+
+Query:   145 EEEEEEGEEEEEEEEDDD 162
+               +E+   + + ++ED+D
+Sbjct:   509 NTDEDSTNDSDSDDEDND 526
+
+ Score = 45 (20.6 bits), Expect = 6.8, Sum P(2) = 1.0
+ Identities = 9/50 (18%), Positives = 23/50 (46%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             N  + ++  E    +   +E+   D D DD+++   +    DE+  + ++
+Sbjct:   493 NTDERQQYMENSGPKFNTDEDSTNDSDSDDEDNDFEKSFVADEDDGEQDD 542
+
+ Score = 43 (19.7 bits), Expect = 1.7, Sum P(2) = 0.81
+ Identities = 8/32 (25%), Positives = 18/32 (56%)
+
+Query:   189 DDEHDDDDLDNEENELEELEERVEARKKTTEK 220
+             +++ D++  + +EN  +  EE  E  K T ++
+Sbjct:  1218 EEDEDENSTEKKENTEKTAEEESENVKNTEDE 1249
+
+ Score = 40 (18.3 bits), Expect = 3.9, Sum P(2) = 0.98
+ Identities = 7/34 (20%), Positives = 22/34 (64%)
+
+Query:   175 DDDEEGFDDEEEFDDDEHDDDDLDNEENELEELE 208
+             ++DE+    E++ + ++  +++ +N +N  +EL+
+Sbjct:  1218 EEDEDENSTEKKENTEKTAEEESENVKNTEDELD 1251
+
+ Score = 39 (17.8 bits), Expect = 2.1, Sum P(3) = 0.87
+ Identities = 9/18 (50%), Positives = 12/18 (66%)
+
+Query:  1014 EEKIENLTEDAFNTQVTA 1031
+             E++ EN TE   NT+ TA
+Sbjct:  1219 EDEDENSTEKKENTEKTA 1236
+
+ Score = 39 (17.8 bits), Expect = 2.1, Sum P(3) = 0.87
+ Identities = 8/21 (38%), Positives = 14/21 (66%)
+
+Query:   988 VTVGTQATKYNSETVDKKIEE 1008
+             V++  +  + N+E VD +IEE
+Sbjct:  1199 VSITNEQFEDNTEAVDMEIEE 1219
+
+ Score = 38 (17.4 bits), Expect = 2.9, Sum P(2) = 0.95
+ Identities = 11/66 (16%), Positives = 29/66 (43%)
+
+Query:   103 SPSDPKQYRYIKLQNGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDD 162
+             +P++P+++      N    L  +  +N   +  N+T    +    ++  +   E+++  D
+Sbjct:   317 NPNNPQRFPVFDSANSDSTLSSNSSNNNSSEQQNSTGIAAKCSSTDDLTKLGLEDDDSPD 376
+
+Query:   163 DDDDED 168
+               +D D
+Sbjct:   377 AAEDSD 382
+
+ Score = 37 (16.9 bits), Expect = 1.7, Sum P(4) = 0.82
+ Identities = 9/30 (30%), Positives = 15/30 (50%)
+
+Query:   499 GGNGETGFEQNSTYSVFSISITLTDEGYEH 528
+             GG+G  G    S+ ++ +   +L  E Y H
+Sbjct:   737 GGSGSGGGGNGSSTTIATGDPSLCAETYRH 766
+
+ Score = 37 (16.9 bits), Expect = 3.9, Sum P(2) = 0.98
+ Identities = 7/14 (50%), Positives = 8/14 (57%)
+
+Query:   163 DDDDEDSGAEIQDD 176
+             +DDD    AE  DD
+Sbjct:   370 EDDDSPDAAEDSDD 383
+
+ Score = 35 (16.0 bits), Expect = 6.8, Sum P(2) = 1.0
+ Identities = 7/12 (58%), Positives = 8/12 (66%)
+
+Query:   158 EEDDDDDDDEDS 169
+             E+DD  D  EDS
+Sbjct:   370 EDDDSPDAAEDS 381
+
+ Score = 34 (15.6 bits), Expect = 3.6, Sum P(4) = 0.97
+ Identities = 6/11 (54%), Positives = 8/11 (72%)
+
+Query:   655 WKSNFDLNSDL 665
+             W+S F+L S L
+Sbjct:   886 WRSRFELISQL 896
+
+ Score = 34 (15.6 bits), Expect = 9.0, Sum P(2) = 1.0
+ Identities = 7/30 (23%), Positives = 15/30 (50%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEE 155
+             D +N         D E+    +E++GE+++
+Sbjct:   513 DSTNDSDSDDEDNDFEKSFVADEDDGEQDD 542
+
+
+>sp|P02641|TRT3_RABIT TROPONIN T, FAST SKELETAL MUSCLE ISOFORMS
+            Length = 279
+
+ Score = 70 (32.0 bits), Expect = 0.0042, Sum P(3) = 0.0042
+ Identities = 16/56 (28%), Positives = 29/56 (51%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             +EE E  EE+  EEEE +EE     +  +   E+   +E   D  E+  ++E +++
+Sbjct:     3 DEEVEHVEEQYEEEEEAQEEAPSPAEVHEPAPEVHVPEEVHEDALEDMREEEEEEE 58
+
+ Score = 64 (29.3 bits), Expect = 0.025, Sum P(3) = 0.024
+ Identities = 16/57 (28%), Positives = 29/57 (50%)
+
+Query:   147 EEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             +EE    EE+ EE+++  ++  S AE+ +   E    EE  +D   D  + + EE +
+Sbjct:     3 DEEVEHVEEQYEEEEEAQEEAPSPAEVHEPAPEVHVPEEVHEDALEDMREEEEEEEK 59
+
+ Score = 61 (27.9 bits), Expect = 0.059, Sum P(3) = 0.057
+ Identities = 17/56 (30%), Positives = 28/56 (50%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDD 196
+             +EE E  EE+ EEEEE +E+     +    A      EE  +D  E   +E ++++
+Sbjct:     3 DEEVEHVEEQYEEEEEAQEEAPSPAEVHEPAPEVHVPEEVHEDALEDMREEEEEEE 58
+
+ Score = 57 (26.1 bits), Expect = 0.19, Sum P(3) = 0.17
+ Identities = 12/21 (57%), Positives = 15/21 (71%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEE 158
+             +DEE E  EE+ E EEE +EE
+Sbjct:     2 SDEEVEHVEEQYEEEEEAQEE 22
+
+ Score = 56 (25.6 bits), Expect = 0.25, Sum P(3) = 0.22
+ Identities = 12/40 (30%), Positives = 23/40 (57%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             EE  E+  E+  EEEE+++    + +  +I + ++  FDD
+Sbjct:    40 EEVHEDALEDMREEEEEEEKPRPKLTAPKIPEGEKVDFDD 79
+
+ Score = 50 (22.9 bits), Expect = 1.4, Sum P(3) = 0.74
+ Identities = 11/20 (55%), Positives = 14/20 (70%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEE 159
+             EE  E+  E+  EEEEEEE+
+Sbjct:    40 EEVHEDALEDMREEEEEEEK 59
+
+ Score = 50 (22.9 bits), Expect = 1.4, Sum P(3) = 0.74
+ Identities = 14/46 (30%), Positives = 22/46 (47%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             EEEEE +EE     E  E   +    E+   +  +D  E  ++EE+
+Sbjct:    14 EEEEEAQEEAPSPAEVHEPAPEVHVPEEVHEDALEDMREEEEEEEK 59
+
+ Score = 49 (22.4 bits), Expect = 1.8, Sum P(3) = 0.83
+ Identities = 12/55 (21%), Positives = 26/55 (47%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHD 193
+             +E E  EE+ EE EE +EE     +  +      + ++  E   ++   +++E +
+Sbjct:     4 EEVEHVEEQYEEEEEAQEEAPSPAEVHEPAPEVHVPEEVHEDALEDMREEEEEEE 58
+
+ Score = 48 (22.0 bits), Expect = 2.4, Sum P(3) = 0.91
+ Identities = 15/50 (30%), Positives = 24/50 (48%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDE 191
+             EE+ EEEEE +EE     +  +   E    E   +D      EEE ++++
+Sbjct:    10 EEQYEEEEEAQEEAPSPAEVHEPAPEVHVPEEVHEDALEDMREEEEEEEK 59
+
+ Score = 47 (21.5 bits), Expect = 0.0042, Sum P(3) = 0.0042
+ Identities = 10/22 (45%), Positives = 14/22 (63%)
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             EE EL  L+ER+E R+    +Q
+Sbjct:   106 EEEELVALKERIEKRRAERAEQ 127
+
+ Score = 35 (16.0 bits), Expect = 0.0042, Sum P(3) = 0.0042
+ Identities = 7/22 (31%), Positives = 12/22 (54%)
+
+Query:   643 SIEDIENSWTELWKSNFDLNSD 664
+             S E + +   ELW + + L +D
+Sbjct:   213 SDEKLRDKAKELWDTLYQLETD 234
+
+ Score = 35 (16.0 bits), Expect = 0.22, Sum P(2) = 0.20
+ Identities = 13/46 (28%), Positives = 21/46 (45%)
+
+Query:  1004 KKIEEFLSSFEEKIENLTEDAFNTQVTALIKLKECEDTHLGEEVDR 1049
+             KK EE L + +E+IE    +    Q     K +E ++    E+  R
+Sbjct:   104 KKEEEELVALKERIEKRRAERAEQQRIRAEKERERQNRLAEEKARR 149
+
+ Score = 34 (15.6 bits), Expect = 7.0, Sum P(3) = 1.0
+ Identities = 15/66 (22%), Positives = 27/66 (40%)
+
+Query:   150 EGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             E  ++EEEE     +  E   AE  +      + E E  +   ++     EE+     EE
+Sbjct:   101 EARKKEEEELVALKERIEKRRAERAEQQRIRAEKERERQNRLAEEKARREEEDAKRRAEE 160
+
+Query:   210 RVEARK 215
+              ++ +K
+Sbjct:   161 DLKKKK 166
+
+
+>sp|P50751|TRTC_SHEEP TROPONIN T, CARDIAC MUSCLE ISOFORM (TNTC)
+            Length = 287
+
+ Score = 69 (31.6 bits), Expect = 0.0046, Sum P(3) = 0.0046
+ Identities = 18/49 (36%), Positives = 24/49 (48%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             T +E EE+EE    E EE  EE+   +  +  GA   +D EE    E E
+Sbjct:     7 TVDEYEEQEEAAVEEHEESVEEEAGGEARQGGGASAAEDGEEEEGREAE 55
+
+ Score = 66 (30.2 bits), Expect = 0.011, Sum P(3) = 0.011
+ Identities = 15/43 (34%), Positives = 21/43 (48%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             A +E EE  EEE  GE  +       +D +E+ G E +D   E
+Sbjct:    18 AVEEHEESVEEEAGGEARQGGGASAAEDGEEEEGREAEDGPVE 60
+
+ Score = 65 (29.7 bits), Expect = 0.015, Sum P(3) = 0.015
+ Identities = 16/59 (27%), Positives = 28/59 (47%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEE 201
+             EE  +E E +EE   EE ++  ++E  G   Q       +D EE +  E +D  ++  +
+Sbjct:     5 EETVDEYEEQEEAAVEEHEESVEEEAGGEARQGGGASAAEDGEEEEGREAEDGPVEESK 63
+
+ Score = 64 (29.3 bits), Expect = 0.020, Sum P(3) = 0.020
+ Identities = 16/45 (35%), Positives = 23/45 (51%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             EE+EE   EE EE  EEE   +      + A    ++EEG + E+
+Sbjct:    12 EEQEEAAVEEHEESVEEEAGGEARQGGGASAAEDGEEEEGREAED 56
+
+ Score = 58 (26.5 bits), Expect = 0.11, Sum P(3) = 0.11
+ Identities = 17/52 (32%), Positives = 22/52 (42%)
+
+Query:   132 GKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             G    A D EEEE  E E+G  EE + +            +I D +   FDD
+Sbjct:    38 GGASAAEDGEEEEGREAEDGPVEESKPQAPGPFMPNLVPPKIPDGERVDFDD 89
+
+ Score = 53 (24.2 bits), Expect = 0.064, Sum P(3) = 0.062
+ Identities = 18/76 (23%), Positives = 33/76 (43%)
+
+Query:   146 EEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELE 205
+             E+ EE E  E E+   ++   +  G  + +       D E  D D+     ++ + NEL+
+Sbjct:    44 EDGEEEEGREAEDGPVEESKPQAPGPFMPNLVPPKIPDGERVDFDDIHRKRMEKDLNELQ 103
+
+Query:   206 ELEERVEARKKTTEKQ 221
+              L E     +K  E++
+Sbjct:   104 TLIEAHFENRKKEEEE 119
+
+ Score = 52 (23.8 bits), Expect = 0.064, Sum P(3) = 0.062
+ Identities = 12/29 (41%), Positives = 16/29 (55%)
+
+Query:   127 LSNVEGKTGNATDEEEEEEEEEEEGEEEE 155
+             +S+VE       ++EE   EE EE  EEE
+Sbjct:     1 MSDVEETVDEYEEQEEAAVEEHEESVEEE 29
+
+ Score = 52 (23.8 bits), Expect = 0.63, Sum P(3) = 0.47
+ Identities = 12/48 (25%), Positives = 23/48 (47%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDD 189
+             +E EE+EE   EE EE  +++   +   G      ++   ++  E +D
+Sbjct:     9 DEYEEQEEAAVEEHEESVEEEAGGEARQGGGASAAEDGEEEEGREAED 56
+
+ Score = 48 (22.0 bits), Expect = 1.9, Sum P(3) = 0.86
+ Identities = 10/28 (35%), Positives = 17/28 (60%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDD 165
+             +D EE  +E EE+ E   EE E+  +++
+Sbjct:     2 SDVEETVDEYEEQEEAAVEEHEESVEEE 29
+
+ Score = 47 (21.5 bits), Expect = 2.5, Sum P(3) = 0.92
+ Identities = 13/40 (32%), Positives = 17/40 (42%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDD 176
+             A  EE EE  EEE G E  +       +D E+      +D
+Sbjct:    17 AAVEEHEESVEEEAGGEARQGGGASAAEDGEEEEGREAED 56
+
+ Score = 45 (20.6 bits), Expect = 0.0046, Sum P(3) = 0.0046
+ Identities = 9/22 (40%), Positives = 14/22 (63%)
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             EE EL  L++R+E R+    +Q
+Sbjct:   116 EEEELVSLKDRIEKRRAERAEQ 137
+
+ Score = 42 (19.2 bits), Expect = 1.1, Sum P(3) = 0.67
+ Identities = 10/24 (41%), Positives = 14/24 (58%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEE 156
+             +T +  +E+EE   EE E   EEE
+Sbjct:     6 ETVDEYEEQEEAAVEEHEESVEEE 29
+
+ Score = 38 (17.4 bits), Expect = 0.0046, Sum P(3) = 0.0046
+ Identities = 6/12 (50%), Positives = 10/12 (83%)
+
+Query:   653 ELWKSNFDLNSD 664
+             ELW+S +DL ++
+Sbjct:   234 ELWQSIYDLEAE 245
+
+ Score = 38 (17.4 bits), Expect = 0.0046, Sum P(3) = 0.0046
+ Identities = 8/33 (24%), Positives = 17/33 (51%)
+
+Query:   550 KRVFEEIQKIEDNEFHYQEQTDPVEYVENMCEN 582
+             + +++ I  +E  +F  QE+    +Y  N+  N
+Sbjct:   233 RELWQSIYDLEAEKFDLQEKFKQQKYEINVLRN 265
+
+ Score = 37 (16.9 bits), Expect = 5.8, Sum P(3) = 1.0
+ Identities = 15/69 (21%), Positives = 26/69 (37%)
+
+Query:   148 EEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEEL 207
+             E   E  ++EEE+     D       +  +++    E E +      ++    E E    
+Sbjct:   107 EAHFENRKKEEEELVSLKDRIEKRRAERAEQQRIRTEREKERQARLAEERARREEEESRR 166
+
+Query:   208 EERVEARKK 216
+             +   EARKK
+Sbjct:   167 KAEDEARKK 175
+
+ Score = 34 (15.6 bits), Expect = 0.20, Sum P(3) = 0.18
+ Identities = 8/15 (53%), Positives = 11/15 (73%)
+
+Query:  1004 KKIEEFLSSFEEKIE 1018
+             KK EE L S +++IE
+Sbjct:   114 KKEEEELVSLKDRIE 128
+
+
+>gnl|PID|e283394 (Y08484) swelling dependent chloride channel, ICln [Danio
+            rerio]
+            Length = 249
+
+ Score = 66 (30.2 bits), Expect = 0.0047, Sum P(2) = 0.0047
+ Identities = 11/33 (33%), Positives = 22/33 (66%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQD 175
+             ++E E    E++ +EE++D++D D +S  EI +
+Sbjct:    85 DDEGEAAPLEKDPDEEDEDEEDSDSESSGEITE 117
+
+ Score = 62 (28.4 bits), Expect = 0.016, Sum P(2) = 0.016
+ Identities = 11/29 (37%), Positives = 19/29 (65%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSG 170
+             ++E E     ++ +EE+ED++D D E SG
+Sbjct:    85 DDEGEAAPLEKDPDEEDEDEEDSDSESSG 113
+
+ Score = 61 (27.9 bits), Expect = 0.022, Sum P(2) = 0.022
+ Identities = 11/26 (42%), Positives = 18/26 (69%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDD 164
+             D+E E    E++ +EE+E+EED D +
+Sbjct:    85 DDEGEAAPLEKDPDEEDEDEEDSDSE 110
+
+ Score = 57 (26.1 bits), Expect = 0.075, Sum P(2) = 0.072
+ Identities = 11/29 (37%), Positives = 17/29 (58%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDE 167
+             DE E    E++  EE+E+EE+ D +   E
+Sbjct:    86 DEGEAAPLEKDPDEEDEDEEDSDSESSGE 114
+
+ Score = 55 (25.2 bits), Expect = 0.14, Sum P(2) = 0.13
+ Identities = 10/26 (38%), Positives = 16/26 (61%)
+
+Query:   165 DDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             DDE   A ++ D +E  +DEE+ D +
+Sbjct:    85 DDEGEAAPLEKDPDEEDEDEEDSDSE 110
+
+ Score = 55 (25.2 bits), Expect = 9.8, P = 1.0
+ Identities = 12/33 (36%), Positives = 18/33 (54%)
+
+Query:   177 DEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             D+EG     E D DE D+D+ D++     E+ E
+Sbjct:    85 DDEGEAAPLEKDPDEEDEDEEDSDSESSGEITE 117
+
+ Score = 51 (23.3 bits), Expect = 0.0047, Sum P(2) = 0.0047
+ Identities = 9/20 (45%), Positives = 13/20 (65%)
+
+Query:   190 DEHDDDDLDNEENELEELEE 209
+             D  DD D + EE ++EE E+
+Sbjct:   149 DNEDDGDYEGEEYDVEEAEQ 168
+
+ Score = 51 (23.3 bits), Expect = 0.46, Sum P(2) = 0.37
+ Identities = 9/28 (32%), Positives = 16/28 (57%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEE 158
+             EG+      + +EE+E+EE+ + E   E
+Sbjct:    87 EGEAAPLEKDPDEEDEDEEDSDSESSGE 114
+
+ Score = 49 (22.4 bits), Expect = 0.83, Sum P(2) = 0.57
+ Identities = 8/26 (30%), Positives = 17/26 (65%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDD 166
+             ++E E    E + +EE+E+++D D +
+Sbjct:    85 DDEGEAAPLEKDPDEEDEDEEDSDSE 110
+
+ Score = 47 (21.5 bits), Expect = 1.5, Sum P(2) = 0.78
+ Identities = 8/27 (29%), Positives = 16/27 (59%)
+
+Query:   135 GNATDEEEEEEEEEEEGEEEEEEEEDD 161
+             G A   E++ +EE+E+ E+ + E   +
+Sbjct:    88 GEAAPLEKDPDEEDEDEEDSDSESSGE 114
+
+ Score = 45 (20.6 bits), Expect = 2.7, Sum P(2) = 0.94
+ Identities = 11/36 (30%), Positives = 16/36 (44%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEF 187
+             ++E E    + D D+ED   E  D +  G   E  F
+Sbjct:    85 DDEGEAAPLEKDPDEEDEDEEDSDSESSGEITEIRF 120
+
+ Score = 41 (18.8 bits), Expect = 0.10, Sum P(2) = 0.096
+ Identities = 7/21 (33%), Positives = 14/21 (66%)
+
+Query:   188 DDDEHDDDDLDNEENELEELE 208
+             DD +++ ++ D EE E E+ +
+Sbjct:   152 DDGDYEGEEYDVEEAEQEQAQ 172
+
+ Score = 40 (18.3 bits), Expect = 0.14, Sum P(2) = 0.13
+ Identities = 5/27 (18%), Positives = 17/27 (62%)
+
+Query:   175 DDDEEGFDDEEEFDDDEHDDDDLDNEE 201
+             D +    +D+ +++ +E+D ++ + E+
+Sbjct:   144 DPEHADNEDDGDYEGEEYDVEEAEQEQ 170
+
+ Score = 39 (17.8 bits), Expect = 0.19, Sum P(2) = 0.17
+ Identities = 7/24 (29%), Positives = 16/24 (66%)
+
+Query:   172 EIQDDDEEGFDDEEEFDDDEHDDD 195
+             E  D++++G  + EE+D +E + +
+Sbjct:   146 EHADNEDDGDYEGEEYDVEEAEQE 169
+
+
+>gi|1763002 (U67262) RING-finger protein [Helicoverpa armigera
+            nucleopolyhedrovirus]
+            Length = 352
+
+ Score = 78 (35.7 bits), Expect = 0.0066, P = 0.0065
+ Identities = 19/73 (26%), Positives = 31/73 (42%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             N +  T N  D     E+  E        + +   D+D         DD+   D +++ D
+Sbjct:   132 NDDDNTSNCDDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNTDDVDDDDD 191
+
+Query:   189 DDEHDDDDLDNEE 201
+             DD +DDD  DN++
+Sbjct:   192 DDVNDDDVNDNDD 204
+
+ Score = 74 (33.9 bits), Expect = 0.024, P = 0.023
+ Identities = 15/80 (18%), Positives = 35/80 (43%)
+
+Query:   124 ISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             I +    E  T    ++ E   + +         ++ + DD D+D   ++ DDD    DD
+Sbjct:   145 IHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNTDDVDDDDDDDVNDDDVNDNDD 204
+
+Query:   184 EEEFDDDEHDDDDLDNEENE 203
+               + + + + ++ ++N  N+
+Sbjct:   205 VNDVNTNVNSNNQINNTTND 224
+
+ Score = 63 (28.8 bits), Expect = 0.80, P = 0.55
+ Identities = 11/50 (22%), Positives = 29/50 (58%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             +++  ++ DDDDDD+ +  ++ D+D+    +     +++ ++   DN+ N
+Sbjct:   179 DDQNTDDVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQINNTTNDNDTN 228
+
+ Score = 62 (28.4 bits), Expect = 1.1, P = 0.67
+ Identities = 14/64 (21%), Positives = 32/64 (50%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D+     E+  E        + +   D++ S     + D++  DD ++ DDD+ +DDD++
+Sbjct:   141 DDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNTDDVDDDDDDDVNDDDVN 200
+
+Query:   199 NEEN 202
+             + ++
+Sbjct:   201 DNDD 204
+
+ Score = 58 (26.5 bits), Expect = 1.0, Sum P(2) = 0.64
+ Identities = 12/40 (30%), Positives = 23/40 (57%)
+
+Query:   165 DDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENEL 204
+             DD+++     DDD++  DD+   +DD +D +   N  N++
+Sbjct:   179 DDQNTDDVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQI 218
+
+ Score = 56 (25.6 bits), Expect = 7.6, P = 1.0
+ Identities = 8/48 (16%), Positives = 28/48 (58%)
+
+Query:   148 EEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             +++  ++ ++++DDD +DD+ +  +  +D     +   + ++  +D+D
+Sbjct:   179 DDQNTDDVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQINNTTNDND 226
+
+ Score = 52 (23.8 bits), Expect = 5.9, Sum P(2) = 1.0
+ Identities = 10/51 (19%), Positives = 26/51 (50%)
+
+Query:   166 DEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKK 216
+             D D+      + ++   D+ + DDD+  +DD  N+ +++ ++   V +  +
+Sbjct:   167 DNDASVNNNTNVDDQNTDDVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQ 217
+
+ Score = 43 (19.7 bits), Expect = 1.0, Sum P(2) = 0.64
+ Identities = 9/45 (20%), Positives = 18/45 (40%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAE 172
+             S+    + N   E  +E  +       ++    +D+DDD  S  +
+Sbjct:    97 SDRNSDSDNCDSEVYDEIVDVNNSNNNDDNNSTNDNDDDNTSNCD 141
+
+
+>sp|P13919|CVCB_PEA CONVICILIN PRECURSOR
+            Length = 386
+
+ Score = 81 (37.1 bits), Expect = 0.0070, Sum P(2) = 0.0070
+ Identities = 15/39 (38%), Positives = 27/39 (69%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             E++E++E + G E  E EED++  D+E  G++ ++D EE
+Sbjct:   128 EKKEQKEVQPGRERWEREEDEEQVDEEWRGSQRREDPEE 166
+
+ Score = 74 (33.9 bits), Expect = 0.058, Sum P(2) = 0.056
+ Identities = 21/82 (25%), Positives = 39/82 (47%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             EE+   E     E+EE+EEE   +   ++   E +   E G   E++ D++E        
+Sbjct:    53 EEKRHGEWRPSYEKEEDEEEGQRERGRQEGEKEEKRHGEWGPSYEKQEDEEEKQKYRYQR 112
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             E+ + EE ++    R+K  +K+
+Sbjct:   113 EKEDEEEKQKYQYQREKKEQKE 134
+
+ Score = 72 (32.9 bits), Expect = 0.11, Sum P(2) = 0.10
+ Identities = 15/65 (23%), Positives = 37/65 (56%)
+
+Query:   132 GKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDE 191
+             G+ G + +++E+EEE+++   + E+E+E++          + Q + + G +  E  +D+E
+Sbjct:    90 GEWGPSYEKQEDEEEKQKYRYQREKEDEEEKQKYQYQREKKEQKEVQPGRERWEREEDEE 149
+
+Query:   192 HDDDD 196
+               D++
+Sbjct:   150 QVDEE 154
+
+ Score = 69 (31.6 bits), Expect = 0.26, Sum P(2) = 0.23
+ Identities = 15/80 (18%), Positives = 38/80 (47%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E + G      E+EE+EEE   E   +E + ++    + G   +  ++E    +  +  +
+Sbjct:    54 EKRHGEWRPSYEKEEDEEEGQRERGRQEGEKEEKRHGEWGPSYEKQEDEEEKQKYRYQRE 113
+
+Query:   191 EHDDDDLDNEENELEELEER 210
+             + D+++    + + E+ E++
+Sbjct:   114 KEDEEEKQKYQYQREKKEQK 133
+
+ Score = 67 (30.7 bits), Expect = 0.47, Sum P(2) = 0.37
+ Identities = 17/77 (22%), Positives = 38/77 (49%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             E+EE+EEE +     +E E+++    +     E Q+D+EE      + + ++ ++     
+Sbjct:    65 EKEEDEEEGQRERGRQEGEKEEKRHGEWGPSYEKQEDEEEKQKYRYQREKEDEEEKQKYQ 124
+
+Query:   200 EENELEELEERVEARKK 216
+              + E +E +E    R++
+Sbjct:   125 YQREKKEQKEVQPGRER 141
+
+ Score = 67 (30.7 bits), Expect = 0.47, Sum P(2) = 0.37
+ Identities = 18/83 (21%), Positives = 39/83 (46%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             ++EE+   E     E+EE+EE+   +     G + +    E     E+ +D+E       
+Sbjct:    51 EKEEKRHGEWRPSYEKEEDEEEGQRERGRQEGEKEEKRHGEWGPSYEKQEDEEEKQKYRY 110
+
+Query:   199 NEENELEELEERVEARKKTTEKQ 221
+               E E EE +++ + +++  E++
+Sbjct:   111 QREKEDEEEKQKYQYQREKKEQK 133
+
+ Score = 66 (30.2 bits), Expect = 0.63, Sum P(2) = 0.47
+ Identities = 16/81 (19%), Positives = 39/81 (48%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             +E E+EE+  GE     E+++D+++ +      + + EE    E     ++ +D++   +
+Sbjct:    48 QEGEKEEKRHGEWRPSYEKEEDEEEGQRERGRQEGEKEEKRHGEWGPSYEKQEDEEEKQK 107
+
+Query:   201 ENELEELEERVEARKKTTEKQ 221
+                  E E+  E +K   +++
+Sbjct:   108 YRYQREKEDEEEKQKYQYQRE 128
+
+ Score = 62 (28.4 bits), Expect = 2.0, Sum P(2) = 0.87
+ Identities = 16/70 (22%), Positives = 35/70 (50%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             ++EE+EEE + E   +E E+E+    +   S  + +D++E+     +   +DE +     
+Sbjct:    65 EKEEDEEEGQRERGRQEGEKEEKRHGEWGPSYEKQEDEEEKQKYRYQREKEDEEEKQKYQ 124
+
+Query:   199 NEENELEELE 208
+              +  + E+ E
+Sbjct:   125 YQREKKEQKE 134
+
+ Score = 60 (27.5 bits), Expect = 3.7, Sum P(2) = 0.97
+ Identities = 17/82 (20%), Positives = 37/82 (45%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             E E+EE+   E     E+EED+++   E    E + +++   +    ++  E +++    
+Sbjct:    49 EGEKEEKRHGEWRPSYEKEEDEEEGQRERGRQEGEKEEKRHGEWGPSYEKQEDEEEKQKY 108
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+                  +E EE  +  +   EK+
+Sbjct:   109 RYQREKEDEEEKQKYQYQREKK 130
+
+ Score = 37 (16.9 bits), Expect = 0.0070, Sum P(2) = 0.0070
+ Identities = 7/32 (21%), Positives = 16/32 (50%)
+
+Query:   539 YLKMLQKLGPEKRVFEEIQKIEDNEFHYQEQT 570
+             ++++LQ+      +FE +Q     E+  +  T
+Sbjct:   220 HIRLLQRFDKRSDLFENLQNYRLVEYRAKPHT 251
+
+
+>gi|1763000 (U67261) RING-finger protein [Helicoverpa armigera
+            nucleopolyhedrovirus]
+            Length = 354
+
+ Score = 77 (35.2 bits), Expect = 0.0090, P = 0.0090
+ Identities = 13/43 (30%), Positives = 25/43 (58%)
+
+Query:   161 DDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             D+ DDD+D   ++ DDD    DD  + + + + D+ ++N  N+
+Sbjct:   179 DNVDDDDDDDDDVNDDDVNDNDDVNDVNTNVNSDNQINNTTND 221
+
+ Score = 76 (34.8 bits), Expect = 0.012, P = 0.012
+ Identities = 17/77 (22%), Positives = 35/77 (45%)
+
+Query:   126 DLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             D + +   T N   E   + +         +  +DDDDDDD+ +  ++ D+D+    +  
+Sbjct:   149 DTAELNTNTVNNDIETTVDNDASVNNNTNVDNVDDDDDDDDDVNDDDVNDNDDVNDVNTN 208
+
+Query:   186 EFDDDEHDDDDLDNEEN 202
+                D++ ++   DN+ N
+Sbjct:   209 VNSDNQINNTTNDNDTN 225
+
+ Score = 70 (32.0 bits), Expect = 0.085, P = 0.082
+ Identities = 14/57 (24%), Positives = 30/57 (52%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             E+  E        + E   D+D   ++   + + D++  DD++  DDD +D+DD+++
+Sbjct:   148 EDTAELNTNTVNNDIETTVDNDASVNNNTNVDNVDDDDDDDDDVNDDDVNDNDDVND 204
+
+ Score = 65 (29.7 bits), Expect = 0.42, P = 0.35
+ Identities = 14/66 (21%), Positives = 33/66 (50%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             N ++ ++     E+  E       +D +   ++  +   + + +  DD+++ DDD +DDD
+Sbjct:   136 NNSNCDDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDNVDDDDDDDDDVNDDD 195
+
+Query:   196 DLDNEE 201
+               DN++
+Sbjct:   196 VNDNDD 201
+
+ Score = 62 (28.4 bits), Expect = 0.23, Sum P(2) = 0.21
+ Identities = 12/58 (20%), Positives = 27/58 (46%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             K    +D   + +  + E  +E  +  + +++DD +S  +  DD+    DD    ++D
+Sbjct:    92 KRNKTSDRNSDSDHSDSEVYDEVVDVNNSNNNDDNNSTNDNDDDNNSNCDDATIHNED 149
+
+ Score = 61 (27.9 bits), Expect = 1.5, P = 0.78
+ Identities = 12/54 (22%), Positives = 30/54 (55%)
+
+Query:   149 EEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             E+  E      ++D +   D+ A + ++      D+++ DDD+ +DDD+++ ++
+Sbjct:   148 EDTAELNTNTVNNDIETTVDNDASVNNNTNVDNVDDDDDDDDDVNDDDVNDNDD 201
+
+ Score = 59 (27.0 bits), Expect = 2.9, P = 0.94
+ Identities = 13/74 (17%), Positives = 34/74 (45%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEF 187
+             +N +  + N  D++     ++     E+  E + +  +++       D       + +  
+Sbjct:   122 NNDDNNSTNDNDDDNNSNCDDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDNV 181
+
+Query:   188 DDDEHDDDDLDNEE 201
+             DDD+ DDDD+++++
+Sbjct:   182 DDDDDDDDDVNDDD 195
+
+ Score = 57 (26.1 bits), Expect = 5.5, P = 1.0
+ Identities = 10/70 (14%), Positives = 33/70 (47%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             N T +   + +  +    +E  + ++ +++D+++     DDD     D+    +++  + 
+Sbjct:    94 NKTSDRNSDSDHSDSEVYDEVVDVNNSNNNDDNNSTNDNDDDNNSNCDDATIHNEDTAEL 153
+
+Query:   196 DLDNEENELE 205
+             + +   N++E
+Sbjct:   154 NTNTVNNDIE 163
+
+ Score = 44 (20.1 bits), Expect = 0.23, Sum P(2) = 0.21
+ Identities = 7/30 (23%), Positives = 19/30 (63%)
+
+Query:   184 EEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             +++ DDD+  +DD  N+ +++ ++   V +
+Sbjct:   182 DDDDDDDDDVNDDDVNDNDDVNDVNTNVNS 211
+
+ Score = 34 (15.6 bits), Expect = 4.4, Sum P(2) = 0.99
+ Identities = 12/57 (21%), Positives = 24/57 (42%)
+
+Query:   994 ATKYNSETVDKKIEEFLSSFEEKIENLTEDAFNTQVTALIKLKECEDTHLGEEVDRN 1050
+             AT +N +T +       +  E  ++N      NT V  +    + +D    ++V+ N
+Sbjct:   143 ATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDNVDDDDDDDDDVNDDDVNDN 199
+
+
+>gi|1762996 (U67259) RING-finger protein [Helicoverpa armigera
+            nucleopolyhedrovirus]
+            Length = 348
+
+ Score = 76 (34.8 bits), Expect = 0.012, P = 0.012
+ Identities = 15/80 (18%), Positives = 36/80 (45%)
+
+Query:   124 ISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             I +    E  T    ++ E   + +         ++ +DD+ D+D   ++ DDD    DD
+Sbjct:   145 IHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNDDNVDDDDDDDVNDDDVNDNDD 204
+
+Query:   184 EEEFDDDEHDDDDLDNEENE 203
+               + + + + ++ ++N  N+
+Sbjct:   205 VNDVNTNVNSNNQINNTTND 224
+
+ Score = 74 (33.9 bits), Expect = 0.024, P = 0.023
+ Identities = 18/73 (24%), Positives = 31/73 (42%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             N +  T N  D     E+  E        + +   D+D         DD+   + +++ D
+Sbjct:   132 NDDDNTSNCDDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNDDNVDDDDD 191
+
+Query:   189 DDEHDDDDLDNEE 201
+             DD +DDD  DN++
+Sbjct:   192 DDVNDDDVNDNDD 204
+
+ Score = 64 (29.3 bits), Expect = 0.58, P = 0.44
+ Identities = 11/50 (22%), Positives = 29/50 (58%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             +++ ++  DDDDDD+ +  ++ D+D+    +     +++ ++   DN+ N
+Sbjct:   179 DDQNDDNVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQINNTTNDNDTN 228
+
+ Score = 60 (27.5 bits), Expect = 2.1, P = 0.88
+ Identities = 12/58 (20%), Positives = 27/58 (46%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             K    +D   + +  + E  +E  +  + +++DD +S  +  DD+    DD    ++D
+Sbjct:    92 KRNKTSDRNSDSDNSDSEVYDEIVDVNNSNNNDDNNSTNDNDDDNTSNCDDATIHNED 149
+
+ Score = 57 (26.1 bits), Expect = 1.0, Sum P(2) = 0.63
+ Identities = 12/40 (30%), Positives = 22/40 (55%)
+
+Query:   165 DDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENEL 204
+             DD++      DDD++  DD+   +DD +D +   N  N++
+Sbjct:   179 DDQNDDNVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQI 218
+
+ Score = 57 (26.1 bits), Expect = 1.0, Sum P(2) = 0.63
+ Identities = 11/51 (21%), Positives = 26/51 (50%)
+
+Query:   166 DEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKK 216
+             D D+      + ++  DD  + DDD+  +DD  N+ +++ ++   V +  +
+Sbjct:   167 DNDASVNNNTNVDDQNDDNVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQ 217
+
+ Score = 57 (26.1 bits), Expect = 5.5, P = 1.0
+ Identities = 8/48 (16%), Positives = 28/48 (58%)
+
+Query:   148 EEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             +++ ++  ++++DDD +DD+ +  +  +D     +   + ++  +D+D
+Sbjct:   179 DDQNDDNVDDDDDDDVNDDDVNDNDDVNDVNTNVNSNNQINNTTNDND 226
+
+ Score = 56 (25.6 bits), Expect = 7.5, P = 1.0
+ Identities = 11/48 (22%), Positives = 25/48 (52%)
+
+Query:   155 EEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             +  +  D + D ++S +E+ D+  +  +     D++  +D+D DN  N
+Sbjct:    92 KRNKTSDRNSDSDNSDSEVYDEIVDVNNSNNNDDNNSTNDNDDDNTSN 139
+
+ Score = 56 (25.6 bits), Expect = 7.5, P = 1.0
+ Identities = 13/64 (20%), Positives = 32/64 (50%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D+     E+  E        + +   D++ S     + D++  D+ ++ DDD+ +DDD++
+Sbjct:   141 DDATIHNEDTAELNTNTVNNDIETTVDNDASVNNNTNVDDQNDDNVDDDDDDDVNDDDVN 200
+
+Query:   199 NEEN 202
+             + ++
+Sbjct:   201 DNDD 204
+
+ Score = 44 (20.1 bits), Expect = 1.0, Sum P(2) = 0.63
+ Identities = 9/45 (20%), Positives = 19/45 (42%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAE 172
+             S+    + N+  E  +E  +       ++    +D+DDD  S  +
+Sbjct:    97 SDRNSDSDNSDSEVYDEIVDVNNSNNNDDNNSTNDNDDDNTSNCD 141
+
+
+>gi|1773061 (U82273) FGF homolog [Drosophila melanogaster]
+            Length = 770
+
+ Score = 76 (34.8 bits), Expect = 0.014, P = 0.014
+ Identities = 14/52 (26%), Positives = 28/52 (53%)
+
+Query:   129 NVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEG 180
+             NV   +G   D++ ++++E+ +  E+ EEE + D    ED+  E    + +G
+Sbjct:   688 NVRMSSGEEQDQDNDQDQEQSDPGEQGEEETEGDGGSLEDASYEDSSSEAQG 739
+
+ Score = 64 (29.3 bits), Expect = 0.64, P = 0.47
+ Identities = 11/55 (20%), Positives = 27/55 (49%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDL 197
+             EE++++ + ++E+ +  +  +++ E  G  ++D   E    E +       DD L
+Sbjct:   695 EEQDQDNDQDQEQSDPGEQGEEETEGDGGSLEDASYEDSSSEAQGRSGAGGDDSL 749
+
+ Score = 63 (28.8 bits), Expect = 0.88, P = 0.58
+ Identities = 17/62 (27%), Positives = 30/62 (48%)
+
+Query:   127 LSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             +S+ E +  +   ++E+ +  E+  EE E +    +D   EDS +E Q     G DD   
+Sbjct:   691 MSSGEEQDQDNDQDQEQSDPGEQGEEETEGDGGSLEDASYEDSSSEAQGRSGAGGDDSLY 750
+
+Query:   187 FD 188
+             +D
+Sbjct:   751 YD 752
+
+ Score = 61 (27.9 bits), Expect = 1.7, P = 0.81
+ Identities = 13/53 (24%), Positives = 23/53 (43%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDD 194
+             E  +  E        EE+D D+D D++     +  +EE   D    +D  ++D
+Sbjct:   680 ETSDRVERNVRMSSGEEQDQDNDQDQEQSDPGEQGEEETEGDGGSLEDASYED 732
+
+ Score = 61 (27.9 bits), Expect = 1.7, P = 0.81
+ Identities = 10/56 (17%), Positives = 25/56 (44%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHD 193
+             T +  E       GEE++++ + D +  D     E + + + G  ++  ++D   +
+Sbjct:   681 TSDRVERNVRMSSGEEQDQDNDQDQEQSDPGEQGEEETEGDGGSLEDASYEDSSSE 736
+
+
+>gi|1749494 (D89143) unnamed protein product [Schizosaccharomyces pombe]
+            Length = 265
+
+ Score = 79 (36.1 bits), Expect = 0.018, Sum P(2) = 0.018
+ Identities = 20/93 (21%), Positives = 41/93 (44%)
+
+Query:   130 VEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDD 189
+             +EG T  +TD++   + E +  E   +  E D+D  D D   +  + + E      + + 
+Sbjct:    84 IEGFTSPSTDDKPNNDVEVDYQELLRQTLEADEDASDSDDSVDSSNKNSEVSIKRRKTES 143
+
+Query:   190 DEHDDDDLDNEENELEELEERVEARKKTTEKQS 222
+             +  +  D  N E+  EE +   E ++   E ++
+Sbjct:   144 NSQESVDSSNSESSDEESDSEDETQQLLRELEN 176
+
+ Score = 64 (29.3 bits), Expect = 1.7, Sum P(2) = 0.81
+ Identities = 14/72 (19%), Positives = 33/72 (45%)
+
+Query:   150 EGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             E +E+  + +D  D  +++S   I+    E    E     +    D+  + E+E ++L  
+Sbjct:   113 EADEDASDSDDSVDSSNKNSEVSIKRRKTESNSQESVDSSNSESSDEESDSEDETQQLLR 172
+
+Query:   210 RVEARKKTTEKQ 221
+              +E  K+  +++
+Sbjct:   173 ELENIKQERKRE 184
+
+ Score = 63 (28.8 bits), Expect = 2.2, Sum P(2) = 0.89
+ Identities = 13/75 (17%), Positives = 34/75 (45%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             +++++  E   +  + E   +E  D  + +  D  ++ +D+ ++   + E    +   + 
+Sbjct:   126 DSSNKNSEVSIKRRKTESNSQESVDSSNSESSDEESDSEDETQQLLRELENIKQERKREQ 185
+
+Query:   196 DLDNEENELEELEER 210
+              L  E+N   E E+R
+Sbjct:   186 MLQEEKNRALEQEKR 200
+
+ Score = 34 (15.6 bits), Expect = 0.018, Sum P(2) = 0.018
+ Identities = 6/16 (37%), Positives = 10/16 (62%)
+
+Query:   622 LLSGANEGRCDLKEKW 637
+             LL+ A+ G   +K +W
+Sbjct:   210 LLNKASSGSFQVKRRW 225
+
+
+>gi|1763566 (U77779) fast skeletal muscle troponin T isoform pTROPT [Mus
+            musculus]
+            Length = 248
+
+ Score = 66 (30.2 bits), Expect = 0.022, Sum P(2) = 0.022
+ Identities = 14/45 (31%), Positives = 26/45 (57%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDD 183
+             +E E+ EEE +E E +EE  E ++    + +  +I + ++  FDD
+Sbjct:     4 EETEQVEEEAQEEEVQEEAPEPEEKPRPKLTAPKIPEGEKVDFDD 48
+
+ Score = 60 (27.5 bits), Expect = 0.14, Sum P(2) = 0.13
+ Identities = 11/25 (44%), Positives = 18/25 (72%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDD 165
+             +EE E+ EEE +EEE +EE  + ++
+Sbjct:     3 DEETEQVEEEAQEEEVQEEAPEPEE 27
+
+ Score = 58 (26.5 bits), Expect = 0.25, Sum P(2) = 0.22
+ Identities = 11/26 (42%), Positives = 18/26 (69%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDD 163
+             +DEE E+ EEE + EE +EE  + ++
+Sbjct:     2 SDEETEQVEEEAQEEEVQEEAPEPEE 27
+
+ Score = 56 (25.6 bits), Expect = 0.46, Sum P(2) = 0.37
+ Identities = 11/25 (44%), Positives = 17/25 (68%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDD 164
+             +EE E+ EEE  EEE +EE  + ++
+Sbjct:     3 DEETEQVEEEAQEEEVQEEAPEPEE 27
+
+ Score = 50 (22.9 bits), Expect = 2.7, Sum P(2) = 0.93
+ Identities = 9/26 (34%), Positives = 18/26 (69%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDE 167
+             +EE E+ EE  +EEE +E+  + +++
+Sbjct:     3 DEETEQVEEEAQEEEVQEEAPEPEEK 28
+
+ Score = 48 (22.0 bits), Expect = 4.9, Sum P(2) = 0.99
+ Identities = 10/24 (41%), Positives = 15/24 (62%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEE 156
+             +T    +E +EEE +EE  E EE+
+Sbjct:     5 ETEQVEEEAQEEEVQEEAPEPEEK 28
+
+ Score = 47 (21.5 bits), Expect = 6.6, Sum P(2) = 1.0
+ Identities = 9/25 (36%), Positives = 16/25 (64%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDED 168
+             +EE E+  EE +EEE  ++  + E+
+Sbjct:     3 DEETEQVEEEAQEEEVQEEAPEPEE 27
+
+ Score = 46 (21.0 bits), Expect = 0.022, Sum P(2) = 0.022
+ Identities = 10/22 (45%), Positives = 14/22 (63%)
+
+Query:   200 EENELEELEERVEARKKTTEKQ 221
+             EE EL  L+ER+E R+    +Q
+Sbjct:    75 EEEELIALKERIEKRRAERAEQ 96
+
+ Score = 35 (16.0 bits), Expect = 0.61, Sum P(2) = 0.46
+ Identities = 13/46 (28%), Positives = 21/46 (45%)
+
+Query:  1004 KKIEEFLSSFEEKIENLTEDAFNTQVTALIKLKECEDTHLGEEVDR 1049
+             KK EE L + +E+IE    +    Q     K +E ++    E+  R
+Sbjct:    73 KKEEEELIALKERIEKRRAERAEQQRIRAEKERERQNRLAEEKARR 118
+
+
+>sp|Q08499|CN4D_HUMAN CAMP-DEPENDENT 3',5'-CYCLIC PHOSPHODIESTERASE 4D (DPDE3)
+            Length = 689
+
+ Score = 74 (33.9 bits), Expect = 0.026, P = 0.026
+ Identities = 18/65 (27%), Positives = 32/65 (49%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             D EE  + + E+ + E   EED + D ++DSG+++++D            D E  +  LD
+Sbjct:   602 DPEEGRQGQTEKFQFELTLEEDGESDTEKDSGSQVEEDTSCSDSKTLCTQDSESTEIPLD 661
+
+Query:   199 NEENE 203
+              +  E
+Sbjct:   662 EQVEE 666
+
+
+>sp|P27323|HS81_ARATH HEAT SHOCK PROTEIN 81-1 (HSP81-1) (HEAT SHOCK PROTEIN 83)
+            Length = 700
+
+ Score = 73 (33.4 bits), Expect = 0.027, Sum P(2) = 0.026
+ Identities = 15/40 (37%), Positives = 24/40 (60%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDE 178
+             DE+E+E ++E EGE EE +EE + D   +    E+  + E
+Sbjct:   221 DEDEDEPKKENEGEVEEVDEEKEKDGKKKKKIKEVSHEWE 260
+
+ Score = 69 (31.6 bits), Expect = 1.2, Sum P(2) = 0.71
+ Identities = 14/37 (37%), Positives = 21/37 (56%)
+
+Query:   184 EEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEK 220
+             E+E  DDE +D+     E E+EE++E  E   K  +K
+Sbjct:   215 EKEISDDEDEDEPKKENEGEVEEVDEEKEKDGKKKKK 251
+
+ Score = 67 (30.7 bits), Expect = 0.16, Sum P(2) = 0.15
+ Identities = 12/37 (32%), Positives = 24/37 (64%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSG 170
+             T   T++E  ++E+E+E ++E E E ++ D++ E  G
+Sbjct:   210 TEKTTEKEISDDEDEDEPKKENEGEVEEVDEEKEKDG 246
+
+ Score = 62 (28.4 bits), Expect = 9.2, Sum P(2) = 1.0
+ Identities = 17/62 (27%), Positives = 31/62 (50%)
+
+Query:   154 EEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             E+  E++  DD+DED   +  + + E  D+E+E D  +       + E EL   ++ +  
+Sbjct:   211 EKTTEKEISDDEDEDEPKKENEGEVEEVDEEKEKDGKKKKKIKEVSHEWELINKQKPIWL 270
+
+Query:   214 RK 215
+             RK
+Sbjct:   271 RK 272
+
+ Score = 61 (27.9 bits), Expect = 0.92, Sum P(2) = 0.60
+ Identities = 13/31 (41%), Positives = 20/31 (64%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDD 161
+             E +  +  DE+E ++E E E EE +EE+E D
+Sbjct:   215 EKEISDDEDEDEPKKENEGEVEEVDEEKEKD 245
+
+ Score = 59 (27.0 bits), Expect = 1.6, Sum P(2) = 0.81
+ Identities = 13/47 (27%), Positives = 25/47 (53%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             KT      ++E+E+E ++  E E EE D++ + D     +I++   E
+Sbjct:   212 KTTEKEISDDEDEDEPKKENEGEVEEVDEEKEKDGKKKKKIKEVSHE 258
+
+ Score = 58 (26.5 bits), Expect = 2.2, Sum P(2) = 0.89
+ Identities = 9/31 (29%), Positives = 22/31 (70%)
+
+Query:   149 EEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             E+  E+E  +++D+D+  +++  E+++ DEE
+Sbjct:   211 EKTTEKEISDDEDEDEPKKENEGEVEEVDEE 241
+
+ Score = 53 (24.2 bits), Expect = 9.2, Sum P(2) = 1.0
+ Identities = 12/48 (25%), Positives = 27/48 (56%)
+
+Query:   112 YIKLQNGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEE 159
+             Y+  +   +  +  D    E K  N  + EE +EE+E++G+++++ +E
+Sbjct:   207 YLWTEKTTEKEISDDEDEDEPKKENEGEVEEVDEEKEKDGKKKKKIKE 254
+
+ Score = 43 (19.7 bits), Expect = 0.027, Sum P(2) = 0.026
+ Identities = 9/27 (33%), Positives = 14/27 (51%)
+
+Query:   193 DDDDLDNEENELEELEERVEARKKTTE 219
+             D+D+   E+ ++ ELEE      K  E
+Sbjct:   672 DEDENVEEDGDMPELEEDAAEESKMEE 698
+
+ Score = 40 (18.3 bits), Expect = 0.065, Sum P(2) = 0.063
+ Identities = 9/22 (40%), Positives = 14/22 (63%)
+
+Query:   188 DDDEHDDDDLDNEENELEELEE 209
+             D+DE+ ++D D  E E +  EE
+Sbjct:   672 DEDENVEEDGDMPELEEDAAEE 693
+
+ Score = 39 (17.8 bits), Expect = 0.23, Sum P(3) = 0.21
+ Identities = 10/31 (32%), Positives = 16/31 (51%)
+
+Query:   191 EHDDDDLDNEENELEELEERVEARKKTTEKQ 221
+             E+D   L +   E  +LE+  E  KK  E++
+Sbjct:   507 EYDGKKLVSATKEGLKLEDETEEEKKKREEK 537
+
+ Score = 38 (17.4 bits), Expect = 0.30, Sum P(3) = 0.26
+ Identities = 8/19 (42%), Positives = 14/19 (73%)
+
+Query:   201 ENELEELEERVEARKKTTE 219
+             E+E EE +++ E +KK+ E
+Sbjct:   524 EDETEEEKKKREEKKKSFE 542
+
+ Score = 36 (16.5 bits), Expect = 0.21, Sum P(2) = 0.19
+ Identities = 7/20 (35%), Positives = 13/20 (65%)
+
+Query:   196 DLDNEENELEELEERVEARK 215
+             +++ +   +EEL +R EA K
+Sbjct:   608 EINPDNGIMEELRKRAEADK 627
+
+ Score = 36 (16.5 bits), Expect = 0.21, Sum P(2) = 0.19
+ Identities = 8/27 (29%), Positives = 17/27 (62%)
+
+Query:   182 DDEEEFDDDEHDDDDLDNEENELEELE 208
+             D+  E D D  + ++   EE+++EE++
+Sbjct:   674 DENVEEDGDMPELEEDAAEESKMEEVD 700
+
+ Score = 34 (15.6 bits), Expect = 0.23, Sum P(3) = 0.21
+ Identities = 5/18 (27%), Positives = 11/18 (61%)
+
+Query:   541 KMLQKLGPEKRVFEEIQK 558
+             K   ++ P+  + EE++K
+Sbjct:   604 KKTMEINPDNGIMEELRK 621
+
+
+>gi|1755049 (U55042) myosin X [Bos taurus]
+            Length = 2052
+
+ Score = 80 (36.6 bits), Expect = 0.032, Sum P(2) = 0.032
+ Identities = 18/77 (23%), Positives = 38/77 (49%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLD 198
+             ++  EEE+ + E EE+ + EE++ + + E   AE++   EE    + E +  + +     
+Sbjct:   814 EKRAEEEKRKREEEEKRKREEEERERERERREAELRAQQEEAARKQRELEALQQESQRAA 873
+
+Query:   199 NEENELEELEERVEARK 215
+                 ELE+ +E  +  +
+Sbjct:   874 ELSRELEKQKENKQVEE 890
+
+ Score = 65 (29.7 bits), Expect = 2.0, Sum P(3) = 0.87
+ Identities = 18/81 (22%), Positives = 36/81 (44%)
+
+Query:   146 EEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELE 205
+             E+  E E+ + EEE+    ++E+   E +  + E    +EE    + + + L  E     
+Sbjct:   814 EKRAEEEKRKREEEEKRKREEEERERERERREAELRAQQEEAARKQRELEALQQESQRAA 873
+
+Query:   206 ELEERVEARKKTTEKQSAAAL 226
+             EL   +E +K+  + +    L
+Sbjct:   874 ELSRELEKQKENKQVEEILRL 894
+
+ Score = 59 (27.0 bits), Expect = 4.4, Sum P(3) = 0.99
+ Identities = 12/31 (38%), Positives = 19/31 (61%)
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDE 167
+             A +E+ + EEEE+   EEEE E + +  + E
+Sbjct:   817 AEEEKRKREEEEKRKREEEERERERERREAE 847
+
+ Score = 56 (25.6 bits), Expect = 0.89, Sum P(4) = 0.59
+ Identities = 13/37 (35%), Positives = 19/37 (51%)
+
+Query:   123 LISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEE 159
+             L+++    E K     +E+ + EEEE E E E  E E
+Sbjct:   811 LLAEKRAEEEKRKREEEEKRKREEEERERERERREAE 847
+
+ Score = 50 (22.9 bits), Expect = 0.89, Sum P(4) = 0.59
+ Identities = 10/30 (33%), Positives = 17/30 (56%)
+
+Query:   155 EEEEEDDDDDDDEDSGAEIQDDDEEGFDDE 184
+             EEEE D+  + D+D+  +  +  E G  D+
+Sbjct:   989 EEEEVDEGFEADDDAFKDSPNPSEHGHSDQ 1018
+
+ Score = 49 (22.4 bits), Expect = 5.0, Sum P(4) = 0.99
+ Identities = 10/28 (35%), Positives = 14/28 (50%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEED 160
+             K       + EEEE+ +  EEE E E +
+Sbjct:   815 KRAEEEKRKREEEEKRKREEEERERERE 842
+
+ Score = 44 (20.1 bits), Expect = 4.4, Sum P(3) = 0.99
+ Identities = 10/44 (22%), Positives = 20/44 (45%)
+
+Query:   177 DEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEK 220
+             +EE  D+  E DDD   D    +E    ++    +    +++E+
+Sbjct:   989 EEEEVDEGFEADDDAFKDSPNPSEHGHSDQRTSGIRTSDESSEE 1032
+
+ Score = 42 (19.2 bits), Expect = 7.2, Sum P(3) = 1.0
+ Identities = 8/19 (42%), Positives = 10/19 (52%)
+
+Query:   178 EEGFDDEEEFDDDEHDDDD 196
+             +  F+D EE  D   D DD
+Sbjct:  1136 QSSFEDSEEDFDSRFDTDD 1154
+
+ Score = 41 (18.8 bits), Expect = 0.89, Sum P(4) = 0.59
+ Identities = 8/16 (50%), Positives = 10/16 (62%)
+
+Query:   182 DDEEEFDDDEHDDDDL 197
+             D EE+FD     DD+L
+Sbjct:  1141 DSEEDFDSRFDTDDEL 1156
+
+ Score = 41 (18.8 bits), Expect = 2.0, Sum P(3) = 0.87
+ Identities = 12/35 (34%), Positives = 17/35 (48%)
+
+Query:   122 LLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEE 156
+             L + D SN E + G       E  E++ E  +EEE
+Sbjct:   707 LQLYDASNSEWQLGKTKVFLRESLEQKLEKRQEEE 741
+
+ Score = 39 (17.8 bits), Expect = 0.032, Sum P(2) = 0.032
+ Identities = 8/26 (30%), Positives = 14/26 (53%)
+
+Query:   521 LTDEGYEHFYEVAHTVFQYLKMLQKL 546
+             L D+GY    + A  +F  L+ L+ +
+Sbjct:  1551 LKDKGYTTLQDEAIKIFNSLQQLESM 1576
+
+ Score = 38 (17.4 bits), Expect = 1.9, Sum P(4) = 0.85
+ Identities = 8/28 (28%), Positives = 14/28 (50%)
+
+Query:   184 EEEFDDDEHDDDDLDNEENELEELEERV 211
+             +  F+D E D D   + ++EL    + V
+Sbjct:  1136 QSSFEDSEEDFDSRFDTDDELSYRRDSV 1163
+
+ Score = 35 (16.0 bits), Expect = 0.10, Sum P(2) = 0.099
+ Identities = 8/31 (25%), Positives = 16/31 (51%)
+
+Query:   538 QYLKMLQKLGPEKRVFEEIQKIEDNEFHYQE 568
+             Q +K  Q+L   +   +++Q++ D E    E
+Sbjct:   902 QRMKERQELSLTEASLQKLQQLRDEELRRLE 932
+
+
+>gi|1750382 (U80896) 93 kDa protein [Plasmodium chabaudi]
+            Length = 558
+
+ Score = 75 (34.3 bits), Expect = 0.051, Sum P(2) = 0.049
+ Identities = 16/83 (19%), Positives = 42/83 (50%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E +   A++E ++E+ EE    EE ++E+ +++   E++ AE+  ++    + + + +++
+Sbjct:   137 EAEENYASEETQDEQGEENYASEETQDEQGEENYAPEETHAEVIVENYGSSETQGDEEEE 196
+
+Query:   191 EHDDDDLDNEENELEELEERVEA 213
+              +   +  N + E     E   A
+Sbjct:   197 NYGSSETLNYQGEENYAPEETHA 219
+
+ Score = 68 (31.1 bits), Expect = 0.40, Sum P(2) = 0.33
+ Identities = 18/56 (32%), Positives = 25/56 (44%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             E      T  EE EE    EG + EE EE+   ++ +D   E     EE  D++ E
+Sbjct:   112 ENYAPEGTQGEEAEENYAPEGTQGEEAEENYASEETQDEQGEENYASEETQDEQGE 167
+
+ Score = 65 (29.7 bits), Expect = 0.97, Sum P(2) = 0.62
+ Identities = 19/82 (23%), Positives = 35/82 (42%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEF 187
+             +N   + G   +  + E  ++EE EE    EE   +  +E+ G+E     EE  +     
+Sbjct:    45 TNENQENGELVESHDPEAPQDEEVEENYASEETQGEQGEENYGSEETQGTEEEENYGSSE 104
+
+Query:   188 DDDEHDDDDLDNEENELEELEE 209
+               +   +++   E  + EE EE
+Sbjct:   105 TLNYQGEENYAPEGTQGEEAEE 126
+
+ Score = 62 (28.4 bits), Expect = 2.3, Sum P(2) = 0.90
+ Identities = 19/63 (30%), Positives = 27/63 (42%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             EE    EG + EE EE+   +  +   AE     EE  D++ E +    +  D   EEN 
+Sbjct:   111 EENYAPEGTQGEEAEENYAPEGTQGEEAEENYASEETQDEQGEENYASEETQDEQGEENY 170
+
+Query:   204 LEE 206
+               E
+Sbjct:   171 APE 173
+
+ Score = 59 (27.0 bits), Expect = 5.5, Sum P(2) = 1.0
+ Identities = 18/77 (23%), Positives = 35/77 (45%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             EE + E+GEE    EE    +++E+ G+    + +   +   E    E  +++   E  +
+Sbjct:    75 EETQGEQGEENYGSEETQGTEEEENYGSSETLNYQGEENYAPEGTQGEEAEENYAPEGTQ 134
+
+Query:   204 LEELEERVEARKKTTEK 220
+              EE EE   + +   E+
+Sbjct:   135 GEEAEENYASEETQDEQ 151
+
+ Score = 57 (26.1 bits), Expect = 9.7, Sum P(2) = 1.0
+ Identities = 16/66 (24%), Positives = 29/66 (43%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             E  + EE EE    E    ++ +E+  +E   D++   +   E   DE  +++   EE  
+Sbjct:   117 EGTQGEEAEENYAPEGTQGEEAEENYASEETQDEQGEENYASEETQDEQGEENYAPEETH 176
+
+Query:   204 LEELEE 209
+              E + E
+Sbjct:   177 AEVIVE 182
+
+ Score = 38 (17.4 bits), Expect = 0.051, Sum P(2) = 0.049
+ Identities = 12/30 (40%), Positives = 14/30 (46%)
+
+Query:   549 EKRVFEEIQKIEDNEFHYQEQTDPVEYVEN 578
+             E    EE Q  E  E +  E+T   E VEN
+Sbjct:   252 ENNAPEEAQAEEIVENNAPEETQAEEIVEN 281
+
+ Score = 38 (17.4 bits), Expect = 0.051, Sum P(2) = 0.049
+ Identities = 12/30 (40%), Positives = 14/30 (46%)
+
+Query:   549 EKRVFEEIQKIEDNEFHYQEQTDPVEYVEN 578
+             E    EE Q  E  E +  E+T   E VEN
+Sbjct:   266 ENNAPEETQAEEIVENNAPEETQAEEIVEN 295
+
+ Score = 38 (17.4 bits), Expect = 0.051, Sum P(2) = 0.049
+ Identities = 12/30 (40%), Positives = 14/30 (46%)
+
+Query:   549 EKRVFEEIQKIEDNEFHYQEQTDPVEYVEN 578
+             E    EE Q  E  E +  E+T   E VEN
+Sbjct:   280 ENNAPEETQAEEIVENNAPEETQAEEIVEN 309
+
+ Score = 38 (17.4 bits), Expect = 1.3, Sum P(3) = 0.73
+ Identities = 11/32 (34%), Positives = 14/32 (43%)
+
+Query:   547 GPEKRVFEEIQKIEDNEFHYQEQTDPVEYVEN 578
+             G E    EE Q  +  E +  E+T     VEN
+Sbjct:   152 GEENYASEETQDEQGEENYAPEETHAEVIVEN 183
+
+ Score = 37 (16.9 bits), Expect = 0.068, Sum P(2) = 0.066
+ Identities = 10/44 (22%), Positives = 17/44 (38%)
+
+Query:   363 KHEPKKNNIDTHARLREFWMRYYSAHYMTLVVQSKETLDTLEKW 406
+             K+ P    +  H +  E +   YS    T V  S++     + W
+Sbjct:   416 KYGPNLQMLQRHKQTAENYPNIYSFGLFTAVDDSEDMSIIAKTW 459
+
+ Score = 35 (16.0 bits), Expect = 0.12, Sum P(2) = 0.12
+ Identities = 9/26 (34%), Positives = 18/26 (69%)
+
+Query:   998 NSETVDKKIEEFLSSFEEKIENLTED 1023
+             +SET++++IEE  +  E + E + E+
+Sbjct:   228 SSETLNEQIEESDAPKETQGEVIVEN 253
+
+ Score = 34 (15.6 bits), Expect = 0.76, Sum P(3) = 0.53
+ Identities = 5/14 (35%), Positives = 12/14 (85%)
+
+Query:   356 WGNAETLKHEPKKN 369
+             +G++ETL ++ ++N
+Sbjct:   198 YGSSETLNYQGEEN 211
+
+
+>gi|1737471 (U80780) putative histone deacetylase [Mus musculus]
+            Length = 267
+
+ Score = 70 (32.0 bits), Expect = 0.080, P = 0.077
+ Identities = 18/65 (27%), Positives = 28/65 (43%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERV 211
+             E+   EE  D+D++D D    I   D+    +EE  D DE  +    N  N  +    + 
+Sbjct:   171 EDAIPEESGDEDEEDPDKRISICSSDKRIACEEEFSDSDEEGEGGRKNSSNFKKAKRVKT 230
+
+Query:   212 EARKK 216
+             E  K+
+Sbjct:   231 EDEKE 235
+
+ Score = 56 (25.6 bits), Expect = 7.2, P = 1.0
+ Identities = 11/30 (36%), Positives = 20/30 (66%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEED 160
+             + K     DE+E++ EE++E  EEE+ +E+
+Sbjct:   224 KAKRVKTEDEKEKDPEEKKEVTEEEKTKEE 253
+
+ Score = 55 (25.2 bits), Expect = 9.9, P = 1.0
+ Identities = 16/82 (19%), Positives = 36/82 (43%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEH 192
+             ++G+  +E+ ++       ++    EE+  D D+E  G      + +     +  D+ E 
+Sbjct:   177 ESGDEDEEDPDKRISICSSDKRIACEEEFSDSDEEGEGGRKNSSNFKKAKRVKTEDEKEK 236
+
+Query:   193 DDDDLDNEENELEELEERVEAR 214
+             D ++      E +  EE+ EA+
+Sbjct:   237 DPEEKKEVTEEEKTKEEKPEAK 258
+
+
+>gnl|PID|e288533 (Z82283) T23G4.e [Caenorhabditis elegans]
+            Length = 500
+
+ Score = 57 (26.1 bits), Expect = 0.086, Sum P(3) = 0.082
+ Identities = 13/39 (33%), Positives = 20/39 (51%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDS 169
+             +G   +  DEEE E +   + EE E    ++ DDD  +S
+Sbjct:    35 DGPADDDYDEEEPEPQPWLQPEEIEHPRRENRDDDGSES 73
+
+ Score = 57 (26.1 bits), Expect = 0.086, Sum P(3) = 0.082
+ Identities = 15/48 (31%), Positives = 24/48 (50%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEE 186
+             D +EEE E +   + EE E    ++ DD+ S ++   D  EG +   E
+Sbjct:    41 DYDEEEPEPQPWLQPEEIEHPRRENRDDDGSESDSSSDCTEGAEATPE 88
+
+ Score = 54 (24.7 bits), Expect = 0.086, Sum P(3) = 0.082
+ Identities = 10/33 (30%), Positives = 21/33 (63%)
+
+Query:   549 EKRVFEEIQKIEDNEFHYQEQTDPVEYVENMCE 581
+             EK + + +  ++D+E     +TDPV+  +N+C+
+Sbjct:    94 EKELDKVVAFMKDSEAAKATETDPVKRYKNLCQ 126
+
+ Score = 54 (24.7 bits), Expect = 0.20, Sum P(3) = 0.18
+ Identities = 13/43 (30%), Positives = 20/43 (46%)
+
+Query:   135 GNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDD 177
+             G A D+ +EEE E +   + EE E    ++ D+D        D
+Sbjct:    36 GPADDDYDEEEPEPQPWLQPEEIEHPRRENRDDDGSESDSSSD 78
+
+ Score = 48 (22.0 bits), Expect = 1.0, Sum P(3) = 0.65
+ Identities = 12/52 (23%), Positives = 23/52 (44%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             +E E +   + E  E    E  DDD  + DS ++  +  E   +  +E + +
+Sbjct:    45 EEPEPQPWLQPEEIEHPRRENRDDDGSESDSSSDCTEGAEATPEQWKELEKE 96
+
+ Score = 47 (21.5 bits), Expect = 1.4, Sum P(3) = 0.75
+ Identities = 11/32 (34%), Positives = 13/32 (40%)
+
+Query:   172 EIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             E+ D      +    F  D   DDD D EE E
+Sbjct:    17 EVSDYQSSSSEPYISFSSDGPADDDYDEEEPE 48
+
+ Score = 47 (21.5 bits), Expect = 1.4, Sum P(3) = 0.75
+ Identities = 15/61 (24%), Positives = 24/61 (39%)
+
+Query:   160 DDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTE 219
+             DDD D++E         +E      E  DDD  + D   +     E   E+ +  +K  +
+Sbjct:    39 DDDYDEEEPEPQPWLQPEEIEHPRRENRDDDGSESDSSSDCTEGAEATPEQWKELEKELD 98
+
+Query:   220 K 220
+             K
+Sbjct:    99 K 99
+
+ Score = 46 (21.0 bits), Expect = 1.8, Sum P(3) = 0.83
+ Identities = 14/58 (24%), Positives = 24/58 (41%)
+
+Query:   159 EDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKK 216
+             +DD D+++ +    +Q ++ E    E   DD    D   D  E      E+  E  K+
+Sbjct:    39 DDDYDEEEPEPQPWLQPEEIEHPRRENRDDDGSESDSSSDCTEGAEATPEQWKELEKE 96
+
+ Score = 45 (20.6 bits), Expect = 2.3, Sum P(3) = 0.90
+ Identities = 15/56 (26%), Positives = 23/56 (41%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             +EEE E +     EE E    ++ DDD        D  E      E++ + E + D
+Sbjct:    43 DEEEPEPQPWLQPEEIEHPRRENRDDDGSESDSSSDCTEGAEATPEQWKELEKELD 98
+
+ Score = 36 (16.5 bits), Expect = 0.086, Sum P(3) = 0.082
+ Identities = 5/14 (35%), Positives = 10/14 (71%)
+
+Query:  1000 ETVDKKIEEFLSSF 1013
+             E +D+K+ E ++ F
+Sbjct:   186 ENIDRKLAELITQF 199
+
+ Score = 35 (16.0 bits), Expect = 0.11, Sum P(3) = 0.11
+ Identities = 12/52 (23%), Positives = 26/52 (50%)
+
+Query:   873 QGNVTSTESMDFLRYVVDKLNFVPLEREMPVQFQVVELPSGHHLCKVRALNK 924
+             + N T+  S + L++     + + L  ++ ++ Q+  + S   L  V+ LNK
+Sbjct:   410 ESNYTNISSDEILQFTDQGDDRMKLGEQLFLEHQIELICSLCKLYPVKLLNK 461
+
+ Score = 34 (15.6 bits), Expect = 0.15, Sum P(3) = 0.14
+ Identities = 6/13 (46%), Positives = 9/13 (69%)
+
+Query:  1045 EEVDRNWNEVVTQ 1057
+             E +DR   E++TQ
+Sbjct:   186 ENIDRKLAELITQ 198
+
+
+>gnl|PID|e248899 (X98207) histone deacetylase [unidentified]
+            Length = 482
+
+ Score = 70 (32.0 bits), Expect = 0.089, P = 0.086
+ Identities = 18/65 (27%), Positives = 28/65 (43%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERV 211
+             E+   EE  D+D++D D    I   D+    +EE  D DE  +    N  N  +    + 
+Sbjct:   386 EDAIPEESGDEDEEDPDKRISICSSDKRIACEEEFSDSDEEGEGGRKNSSNFKKAKRVKT 445
+
+Query:   212 EARKK 216
+             E  K+
+Sbjct:   446 EDEKE 450
+
+ Score = 56 (25.6 bits), Expect = 7.9, P = 1.0
+ Identities = 11/30 (36%), Positives = 20/30 (66%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEED 160
+             + K     DE+E++ EE++E  EEE+ +E+
+Sbjct:   439 KAKRVKTEDEKEKDPEEKKEVTEEEKTKEE 468
+
+
+>gi|1732237 (U69264) CTR9 [Saccharomyces cerevisiae]
+            Length = 1077
+
+ Score = 69 (31.6 bits), Expect = 0.13, P = 0.12
+ Identities = 10/39 (25%), Positives = 26/39 (66%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDS 169
+             + +  N   E+ +EEE +  G E+ + +++D+++D++D+
+Sbjct:  1035 KSQLSNEFIEDSDEEEAQMSGSEQNKNDDNDENNDNDDN 1073
+
+ Score = 68 (31.1 bits), Expect = 0.18, P = 0.17
+ Identities = 13/42 (30%), Positives = 26/42 (61%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDS 169
+             S+ +GK    ++E  E+ +EEE      E+ ++DD+D++ D+
+Sbjct:  1029 SHNKGKKSQLSNEFIEDSDEEEAQMSGSEQNKNDDNDENNDN 1070
+
+ Score = 66 (30.2 bits), Expect = 0.34, P = 0.29
+ Identities = 20/70 (28%), Positives = 34/70 (48%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVE 212
+             +EE E+     +    S  E   +++E F+ E+    DE      +NE  E E +++  E
+Sbjct:   874 KEELEQRIQLGETTMKSALERSLNEQEEFEKEQSAKIDEARKILEENELKEQERMKQEEE 933
+
+Query:   213 ARKKTTEKQS 222
+             AR+   EKQ+
+Sbjct:   934 ARRLKLEKQA 943
+
+ Score = 66 (30.2 bits), Expect = 0.34, P = 0.29
+ Identities = 20/103 (19%), Positives = 44/103 (42%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             N   E+E  ++EEE    + E++ ++     +++   IQ+ +     +    DD +  D 
+Sbjct:   920 NELKEQERMKQEEEARRLKLEKQAEEYRKLQDEAQKLIQEREAMAISEHNVKDDSDLSDK 979
+
+Query:   196 DLDNEENELEELEERVEARKKTTEKQSAAALCVGVGSFADPDD 238
+             D + +E +  +  +R    K + E +   A    +    + DD
+Sbjct:   980 DNEYDEEKPRQKRKRSTKTKNSGESKRRKAAKKTLSDSDEDDD 1022
+
+ Score = 65 (29.7 bits), Expect = 0.47, P = 0.38
+ Identities = 10/29 (34%), Positives = 20/29 (68%)
+
+Query:   138 TDEEEEEEEEEEEGEEEEEEEEDDDDDDD 166
+             +DEEE +    E+ + ++ +E +D+DD+D
+Sbjct:  1046 SDEEEAQMSGSEQNKNDDNDENNDNDDND 1074
+
+ Score = 62 (28.4 bits), Expect = 1.2, P = 0.71
+ Identities = 8/32 (25%), Positives = 22/32 (68%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSG 170
+             ++ +EEE +    E+ + ++ D+++D+D++ G
+Sbjct:  1044 EDSDEEEAQMSGSEQNKNDDNDENNDNDDNDG 1075
+
+ Score = 62 (28.4 bits), Expect = 1.2, P = 0.71
+ Identities = 17/75 (22%), Positives = 36/75 (48%)
+
+Query:   142 EEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEE 201
+             EE E +E+E  ++EEE      +   +   ++QD+ ++   + E     EH+  D  +  
+Sbjct:   918 EENELKEQERMKQEEEARRLKLEKQAEEYRKLQDEAQKLIQEREAMAISEHNVKDDSDLS 977
+
+Query:   202 NELEELEERVEARKK 216
+             ++  E +E    +K+
+Sbjct:   978 DKDNEYDEEKPRQKR 992
+
+
+>gnl|PID|e290385 (Z83731) M04C9.4 [Caenorhabditis elegans]
+            Length = 455
+
+ Score = 69 (31.6 bits), Expect = 0.18, Sum P(2) = 0.16
+ Identities = 17/69 (24%), Positives = 31/69 (44%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEF 187
+             S++    G   + E +    E  G+E EE E +  DD D  +     D +     DEE +
+Sbjct:    39 SSLRQMEGYQEEIETDNPINESRGDEAEELENEGCDDRDRCTSRNSIDSEIYENSDEEVY 98
+
+Query:   188 DDDEHDDDD 196
+             D+  ++ ++
+Sbjct:    99 DESMYESEE 107
+
+ Score = 56 (25.6 bits), Expect = 4.4, Sum P(2) = 0.99
+ Identities = 13/51 (25%), Positives = 24/51 (47%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             E  +EE + D+  +E  G E ++ + EG DD +        D ++    +E
+Sbjct:    45 EGYQEEIETDNPINESRGDEAEELENEGCDDRDRCTSRNSIDSEIYENSDE 95
+
+ Score = 41 (18.8 bits), Expect = 4.4, Sum P(2) = 0.99
+ Identities = 11/30 (36%), Positives = 15/30 (50%)
+
+Query:   928 NSEVTVYYQSGTRSLREYTLMELLVMHMEE 957
+             NS+  VY +S   S  EY     ++  MEE
+Sbjct:    92 NSDEEVYDESMYESEEEYADSPFIIDKMEE 121
+
+ Score = 39 (17.8 bits), Expect = 0.18, Sum P(2) = 0.16
+ Identities = 7/15 (46%), Positives = 10/15 (66%)
+
+Query:   683 FDCPETEYPAKIVNT 697
+             FD    EYPA +++T
+Sbjct:   293 FDKHFVEYPASVIDT 307
+
+ Score = 34 (15.6 bits), Expect = 9.6, Sum P(3) = 1.0
+ Identities = 8/25 (32%), Positives = 13/25 (52%)
+
+Query:   568 EQTDPVEYVENMCENMQLYPRQDFL 592
+             E +D   Y E+M E+ + Y    F+
+Sbjct:    91 ENSDEEVYDESMYESEEEYADSPFI 115
+
+
+>sp|P10645|CMGA_HUMAN CHROMOGRANIN A PRECURSOR (CGA) (CONTAINS: PANCREASTATIN
+            AND WE-14) (PITUITARY SECRETORY PROTEIN I) (SP-I)
+            Length = 457
+
+ Score = 72 (32.9 bits), Expect = 0.18, Sum P(2) = 0.16
+ Identities = 15/21 (71%), Positives = 16/21 (76%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEE 159
+             +EEEEEEEE E GEE   EEE
+Sbjct:   228 EEEEEEEEEAEAGEEAVPEEE 248
+
+ Score = 60 (27.5 bits), Expect = 2.2, P = 0.89
+ Identities = 12/23 (52%), Positives = 16/23 (69%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDD 162
+             + EEEEEEEEE E  EE   +++
+Sbjct:   226 KREEEEEEEEEAEAGEEAVPEEE 248
+
+ Score = 59 (27.0 bits), Expect = 7.9, Sum P(2) = 1.0
+ Identities = 17/74 (22%), Positives = 31/74 (41%)
+
+Query:    83 DESEEEGRSLSNVGDPEIIKSPSDPKQYRYIKLQNGLQALLISDLSNVEGKTGNATDEEE 142
+             +E+E    ++     P ++ +P     Y+ I+        L  D +   G       E +
+Sbjct:   235 EEAEAGEEAVPEEEGPTVVLNPHPSLGYKEIRKGESRSEALAVDGAGKPGAEEAQDPEGK 294
+
+Query:   143 EEEEEEEEGEEEEE 156
+              E+E  ++ EEEEE
+Sbjct:   295 GEQEHSQQKEEEEE 308
+
+ Score = 53 (24.2 bits), Expect = 3.3, Sum P(2) = 0.96
+ Identities = 11/29 (37%), Positives = 17/29 (58%)
+
+Query:   145 EEEEEEGEEEEEEEEDDDDDDDEDSGAEI 173
+             + + EE EEEEEE E  ++   E+ G  +
+Sbjct:   224 QAKREEEEEEEEEAEAGEEAVPEEEGPTV 252
+
+ Score = 45 (20.6 bits), Expect = 3.3, Sum P(2) = 0.96
+ Identities = 10/19 (52%), Positives = 11/19 (57%)
+
+Query:   128 SNVEGKTGNATDEEEEEEE 146
+             S  EG      +EEEEEEE
+Sbjct:   161 SKAEGNNQAPGEEEEEEEE 179
+
+ Score = 36 (16.5 bits), Expect = 0.18, Sum P(2) = 0.16
+ Identities = 10/47 (21%), Positives = 21/47 (44%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             E E+EEE    + ++       D   +    E+  +  E ++D+ D+
+Sbjct:   324 ELEQEEERLSKEWEDSKRWSKMDQLAKELTAEKRLEGQEEEEDNRDS 370
+
+
+>gi|1749512 (D89152) similar to Saccharomyces serevisiae mitochondrial
+            processing peptidase beta subunit precursor, SWISS-PROT Accession
+            Number P10507 [Schizosaccharomyces pombe]
+            Length = 453
+
+ Score = 61 (27.9 bits), Expect = 0.19, Sum P(4) = 0.17
+ Identities = 13/27 (48%), Positives = 16/27 (59%)
+
+Query:   228 VGVGSFADPDDLPGLAHFLEHMVFMGS 254
+             V  GS A+     G AHFLEH+ F G+
+Sbjct:    50 VDAGSRAETAKNNGAAHFLEHLAFKGT 76
+
+ Score = 40 (18.3 bits), Expect = 0.19, Sum P(4) = 0.17
+ Identities = 13/57 (22%), Positives = 24/57 (42%)
+
+Query:   271 GGSDNASTDCERTVFQFDVQRKYFKEALDRWAQFFIHPLMIRDAIDREVEAVDSEYQ 327
+             G   NA T  E+TV+     +     A+   A    +  +   A++RE + +  E +
+Sbjct:    92 GAHLNAYTSREQTVYYAHAPQNAVPHAVAVLADILTNSSISASAVERERQVILREQE 148
+
+ Score = 39 (17.8 bits), Expect = 0.19, Sum P(4) = 0.17
+ Identities = 7/19 (36%), Positives = 11/19 (57%)
+
+Query:   345 ARPGHPMGKFFWGNAETLK 363
+             A  GHP+G+   G  E ++
+Sbjct:   166 AYQGHPLGRTILGPKENIE 184
+
+ Score = 36 (16.5 bits), Expect = 0.19, Sum P(4) = 0.17
+ Identities = 6/15 (40%), Positives = 11/15 (73%)
+
+Query:   847 MDGLSLESLLNFVKD 861
+             ++ L+ E LL ++KD
+Sbjct:   183 IESLTREDLLQYIKD 197
+
+
+>gi|1766073 (U37272) winged helix protein CWH-1 [Gallus gallus]
+            Length = 443
+
+ Score = 71 (32.5 bits), Expect = 0.20, Sum P(3) = 0.18
+ Identities = 11/17 (64%), Positives = 16/17 (94%)
+
+Query:   154 EEEEEEDDDDDDDEDSG 170
+             E+EEE+DDD++DDE+ G
+Sbjct:    46 EDEEEDDDDEEDDEEEG 62
+
+ Score = 70 (32.0 bits), Expect = 0.26, Sum P(3) = 0.23
+ Identities = 16/46 (34%), Positives = 24/46 (52%)
+
+Query:   145 EEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             E   EE    E E+ D D       GA+  +D+EE  DDEE+ +++
+Sbjct:    16 ERSPEEEPLSEVEDADIDVVGPPQDGAKYSEDEEEDDDDEEDDEEE 61
+
+ Score = 68 (31.1 bits), Expect = 0.46, Sum P(3) = 0.37
+ Identities = 16/45 (35%), Positives = 23/45 (51%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDD 196
+             E   EEE   + +D +        D  +  +DEEE DDDE DD++
+Sbjct:    16 ERSPEEEPLSEVEDADIDVVGPPQDGAKYSEDEEEDDDDEEDDEE 60
+
+ Score = 68 (31.1 bits), Expect = 0.46, Sum P(3) = 0.37
+ Identities = 13/46 (28%), Positives = 26/46 (56%)
+
+Query:   123 LISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             ++S+ S  E       D + +     ++G +  E+EE+DDDD+++D
+Sbjct:    13 IMSERSPEEEPLSEVEDADIDVVGPPQDGAKYSEDEEEDDDDEEDD 58
+
+ Score = 67 (30.7 bits), Expect = 0.61, Sum P(3) = 0.46
+ Identities = 15/42 (35%), Positives = 24/42 (57%)
+
+Query:   155 EEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDD 196
+             EEE   + +D D D     QD  +   D+EE+ DD+E D+++
+Sbjct:    20 EEEPLSEVEDADIDVVGPPQDGAKYSEDEEEDDDDEEDDEEE 61
+
+ Score = 60 (27.5 bits), Expect = 4.1, Sum P(3) = 0.98
+ Identities = 16/46 (34%), Positives = 23/46 (50%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             E   EEE   E E+ + +      D  + S  E +DDD+E  D+EE
+Sbjct:    16 ERSPEEEPLSEVEDADIDVVGPPQDGAKYSEDEEEDDDDEEDDEEE 61
+
+ Score = 59 (27.0 bits), Expect = 5.4, Sum P(3) = 1.0
+ Identities = 16/46 (34%), Positives = 21/46 (45%)
+
+Query:   146 EEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDE 191
+             E   E E   E E+ D D            +DEE  DD+EE D++E
+Sbjct:    16 ERSPEEEPLSEVEDADIDVVGPPQDGAKYSEDEEEDDDDEEDDEEE 61
+
+ Score = 57 (26.1 bits), Expect = 9.2, Sum P(3) = 1.0
+ Identities = 10/26 (38%), Positives = 18/26 (69%)
+
+Query:   135 GNATDEEEEEEEEEEEGEEEEEEEED 160
+             G   D  +  E+EEE+ ++EE++EE+
+Sbjct:    36 GPPQDGAKYSEDEEEDDDDEEDDEEE 61
+
+ Score = 36 (16.5 bits), Expect = 0.20, Sum P(3) = 0.18
+ Identities = 7/11 (63%), Positives = 8/11 (72%)
+
+Query:  1122 GMQLIYLPPSP 1132
+             G+QL  LPP P
+Sbjct:   257 GLQLQGLPPGP 267
+
+ Score = 36 (16.5 bits), Expect = 0.20, Sum P(3) = 0.18
+ Identities = 6/21 (28%), Positives = 9/21 (42%)
+
+Query:   293 YFKEALDRWAQFFIHPLMIRD 313
+             Y++E    W     H L + D
+Sbjct:   159 YYREKFPAWQNSIRHNLSLND 179
+
+
+>gi|1750264 (U72720) heat shock protein 70 [Streptococcus pneumoniae]
+            Length = 607
+
+ Score = 74 (33.9 bits), Expect = 0.25, Sum P(2) = 0.22
+ Identities = 20/94 (21%), Positives = 46/94 (48%)
+
+Query:   120 QALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             Q ++I   S +  +  +   ++ E   E ++  +EE +  ++ D     +   I++ + +
+Sbjct:   467 QTIVIQSNSGLTDEEIDRMMKDAEANAESDKKRKEEVDLRNEVDQAIFATEKTIKETEGK 526
+
+Query:   180 GFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             GFD E +      DD     E+N L++++ ++EA
+Sbjct:   527 GFDAERDAAQAALDDLKKAQEDNNLDDMKAKLEA 560
+
+ Score = 50 (22.9 bits), Expect = 7.7, Sum P(3) = 1.0
+ Identities = 11/33 (33%), Positives = 21/33 (63%)
+
+Query:   193 DDDDLDNEENELEELEERVEARKKTTEKQSAAA 225
+             +D++LD+ + +LE L E+ +       +Q+AAA
+Sbjct:   547 EDNNLDDMKAKLEALNEKAQGLAVKLYEQAAAA 579
+
+ Score = 48 (22.0 bits), Expect = 7.7, Sum P(3) = 1.0
+ Identities = 11/59 (18%), Positives = 27/59 (45%)
+
+Query:   105 SDPKQYRYIKLQNGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDD 163
+             SD K+   + L+N +   + +    ++   G   D E +  +   +  ++ +E+ + DD
+Sbjct:   495 SDKKRKEEVDLRNEVDQAIFATEKTIKETEGKGFDAERDAAQAALDDLKKAQEDNNLDD 553
+
+ Score = 34 (15.6 bits), Expect = 0.25, Sum P(2) = 0.22
+ Identities = 10/34 (29%), Positives = 15/34 (44%)
+
+Query:    67 NGQDLGESGRVARLGADESEEEGRSLSNVGDPEI 100
+             NG DL       +   D +E+  + LS V   +I
+Sbjct:   218 NGIDLSTDKMAMQRLKDAAEKAKKDLSGVTSTQI 251
+
+
+>gi|1772306 (AB000168) glycinin [Glycine max]
+            Length = 517
+
+ Score = 66 (30.2 bits), Expect = 0.32, P = 0.28
+ Identities = 12/47 (25%), Positives = 28/47 (59%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +E+E+E++D+D++ E + +        G  +++E +D+E D    D+
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPDH 322
+
+ Score = 65 (29.7 bits), Expect = 0.45, P = 0.36
+ Identities = 14/46 (30%), Positives = 24/46 (52%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             +E+E+E+E E+EE E+           G    D+DE+  +D+   D
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPD 321
+
+ Score = 65 (29.7 bits), Expect = 0.45, P = 0.36
+ Identities = 14/61 (22%), Positives = 29/61 (47%)
+
+Query:   154 EEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             +E+E+ED+D+D++ +               E++ D+DE +D    +   +     E+ E 
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPDHPPQRPSRPEQQEP 335
+
+Query:   214 R 214
+             R
+Sbjct:   336 R 336
+
+ Score = 63 (28.8 bits), Expect = 0.85, P = 0.57
+ Identities = 12/46 (26%), Positives = 27/46 (58%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDD 189
+             +E+E+E+ +E+EE E+         S  + +DD++E  ++++   D
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPD 321
+
+ Score = 61 (27.9 bits), Expect = 1.6, P = 0.80
+ Identities = 10/40 (25%), Positives = 25/40 (62%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDE 191
+             +E+E+E+ED+D++ ++      +       +D+E+ D++E
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEE 315
+
+ Score = 58 (26.5 bits), Expect = 4.2, P = 0.98
+ Identities = 12/39 (30%), Positives = 21/39 (53%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             +E+E+E+E+E EE E+               + +D+DEE
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEE 314
+
+ Score = 58 (26.5 bits), Expect = 4.2, P = 0.98
+ Identities = 13/58 (22%), Positives = 30/58 (51%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             E+E+E+E++D++ +   S    +    +  DDE+E ++++    D   +     E +E
+Sbjct:   277 EQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPDHPPQRPSRPEQQE 334
+
+
+>gi|1772308 (AB000169) glycinin [Glycine max]
+            Length = 517
+
+ Score = 66 (30.2 bits), Expect = 0.32, P = 0.28
+ Identities = 12/47 (25%), Positives = 28/47 (59%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             +E+E+E++D+D++ E + +        G  +++E +D+E D    D+
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPDH 322
+
+ Score = 65 (29.7 bits), Expect = 0.45, P = 0.36
+ Identities = 14/46 (30%), Positives = 24/46 (52%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             +E+E+E+E E+EE E+           G    D+DE+  +D+   D
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPD 321
+
+ Score = 65 (29.7 bits), Expect = 0.45, P = 0.36
+ Identities = 14/61 (22%), Positives = 29/61 (47%)
+
+Query:   154 EEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             +E+E+ED+D+D++ +               E++ D+DE +D    +   +     E+ E 
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPDHPPQRPSRPEQQEP 335
+
+Query:   214 R 214
+             R
+Sbjct:   336 R 336
+
+ Score = 63 (28.8 bits), Expect = 0.85, P = 0.57
+ Identities = 12/46 (26%), Positives = 27/46 (58%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDD 189
+             +E+E+E+ +E+EE E+         S  + +DD++E  ++++   D
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPD 321
+
+ Score = 61 (27.9 bits), Expect = 1.6, P = 0.80
+ Identities = 10/40 (25%), Positives = 25/40 (62%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDE 191
+             +E+E+E+ED+D++ ++      +       +D+E+ D++E
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEE 315
+
+ Score = 58 (26.5 bits), Expect = 4.2, P = 0.98
+ Identities = 12/39 (30%), Positives = 21/39 (53%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             +E+E+E+E+E EE E+               + +D+DEE
+Sbjct:   276 QEQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEE 314
+
+ Score = 58 (26.5 bits), Expect = 4.2, P = 0.98
+ Identities = 13/58 (22%), Positives = 30/58 (51%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEE 209
+             E+E+E+E++D++ +   S    +    +  DDE+E ++++    D   +     E +E
+Sbjct:   277 EQEDEDEDEDEEYEQTPSYPPRRPSHGKHEDDEDEDEEEDQPRPDHPPQRPSRPEQQE 334
+
+
+>sp|P51123|CCG1_DROME TRANSCRIPTION INITIATION FACTOR TFIID 230 KD SUBUNIT
+            (TBP-ASSOCIATED FACTOR 230 KD) (P230) (TAFII-230)
+            Length = 2068
+
+ Score = 68 (31.1 bits), Expect = 0.54, Sum P(3) = 0.42
+ Identities = 14/47 (29%), Positives = 26/47 (55%)
+
+Query:   132 GKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDE 178
+             G+     D  EE+ +   + E+++EEE+  +  +DE++ A I D  E
+Sbjct:  1797 GRPRKQRDPVEEDLQCSTDDEDDDEEEDFQEVSEDENNAASILDQGE 1843
+
+ Score = 47 (21.5 bits), Expect = 0.54, Sum P(3) = 0.42
+ Identities = 10/23 (43%), Positives = 15/23 (65%)
+
+Query:   194 DDDLDNEENELEELEERVEARKK 216
+             DDDLD  E++ E+   RV  +K+
+Sbjct:  1963 DDDLDISESDEEDDGSRVRIKKE 1985
+
+ Score = 40 (18.3 bits), Expect = 0.33, Sum P(4) = 0.28
+ Identities = 8/27 (29%), Positives = 17/27 (62%)
+
+Query:    73 ESGRVARLGADESEEEGRSLSNVGDPE 99
+             E  R+A+L  ++  + G   +++GDP+
+Sbjct:  1291 ERERLAQLAQNQKLQPGGMPTSLGDPK 1317
+
+ Score = 37 (16.9 bits), Expect = 7.3, Sum P(3) = 1.0
+ Identities = 5/16 (31%), Positives = 10/16 (62%)
+
+Query:   180 GFDDEEEFDDDEHDDD 195
+             G DD+ +  + + +DD
+Sbjct:  1961 GIDDDLDISESDEEDD 1976
+
+ Score = 35 (16.0 bits), Expect = 0.54, Sum P(3) = 0.42
+ Identities = 6/12 (50%), Positives = 9/12 (75%)
+
+Query:    63 DLQPNGQDLGES 74
+             D++P G D GE+
+Sbjct:   332 DVRPEGPDNGEN 343
+
+
+>gi|1763754 (U74488) Barren [Drosophila melanogaster]
+            Length = 736
+
+ Score = 60 (27.5 bits), Expect = 0.44, Sum P(3) = 0.36
+ Identities = 15/40 (37%), Positives = 19/40 (47%)
+
+Query:   174 QDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             + D +EG D   + D D H DDD D E    E   + V A
+Sbjct:   531 EPDSDEGGDLGIDMDADMHHDDDNDQELFNNEHFTDAVPA 570
+
+ Score = 51 (23.3 bits), Expect = 7.2, Sum P(2) = 1.0
+ Identities = 10/36 (27%), Positives = 19/36 (52%)
+
+Query:   160 DDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDD 195
+             + D D+  D G ++  D     D+++E  ++EH  D
+Sbjct:   531 EPDSDEGGDLGIDMDADMHHDDDNDQELFNNEHFTD 566
+
+ Score = 49 (22.4 bits), Expect = 8.4, Sum P(3) = 1.0
+ Identities = 12/53 (22%), Positives = 24/53 (45%)
+
+Query:   180 GFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAAALCVGVGS 232
+             G D + +   D+ +D +L N E+  + +   V        +Q+A A  + V +
+Sbjct:   541 GIDMDADMHHDDDNDQELFNNEHFTDAVPANVSVIAAIAAEQAAEASMMNVSA 593
+
+ Score = 46 (21.0 bits), Expect = 0.44, Sum P(3) = 0.36
+ Identities = 15/67 (22%), Positives = 25/67 (37%)
+
+Query:    64 LQPNGQDLGESGRVARLGADESEEEGRSLSNVGDPEIIKSPSDPKQYRYIKLQNGLQALL 123
+             L P   D  E     R    +      +L ++ D E IK+  +      +   N    +L
+Sbjct:    26 LTPFNDDEAERREARRRTLLQQHHRSSTLESIEDNETIKNCLELYNGNKVSKDNAWNLML 85
+
+Query:   124 ISDLSNV 130
+             I  L+N+
+Sbjct:    86 IDSLANL 92
+
+ Score = 38 (17.4 bits), Expect = 0.44, Sum P(3) = 0.36
+ Identities = 8/21 (38%), Positives = 11/21 (52%)
+
+Query:   159 EDDDDDDDEDSGAEIQDDDEE 179
+             EDDD    E +  E QD  ++
+Sbjct:   149 EDDDGPQGEQATGEGQDSAQQ 169
+
+ Score = 35 (16.0 bits), Expect = 1.0, Sum P(3) = 0.63
+ Identities = 6/13 (46%), Positives = 8/13 (61%)
+
+Query:   164 DDDEDSGAEIQDD 176
+             D+D D G +  DD
+Sbjct:   320 DEDHDEGLDNADD 332
+
+ Score = 34 (15.6 bits), Expect = 1.3, Sum P(3) = 0.73
+ Identities = 6/22 (27%), Positives = 13/22 (59%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEI 173
+             E+  E  +D+D D+  D+  ++
+Sbjct:   312 EKAAEVVQDEDHDEGLDNADDV 333
+
+ Score = 34 (15.6 bits), Expect = 1.3, Sum P(3) = 0.73
+ Identities = 6/25 (24%), Positives = 14/25 (56%)
+
+Query:   133 KTGNATDEEEEEEEEEEEGEEEEEE 157
+             K+ N    E  ++E+ +EG +  ++
+Sbjct:   308 KSANEKAAEVVQDEDHDEGLDNADD 332
+
+
+>gi|1737064 (U55776) calcium channel alpha-1 subunit [Drosophila melanogaster]
+            Length = 1851
+
+ Score = 71 (32.5 bits), Expect = 0.54, Sum P(2) = 0.42
+ Identities = 19/77 (24%), Positives = 37/77 (48%)
+
+Query:   115 LQNGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQ 174
+             L N   A+ + +L+N +  T    ++ EE++E++ +  E+E E    D    E+    + 
+Sbjct:   658 LLNVFLAIAVDNLANAQELTAAEEEQVEEDKEKQLQELEKEMEALQADGVHVENGDGAVA 717
+
+Query:   175 DDDEEGFDDEEEFDDDE 191
+                 +G   EEE  ++E
+Sbjct:   718 PSKSKGKKKEEEKKEEE 734
+
+ Score = 38 (17.4 bits), Expect = 0.54, Sum P(2) = 0.42
+ Identities = 12/46 (26%), Positives = 19/46 (41%)
+
+Query:   995 TKYNSETVDKKIEEFLSSFEEKIENLTEDAFNTQVTALIKLKECED 1040
+             T  NS T     + F+          T +A+   + A +K K C+D
+Sbjct:  1253 TVENSITRHNNFQSFIHGVMLLFRCATGEAWPNIMLACLKGKACDD 1298
+
+ Score = 36 (16.5 bits), Expect = 1.7, Sum P(3) = 0.82
+ Identities = 7/33 (21%), Positives = 15/33 (45%)
+
+Query:   275 NASTDCERTVFQFDVQRKYFKEALDRWAQFFIH 307
+             + S +C+ + F+++      K+ L  W     H
+Sbjct:   939 HTSAECQGSYFKYEEDELLPKQELRVWKPRAFH 971
+
+
+>sp|P38062|AMP2_RAT METHIONINE AMINOPEPTIDASE 2 (METAP 2) (PEPTIDASE M 2)
+            (INITIATION FACTOR 2 ASSOCIATED 67 KD GLYCOPROTEIN) (P67)
+            Length = 478
+
+ Score = 68 (31.1 bits), Expect = 0.61, Sum P(2) = 0.46
+ Identities = 12/36 (33%), Positives = 23/36 (63%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGA 171
+             + T  +E  ++ E +  EE+E+++DD+D D +  GA
+Sbjct:    60 SGTSVDEVAKQLERQALEEKEKDDDDEDGDGDGDGA 95
+
+ Score = 63 (28.8 bits), Expect = 2.6, Sum P(2) = 0.93
+ Identities = 15/65 (23%), Positives = 32/65 (49%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             EG +  A +  +++  ++++G+      + + D +   S  E+    E    +E+E DDD
+Sbjct:    25 EGTSSTAEEAAKKKRRKKKKGKGAVSAGQQELDKESGTSVDEVAKQLERQALEEKEKDDD 84
+
+Query:   191 EHDDD 195
+             + D D
+Sbjct:    85 DEDGD 89
+
+ Score = 36 (16.5 bits), Expect = 0.61, Sum P(2) = 0.46
+ Identities = 7/25 (28%), Positives = 14/25 (56%)
+
+Query:   429 DPFDTPAFNKLYRVVPIRKIHALTI 453
+             + ++     K Y+V PIR ++  +I
+Sbjct:   309 ESYEVEIDGKTYQVKPIRNLNGHSI 333
+
+ Score = 36 (16.5 bits), Expect = 0.61, Sum P(2) = 0.46
+ Identities = 8/30 (26%), Positives = 13/30 (43%)
+
+Query:   989 TVGTQATKYNSETVDKKIEEFLSSFEEKIE 1018
+             T   + T    + +D+  EE  + F E  E
+Sbjct:   145 TAAWRTTSEEKKALDQASEEIWNDFREAAE 174
+
+ Score = 35 (16.0 bits), Expect = 0.82, Sum P(2) = 0.56
+ Identities = 7/20 (35%), Positives = 13/20 (65%)
+
+Query:  1002 VDKKIEEFLSSFEEKIENLT 1021
+             V + I+E + S+E +I+  T
+Sbjct:   300 VGEAIQEVMESYEVEIDGKT 319
+
+
+>gi|1732509 (U62741) putative cytoskeletal protein [Arabidopsis thaliana]
+            Length = 183
+
+ Score = 63 (28.8 bits), Expect = 0.68, P = 0.49
+ Identities = 11/28 (39%), Positives = 20/28 (71%)
+
+Query:   135 GNATDEEEEEEEEEEEGEEEEEEEEDDD 162
+             G++++E+EEEE+EEEE  +      +D+
+Sbjct:   144 GHSSEEDEEEEDEEEEKSDGRSSCRNDE 171
+
+ Score = 57 (26.1 bits), Expect = 4.7, P = 0.99
+ Identities = 12/24 (50%), Positives = 16/24 (66%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDE 167
+             EE+EEEE EEEE+ +      +DE
+Sbjct:   148 EEDEEEEDEEEEKSDGRSSCRNDE 171
+
+ Score = 57 (26.1 bits), Expect = 4.7, P = 0.99
+ Identities = 9/28 (32%), Positives = 18/28 (64%)
+
+Query:   151 GEEEEEEEEDDDDDDDEDSGAEIQDDDE 178
+             G   EE+EE++D+++++  G     +DE
+Sbjct:   144 GHSSEEDEEEEDEEEEKSDGRSSCRNDE 171
+
+ Score = 55 (25.2 bits), Expect = 9.0, P = 1.0
+ Identities = 10/28 (35%), Positives = 16/28 (57%)
+
+Query:   132 GKTGNATDEEEEEEEEEEEGEEEEEEEE 159
+             G +    +EEE+EEEE+ +G      +E
+Sbjct:   144 GHSSEEDEEEEDEEEEKSDGRSSCRNDE 171
+
+
+>sp|P50503|HIP_RAT HSC70-INTERACTING PROTEIN
+            Length = 368
+
+ Score = 59 (27.0 bits), Expect = 0.80, Sum P(2) = 0.55
+ Identities = 14/54 (25%), Positives = 25/54 (46%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDE 184
+             + K+   T EE+ ++  E+  + EE   E+ D + D +   E   D  +   DE
+Sbjct:    48 KAKSEENTKEEKRDKTTEDNIKTEEPSSEESDLEIDNEGVIEADTDAPQEMGDE 101
+
+ Score = 54 (24.7 bits), Expect = 3.5, Sum P(2) = 0.97
+ Identities = 14/67 (20%), Positives = 31/67 (46%)
+
+Query:   144 EEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENE 203
+             + EE  + E+ ++  ED+   ++  S     + D EG  + +     E  D++ +  E  
+Sbjct:    50 KSEENTKEEKRDKTTEDNIKTEEPSSEESDLEIDNEGVIEADTDAPQEMGDENAEITEAM 109
+
+Query:   204 LEELEER 210
+             ++E  E+
+Sbjct:   110 MDEANEK 116
+
+ Score = 53 (24.2 bits), Expect = 4.6, Sum P(2) = 0.99
+ Identities = 15/59 (25%), Positives = 26/59 (44%)
+
+Query:   136 NATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDD 194
+             N  +E+ ++  E+    EE   EE D + D+E       D  +E  D+  E  +   D+
+Sbjct:    54 NTKEEKRDKTTEDNIKTEEPSSEESDLEIDNEGVIEADTDAPQEMGDENAEITEAMMDE 112
+
+ Score = 43 (19.7 bits), Expect = 0.80, Sum P(2) = 0.55
+ Identities = 9/24 (37%), Positives = 14/24 (58%)
+
+Query:   201 ENELEELEERVEARKKTTEKQSAA 224
+             + E  E++ER+E  KK  E+   A
+Sbjct:   240 KREEREIKERIERVKKAREEHEKA 263
+
+ Score = 41 (18.8 bits), Expect = 1.4, Sum P(2) = 0.76
+ Identities = 9/21 (42%), Positives = 14/21 (66%)
+
+Query:   200 EENELEELEERVEARKKTTEK 220
+             EE E++E  ERV+  ++  EK
+Sbjct:   242 EEREIKERIERVKKAREEHEK 262
+
+
+>gi|1749750 (D89271) similar to Saccharomyces cerevisiae nucleosome assembly
+            protein, SWISS-PROT Accession Number p25293 [Schizosaccharomyces
+            pombe]
+            Length = 353
+
+ Score = 63 (28.8 bits), Expect = 0.80, P = 0.55
+ Identities = 13/37 (35%), Positives = 21/37 (56%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQD 175
+             D  +  + +EE+ E+   +EED   DD+E   +EI D
+Sbjct:   317 DLSDFNQMDEEDSEDAYTDEEDLSSDDEEILSSEISD 353
+
+
+>gi|1754690 (U81040) homeotic complex [Tribolium castaneum]
+            Length = 283
+
+ Score = 62 (28.4 bits), Expect = 1.1, P = 0.65
+ Identities = 9/31 (29%), Positives = 20/31 (64%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSG 170
+             E+   +E+++  + +     +D+DDDDE++G
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETG 206
+
+ Score = 62 (28.4 bits), Expect = 1.1, P = 0.65
+ Identities = 12/34 (35%), Positives = 18/34 (52%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             E+   +E+DD DD    S    +DDD+E   D +
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGDRQ 209
+
+ Score = 60 (27.5 bits), Expect = 2.0, P = 0.87
+ Identities = 12/32 (37%), Positives = 18/32 (56%)
+
+Query:   157 EEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             E+ + D+ DD D G     +++E  DDEE  D
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGD 207
+
+ Score = 60 (27.5 bits), Expect = 2.0, P = 0.87
+ Identities = 8/34 (23%), Positives = 22/34 (64%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQ 174
+             E+   +E+++G++ +    ++D+DDD++   + Q
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGDRQ 209
+
+ Score = 58 (26.5 bits), Expect = 3.8, P = 0.98
+ Identities = 10/34 (29%), Positives = 20/34 (58%)
+
+Query:   167 EDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             ED+ ++ QDD ++G       D+D+ D++  D +
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGDRQ 209
+
+ Score = 57 (26.1 bits), Expect = 5.3, P = 0.99
+ Identities = 7/28 (25%), Positives = 18/28 (64%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDD 166
+             D   +E+++ ++G+      ++DDDD++
+Sbjct:   177 DANSDEQDDGDDGQGSSTNNDEDDDDEE 204
+
+
+>gi|1754686 (U81038) transcription factor Deformed [Tribolium castaneum]
+            Length = 412
+
+ Score = 62 (28.4 bits), Expect = 1.1, P = 0.68
+ Identities = 9/31 (29%), Positives = 20/31 (64%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSG 170
+             E+   +E+++  + +     +D+DDDDE++G
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETG 206
+
+ Score = 62 (28.4 bits), Expect = 1.1, P = 0.68
+ Identities = 12/34 (35%), Positives = 18/34 (52%)
+
+Query:   152 EEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             E+   +E+DD DD    S    +DDD+E   D +
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGDRQ 209
+
+ Score = 60 (27.5 bits), Expect = 2.1, P = 0.88
+ Identities = 12/32 (37%), Positives = 18/32 (56%)
+
+Query:   157 EEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFD 188
+             E+ + D+ DD D G     +++E  DDEE  D
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGD 207
+
+ Score = 60 (27.5 bits), Expect = 2.1, P = 0.88
+ Identities = 8/34 (23%), Positives = 22/34 (64%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQ 174
+             E+   +E+++G++ +    ++D+DDD++   + Q
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGDRQ 209
+
+ Score = 58 (26.5 bits), Expect = 4.1, P = 0.98
+ Identities = 10/34 (29%), Positives = 20/34 (58%)
+
+Query:   167 EDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             ED+ ++ QDD ++G       D+D+ D++  D +
+Sbjct:   176 EDANSDEQDDGDDGQGSSTNNDEDDDDEETGDRQ 209
+
+ Score = 57 (26.1 bits), Expect = 5.6, P = 1.0
+ Identities = 7/28 (25%), Positives = 18/28 (64%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDDDDDD 166
+             D   +E+++ ++G+      ++DDDD++
+Sbjct:   177 DANSDEQDDGDDGQGSSTNNDEDDDDEE 204
+
+
+>sp|P27732|CICB_RAT DIHYDROPRYRIDINE-SENSITIVE L-TYPE, BRAIN CALCIUM CHANNEL
+            ALPHA-1 SUBUNIT
+            Length = 1666
+
+ Score = 66 (30.2 bits), Expect = 1.2, Sum P(2) = 0.69
+ Identities = 20/93 (21%), Positives = 47/93 (50%)
+
+Query:   121 ALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEG 180
+             A+ + +L++ E       +E EE+E ++   +E  E ++++  + ++ + ++ +   ++ 
+Sbjct:   768 AIAVDNLADAESLNTAQKEEAEEKERKKIARKESLENKKNNKPEVNQIANSDNKVTIDDY 827
+
+Query:   181 FDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+              ++ E+ D     D  +  EE E EE E  V A
+Sbjct:   828 QEEAEDKDPYPPCDVPVGEEEEEEEEDEPEVPA 860
+
+ Score = 40 (18.3 bits), Expect = 1.2, Sum P(2) = 0.69
+ Identities = 7/20 (35%), Positives = 11/20 (55%)
+
+Query:   399 TLDTLEKWVTEIFSQIPNNG 418
+             T+ T E W   ++  I +NG
+Sbjct:  1115 TVSTFEGWPALLYKAIDSNG 1134
+
+
+>sp|P80585|T1CA_CHICK TCP1-CHAPERONIN COFACTOR A
+            Length = 107
+
+ Score = 60 (27.5 bits), Expect = 1.3, P = 0.74
+ Identities = 21/72 (29%), Positives = 33/72 (45%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEEN 202
+             E+E +++E + E+ + E  DD   +     +Q+      D +   +    D   L   E 
+Sbjct:    26 EKEAKQQEEKIEKMKAEACDDYGIKKQAEILQESRMMIPDCQRRLEIAHADLTQLLENEK 85
+
+Query:   203 ELEELEERVEAR 214
+             ELEE EE  EAR
+Sbjct:    86 ELEEAEEYKEAR 97
+
+
+>gnl|PID|e254977 (Z75208) hypothetical protein [Bacillus subtilis]
+            Length = 210
+
+ Score = 61 (27.9 bits), Expect = 1.4, P = 0.74
+ Identities = 9/51 (17%), Positives = 24/51 (47%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDE 191
+             + ++ E      ++        D   +   +E+ DDD  G+++ +++ DD+
+Sbjct:   144 QRQQTEAPSSNSQDPPSSSSQTDKTIQQPASELPDDDGYGYEERKKWHDDQ 194
+
+
+>sp|P32497|NIP1_YEAST NUCLEAR TRANSPORT PROTEIN NIP1
+            Length = 812
+
+ Score = 61 (27.9 bits), Expect = 1.4, Sum P(2) = 0.76
+ Identities = 11/36 (30%), Positives = 21/36 (58%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDS 169
+             + ++++ E ++E ++    E E E E D D DD D+
+Sbjct:    32 SSSSSESELDQESDDSFFNESESESEADVDSDDSDA 67
+
+ Score = 55 (25.2 bits), Expect = 7.9, Sum P(2) = 1.0
+ Identities = 14/58 (24%), Positives = 25/58 (43%)
+
+Query:   110 YRYIKLQNGLQALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDE 167
+             Y Y    +  +  L+S        + ++  E ++E ++    E E E E D D DD +
+Sbjct:     9 YEYDVASSSSEEDLLSSSEEDLLSSSSSESELDQESDDSFFNESESESEADVDSDDSD 66
+
+ Score = 55 (25.2 bits), Expect = 7.9, Sum P(2) = 1.0
+ Identities = 13/58 (22%), Positives = 25/58 (43%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             SN E    +++ EE+     EE+       E + D + D+    E + + E   D ++
+Sbjct:     7 SNYEYDVASSSSEEDLLSSSEEDLLSSSSSESELDQESDDSFFNESESESEADVDSDD 64
+
+ Score = 42 (19.2 bits), Expect = 1.4, Sum P(2) = 0.76
+ Identities = 6/22 (27%), Positives = 15/22 (68%)
+
+Query:   562 NEFHYQEQTDPVEYVENMCENM 583
+             ++F  ++Q D  +YV+N+ + +
+Sbjct:   465 SKFTSKDQLDSADYVDNLIDGL 486
+
+
+>sp|P52154|RHO_MICLU TRANSCRIPTION TERMINATION FACTOR RHO
+            Length = 691
+
+ Score = 63 (28.8 bits), Expect = 1.6, Sum P(2) = 0.80
+ Identities = 14/69 (20%), Positives = 27/69 (39%)
+
+Query:   131 EGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             + ++G +   +E E+  + E          DDD              E+G D +   D +
+Sbjct:   137 QDRSGGSEARDEGEDRPQSERRSRGRRRAGDDDAQQGQDRRSDGAQGEDGADADRRGDRE 196
+
+Query:   191 EHDDDDLDN 199
+             + DD+  +N
+Sbjct:   197 DRDDNGREN 205
+
+ Score = 59 (27.0 bits), Expect = 5.1, Sum P(2) = 0.99
+ Identities = 15/62 (24%), Positives = 24/62 (38%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             E  +E E+    E          DDD   G + + D  +G D  +     + +D D +  
+Sbjct:   144 EARDEGEDRPQSERRSRGRRRAGDDDAQQGQDRRSDGAQGEDGADADRRGDREDRDDNGR 203
+
+Query:   201 EN 202
+             EN
+Sbjct:   204 EN 205
+
+ Score = 39 (17.8 bits), Expect = 1.6, Sum P(2) = 0.80
+ Identities = 11/32 (34%), Positives = 14/32 (43%)
+
+Query:  1109 DGAPVCEDPNSREGMQLIYLPPSPLLAESTTP 1140
+             +G P  E P   E  +L+ L P   L   T P
+Sbjct:   387 NGQPAVEHPQRVEFGKLVPLYPQERLRLETDP 418
+
+ Score = 36 (16.5 bits), Expect = 3.9, Sum P(2) = 0.98
+ Identities = 8/30 (26%), Positives = 15/30 (50%)
+
+Query:   740 VNILTHNLAEPAYEADVAQLEYKLVAGEHG 769
+             +++LT+ + + A  A+   L  K   G  G
+Sbjct:   660 LDLLTNKIKDTASNAEFLMLVSKTTLGSKG 689
+
+
+>gnl|PID|e288607 (Z81134) T28D6.a [Caenorhabditis elegans]
+            Length = 795
+
+ Score = 61 (27.9 bits), Expect = 1.7, P = 0.81
+ Identities = 11/35 (31%), Positives = 23/35 (65%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDD 162
+             +++   T + ++EEEE    +++G++ E  E+DDD
+Sbjct:   627 NHLNHNTESDSEEEEEPARVQDDGKDAEIAEKDDD 661
+
+
+>gi|1749418 (D89105) simslar to Saccharomyces cerevisiae hypothetical 60.5KD
+            protein in PDB1-ABD1 intergenic region, SWISS-PROT Accession Number
+            P38137 [Schizosaccharomyces pombe]
+            Length = 215
+
+ Score = 60 (27.5 bits), Expect = 1.9, P = 0.85
+ Identities = 12/32 (37%), Positives = 18/32 (56%)
+
+Query:   446 RKIHALTITWALPPQQQHYRVKPLHYISWLVG 477
+             R IH +T ++ L P+   Y V PL ++  L G
+Sbjct:    85 RSIHNITTSYRLDPRDTSYVVMPLFHVHGLCG 116
+
+
+>gnl|PID|e248486 (X98259) M-phase phosphoprotein 8 [Homo sapiens]
+            Length = 305
+
+ Score = 60 (27.5 bits), Expect = 2.0, P = 0.87
+ Identities = 15/89 (16%), Positives = 41/89 (46%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHD 193
+             T +A +++E +  E +E  ++  + + ++    E  G +   +    FD  +   ++++D
+Sbjct:   174 TDSAEEDKETKRNESKEKYQKRHDSDKEEKGRKEPKGLKTLKEIRNAFDLFKLTPEEKND 233
+
+Query:   194 DDDLDNEENELEELEERVEARKKTTEKQS 222
+               + + +  E+    + ++  K    KQS
+Sbjct:   234 VSENNRKREEIPLDFKTIDDHKTKENKQS 262
+
+
+>gnl|PID|e283100 (Y08964) cell division protein [Corynebacterium glutamicum]
+            Length = 438
+
+ Score = 60 (27.5 bits), Expect = 2.2, P = 0.89
+ Identities = 13/43 (30%), Positives = 19/43 (44%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDD 176
+             TGN  D   +E  E+   E  ++   D  DD  +D   +  DD
+Sbjct:   388 TGNDRDYRRDERREDHRDERRDDRSYDRRDDRRDDRRDDRGDD 430
+
+
+>gi|1732363 (U80270) early fruit mRNA [Malus domestica]
+            Length = 197
+
+ Score = 59 (27.0 bits), Expect = 2.5, P = 0.92
+ Identities = 12/32 (37%), Positives = 19/32 (59%)
+
+Query:   147 EEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDE 178
+             EE E EE+  +E DDD +++ D   E+  + E
+Sbjct:     1 EESESEEDILDEGDDDAEEEHDHELEVPVNPE 32
+
+ Score = 58 (26.5 bits), Expect = 3.5, P = 0.97
+ Identities = 10/24 (41%), Positives = 17/24 (70%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDD 162
+             +E E EE+  +EG+++ EEE D +
+Sbjct:     1 EESESEEDILDEGDDDAEEEHDHE 24
+
+
+>gi|1769810 (D50370) nucleosome assembly protein [Homo sapiens]
+            Length = 506
+
+ Score = 65 (29.7 bits), Expect = 2.8, Sum P(2) = 0.94
+ Identities = 20/86 (23%), Positives = 40/86 (46%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             EEE E   E+E    +EE +D+   +      E +++ +E  + + E  +   +  ++ +
+Sbjct:   159 EEECEWNSEDEEFSSDEEVQDNTPSEMPPLEGEEEENPKENPEVKAEEKEVPKEIPEVKD 218
+
+Query:   200 EENELEELEERVEARKKTTEKQSAAA 225
+             EE E+ +    V+A +K   K    A
+Sbjct:   219 EEKEVAKEIPEVKAEEKADSKDCMEA 244
+
+ Score = 34 (15.6 bits), Expect = 2.8, Sum P(2) = 0.94
+ Identities = 7/16 (43%), Positives = 11/16 (68%)
+
+Query:   540 LKMLQKLGPEKRVFEE 555
+             LK + KLGP  + ++E
+Sbjct:   319 LKNVDKLGPMIQKYDE 334
+
+
+>gnl|PID|e288227 (Z82089) ZK270.c [Caenorhabditis elegans]
+            Length = 725
+
+ Score = 59 (27.0 bits), Expect = 3.1, P = 0.96
+ Identities = 10/29 (34%), Positives = 18/29 (62%)
+
+Query:   157 EEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             E+EDD+D  D+D    +  DD+  + ++E
+Sbjct:   662 EDEDDEDFMDDDKPVTVHSDDKMTYREDE 690
+
+
+>gnl|PID|e248487 (X98260) M-phase phosphoprotein 11 [Homo sapiens]
+            Length = 582
+
+ Score = 51 (23.3 bits), Expect = 3.2, Sum P(3) = 0.96
+ Identities = 11/29 (37%), Positives = 19/29 (65%)
+
+Query:   130 VEGKTGNATDEEEEEEEEEEEGEEEEEEE 158
+             V+ +  NA+   +E E+++E  EE E+EE
+Sbjct:    53 VKRRNRNASASFQELEDKKELSEESEDEE 81
+
+ Score = 47 (21.5 bits), Expect = 3.2, Sum P(3) = 0.96
+ Identities = 16/71 (22%), Positives = 34/71 (47%)
+
+Query:   155 EEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEAR 214
+             +EEE++  +  DE    E Q+        +EE +      D+  + +  +++ +E  +A+
+Sbjct:   245 DEEEKEKAECRDERRWIEKQNGATRAQRKKEEMNRIRTLVDNAYSCDPRIKKFKEEEKAK 304
+
+Query:   215 KKTTEKQSAAA 225
+             K+  +K  A A
+Sbjct:   305 KEAEKKAKAEA 315
+
+ Score = 37 (16.9 bits), Expect = 3.2, Sum P(3) = 0.96
+ Identities = 6/13 (46%), Positives = 9/13 (69%)
+
+Query:   259 DENGFDAFLKKHG 271
+             ++  FD F K+HG
+Sbjct:   479 NKKAFDKFKKEHG 491
+
+
+>gnl|PID|e286601 (Y09128) Ran binding protein 1 [Xenopus laevis]
+            Length = 208
+
+ Score = 51 (23.3 bits), Expect = 3.7, Sum P(2) = 0.98
+ Identities = 14/49 (28%), Positives = 23/49 (46%)
+
+Query:   172 EIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEK 220
+             + Q++ E   D+ EE + D   +  +   E E++ LEE  E   K   K
+Sbjct:     5 DTQEEHETSVDNTEESNHDPQFEPIVSLPEQEIKTLEEDEEELFKMRAK 53
+
+ Score = 43 (19.7 bits), Expect = 3.7, Sum P(2) = 0.98
+ Identities = 9/37 (24%), Positives = 19/37 (51%)
+
+Query:   554 EEIQKIEDNEFHYQEQTDPVEYVENMCENMQLYPRQD 590
+             EE+ K+    F +  + DP E+ E    +++L   ++
+Sbjct:    45 EELFKMRAKLFRFASENDPPEWKERGTGDVKLLKHKE 81
+
+
+>gi|1750261 (U72719) heat shock protein 70 [Streptococcus agalactiae]
+            Length = 609
+
+ Score = 61 (27.9 bits), Expect = 4.5, Sum P(2) = 0.99
+ Identities = 18/94 (19%), Positives = 44/94 (46%)
+
+Query:   120 QALLISDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEE 179
+             Q ++I   S +  +  +   ++ E   E +   +EE + +++ D     +   I++ + +
+Sbjct:   467 QHIVIQSNSGLTDEEIDKMMKDAEANAEADAKRKEEVDLKNEVDQAIFATEKTIKETEGK 526
+
+Query:   180 GFDDEEEFDDDEHDDDDLDNEENELEELEERVEA 213
+             GFD E +      D+     E   L++++ ++EA
+Sbjct:   527 GFDTERDAAQSALDELKKAQESGNLDDMKAKLEA 560
+
+ Score = 37 (16.9 bits), Expect = 4.5, Sum P(2) = 0.99
+ Identities = 10/34 (29%), Positives = 16/34 (47%)
+
+Query:    67 NGQDLGESGRVARLGADESEEEGRSLSNVGDPEI 100
+             NG DL +     +   D +E+  + LS V   +I
+Sbjct:   218 NGIDLSQDKMALQRLKDAAEKAKKDLSGVTQTQI 251
+
+
+>gnl|PID|e289986 (Z81133) T28B8.1 [Caenorhabditis elegans]
+            Length = 170
+
+ Score = 57 (26.1 bits), Expect = 4.6, P = 0.99
+ Identities = 14/54 (25%), Positives = 27/54 (50%)
+
+Query:   165 DDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTT 218
+             D+E + A +  + +E   DE+ + +  H  +  D++E    E  E +E   +TT
+Sbjct:    15 DEESTAAPVDQEGQEQLIDEDGWVNFNHPTESGDSDEFAFIENPEILEMGDETT 68
+
+
+>gi|1732511 (U62742) Ran binding protein 1 homolog [Arabidopsis thaliana]
+            Length = 219
+
+ Score = 53 (24.2 bits), Expect = 5.5, Sum P(2) = 1.0
+ Identities = 8/21 (38%), Positives = 16/21 (76%)
+
+Query:   153 EEEEEEEDDDDDDDEDSGAEI 173
+             E E  E++ + ++DED+GA++
+Sbjct:     7 ERENREDETEVNEDEDTGAQV 27
+
+ Score = 40 (18.3 bits), Expect = 5.5, Sum P(2) = 1.0
+ Identities = 10/52 (19%), Positives = 25/52 (48%)
+
+Query:   174 QDDDEEGFDDEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAAA 225
+             Q D+  G  +    +++  ++   + EE E  + ++  +  K   EK++ A+
+Sbjct:   167 QGDEAAGLIENLSVEENISEEKAKEAEEKEPAKEDKETKKEKVEEEKKTEAS 218
+
+
+>gnl|PID|e286147 (Y09741) beta tubulin [Hordeum vulgare]
+            Length = 447
+
+ Score = 57 (26.1 bits), Expect = 5.7, P = 1.0
+ Identities = 9/24 (37%), Positives = 18/24 (75%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDD 163
+             ++ ++   +EEGE E+E++E +DD
+Sbjct:   423 QQYQDATADEEGEYEDEDQEAEDD 446
+
+ Score = 57 (26.1 bits), Expect = 5.7, P = 1.0
+ Identities = 12/46 (26%), Positives = 25/46 (54%)
+
+Query:   151 GEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDD 196
+             GE  +E E  + + +  D  +E Q   +   D+E E++D++ + +D
+Sbjct:   400 GEGMDEMEFTEAESNMNDLVSEYQQYQDATADEEGEYEDEDQEAED 445
+
+
+>gi|1762146 (U48418) suppressor of mrs2-1 mutation [Saccharomyces cerevisiae]
+            Length = 454
+
+ Score = 57 (26.1 bits), Expect = 5.7, P = 1.0
+ Identities = 13/61 (21%), Positives = 32/61 (52%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDNE 200
+             +E+E   +++ ++  E+EE   +++ ++  A +   DE   DD+++  D    D  L + 
+Sbjct:   383 KEDEASAKQKLKQLREQEEIMKEEEQQEENAIVSVKDELSLDDQDKNIDAAAPDVKLHDS 442
+
+Query:   201 E 201
+             +
+Sbjct:   443 K 443
+
+
+>gnl|PID|e288206 (Z81595) T22H2.e [Caenorhabditis elegans]
+            Length = 566
+
+ Score = 57 (26.1 bits), Expect = 5.8, P = 1.0
+ Identities = 10/22 (45%), Positives = 15/22 (68%)
+
+Query:   141 EEEEEEEEEEGEEEEEEEEDDD 162
+             EEEE++++EE    E+ E D D
+Sbjct:   466 EEEEDDDDEESTSSEDPESDVD 487
+
+ Score = 56 (25.6 bits), Expect = 8.0, P = 1.0
+ Identities = 9/20 (45%), Positives = 15/20 (75%)
+
+Query:   158 EEDDDDDDDEDSGAEIQDDD 177
+             EE++DDDD+E + +E  + D
+Sbjct:   466 EEEEDDDDEESTSSEDPESD 485
+
+
+>gnl|PID|e248491 (X98265) M-phase phosphoprotein 4 [Homo sapiens]
+            Length = 611
+
+ Score = 57 (26.1 bits), Expect = 5.8, P = 1.0
+ Identities = 16/58 (27%), Positives = 25/58 (43%)
+
+Query:    50 PGRNKAKSTCSCPDLQPNGQDLGESGRVARLGADESEEEGRSLSNVGDPEIIKSPSDP 107
+             P +  AK   +   LQ  G   G  GR +  G D +EE     + V    ++++ S P
+Sbjct:   448 PSKKTAKLHVAVKVLQDMGLPTGAEGRDSSKGEDSAEETEAKPAVVAPAPVVEAVSTP 505
+
+
+>gnl|PID|e289991 (Z83760) COS41.1 [Ciona intestinalis]
+            Length = 793
+
+ Score = 50 (22.9 bits), Expect = 5.9, Sum P(2) = 1.0
+ Identities = 6/17 (35%), Positives = 15/17 (88%)
+
+Query:   175 DDDEEGFDDEEEFDDDE 191
+             ++D + ++DE++F+DD+
+Sbjct:    16 EEDPDFYEDEDDFEDDQ 32
+
+ Score = 48 (22.0 bits), Expect = 5.9, Sum P(2) = 1.0
+ Identities = 11/33 (33%), Positives = 15/33 (45%)
+
+Query:   991 GTQATKYNSETVDKKIEEFLSSFEEKIENLTED 1023
+             G  A   N   V K I +F    ++  EN TE+
+Sbjct:   244 GQTAEDQNESAVPKDIYDFYEQIDKDDENATEE 276
+
+ Score = 35 (16.0 bits), Expect = 9.6, Sum P(3) = 1.0
+ Identities = 10/47 (21%), Positives = 21/47 (44%)
+
+Query:   843 YRALMDGLSLESLLNFVKDFKSQLFVEGLVQGNVTSTESMDFLRYVV 889
+             Y A+  GL  E ++ ++          G+V+     T+S   ++ V+
+Sbjct:   130 YAAVSVGLDTEDIIEYLGRLSKTSIPPGIVEFIRLCTQSYGKVKLVL 176
+
+
+>gi|1742216 (D90773) Exodeoxyribonuclease VIII (EC 3.1.11.-) (Exo VIII).
+            [Escherichia coli]
+            Length = 797
+
+ Score = 57 (26.1 bits), Expect = 5.9, P = 1.0
+ Identities = 12/42 (28%), Positives = 22/42 (52%)
+
+Query:   149 EEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             +E  +EE + E  ++D +E  GAE   ++  G D   +  D+
+Sbjct:   472 QETFDEESQVEAKENDPEEMEGAEHPHNENAGSDPHRDCSDE 513
+
+
+>gi|1742219 (D90774) Exodeoxyribonuclease VIII (EC 3.1.11.-) (Exo VIII).
+            [Escherichia coli]
+            Length = 866
+
+ Score = 57 (26.1 bits), Expect = 6.0, P = 1.0
+ Identities = 12/42 (28%), Positives = 22/42 (52%)
+
+Query:   149 EEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDD 190
+             +E  +EE + E  ++D +E  GAE   ++  G D   +  D+
+Sbjct:   541 QETFDEESQVEAKENDPEEMEGAEHPHNENAGSDPHRDCSDE 582
+
+
+>gi|1750267 (U72721) heat shock protein 70 [Streptococcus pyogenes]
+            Length = 608
+
+ Score = 60 (27.5 bits), Expect = 6.0, Sum P(2) = 1.0
+ Identities = 15/74 (20%), Positives = 36/74 (48%)
+
+Query:   140 EEEEEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEEEFDDDEHDDDDLDN 199
+             ++ E   E +   +EE + +++ D     +   I++ + +GFD E +      D+     
+Sbjct:   487 KDAEANAEADAKRKEEVDLKNEVDQAIFATEKTIKETEGKGFDTERDAAQSALDELKAAQ 546
+
+Query:   200 EENELEELEERVEA 213
+             E   L++++ ++EA
+Sbjct:   547 ESGNLDDMKAKLEA 560
+
+ Score = 37 (16.9 bits), Expect = 6.0, Sum P(2) = 1.0
+ Identities = 10/34 (29%), Positives = 16/34 (47%)
+
+Query:    67 NGQDLGESGRVARLGADESEEEGRSLSNVGDPEI 100
+             NG DL +     +   D +E+  + LS V   +I
+Sbjct:   218 NGIDLSQDKMALQRLKDAAEKAKKDLSGVTQTQI 251
+
+
+>gi|1763539 (U77369) transcription factor dMax [Drosophila melanogaster]
+            Length = 161
+
+ Score = 56 (25.6 bits), Expect = 6.3, P = 1.0
+ Identities = 13/41 (31%), Positives = 21/41 (51%)
+
+Query:   128 SNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+             +N+  K   A +    ++  E   +EE   EE DD+D D+D
+Sbjct:   108 NNIIAKQIQALESSNGDQFSEFLSDEEVGSEEADDEDLDQD 148
+
+
+>gnl|PID|e264756 (X97251) PRSV YK polyprotein [Papaya ringspot virus]
+            Length = 3344
+
+ Score = 64 (29.3 bits), Expect = 6.3, Sum P(2) = 1.0
+ Identities = 11/43 (25%), Positives = 26/43 (60%)
+
+Query:   143 EEEEEEEEGEEEEEEEEDDDDDDDEDSGAEIQDDDEEGFDDEE 185
+             E+ +E+E+ +E+E++++ D D+D    G ++    + G  D +
+Sbjct:  3069 EKLKEKEKQKEKEKDKQQDKDNDGASDGNDVSTSTKTGERDRD 3111
+
+ Score = 38 (17.4 bits), Expect = 6.3, Sum P(2) = 1.0
+ Identities = 8/22 (36%), Positives = 11/22 (50%)
+
+Query:    92 LSNVGDPEIIKSPSDPKQYRYI 113
+             L N GDP+ +  P+      YI
+Sbjct:   863 LGNSGDPKYVDLPTLESDSMYI 884
+
+
+>sp|P13154|DHLE_BACST LEUCINE DEHYDROGENASE (LEUDH)
+            Length = 377
+
+ Score = 50 (22.9 bits), Expect = 6.6, Sum P(3) = 1.0
+ Identities = 14/47 (29%), Positives = 19/47 (40%)
+
+Query:   985 GFSVTVGTQATKYNSETVDKKIEEFLSSFEEKIENLTEDAFNTQVTA 1031
+             G  + V  +   YN E   KKIE+   + E+       D   T V A
+Sbjct:   289 GGVINVADELYGYNRERAMKKIEQIYDNIEKVFAIAKRDNIPTYVAA 335
+
+ Score = 43 (19.7 bits), Expect = 6.6, Sum P(3) = 1.0
+ Identities = 11/30 (36%), Positives = 17/30 (56%)
+
+Query:   202 NELEELEERVEARKKTTEKQSAAALCVGVG 231
+             +E E LE+ +   +  T K +AA L +G G
+Sbjct:    50 SEEEALEDALRLARGMTYKNAAAGLNLGGG 79
+
+ Score = 36 (16.5 bits), Expect = 6.6, Sum P(3) = 1.0
+ Identities = 10/40 (25%), Positives = 18/40 (45%)
+
+Query:   383 RYYSAHYMTLVVQSKETLDTLEKWVTEIFSQIPNNGLPKP 422
+             RY +A  +   V   + +     +VT I  +  ++G P P
+Sbjct:   109 RYITAEDVGTTVADMDIIYQETDYVTGISPEFGSSGNPSP 148
+
+
+>gnl|PID|e255104 (Z75208) aspartokinase II alpha subunit [Bacillus subtilis]
+            Length = 408
+
+ Score = 56 (25.6 bits), Expect = 7.7, P = 1.0
+ Identities = 14/42 (33%), Positives = 21/42 (50%)
+
+Query:   195 DDLDNEENELEELEERVEARKKTTEKQSAAALCVGVGSFADP 236
+             +D D     LEE ++ +E  K  TE + A    VG G  ++P
+Sbjct:   311 EDADQTVAVLEEYKDALEFEKIETESKLAKVSIVGSGMVSNP 352
+
+
+>gnl|PID|e286624 (X94551) laminin gamma1 [Rattus norvegicus]
+            Length = 351
+
+ Score = 59 (27.0 bits), Expect = 7.8, Sum P(2) = 1.0
+ Identities = 20/92 (21%), Positives = 40/92 (43%)
+
+Query:    77 VARLGADESEEEGRSLSNVGDPEIIKSPSDPKQYRYIKLQNGLQALLISDLSNVEGKTGN 136
+             + R  A+ +E+   +   +G+     + +  K +   ++ +G+Q    S  ++ E     
+Sbjct:   136 INRTIAEANEKTREAQLALGNAAADATEAKNKAHEAERIASGVQKNATSTKADAERTFSE 195
+
+Query:   137 ATDEEEEEEEEEEEGEEEEEEEEDDDDDDDED 168
+              TD + E      + EE E E +   DD D+D
+Sbjct:   196 ETDLDNEVNGMLRQLEEAENELKRKQDDADQD 227
+
+ Score = 35 (16.0 bits), Expect = 7.8, Sum P(2) = 1.0
+ Identities = 9/24 (37%), Positives = 12/24 (50%)
+
+Query:   190 DEHDDDDLDNEENELEELEERVEA 213
+             DE    DLD + + LE    + EA
+Sbjct:   289 DEMKVSDLDRKVSNLENEARKQEA 312
+
+
+>gnl|PID|e290077 (X14805) DNA MeTase [unidentified]
+            Length = 1620
+
+ Score = 49 (22.4 bits), Expect = 11., Sum P(3) = 1.0
+ Identities = 11/29 (37%), Positives = 13/29 (44%)
+
+Query:   134 TGNATDEEEEEEEEEEEGEEEEEEEEDDD 162
+             T   T  + +EE EE    E   EE D D
+Sbjct:   169 TKGPTKRKPKEESEEGNSAESAAEERDQD 197
+
+ Score = 48 (22.0 bits), Expect = 11., Sum P(3) = 1.0
+ Identities = 11/44 (25%), Positives = 21/44 (47%)
+
+Query:   183 DEEEFDDDEHDDDDLDNEENELEELEERVEARKKTTEKQSAAAL 226
+             D E+ D+DE ++        +LE     V++R +    QS + +
+Sbjct:   307 DSEDRDEDEREEKRRKTTRKKLESHTVPVQSRSERKAAQSKSVI 350
+
+ Score = 40 (18.3 bits), Expect = 11., Sum P(3) = 1.0
+ Identities = 7/20 (35%), Positives = 13/20 (65%)
+
+Query:   606 IAEALNQLVPQKANLVLLSG 625
+             +  +L Q +PQK ++ +L G
+Sbjct:  1206 VTNSLGQRLPQKGDVEMLCG 1225
+
+ Score = 38 (17.4 bits), Expect = 7.8, Sum P(4) = 1.0
+ Identities = 8/20 (40%), Positives = 13/20 (65%)
+
+Query:   558 KIEDNEFHYQEQTDPVEYVE 577
+             KIE+N  +YQ+ +   E +E
+Sbjct:   741 KIEENRTYYQKVSIDEEMLE 760
+
+
+>gi|1773367 (U82565) putative histidine protein kinase [Alcaligenes
+            hydrogenophilus]
+            Length = 456
+
+ Score = 56 (25.6 bits), Expect = 7.8, P = 1.0
+ Identities = 11/31 (35%), Positives = 17/31 (54%)
+
+Query:   403 LEKWVTEIFSQIPNNGLPKPNFSHLTDPFDT 433
+             +E  V  +F +   +G+P  N S + DPF T
+Sbjct:   380 IENGVVSLFIRDNGSGIPPQNLSRIFDPFFT 410
+
+
+>gnl|PID|e267609 (X99517) Eukaryotic initiation factor-5 [Zea mays]
+            Length = 460
+
+ Score = 56 (25.6 bits), Expect = 7.8, P = 1.0
+ Identities = 11/41 (26%), Positives = 18/41 (43%)
+
+Query:   125 SDLSNVEGKTGNATDEEEEEEEEEEEGEEEEEEEEDDDDDD 165
+             S    ++ K   AT  +E+         + ++   DDDDDD
+Sbjct:   201 STAKGLKKKATTATGSDEDHSSSPTRSHDGDKAAADDDDDD 241
+
+
+>gnl|PID|e255119 (Z75208) hypothetical protein [Bacillus subtilis]
+            Length = 140
+
+ Score = 41 (18.8 bits), Expect = 8.3, Sum P(3) = 1.0
+ Identities = 9/24 (37%), Positives = 15/24 (62%)
+
+Query:   139 DEEEEEEEEEEEGEEEEEEEEDDD 162
+             D+E+ +  E E G+E + E+ D D
+Sbjct:    11 DKEDVQTGEVEIGKEVKTEKRDMD 34
+
+ Score = 39 (17.8 bits), Expect = 8.3, Sum P(3) = 1.0
+ Identities = 8/19 (42%), Positives = 13/19 (68%)
+
+Query:   198 DNEENELEELEERVEARKK 216
+             D+EE  +  +EE++E  KK
+Sbjct:    61 DSEEIRVPIVEEKLEVTKK 79
+
+ Score = 37 (16.9 bits), Expect = 8.3, Sum P(3) = 1.0
+ Identities = 9/25 (36%), Positives = 14/25 (56%)
+
+Query:  1005 KIEEFLSSFEEKIENLTEDAFNTQV 1029
+             K EE   + E K++ L +D  N Q+
+Sbjct:   104 KKEEPRLNKEGKVDGLDDDPLNNQM 128
+
+
+>sp|P17264|CRO_RANCA RHO CRYSTALLIN
+            Length = 324
+
+ Score = 48 (22.0 bits), Expect = 8.7, Sum P(4) = 1.0
+ Identities = 12/46 (26%), Positives = 23/46 (50%)
+
+Query:  1043 LGEEVDRNWNEVVTQQYLFDRLAHEIEALKSFSKSDLVSWFKAHRG 1088
+             LG   DRNW ++     L D + ++I A  + + +++   F   +G
+Sbjct:   220 LGSHRDRNWVDLSLPVLLDDPILNKIAAKYNRTSAEVAMRFILQKG 265
+
+ Score = 39 (17.8 bits), Expect = 8.7, Sum P(4) = 1.0
+ Identities = 8/28 (28%), Positives = 14/28 (50%)
+
+Query:   358 NAETLKHEPKKNNIDTHARLREFWMRYY 385
+             N   LK++P  N ++ H  L +  +  Y
+Sbjct:   179 NKPGLKYKPVCNQVECHVYLNQNKLHSY 206
+
+ Score = 36 (16.5 bits), Expect = 8.7, Sum P(4) = 1.0
+ Identities = 6/22 (27%), Positives = 12/22 (54%)
+
+Query:   305 FIHPLMIRDAIDREVEAVDSEY 326
+             +  P M+R  ++R +  V  +Y
+Sbjct:    90 YFSPDMVRKGLERSLRDVGMDY 111
+
+ Score = 34 (15.6 bits), Expect = 8.7, Sum P(4) = 1.0
+ Identities = 7/16 (43%), Positives = 11/16 (68%)
+
+Query:   228 VGVGSFADPDDLPGLA 243
+             +G+G++A PD    LA
+Sbjct:    20 LGLGTYAAPDVPKSLA 35
+
+
+>gnl|PID|e286150 (Y09395) temporin G precursor [Rana temporaria]
+            Length = 61
+
+ Score = 52 (23.8 bits), Expect = 9.8, P = 1.0
+ Identities = 11/23 (47%), Positives = 15/23 (65%)
+
+Query:   184 EEEFDDDEHDDDDLDNEENELEE 206
+             EEE D DE   DDL+  + E+E+
+Sbjct:    23 EEERDADEERRDDLEERDVEVEK 45
+
+Parameters:
+  V=20
+  B=100
+  P=4
+
+  -ctxfactor=1.00
+  E=10
+
+  Query                        -----  As Used  -----    -----  Computed  ----
+  Frame  MatID Matrix name     Lambda    K       H      Lambda    K       H
+   +0      0   BLOSUM62        0.317   0.136   0.396    same    same    same
+
+  Query
+  Frame  MatID  Length  Eff.Length   E    S W   T  X     E2  S2
+   +0      0     1161      1161      10. 56 3  11 22    0.21 34
+
+Statistics:
+  Query          Expected        Observed           HSPs       HSPs
+  Frame  MatID  High Score      High Score       Reportable  Reported
+   +0      0    60 (27.5 bits)  173 (79.1 bits)       548        548
+
+  Query         Neighborhd  Word      Excluded    Failed   Successful  Overlaps
+  Frame  MatID   Words      Hits        Hits    Extensions Extensions  Excluded
+   +0      0     30731     3590665      774455     2806364     9846      2912
+
+  Database:  All GenBank CDS translations+PDB+SwissProt+SPupdate+PIR released in the last month
+    Release date:  January 14, 1997
+    Posted date:  6:46 AM EST Jan 14, 1997
+  # of letters in database:  1,477,235
+  # of sequences in database:  4840
+  # of database sequences satisfying E:  82
+  No. of states in DFA:  584 (58 KB)
+  Total size of DFA:  336 KB (384 KB)
+  Time to generate neighborhood:  0.04u 0.00s 0.04t  Real: 00:00:00
+  No. of processors used:  4
+  Time to search database:  6.39u 0.09s 6.48t  Real: 00:00:02
+  Total cpu time:  6.52u 0.11s 6.63t  Real: 00:00:02
+
+WARNINGS ISSUED:  1
+$ END
+
+

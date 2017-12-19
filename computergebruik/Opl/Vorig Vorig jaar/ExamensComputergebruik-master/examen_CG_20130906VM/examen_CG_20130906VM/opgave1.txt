@@ -1,0 +1,27 @@
+
+1)
+
+tr -s [:blank:] ' ' | sed 's/ \([0-9]\)* \([A-Za-z]*\)/\L\2 (\1)/'
+
+2)
+
+sed 's/.* //g' | sort | uniq -c | sort -k1,1nr -k2,2 | head -n 4
+
+3)
+
+cut -d' ' -f1 | fold -w1 | sort | uniq -c | sort -k1,1nr -k2,2 | head -n 3
+
+Opmerking: 'fold -w1' can also be 'grep -o .', but I don't know if we can use that.
+
+4)
+
+sed 's/^\(.*\) \([0-9]*\)$/sed "\2q;d" \1/' | bash
+
+5)
+
+sed "s/.*/Regel 4 van $(cut -d' ' -f1 invoer.txt): &/"
+
+6)
+
+
+echo -e "Regels $(cut -d' ' -f2 invoer.txt)+ van $(cut -d' ' -f1 invoer.txt)\n$(tail -n+$(cut -d' ' -f2 invoer.txt) $(cut -d' ' -f1$)"

@@ -1,0 +1,4 @@
+http://www.grymoire.com/Unix/Regular.html
+Alles word uitgelegd, goed referentie middel
+
+Ook goed : De cheatsheet op regexr.com

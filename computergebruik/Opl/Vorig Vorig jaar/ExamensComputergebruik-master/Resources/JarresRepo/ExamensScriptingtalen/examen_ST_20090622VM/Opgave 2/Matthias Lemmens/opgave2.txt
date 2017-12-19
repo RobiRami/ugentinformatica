@@ -1,0 +1,54 @@
+##### Opgave 2: srt_one_line.sed #####
+
+/-->/{
+n
+N
+s/\([a-zA-Z ]*\)\n\([^\n]\)/\1 \2/
+}
+
+
+##### Opgave 2: code srt_adjust_time #####
+
+#!/bin/bash
+
+file=$1
+
+gawk -v schuif=$2 '
+
+/-->/{
+	split($0,tijden," --> ")			# tijden extraheren
+	for (x in tijden){				# Voor elke tijd (2 per lijn);
+		split(tijden[x],hms,":")		# uren, min, sec extraheren
+		split(hms[3],sec,",")			# sec en sec/1000 extraheren
+
+		sec[1]=(sec[1]+schuif)			# shift bij sec optellen
+		minbij=int(sec[1]/60)			# berekenen hoeveel min we moeten toevoegen
+
+		urenbij=int((hms[2]+minbij)/60)		# berekenen hoeveel uren we moeten toevoegen 
+
+		sec[1]=sec[1]-(minbij*60)		# seconden onder 60 houden
+                if (sec[1] <= 9) {			# eventueel weggevallen 0 terugzetten
+                        sec[1]=0 sec[1]
+                }
+
+		hms[2]=(hms[2]+minbij)-(urenbij*60)	# minuten berekenen (en onder 60 houden)
+		if (hms[2] <= 9) {			# eventueel weggevallen 0 terugzetten
+			hms[2]=0 hms[2]
+		}
+		
+		hms[1]=(hms[1]+urenbij)			# uren berekenen (mag >60 zijn)
+                if (hms[1] <= 9) {			# eventueel weggevallen 0 terugzetten
+                        hms[1]=0 hms[1]
+                }
+
+		 tijden[x]=hms[1] ":" hms[2] ":" sec[1] "," sec[2]	# tijd-notatie reconstrueren
+	}
+print tijden[1] " --> " tijden[2]			# interval-notatie reconstrueren
+next							# doorgaan met volgende lijn (niet ng eens afdrukken)
+}
+
+{ print }						# afdrukken (enkel bij niet-intervallen)
+
+' $file
+
+

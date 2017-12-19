@@ -1,0 +1,100 @@
+1;1.987.29;De slimste mens ter wereld;ontspanning;een;28/01/2010;22:14:57;01h01m27s;34,0%;78,6%
+2;1.954.69;De allerslimste mens ter wereld;ontspanning;een;29/12/2010;22:14:23;51m04s;33,4%;67,6%
+3;1.942.48;Witse;fiktie;een;05/12/2010;21:42:09;55m56s;33,2%;66,2%
+4;1.901.47;De pappenheimers;ontspanning;een;28/11/2010;20:33:32;01h03m49s;32,5%;60,8%
+5;1.637.44;Vb. wk. fin.:nederland/spanje;sport;canvas;11/07/2010;20:30:08;02h11m50s;28,0%;67,8%
+6;1.625.17;Fc de kampioenen;fiktie;een;20/03/2010;20:43:31;38m52s;27,8%;60,7%
+7;1.608.58;Oud belgie;fiktie;een;03/01/2010;21:07:55;56m15s;27,5%;52,8%
+8;1.498.83;Dubbelleven;fiktie;een;25/11/2010;21:24:31;48m22s;25,6%;52,2%
+9;1.482.59;De jaren stillekes;ontspanning;een;07/11/2010;20:31:52;57m28s;25,4%;50,9%
+10;1.430.20;Help haiti;informatie;een+vtm;21/01/2010;20:43:00;01h27m55s;24,5%;56,0%
+11;1.420.46;Geert hoste beslist;ontspanning;een;01/01/2010;20:37:35;55m17s;24,3%;55,7%
+12;1.414.52;In godsnaam - het slotklooster van brecht (1/2);algemene kennis;een;15/02/2010;21:16:14;46m09s;24,2%;48,7%
+13;1.338.35;Eurovisie songfestival;ontspanning;een;29/05/2010;21:00:05;03h20m45s;22,9%;57,6%
+14;1.325.79;Sportweekend;sport;een;17/01/2010;19:22:21;33m39s;22,7%;52,8%
+15;1.322.12;De kinderpuzzel;ontspanning;een;21/02/2010;20:24:27;48m41s;22,6%;46,0%
+16;1.304.68;Koppen;informatie;een;25/11/2010;20:46:41;34m00s;22,3%;46,7%
+17;1.282.30;Sportgala;ontspanning;een;19/12/2010;20:06:22;01h41m53s;21,9%;44,2%
+18;1.279.25;Het 7 uur-journaal;informatie;een;15/02/2010;19:00:01;42m11s;21,9%;50,3%
+19;1.274.81;Boer zkt vrouw;ontspanning;vtm;15/11/2010;20:48:10;54m05s;21,8%;44,5%
+20;1.271.84;Geert hoste en het jaar van de tijger;ontspanning;een;28/11/2010;20:04:20;25m27s;21,7%;46,0%
+21;1.270.58;Man bijt hond;algemene kennis;een;02/12/2010;19:45:14;24m44s;21,7%;48,3%
+22;1.257.47;De premiejagers;ontspanning;een;16/08/2010;19:59:51;23m26s;21,5%;56,4%
+23;1.256.45;Thuis;fiktie;een;15/02/2010;20:16:43;25m30s;21,5%;42,6%
+24;1.232.35;Goesting;fiktie;een;07/01/2010;21:20:03;46m51s;21,1%;45,8%
+25;1.211.80;Vb. wk. 1/2f:uruguay/nederland;sport;canvas;06/07/2010;20:30:19;01h36m58s;20,7%;49,4%
+26;1.186.70;Mijn restaurant!;algemene kennis;vtm;10/06/2010;22:59:41;18m28s;20,3%;62,1%
+27;1.184.38;Peter live;ontspanning;een;17/12/2010;20:43:36;01h20m14s;20,3%;44,0%
+28;1.175.79;In godsnaam - boeddhisme;algemene kennis;een;01/02/2010;21:12:12;50m06s;20,1%;43,1%
+29;1.166.52;In godsnaam - hare krisjna in durbuy;algemene kennis;een;01/03/2010;21:13:07;46m53s;19,9%;41,9%
+30;1.153.89;Sporza:wielrennen. parijs- roubaix;sport;canvas;11/04/2010;13:35:18;03h54m43s;19,7%;75,8%
+31;1.142.34;Tomtesterom;algemene kennis;een;16/05/2010;20:26:28;43m31s;19,5%;43,1%
+32;1.139.84;Sporza:veldrijden. wk. tabor;sport;canvas;31/01/2010;13:56:26;01h23m12s;19,5%;72,2%
+33;1.136.62;Made in belgium - houston;algemene kennis;een;22/12/2010;21:41:36;29m29s;19,4%;40,4%
+34;1.122.57;De beste hobbykok van vlaanderen;ontspanning;vtm;30/11/2010;20:48:51;01h01m30s;19,2%;38,5%
+35;1.112.26;Zoo australie;algemene kennis;een;10/01/2010;20:02:27;21m50s;19,0%;38,9%
+36;1.109.29;Ook getest op mensen;algemene kennis;een;22/12/2010;20:45:49;51m19s;19,0%;38,3%
+37;1.108.94;Sporza:wielrennen. ronde van vlaanderen;sport;canvas;04/04/2010;12:50:45;04h03m03s;19,0%;73,6%
+38;1.108.28;Made in belgium - frankrijk;algemene kennis;een;29/12/2010;21:42:42;29m19s;19,0%;39,2%
+39;1.105.15;De chriscollectie;ontspanning;een;27/03/2010;20:44:37;30m01s;18,9%;43,3%
+40;1.104.79;De generatie show;ontspanning;een;05/03/2010;20:44:19;01h14m54s;18,9%;42,4%
+41;1.099.76;Lili en marleen;fiktie;vtm;28/02/2010;19:56:23;36m38s;18,8%;40,2%
+42;1.092.86;Het groot debat;informatie;een;06/06/2010;20:57:21;01h40m21s;18,7%;44,3%
+43;1.092.85;In godsnaam - islam;algemene kennis;een;25/01/2010;21:14:14;50m16s;18,7%;39,4%
+44;1.090.83;In godsnaam - hindoeisme in bali;algemene kennis;een;08/02/2010;21:11:31;49m08s;18,7%;40,0%
+45;1.079.27;Made in belgium - washington d.c.;algemene kennis;een;08/12/2010;21:40:39;30m41s;18,5%;38,5%
+46;1.076.59;In godsnaam - islam in senegal;algemene kennis;een;22/03/2010;21:14:34;43m21s;18,4%;37,0%
+47;1.064.46;Dieren in nesten;algemene kennis;een;06/02/2010;20:12:03;29m05s;18,2%;47,7%
+48;1.041.80;God en klein pierke - karel de gucht;algemene kennis;een;14/12/2010;20:43:04;50m06s;17,8%;37,5%
+49;1.040.72;De nacht van de vlaamse televisiesterren;ontspanning;een;06/03/2010;20:38:17;01h49m04s;17,8%;44,0%
+50;1.030.63;We are from belgium;algemene kennis;een;27/01/2010;21:40:22;31m03s;17,6%;40,2%
+51;1.030.21;Koppen xl;informatie;een;07/12/2010;21:38:25;32m02s;17,6%;39,1%
+52;1.030.18;Vb. wk. 1/2f:duitsland/spanje;sport;canvas;07/07/2010;20:30:10;01h34m26s;17,6%;46,8%
+53;1.017.39;Volt;ontspanning;een;08/12/2010;20:46:30;50m04s;17,4%;36,6%
+54;1.013.68;1000 zonnen;algemene kennis;een;16/08/2010;19:31:18;20m56s;17,3%;49,4%
+55;1.011.75;In godsnaam - het tibetaans boeddhisme in hoei;algemene kennis;een;15/03/2010;21:13:18;44m09s;17,3%;35,0%
+56;1.009.66;Blokken;ontspanning;een;02/12/2010;18:31:54;24m41s;17,3%;50,0%
+57;1.000.38;God en klein pierke - hannelore knuts;algemene kennis;een;21/12/2010;20:43:37;52m16s;17,1%;34,8%
+58;990.28;Benidorm bastards;ontspanning;vtm;10/06/2010;22:23:29;20m55s;16,9%;46,9%
+59;988.93;Flikken maastricht;fiktie;een;24/10/2010;21:29:13;44m53s;16,9%;35,3%
+60;983.84;Ergens onderweg - sebastian & peter vandermeersch;algemene kennis;een;20/12/2010;21:28:42;30m05s;16,8%;32,7%
+61;983.56;Ergens onderweg - emma & rob vanoudenhoven;algemene kennis;een;13/12/2010;21:33:14;25m25s;16,8%;36,3%
+62;982.86;Aspe;fiktie;vtm;08/11/2010;21:51:50;50m09s;16,8%;38,9%
+63;978.50;Vb. ek. kwalif.:belgie/oostenrijk;sport;canvas;12/10/2010;20:48:31;01h36m13s;16,7%;35,8%
+64;977.70;Tegen de sterren op;ontspanning;vtm;19/12/2010;19:55:54;38m52s;16,7%;34,1%
+65;977.23;Made in belgium - chili;algemene kennis;een;15/12/2010;21:43:27;30m10s;16,7%;37,4%
+66;967.03;Ergens onderweg - hannah & chris dusauchoit;algemene kennis;een;27/12/2010;21:22:51;26m17s;16,5%;33,1%
+67;965.59;Nieuws 19u vtm;informatie;vtm;11/01/2010;18:59:44;37m49s;16,5%;38,1%
+68;964.69;Veldrijden. oostmalle;sport;2be;10/01/2010;14:00:01;02h15m24s;16,5%;59,9%
+69;958.00;Vrolijke vrienden, dankuwel nonkel bob;algemene kennis;een;20/02/2010;19:35:51;24m06s;16,4%;49,6%
+70;955.41;De laatste show;ontspanning;een;01/02/2010;22:03:51;49m49s;16,3%;42,8%
+71;951.14;Familie;fiktie;vtm;27/09/2010;20:09:50;30m48s;16,3%;34,4%
+72;950.91;God en klein pierke - godfried danneels;algemene kennis;een;07/12/2010;20:41:23;54m22s;16,3%;34,2%
+73;943.60;De zussen van mijn dochter;algemene kennis;een;20/12/2010;20:43:27;40m23s;16,1%;31,1%
+74;939.62;God en klein pierke - raymond van het groenewoud;algemene kennis;een;28/12/2010;20:39:10;52m09s;16,1%;33,3%
+75;924.61;Ergens onderweg - milo & tom waes;algemene kennis;een;06/12/2010;21:19:33;30m06s;15,8%;33,1%
+76;921.52;Het journaal laat;informatie;een;29/12/2010;23:07:49;15m31s;15,8%;49,3%
+77;917.06;Eurosong;ontspanning;een;07/03/2010;21:15:26;01h02m16s;15,7%;36,0%
+78;915.58;Sterren op de dansvloer;ontspanning;vtm;02/04/2010;20:42:12;01h46m18s;15,7%;35,7%
+79;907.30;De kotmadam;fiktie;vtm;07/03/2010;20:03:42;26m46s;15,5%;34,5%
+80;897.21;God en klein pierke - herman van rompuy (2/2);algemene kennis;een;16/11/2010;20:43:00;51m05s;15,3%;31,3%
+81;892.06;Made in belgium - new york;algemene kennis;een;24/11/2010;21:42:52;31m14s;15,3%;33,7%
+82;888.19;I dreamed a dream, the susan boyle story;algemene kennis;vtm;01/01/2010;22:29:20;46m44s;15,2%;43,6%
+83;885.62;Chester zoo;algemene kennis;een;25/04/2010;20:04:10;21m57s;15,1%;37,2%
+84;884.49;God en klein pierke - kamagurka;algemene kennis;een;30/11/2010;20:41:21;52m33s;15,1%;29,8%
+85;882.41;De klas van frieda;ontspanning;een;13/04/2010;22:05:35;47m16s;15,1%;40,2%
+86;879.71;Zone stad;fiktie;vtm;19/04/2010;21:39:35;47m40s;15,0%;36,0%
+87;874.54;Sporza:veldrijden. igorre;sport;canvas;05/12/2010;15:25:59;01h14m04s;15,0%;56,8%
+88;872.34;Vlaanderen vakantieland;algemene kennis;een;09/01/2010;18:13:16;44m25s;14,9%;48,8%
+89;869.55;Het leven zoals het is - huis te koop;algemene kennis;een;15/02/2010;20:43:44;29m00s;14,9%;30,5%
+90;868.39;Sporza:wielrennen. kuurne- brussel-kuurne;sport;canvas;28/02/2010;14:21:09;02h47m30s;14,9%;58,4%
+91;867.04;Villa vanthilt;ontspanning;een;29/08/2010;21:39:00;01h08m43s;14,8%;38,5%
+92;864.51;2009, het jaar van de angst (herh.);informatie;een;06/01/2010;20:43:51;01h00m45s;14,8%;31,2%
+93;859.68;Music industry awards;ontspanning;een;08/01/2010;20:39:46;01h39m47s;14,7%;35,1%
+94;856.16;Het 1 uur-journaal;informatie;een;14/11/2010;12:59:57;36m38s;14,6%;60,7%
+95;850.74;Verkiezingen;informatie;een;13/06/2010;13:30:49;09h36m59s;14,6%;49,5%
+96;846.09;Het sterke geslacht;ontspanning;vtm;22/11/2010;20:48:01;50m54s;14,5%;30,1%
+97;841.75;De rodenburgs;fiktie;vtm;10/02/2010;20:40:39;48m22s;14,4%;29,3%
+98;840.76;De rode loper;algemene kennis;een;29/05/2010;20:39:52;16m32s;14,4%;36,4%
+99;839.17;Vlaanderen muziekland;ontspanning;een;13/08/2010;20:25:32;50m47s;14,4%;42,7%
+100;837.71;Tour 2010;sport;een;25/07/2010;21:31:55;56m32s;14,3%;40,1%

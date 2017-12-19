@@ -1,0 +1,98 @@
+### OPGAVE 3 #########################################################
+
+#!/bin/bash
+# Auteur: Nick Van Haver
+# Pas op: Het script is onvolledig en werkt niet 100%
+#         De argument-checks werken wel
+
+LARG=
+AANTAL=5
+LETTERS="abcdefghijklmnopqrstuvwABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!@#$%^&*()][{};:?-_+="
+
+# Opties parsen met getopts
+while getopts :cl:p: arg
+do
+    case $arg in
+        c)     LETTERS="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!@#$%^&*()][{};:?-_+=" ;;
+
+        l)     LARG=$OPTARG ;;
+
+        p)     if [ $OPTARG -lt 1 ]
+               then
+                   echo "Geef een getal groter of gelijk aan 1 op voor optie -p" 1>&2
+                   exit 1
+               else
+                   AANTAL=$OPTARG
+               fi ;;
+
+        :)     echo "Geef aan -$OPTARG een argument." 1>&2
+               exit 1 ;;
+
+        \?)    echo "Ongldige optie -$OPTARG genegeerd." 1>&2 ;;
+    esac
+done
+
+# Wegshiften van opties
+shift `expr $OPTIND - 1`
+
+# Controle op het aantal argumenten
+if [ $# -lt 2 ]
+then
+    echo "Geef tenminste 2 argumenten op." 1>&2
+    exit 1 
+fi
+
+# Patroon opslaan, lengte berekenen en argument wegshiften
+PATROON="$1"
+LENGTE=$(echo "$1" | wc -L)
+shift
+
+# Verder parsen van de optie -l
+if [ "$LARG" != "" ]
+then
+    if [ $LARG -lt $LENGTE ]
+    then
+        echo "Geef een getal groter of gelijk aan de lengte van het patroon op voor optie -l" 1>&2
+        exit 1
+    else
+        LENGTE=$LARG
+    fi
+fi
+
+# Controle van patroon 
+if expr "$PATROON" : '^[LCT]\+$' >/dev/null
+then
+    echo "Het patroon is geldig" 1>&2
+else
+    echo "Het patroon moet bestaan uit L, C en T" 1>&2
+    exit 1
+fi
+
+# Bestandenlijst controleren op slechte bestanden
+for var in "$@"
+do
+    if [ -f "$var" -a -r "$var" ]
+    then
+        echo "Bestand $var ok." 1>&2
+    else
+        echo "Bestand $var is geen bestand of niet leesbaar." 1>&2
+    fi
+done
+
+# Wachtwoorden genereren
+for j in $(seq 1 1 $AANTAL)
+do
+
+# Genereren van één wachtwoord, werkt niet wegens fout in substring.
+
+    len=`expr length $LETTERS`
+    num=5
+    for i in $(seq 1 1 $LENGTE)
+    do 
+        wachtwoord=$wachtwoord${LETTERS:$num:$num}
+        echo "$wachtwoord"
+        num=$(((num*5)%40))
+    done
+done
+
+

@@ -1,0 +1,12 @@
+##### Opgave 4: code list.sed #####
+<Plaats hier code van script>
+
+##### Opgave 4: code prettymail.awk #####
+<Plaats hier code van script>
+
+##### Opgave 4: code spamfilter.awk #####
+<Plaats hier code van script>
+
+##### Opgave 4: code mailtrooper.sh #####
+<Plaats hier code van script>
+

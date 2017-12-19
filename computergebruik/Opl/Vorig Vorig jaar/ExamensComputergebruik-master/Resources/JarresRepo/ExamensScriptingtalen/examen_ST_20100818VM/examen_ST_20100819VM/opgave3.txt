@@ -1,0 +1,9 @@
+### OPGAVE 3 #########################################################
+
+1)
+
+<plak hier je VBA programmacode van de subprocedure toon_spel>
+
+2)
+
+<plak hier je VBA programmacode van de subprocedure toon_scorebord>

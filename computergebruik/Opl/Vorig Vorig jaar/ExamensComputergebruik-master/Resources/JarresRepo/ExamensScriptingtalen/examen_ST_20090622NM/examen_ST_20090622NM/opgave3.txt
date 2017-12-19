@@ -1,0 +1,2 @@
+##### Opgave 3: script #####
+<Plaats hier code van shell script>

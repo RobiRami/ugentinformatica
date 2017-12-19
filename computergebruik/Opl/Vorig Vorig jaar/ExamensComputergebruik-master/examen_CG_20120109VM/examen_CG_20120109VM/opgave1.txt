@@ -1,0 +1,26 @@
+### OPGAVE 1 #######################
+
+1a) commando: egrep ']...(.).*\1... ' brain.txt
+    aantal: 35587
+
+1b) commando: egrep '\[(..........).*]\1' brain.txt
+    aantal: 27483
+
+1c) commando: egrep -v '].*(\++[^+-]+\+|-+[^+-]+-)' brain.txt
+    aantal: 1431
+
+1d) commando: egrep -v '<[^<>-]*(-[^-<>]*-[^-<>]*)*>' brain.txt
+    aantal: 35330
+
+
+2a) commando: egrep ']...(.).*\1... ' brain.txt | egrep '\[(..........).*]\1'
+    woord: nothing
+
+2b) commando: egrep '\[(..........).*]\1' brain.txt | egrep -v '].*(\++[^+-]+\+|-+[^+-]+-)'
+    woord: endures
+
+2c) commando: egrep -v '].*(\++[^+-]+\+|-+[^+-]+-)' brain.txt | egrep -v '<[^<>-]*(-[^-<>]*-[^-<>]*)*>'
+    woord: but
+
+2d) commando: egrep ']...(.).*\1... ' brain.txt | egrep -v '<[^<>-]*(-[^-<>]*-[^-<>]*)*>'
+    woord: change

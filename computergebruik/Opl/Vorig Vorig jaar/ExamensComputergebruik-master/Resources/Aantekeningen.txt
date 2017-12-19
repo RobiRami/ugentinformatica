@@ -1,0 +1,1025 @@
+Credits: Michael Deschoolmeester
+							##Man pages##
+	#syntaxis beschrijving
+ls [-aAbcCdfFghilLmnopqrRstux1@]	vierkante haakjes: optioneel	
+cat [file...]						drie puntjes: herhaling	
+			
+
+						##Processtructuur##
+
+ps:		toont overzicht van processen die op bepaald ogenblik door systeem afgehandeld worden
+
+		- Vlaggen
+			-u loginnaam	processen van bepaalde gebruiker
+			-l, -f			meer details van elk proces
+			-e				extended: lijst van alle systeemprocessen
+	
+	
+kill [-signum|signaam] [procesnummer ]: 	Afbreken van achtergrondprocessen
+	
+	- Signalen
+		   Signaalnummer  	techn.term   	techn.code 	terminal equivalent
+					  
+				1			hangup		SIGHUP		verbinding verbreken(uitloggen)
+				2			interrupt	SIGINT		intypen van ^C (proces afbreken)
+				3			quit		SIGQUIT		intypen van ^\ (core dump)
+				9			kill		SIGKILL		garandeert afsluiten van proces
+				11			segmentation	SIGSEGV		afsluiten proces na geheugenfout, proces probeert geheugenruimte aan te spreken dat niet bij proces hoort
+							violation
+				15			terminate	SIGTERM		default kill commando signaal
+				17			child finishes	SIGCHILD	informeert proces dat een subproces werd afgesloten
+							execution
+				20			suspend/stop	SIGTSTP		initypen van ^Z, staakt(pauzeert) proces
+				
+				
+		soms moet SIG weggelaten worden als naam van signaal gebruikt wordt met kill commando
+   +
+   -
+		
+trap ['commandolijst'] [signaallijst]:		opvangen signalen uit signaallijst
+	**aanhalingstekens rond commandolijst verplicht
+	
+	- 	geen signaallijst of commandolijst			voert standaard kernelgedefinieerde actie uit
+		signaallijst en '' commandoliijst(leeg)			negeren signalen
+		signaallijst en commandolijst				uitvoeren commando's uit commandolijst bij binnenkomen signalen
+
+		
+nice [-1...20]:			beginprioriteit van processen verlagen 
+	
+	- Voorbeelden
+		nice -5 du /usr | sort -n | tail -1 &
+		nice -10 du /usr | sort -n | tail -1 &
+
+		
+renice: 	prioriteit van lopend proces verlagen
+	
+	
+top:		toont commando's die meest CPU tijd verbruiken + uitgebreide status CPU verbruik
+	
+	
+nohup: 		geeft aan dat proces hangup signalen mag negeren (na uitloggen blijft proces verderlopen)
+	
+		-Voorbeelden
+		nohup nice -5 du /usr | sort -n | tail -1 &
+	
+	
+at tijd [dag] [< shellscript]: 		geeft aan wanneer bepaald shellscript moet starten
+	
+	 	Vlaggen
+		-l		at-jobs tonen
+		-r		at-jobs verwijderen
+	
+	
+crontab:		opdrachten herhalen
+	
+	- Vlaggen
+		-l		toont inhoud crontab-bestand 
+		-e 		crontab bestand bewerken
+		
+		
+		
+	#jobs
+**commando (eventueel complete pijpleiding) dat als apart proces (of samenstel van processen) wordt uitgevoerd
+	
+job: 			geeft lopende jobs weer
+
+	job ID	   process ID
+	[1]-  		Running                 du /usr | sort -n | tail -1 &
+	[2]+  		Running                 du /usr | sort -n | tail -1 &
+
+	
+stop:			tijdelijk stoppen van job-uitvoer = pauzeren
+			tijdelijk stoppen van voorgrondproces door ^Z
+			kan ook door STOP signaal (kill -STOP)
+
+bg(background):	herstarten job in achtergrond
+fg(foreground):	herstarten job in voorgrond			
+
+
+
+
+
+
+									##Bash Algemeen##
+				
+				
+	#Pipes en redirection
+	
+	programma1 | programma2				pipes worden simultaan uitgevoerd
+	sort bestand | tee log | wc -l 			output wordt naar log gebufferd voor ze wordt doorgegeven
+	sort bestand | wc -l | tee log			schrijft output naar std out en log
+	ls WK* bestand | wc -l > uitvoer 2>&1		err staat in bestand uitvoer
+	ls WK* bestand | wc -l 2>&1 > uitvoer		err staat in terminal (std out)
+
+	
+	#Sort
+	
+sort [-bfidnrtxu] [-k pos1, pos2[keys]] [file …]
+	vlaggen
+	-f	fold		case insensitive (hoofdletters = kleine letters)
+	-i	ignore		niet-afdrukbare tekens worden genegeerd
+	-d	dictionary	enkel cijfers, letters en spaties worden in	order	rekening gebracht
+	-n	numerical	numeriek sorteren
+	-r	reverse		sorteervolgorde wordt omgekeerd
+	-tx	tokenize	gebruik x als veldscheidingsteken (i.p.v. witruimte)
+	-b	blank		witruimte vooraan wordt genegeerd
+	-u	unique		meervoudige regels worden ontdubbeld
+	
+	veldaanduiding (nieuwe stijl)
+		voorbeeld: sorteer op basis van woorden 5, 6 en 7
+		sort -k 5,7
+		
+		voorbeeld: sorteer vanaf 3e letter van 5e woord tot en met 2e letter van 7e woord
+		sort -k 5.3, 7.2
+		
+		- vlaggen die na een veldaanduiding staat hebben enkel invloed op veldaanduiding die er net aan voorafgaat
+		- vlaggen die voor alle veldaanduidingen staan hebben enkel invloed op alle volgende veldaanduidingen die zelf geen vlaggen hebben
+			sort -t: -r -k4,4n -k1,1f /etc/passwd
+	
+		
+		
+	#File name expansion
+
+	
+*		vervangt willekeurige tekenreeks
+? 		vervangt 1 willekeurig karakter
+[ ]		vervangt alle combinaties met karakters tussen verkiante haakjes, werkt ook met ranges
+[! ]		geen combinaties met karakters tss haakjes
+
+	mdschool@helios:~$ touch haha1 haha2 haha3 haaha4
+	mdschool@helios:~$ echo haha*
+	haha1 haha2 haha3
+	mdschool@helios:~$ echo haha?
+	haha1 haha2 haha3
+	mdschool@helios:~$ echo haha[12]
+	haha1 haha2
+	mdschool@helios:~$ echo haha[1-3]
+	haha1 haha2 haha3
+	mdschool@helios:~$
+
+
+#uniq: neemt aan dat input alfabetisch staat. (enkel duplicate, aangrenzende, regels)
+
+	- syntaxis
+		uniq [-udc] [+n] [-n] [input [output]]
+		
+	- vlaggen
+		+n	sla eerste n letters op elke regel over
+		-n	sla eerste n woorden op elke regel over
+		-u	geef alleen regels terug die niet dubbel voorkomen
+		-d	alleen regels die minstens tweemaal voorkomen worden 	(ontdubbeld) teruggegeven
+		-c	regels worden (ontdubbeld) teruggegeven, samen met aantal voorkomens
+	
+	
+#split: opsplitsen van bestand over deelbestanden met gelijk aantal regels n (standaard 1000)
+
+	- syntaxis
+		split [-n] [input [output]]
+	- delen gebruiken output (standaard x) als basis van de naam, aangevuld met aa, ab, …, az, ba, bb, …
+	- terug samenvoegen van delen kan door gebruik te maken van commando cat
+	
+
+#csplit: opsplitsen van bestand over deelbestanden met ongelijke lengte, ofwel aangegeven door regel-nummers of door reguliere expressies
+	
+	- syntaxis
+		csplit [-s] [-k] [-f prefix] file arg1 [… argn]
+
+	- vlaggen
+		-k verhindert dat splitsing niet doorgaat bij onvoldoende regels
+		-f stel andere prefix in dan xx
+		-s (silent) vermijd exces aan output
+		
+	- voorbeeld (regelnummers met herhalingsfactor):
+		csplit file 100 {4}
+			file[1-99] ? xx00
+			file[100-199] ? xx01
+			file[200-299] ? xx02
+			
+		csplit -k hfdst06.tex '/\\section/' {99}
+			hfdst06.tex ? xx00 = deel voor eerste regel die \section bevat
+			hfdst06.tex ? xx01 = deel tussen eerste twee \section regels
+	
+#paste en join: werken op dezelfde manier, maar bij join is er voor de beide bestanden een gemeenschappelijke field nodig (bv genummerde regels)
+		
+	
+#find:	zoekt bestanden
+
+	syntaxis: find padnamen criteria acties
+		
+		criteria
+			-name: naam 
+			-user: gebruiker die bestand heeft aangemaakt (eigenaar )
+			-type: type (gewoon bestand [f], directory [d], …)
+			-size: grootte (in blokken)
+			-inum: inode
+			-mtime: datum waarop bestand laatst werd aangepast
+			-atime: datum waarop bestand laatst werd bekeken
+			plus-teken voor argument betekent "meer dan"
+			min-teken voor argument betekent "minder dan"
+		
+		acties
+			print (default) ? afdrukken van naam (niet inhoud)
+			ls ? afdrukken gedetailleerde bestandsinformatie
+			exec commando ';' ? uitvoeren van commando op bestand(en)
+			ok commando ';' ? uitvoeren van commando na bevestiging
+			
+	- {} kan gebruikt worden om gevonden bestandsnaam door te geven aan commando dat als actie wordt uitgevoerd
+	- gebruik van quotes en dubbele aanhalingstekens tegen shell expansion
+	
+		voorbeelden	!!
+			find . "(" -name "*.c" -o -name "*.pl" ")" -type f -ls
+			find ~john -name "*.mp3" -type f -exec rm '{}' \;
+
+			
+			
+			
+				#hardlinks en softlinks
+				
+hardlinks:	nieuw bestand dat verwijst naar inode nummer, bestand wordt pas verwijderd als alle links naar het inode nummer verwijderd zijn.
+softlinks:	nieuw bestand dat verwijst naar ander bestand, als het andere bestand verplaatst wordt of als de naam verandert wordt de link ongeldig.
+
+	
+	
+				#Random
+	
+/dev/null				//"zwarte gat"
+unix2dos filename			//unix -> dos
+dos2unix filename			//dos -> unix
+rm -r 					//recursief: alle onderliggende dir	
+cd -					//herhaling vorige dir
+nl					//nummeren van tekstregels
+sdiff					//als diff, maar vergelijkt regel naast regel
+du 					//print disk usage van bestanden of mappen
+which					//toon eerste padnaam van commando
+whereis					//toon alle locaties van commando
+apropos					//doorzoekt beschrijvingen man pages naar sleutelwoord
+type					//geeft aan welk soort commando
+mkfifo					//maakt named pipe aan
+ls | more				//geeft per regel één bestand in map weer
+top					//toont CPU gebruik
+
+	
+	
+				#Protecties en privileges
+		
+Permissies		  Eigenaar(UID)	  Groep(GID)	Datum	 Tijd  Bestand
+  U  G  O
+-rw-r--r-- 1 		mdschool 		users      30 Jan  2 17:54	test
+-rw-r--r-- 1 		mdschool 		users      56 Jan  2 18:31 uitvoer
+
+	Files:
+		r = openen + lezen bestand
+		w = wijzigen + inkorten bestand
+		x = uitvoeren bestand
+
+	Directories:
+		r = oplijsten bestanden in directory(namen + inode)
+		w = aanmaken, hernoemen en wissen bestanden in directory
+		x = navigeren in directory(cd) + gebruiken directory als padnaam
+	
+	
+Change mode (chmod):	permissies bestand wijzigen
+
+	chmod [augo] [+-=] [rwx] file		relative: a(all users) u(user=owner) g(group) o(others); +bijvoegen -wegnemen =vervangen
+	chmod [UGO] file1			absolute: 3 getallen ###=UGO 1=execute 2=write 4=read -> optellen voor meer permissies
+
+	Set user ID (suid):	 		gebruiker waaronder programma wordt uitgevoerd is eigenaar, niet gebruiker die uitvoert
+	Set group ID (sgid): 			groep waaronder programma wordt uitgevoerd is eigenaar, niet groep vd gebruiker die uitvoertt
+		
+	chmod u+st file		relative: s=SUID of SGID, t= sticky bit
+	chmod 2754 file		absolute: add 4th digit infront: 1=sticky bit(cant remove files in dir except with root or owner+write) 2=setgid 4=setuid: 	
+	-rws-r-sr--		1e s: SUID, 2e s: SGID
+				
+				
+Uniform mask (umask):	standaardpermissies bestanden wijzigen
+
+	Standaardpermissies: umask 000
+		gewoon bestand 		666	-rw-rw-rw-
+		uitvoerbaar bestand	777	-rwxrwxrwx
+		directory			777	-rwxrwxrwx
+
+	Helios: umask 022 => umask wordt afgetrokken van standaardwaarde
+		gewoon bestand		644	-rw-r--r--
+		uitvoerbaar bestand	755	-rwxr-xr-x
+		directory			755	-rwxr-xr-x
+	
+	
+Change owner (chown):	eigenaar bestand wijzigen
+		les 15 slide 11
+	
+Change group (chgrp):	groep bestand wijzigen	
+	
+	
+	
+	
+						##Regex##
+	
+first match:	eerste voorval van patroon wordt gematcht
+longest match:	langste versie van patroon wordt gematcht
+
+	\c		ontneemt speciale betekenis van teken c
+	^		begin van regel (voor het eerste teken)
+	$		einde van regel (na het laatste teken)
+	.		1 willekeurig teken
+	[ ]		1 enkel teken uit de lijst
+				- intervallen van tekens uit ASCII tabel kunnen opgegeven worden
+				- binnen rechte haken verliezen . ^ en $ hun speciale betekenis
+				- symbolische voorstelling van tekens: \n (regeleinde), \t (tab)
+	[^ ]		exact 1 teken dat niet voorkomt in de lijst
+	R*		nul of meer herhalingen van de reguliere expressie R
+	\(R\)		afbakening van reguliere expressie (groep)
+	\n		verwijzing naar n-de afgebakende reguliere expressie (met n=1,2,3,…)
+	\w		word-character: matcht [a-zA-Z0-9_]
+	&		matcht volledig patroon
+	
+	R+		1 of meer herhalingen van reguliere expressie R
+	R?		nul of 1 herhalingen van reguliere expressie R
+	R{n}		n herhalingen van reguliere expressie R
+	R{n,m}		n tot m herhalingen van reguliere expressie R
+	R{n,}		n of meer herhalingen van reguliere expressie R
+	R{,m}		m of minder herhalingen van reguliere expressie R
+	R1|R2		reguliere expressie R1 of reguliere expressie R2
+	(R)		ronde haakjes rond reguliere expressie zorgen voor duidelijkheid, waarbij haakjes mogen genest worden
+
+
+	
+						##Sed##
+
+				#Meerdere instructies
+	
+sed 'commando; ...; commando' invoerbestand
+sed -e 'commando' -e 'commando' ... -e 'commando' invoerbestand
+sed '
+	> commando
+	> ...
+	> commando' invoerbestand
+
+	
+				#Adressering (geen spatie na accolade)
+
+[adres] is regelnummer, eerste~stap,$ of /regex/
+[regel-adres] is enkele regel
+
+	[adres]commando
+		
+	adres {
+		[adres1]commando1
+		[adres2]commando2
+		[adres3]commando3
+		}
+		
+		
+				#Commentaar
+	
+- 	Commentaarregels starten met een hekje (#)
+- 	Indien eerste karakter na het hekje op de eerste regel een 'n' is,
+	dan wordt wegschrijven van de pattern space naar standaard uitvoer onderdrukt
+
+	
+	#Substitutie
+	
+[adres]s/patroon/vervanging/vlaggen
+	- vlaggen
+		n	substituteer enkel n-de voorkomen van patroon (n ? [1,512])
+		g	substitueer alle voorkomens van patroon
+		p	schrijf inhoud van pattern space naar stdout (enkel bij geslaagde substitutie)
+		w	schrijf inhoud van pattern space naar bestand (enkel bij geslaagde substitutie)
+				
+	- regeleindes voorstellen door \n
+	
+	
+				#Commando's
+
+[adres]d			delete
+[adres]c\			copy
+[regel-adres]i\			insert
+[regel-adres]a\			append
+[adres]l			toont niet-afdrukbare tekens in hexadecimaal
+[adres]y/abc/xyz/		zelfde als tr commando
+[adres]p			print: schrijft inhoud van pattern space naar stdout (maakt pattern space niet leeg)
+[regel-adres]=			schrijft regelnummer weg naar stdout, zonder -n vlag zowel regelnummer als tekstregel
+[adres]n			next:	- schrijft inhoud pattern space nr stdout (als -n er niet is)
+					- overschrijft vervolgens pattern space met volgende regel
+					- springt NIET terug naar begin van script
+[regel-adres]r file		read:	- schrijft inhoud van file naar stdout nadat pattern space werd uitgeschreven
+					- geen spaties na bestandsnaam, geen foutboodschap als file niet bestaat
+[adres]w file			write:	- schrijft inhoud pattern space naar file
+[regel-adres]q 			quit: schrijft pattern space nog laatste keer naar stdout, stopt daarna uitvoer sed commando							
+
+
+
+	
+							##Text editors##
+		
+		
+				##Vim##
+		
+Om een patroon over meerdere regels te matchen, scheidt deze door ^M (in Vim ingegeven als ^V^M) = ctrl+v ctrl+m
+		
+commando's						
+	Insert  (i,I)
+	Append  (a,A)
+	Open    (o,O)
+	Change  (c)
+	Replace (r,R)
+	Delete  (d,D)
+
+	:w		write to file
+	:q		exit
+	:q!		exit without writing to file
+	:wq		exit with writing to file
+	
+navigeren
+	<spatie>		volgend karakter
+	+			begin volgende regel
+	-			begin vorige regel
+	<return>		begin volgende regel
+	w	Word		woord vooruit
+	b	Backwards	woord achteruit
+	^			begin regel
+	0			begin kolom regel
+	$			einde regel
+	H	High		top scherm
+	L	Low		voet scherm
+	M	Middle		midden scherm
+	fc	Find		zoekt eerstvolgende letter c
+	
+	^D	Down		half scherm vooruit
+	^U	Up		half scherm achteruit
+	^F	Forward		heel scherm vooruit
+	^B	Backward	heel scherm achteruit
+	
+	<regelnr>G	Go	ga naar regelnummer
+	/string			voorwaards zoeken nr string
+	?string			achterwaards zoeken nr string
+	n	/	?		zoekactie herhalen
+	
+	je kan commando's herhalen door een getal ervoor te plaatsen.
+		3^F		drie pagina's vooruit
+		2w		twee woorden vooruit
+		20h		twintig karakters naar links
+		
+verwijderen (d) naar paste buffer / vervangen (c) / kopieren=yank (y) naar paste buffer / plakken (p) vanuit paste buffer
+		
+	dw	delete word			volgende woord
+	db	delete backward			vorige woord
+	d$					alles vanaf cursor tot regeleinde
+	d^					alles vanaf regelbegin tot cursor
+	dd					verwijder huidige regel
+	x					verwijder karakter onder de cursor
+	.					herhaalt commando
+	u					undo laatste wijziging
+	U					undo laatste wijziging op huidige regel
+	!!commando			zet output commando in tekst
+	1,$ !commando		voert commando's uit op range van regels
+
+								
+				##Ed en ex: line editor##
+		
+	p			print
+	d			delete
+	a			append
+	i 			insert
+	c 			change
+	van m naar	move 			move van regel1en zet na regel2
+	van t naar	transcribe		kopieer van regel naar regel
+	t.					kopieer huidige regel
+	n			number		regels weergeven met regelnummer
+	l			list		regels weergeven waarbij controlekarakters zichtbaar worden gemaakt
+	s/van/naar/[g][p]			substitute van tekst naar tekst, met g voor volledige regel
+	f			file		verander bestandsnaam, zonder argument: toon huigdige naam
+	w			write		aangeven welke regels weggeschreven moeten worden, met bestandnaam erbij naar nieuw bestand (overschrijven)
+	r			read		aangeven vanaf welke regel, of met een bestandsnaam erbij, welk bestand ingelezen moet worden
+	j 			join		regeleindes tussen regels verwijderen
+	k					regels markeren, regsls opzoeken door ' gevolgd door regeladres
+		/twee/ka
+		/drie/kb
+		'a, 'bp		print regels van markering a tot b
+	x							versleuten van bestand
+	
+	g 							regeladresseringsfilter: kiest regels die voldoen aan patroon
+	v							regeladresseringsfilter: kiest de regels die niet voldoen aan patroon
+		vb: 1,$g/i/.-1s/./x/p	ga naar de regels met "i", ga 1 regel terug en vervang de eerste letter door x
+	
+	-					ga 1 regel terug 
+	---					ga drie regels terug 
+	-3					ga drie regels terug 
+	+ of <enter>				ga 1 regel vooruit 				
+	+4					ga vier regels vooruit 
+	.					staat voor nummer van huidige regel  //als commando ingegeven wordt huidige regel afgedrukt (net hetzelfde dus als het commando p)
+	.=					drukt nummer van huidige regel af
+	/string/				zoek voorwaards naar string
+	?string?				zoek achterwaards naar string
+	regel commando				voer commando uit op regel
+	reg,els commando			voer commando uit op range van regels
+	/string/ commando			voer commando uit op regel met patroon
+
+	
+
+							
+	
+	
+							##Git##
+							
+
+	
+	#Git aliases
+git config --global alias.afkorting cmds	//Vervangt afkorting door de ingegeven commands
+							
+
+	#Git commands
+							
+git add -A						//voegt nieuwe, aangepaste toe aan staging area en verwijdert verwijderde bestanden.					
+git commit -m 'message hier yo'				//commit en voeg message toe aan je commit *Na commit gaat branch en HEAD mee naar de nieuwe commit
+git commit -a -m "tekst"				//commit en voegt AANGEPASTE bestanden toe aan staging area. NIET nieuwe bestanden											
+git status -s						//geeft status weer van bestanden in 2 kolommen:	??: untracked	A: Added	M-=Modified + added		MM=Modified, added, modified
+git rm log/\*.log					//remove alle log files in git repository log dir. Escape * want mag niet door de shell geëxpand worden	
+git diff --staged	git diff --cached		//verschil tussen staged files en commited files
+checksum = 'versienummer'				//commit heeft checksum, directories hebben checksum en files hebben checksum
+git log --oneline --decorate --graph --all		//checksums + grafische voorstelling branches
+
+
+	#Git Moving around
+	
+^		git checkout HEAD^			//ouder van branch/HEAD		- checkout commit die voor HEAD komt
+^2 		git checkout HEAD^2			//kiest tweede ouder van HEAD(wanneer current commit komt uit een merge van twee commits)
+~3 		git branch -f master bugFix~3		//3e ouder van branch/HEAD 	- move branch master 3 commits voor bugFix
+
+
+				#Git branches
+	
+git checkout <branch>					//switchen van branch(= bep. branch HEAD maken)
+git checkout -b <branchname>				//branch aanmaken + van nieuwe branch HEAD maken
+
+git branch						//branches tonen + current branch
+git branch -d <branch>					//verwijdert branch
+git branch --merged					//gemergde branches tonen
+git branch --nomerged					//niet gemergde branches tonen
+git branch -f master HEAD~3				//Move(verplaats) de master branch 3 parents voor HEAD	
+
+git merge <branch>		vb: bij hotfix		//maak nieuwe commit aan met werk van beide branches, indien current branch parent is van <branch> verzet hij current branch naar zelfde commit als <branch>	
+								=> nadien is de hotfix niet meer nodig want hij staat als master en de oude mag dus verwijderd worden
+git rebase <branch>					//zet current branch onder <branch> (rebase onto <branch>), nadien merge met bv master nodig om master naar einde te krijgen
+git rebase <branch to rebase on> <branch to rebase>	
+git rebase --onto <branch to rebase on> <vanaf welke branchsplitsing> <branch to rebase>										
+	*rebase geen commits die reeds gepushed zijn naar een public repo
+
+     voorbeeld:
+	 
+									   H---I---J  topicB			
+                                      /
+                             E---F---G---K  topicA
+                            /
+               A---B---C---D  master
+			   
+			   
+	$ git rebase --onto master topicA topicB	   
+	
+			   
+			  			    H'--I'--J'  topicB
+                           /
+                           | E---F---G---K  topicA
+                           |/
+               A---B---C---D  master
+		
+		
+				
+				#Git moving branches, commits around
+	
+git branch -f <branchtomove> <placetomove>		//Verplaatst <branchtomove> naar de geekozen plaats
+git cherry-pick <commit> <commit2> <...>		//Verplaats gekozen commits onder HEAD
+git rebase -i <placetomoveto>				//Interactieve rebase: laat je toe te kiezen welke commits vanaf HEAD tot <placetomove> je onder <placetomove> wil
+	
+	
+			#Git reverting and resetting
+
+git reset HEAD~2					//reset commit 2 commits voor HEAD, alsof commits nooit gebeurd zijn. !!Geeft problemen op remote branches
+git revert 	branch/HEAD				//maakt nieuwe commit aan die veranderingen van laatste commit undo'd
+	
+	
+	#Git tags
+	
+git tag	[-l <pattern>] [-a]	<tag>[-lw] [commit]	//tags commits, -l <pattern> toont lijst van alle tags met bepaald patroon(bv 'v1.8.5*' ), -a annotate tag, -lw = lightweight (show toont minder info), [commit] tagt bepaalde commit adhv hash
+git show <tagname>					//toont info over tag
+git describe [place]	v1_2_gC2			//toont dichtste tag, hoeveel commits tussen tag en [place], en commit van place
+	
+	
+				#Git remote branches	
+**origin/master is de commit waarop de master branch van de remote server staat sinds de laatste fetch
+	
+git remote [-v]						//toont remote branch, met -v fetch en push remotes
+git remote add remotename <../remote.git>		//remote toevoegen
+git remote show remote					//toont informatie over remote
+git remote rename remote othername			//hernoemt remote naar othername (git remote -v toont namen)
+
+git clone <repo> <directory>				//clone van repository naar directory
+git clone --bare <repo> <directory>			//als je enkel wil pushen en fetchen(=geen working dir)	
+
+git fetch						//haal alle nieuwe commits binnen
+git fetch <remote>					//haal alle nieuwe commits op <remote> binnen	(= downloaden, niets verandert aan je local state!)
+git pull <remote>					//fetch + merge
+git pull --rebase <remote>				//fetch + rebase
+	
+	
+				#Git push and fetch parameters
+**<place> = lokale branch die remote branch trackt. bv foo en origin/foo, master en origin/master
+	
+git push <remote> <place>				//pusht alle commits die op local place die niet op remote aanwezig zijn naar remote place
+git push <remote> <source>:<destination>		//zelfde command, maar source:destination laat toe om te pushen naar een branch die niet getrackt wordt(nieuwe wordt aangemaakt als er geen bestaat)
+git push <remote> --tags				//pushes tags to remote
+git push <remote> :<branch>				//pushes nothing to destination branch -> removes branch
+
+git fetch <remote> <place>				//fetcht alle commits van place op de remote die niet aanwezig zijn lokaal en zet ze op place lokaal
+git fetch <remote> <source>:<destination>		//Git gaat naar de source branch op de remote en download alle commits die er lokaal niet zijn en zet ze onder de destination branch. (nieuwe branch wordt aangemaakt als er geen bestaat)
+git fetch <remote> :<branch>				//fetches nothing to destination branch -> creates new branch
+**je kan geen commits fetchen die gechecked out zijn 
+ 
+
+				#Git tracking branches
+	
+git checkout -b <branch> <remotebranch to track>	//new <branch> trackt <branch to track>(bv origin/hotfix)
+git checkout --track <remote branch to track>		//hudige branch trackt <branch to track>
+git branch -u <remote branch to track> <branch>		//<branch> trackt <branch to track>
+
+
+
+
+
+						##Shell scripting##
+						
+*Tijdens shellscript wordt er tijdelijk een nieuwe shell opgestart						
+							
+echo $PATH		/Toont de volgorde van de directories weer waarin de shell gaat zoeken naar een command. De eerste match wordt uitgevoerd.
+which command		//Toont het path waaruit het command wordt uitgevoerd.
+whereis command		//Toont alle paths waar het command gevonden wordt.
+
+
+	#HERE doc in shellscript		voorbeeld les 15 slide 27
+
+<< 'HERE'		//Alle speciale tekens in HERE doc verliezen betekenis
+<< HERE			//Geen enkel speciaal teken verliest betekenis
+<< HERE met \ in doc	//Teken na \ verliest betekenis		
+
+
+				#Shell variables in echo
+	
+naam=Gaston*
+	echo $naam
+		Gaston.Dude Gaston.Hier Gaston.Meernamen
+	echo "$naam"		// !! dubbele aanhalingstekens laten substitutie van variabelen toe, maar geen bestandsnaamexpansie.
+		Gaston*
+	echo \$naam
+		$naam
+	echo '$naam'		// !!  enkele aanhalingstekens laten geen substitutie van variabelen toe, en ook geen bestandsnaamexpansie
+		$naam			=> enkele aanhalingstekens maken speciale betekenis van elk karakter ongedaan 
+
+echo -e				//speciale tekens toelaten in echo
+						\b	backspace
+						\c	drukt regel af zonder cursor op volgende regel te plaatsen
+						\f	form feed
+						\n	newline (plaatst cursor op volgende regel)
+						\r	carriage return
+						\t	horizontale tab
+						\v	verticale tab
+						\\	backslash (heft speciale betekenis van backslash op)
+						\on	letterteken met octale waarde n uit ASCII tabel		
+		
+		
+		
+				#Shell variables
+
+
+. <shellscript>				puntcommando: zorgt ervoor dat shellscript door huidige shell wordt uitgevoerd
+( commands )				binnenin shellscript: zorgt ervoor dat er toch een nieuwe subshell wordt opgestart
+		
+#Omgevingsvariabelen
+	$CDPATH					zoekpad van cd commando
+							-directorynamen worden één voor één doorzocht om directory te vinden die als parameter werd doorgegeven aan cd commando
+							-huidige directory wordt doorzocht als variabele niet is ingesteld
+	$EDITOR					standaard editor
+							-bijvoorbeeld gebruikt door emailprogramma
+	$HOME					home directory van gebruiker
+	$IFS					lijst van veldscheidingstekens
+	$MAIL					mailboxbestand van gebruiker
+	$MAILCHECK				hoe vaak moet shell mailbox controleren(frequentie uitgedrukt in seconden)
+	$PATH					zoekpad van gebruiker: directories die door shell doorzocht worden om extern commando of programma te vinden				
+	$PS1					eerste shellprompt die op commandolijn verschijnt
+	$PS2					tweede shellprompt
+							-verschijnt op tweede lijn van commando als shell denkt dat commando nog niet volledig is ingegeven
+	$PWD					naam huidige directory
+	$TERM					type terminal waarop gebruiker aan het werken is
+	$0					naam van commando
+	$1-9					waarde van commandolijnargumenten 1-9
+	$*					waarde van alle commandolijnargumenten
+	$@					waarde van alle commandolijnargumenten
+							-elke argument wordt afzonderlijk tss dubbele aanhalingstekens geplaatst als $@ zelf tussen dubbele aanhalingstekens wordt geplaatst ("$@")
+	$#					aantal commandolijnargumenten
+	$$					procesidentifier (PID) van huidige proces
+	$PPID					procesidentifier van het ouderproces
+	$?					exit status van laatst uitgevoerde proces
+	$!					procesidentifier (PID) van laatste achtergrondproces
+
+env of printenv				//toont waarde omgevingsvariabelen
+							
+set							//zonder arg: toont waarde omgevingsvariabelen+gebruikersvariabelen
+set [opties] [argLijst]					//stelt waarde van $1, $2,.. in op die van argumenten uit argumentenlijst 	
+							//optie -- zorgt ervoor dat argumenten die volgen(en mss starten met -) geen opties van set zijn, maar argumenten
+	$ set $(date)
+	$ echo "$@"
+	Tue Jan 06 22:24 CET 2015
+
+			
+unset variabele				//geheugen ingenomen door variabele wordt vrijgegeven
+	
+export naamvariabele			//exporteert naam naar elke subshell die hierna wordt uitgevoerd
+						!! elk nieuw shellscript start een kindproces(subshell) op
+						!! je kan geen variabele van subshell doorgeven naar shell
+
+readonly naam				//Waarde van variabelen wordt "bevroren"
+					//Zonder argumenten: geeft lijst van symbolische constanten.							
+							
+$0 					variabele voor commandnaam, $1, $2,...(max $9) voor eerste, tweede,.. argument
+${10}, ${11},... 			variabele voor 10, 11,...
+$@					verwijst naar alle argumenten
+
+**accolades gebruiken indien naam van variabele niet meteen duidelijk is
+	cp /staff/fwet/pdawyndt/$SUBDIR/project		//variabele SUBDIR
+	cp /staff/fwet/pdawyndt/${SUBDIR}/project	//variabele SUBDIR
+	cp /staff/fwet/pdawyndt/${SUB}DIR/project	//variabele SUB gevolgd door string DIR
+
+declare -xargs			//toont alle variabelen
+						
+read naam plaats		//Read leest 1 regel uit stdin en kent velden uit die regel in volgorde toe aan variabelen(naam en plaats).
+						//velden gescheiden door delimiter in $IFS
+								#velden > #variabelen	=>	resterende velden toegekend aan laatste variabele.
+								#velden < #variabelen	=>	lege string toegekend aan laatste variabelen.
+						//Geeft true als regel wordt uitgelezen, false bij EOF.
+						
+$(commando)			//voert commando uit in nieuw process en print naar stdout
+of $((commando))		//wiskundige expressies
+of `commando` (oud)		` `	= backticks
+
+
+
+			#Substrings
+
+${naam:-standaardwaarde}		wordt vervangen door waarde van variabele naam
+						//indien naam leeg(of niet gedeclareerd): vervangen door standaardwaarde
+${naam:=standaardwaarde}		zelfde, maar nadien wordt standaardwaarde toegekend aan naam
+${naam:?foutboodschap}			indien naam leeg(of niet gedeclareerd): foutboodschap naar stderr								
+${naam:offset[:lengte]}			vervangen door substring van variabele naam, verwijdert eerste offset karakters
+						//behoudt lengte karakters van overgebleven tekenreeks (alles behouden indien geen lengte)
+	
+	$ export STRING="ditiseenzeerlangenaam"
+	$ echo ${STRING:8:9}
+	zeerlange
+
+${#variabele}			geeft aantal karakters in variabele terug
+
+${naam operator patroon}	//Wordt vervangen door waarde van variabele naam en verwijdert prefix of suffix die overeenkomt met patroon. (op patroon wordt expansie toegepast)
+				//Als naam * of @ is, dan wordt het toegepast op elk positioneel argument(als naam array is met index *(of @), toegepast op alle elementen).
+				//Operatoren:
+					# / ##  //Verwijdert prefix met shortest/longest match
+					% / %%  //Verwijdert suffix met shortest/longest match
+	
+	
+
+			#Arrayvariabelen
+
+array=(elem1 elem2 ... elemN)		declaratie van arrayvariabele met N elementen
+	
+	array[i]=element			kent i-de index van array toe aan element
+	echo ${array[i]}			geeft element op i-de index terug(startend vanaf 0)
+	echo ${array[@]} of [*]			geeft alle elementen terug
+	echo ${#array[@]} of [@]		geeft lengte array terug
+	
+
+				
+				#Command line arguments
+	
+./script.sh 1 2\ 3		//wordt gezien als 2 argumenten want spatie wordt geescaped(zelfde als tussen '')
+of ./script.sh 1 '2 3'		// !! #@ geeft nog stees 3 argumenten, "#@" geeft 3 want de grenzen worden beschermd.						
+	
+shift N				//Schuift commandolijnargumenten N posities naar links (tweede arg -> $1, derde arg, -> $2, ...)
+				// !! eerste arg valt weg, dus ook niet meer toegankelijk met #@
+
+xargs commando			//leest stdin, roept commando op met ingelezen waarden als argumenten(alternatief voor problemen met exec-buffer)
+
+
+
+				#Controlestructuren
+# [ en [[
+
+Contrary to [, [[ prevents word splitting of variable values. So, if VAR="var with spaces", you do not need to double quote $VAR in a test - eventhough using quotes remains a good habit.
+Also, [[ prevents pathname expansion, so literal strings with wildcards do not try to expand to filenames.
+Using [[, == and != interpret strings to the right as shell glob patterns to be matched against the value to the left, for instance: [[ "value" == val* ]].
+				
+				
+# $(( ))
+
+$(( EXPRESSION ))
+The expression is treated as if it were within double quotes, but a double quote inside the parentheses is not treated specially.
+All tokens in the expression undergo parameter expansion, command substitution, and quote removal. Arithmetic substitutions may be nested.				
+Within an expression, shell variables may also be referenced by name without using the parameter expansion syntax.				
+				
+				
+#if-then-else
+
+	if voorwaarde
+	then
+		instructies
+	elif voorwaarde2
+	then
+		insstructies
+	...
+	fi
+	
+	
+#case
+
+	case test-string in					//test-string is bv variabele met invoer van gebruiker
+		patroon1)	instructies				
+					;;			//zonder ;; worden instructies volgende blok ook uitgevoerd
+		patroon2)	instructies
+					;;
+			   *)	instructies			//dient voor optie die niet in lijst staat
+					;;
+	esac
+	instructies
+
+
+#for-loop							//kent per stap argument uit arglijst toe aan variabele
+
+	for variabele [in arglijst]				//zonder "in" wordt commandolijnargumenten gebruikt
+	do
+		instructies
+	done
+	
+	
+#while-loop
+
+	while voorwaarde
+	do
+		instructie1
+		...
+		break/continue					//break: ga naar instructie3
+		...						//continue: ga naar voorwaare(begin loop)
+		instructie2
+	done
+	instructie3
+
+
+#until-loop
+
+	until voorwaarde
+	do
+		insstructies
+	done
+	
+		
+	#tests
+	
+test [ expressie ]			//test de expressie aan bepaale voorwaarden, geeft waar($? = 0) of vals($? != 0) terug.
+of [[ expressie ]]
+:					//null-commando ':' geeft true als resultaat
+
+  //bestanden
+	-d bestand			waar als bestand een directory is
+	-f bestand			waar als bestand een gewoon bestand is
+	-r bestand			waar als bestand leesbaar is
+	-s bestand			waar als bestand niet leeg is (? 0 bytes)
+	-t filedes			waar als file descriptor filedes geassocieerd is met de terminal
+	-w bestand			waar als bestand schrijfbaar is
+	-x bestand			waar als bestand uitvoerbaar is
+	
+  //getallen
+	int1 -eq int2			waar als int1 en int2 gelijk zijn
+	int1 -ge int2			waar als int1 groter of gelijk is aan int2
+	int1 -gt int2			waar als int1 groter is dan int2
+	int1 -le int2			waar als int1 kleiner of gelijk is aan int2
+	int1 -lt int2			waar als int1 kleiner is dan int2
+	int1 -ne int2			waar als int1 niet gelijk is aan int2
+
+  //strings
+	str				waar als str niet de lege string is
+	str1 == str2			waar als str1 en str2 gelijk zijn
+	str1 != str2			waar als str1 en str2 verschillend zijn
+	-n str				waar als de lengte van str groter is dan nul
+	-z str				waar als de lengte van str gelijk is aan nul
+
+  //operatoren
+	!expr				waar als expr onwaar is
+	expr1 -a expr2			waar als str1 en str2 beide waar zijn
+	expr1 -o expr2			waar als minstens 1 van expr1 en expr2 waar zijn
+	( expr )			groeperen van expressies !!spatie voor en na haakje
+
+
+			#Procescontrole overnemen
+
+file descriptors:	gehele getallen die verwijzen naar datastromen geassocieerd met proces	
+	stdin		fd 0
+	stdout		fd 1
+	stderr		fd 2	
+	
+exec <commando>:	overschrijft calling proces met commando
+	
+	exec < bestand			opent bestand om te worden gelezen
+						//koppelt stdin van proces aan bestand
+	exec > bestand			opent bestand om te worden geschreven
+						//koppelt stdout van proces aan bestand (overschrijven)
+	exec >> bestand			opent bestand om te worden geschreven
+						//koppel stdout van proces aan bestand (toevoegen)
+	exec n< bestand			opent bestand om te worden gelezen
+						//koppelt bestand aan fd n
+	exec n> bestand			opent bestand om te worden geschreven (overschrijven)
+						//koppeelt bestand aan fd n 
+	exec n>> bestand		opent bestand om te worden geschreven (toevoegen)
+						//koppelt bestand aan fd n
+	exec n>&m			koppelt fd n aan fd m
+						//alles wat naar bestand met fd n wordt geschreven wordt ook naar bestand met fd m geschreven
+	exec n<< here			opent 'here document' om te worden gelezen 
+			 ...			//koppelt 'here doc' aan fd n
+			 here
+
+	exec <&- 				afsluiten van stdin
+	exec >&-				afsluiten van stdout
+	exec n<&-				afsluiten van file descriptor n
+							//fd wordt gebruikt als inputkanaal => werd geopend om te lezen
+	exec n>&-				afsluiten van file descriptor n
+							//fd wordt gebruikt als outputkanaal => werd geopend om te schrijven
+		
+
+			#Numerieke verwerking
+	
+expr args:	evalueert args als (numerieke) expressie en schrijft resultaat weg naar stdout
+			!!zorgt voor conversie naar gehele getallen, evaluatie expressie en conversie van resultaat naar tekenreeeks
+					
+	exp \| exp					geef waarde eerste expr terug indien niet null of 0, anders tweedee expressie
+	exp \& exp					geef waarde eerste expr terug indien beide expr niet null of 0 zijn, anders geef 0 terug
+	=, \>, \>=, \<, \<=, !=				vergelijkingsoperatoren voor gehele getalleen
+	+, -, \*, /, %					wiskundige operatoren voor gehele getallen (deling is gehele deling)
+					
+		
+			#Shell functies
+	
+functienaam () {
+	commandolijst
+}
+
+**kunnen return values hebben
+	
+	functie () {
+		if [[ ... ]]
+		then
+			return $getal
+		fi
+	}	
+	==>	$? is dan $getal
+	
+	
+			#Debuggen
+	
+bash 
+	- Vlaggen:
+		-x	echo		toont elke regel van shellscript na substitutie van variabelen, maar voor uitvoer commando's
+		-v	verbose		toont elke originelee regel uit shellscript voor uitvoer commando's
+
+		
+			#Commando-opties
+	
+getopts optstring variabelenaam:		haalt volgende optie van commandolijn een kent die toe aan variabele met naam gegeven als argument
+										//exit status 0 als er nog een optie gevonden werd, 1 als er geen meer zijn
+										//opstring bestaat uit letters en dubbelpunten
+										//letter gevolgd door dubbelpunt staat voor optie met verplicht argument
+
+	while getopts ":ab:" opt				//dubbelpunt aan begin onderdrukt generen van foutmelding door getopts
+	do
+		case $opt in
+			a )	instructie1
+				;;
+			b )	instructie2
+				$OPTARG bevat arg b		//$OPTARG is variabele waarin argument wordt opgeslagen
+				;;
+			\?)	instructie3			//voor ongeldige optie
+				;;
+		esac
+	done
+	shift $((OPTIND - 1))					//$OPTIND houdt positie van volgende arg bij dat verwerkt moet worden
+						
+					
+					
+					##SHTML en XML##
+						
+zowel niet-verwerkte als verwerkte algemene en parameterentiteiten mogelijk
+
+algemene entiteiten: naam toevoegen aan taal
+parameterentiteiten: naam toevoegen aan DTD
+
+
+
+
+
+
+
+
+

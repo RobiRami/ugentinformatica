@@ -1,0 +1,137 @@
+
+1)
+
+echo "Lmiyj od ,u jrtp" | tr "WERTYUIOP{SDFGHJKL:"XCVBNM<wertyuiop[sdfghjkl;'xcvbnm," "QWERTYUIOPASDFGHJKL;ZXCVBNMqwertyuiopasdfghjkl;zxcvbnm"
+echo "Jr;;p ept;f" | tr "WERTYUIOP{SDFGHJKL:"XCVBNM<wertyuiop[sdfghjkl;'xcvbnm," "QWERTYUIOPASDFGHJKL;ZXCVBNMqwertyuiopasdfghjkl;zxcvbnm"
+
+2)
+
+---PVERSCHA: Ik heb hier een commando dat werkt
+
+find /usr/share/doc -regex '.*game[^/]*\.pdf' -exec pdfinfo -meta '{}' 2> /dev/null \; | grep "Pages: \+[0-9]*$" | sed 's/^.* \+\([0-9]*\)$/\1/' | paste -sd+ | bc
+
+---JMARBAIX: Hier is een licht korter commando
+
+find /usr/share/doc -name *game*.pdf -exec pdfinfo -meta {} \; | grep '^Pages:' | tr -d 'Pages:\t' | paste -sd+ | bc
+
+---PVERSCHA
+
+### NISTRIJB: Hier is een alternatief met sed
+
+find /usr/share/doc -name *game*.pdf -exec pdfinfo -meta {} \; | sed -n 's/^Pages: *\(.*\)$/\1/p' | paste -sd+ | bc
+
+### NISTRIJB
+
+%%%%RBMAERTE:
+Alternatief gebruik van sed (blijkbaar kun je dus ook "pipen" in sed zelf met ; )
+find ~ -name "*game*.pdf" -exec pdfinfo -meta {} \; 2> /dev/null | sed '/Pages:/!d;s/[^0-9]*\([0-9]*\)/\1/;' | paste -sd+ | bc
+%%%%%RBMAERTE:
+
+@Mathieu: Ik heb jouw commando even verwijdert omdat het toch niet helemaal werkt zoals hoort ;)
+
+3)
+
+lines=(
+    A----A----------A----A-A--AAAA-
+    -CC----CCCC-C-----CCC-C-------C
+    ------G----G--G--G------G------
+    ---TT--------T-T---------T-----
+)
+
+result=""
+for ((i=0;i<${#lines};i++)) ;do
+    chr=- c=0
+    for ((l=0;l<${#lines[@]};l++)) ;do
+        [ "${lines[l]:i:1}" != "-" ] &&
+            chr="${lines[l]:i:1}" &&
+            ((c++))
+      done
+    result+=$chr
+    [ $c == 0 ] && printf 'Char #%d not replaced.\n' $i
+    [ $c -gt 1 ] && printf "Conflict at char #%d.\n" $i
+  done
+echo $result
+//Kweet dat het eruit ziet als een script, maar het werkt ook op de commando lijn. :D
+Credit:http://stackoverflow.com/questions/27764388/bash-merging-4-lines-in-4-files-into-one-single-file
+@Mathieu: Het werkt idd op de cmd-line, maar kdenk niet dat dit de bedoeling is. Kga ies kijken of ik iets kan vinden
+dat op 1 regel werkt
+
+#### NISTRIJB One liner voor 3). Werkt met alle sanger.* bestanden.
+
+eval paste $(eval echo "sanger.* | xargs -I% -d' ' echo '<(cat % | fold -w1 )'") | tr -d '\t\n-' && echo
+
+#### NISTRIJB ####
+
+%%%%RBMAERTE: zonder eval voor de gewone stervelingen:
+paste <(cat sanger.a | fold -w1) <(cat sanger.c | fold -w1) <(cat sanger.g | fold -w1) <(cat sanger.t | fold -w1)  | tr -d "\t\n-"; echo
+%%%%
+
+4)
+
+---PVERSCHA:    Ik heb een script gemaakt dat werkt en op 1 regel (zoals gevraagd)
+                Blijkbaar werkt command substitution binnen quotes :)
+
+#! /bin/bash
+
+cat $1 | sed "s/\(.*\)/echo \1%$(cat $1 | sed -n '1p') | bc | grep '0' /" | bash | wc -l | sed 's/\(.*\)/echo "\1-1" | bc/' | bash
+
+---PVERSCHA
+
+%%%RBMAERTE:
+Ongeveer hetzelfde als niko
+sed '1d' $1 | sed "s/^.*$/(&%$(sed '1q' $1))/g" | bc | sed '/[^0]/d' | grep -c "0"
+%%%%%%%%%
+
+### NISTRIJB: Hetzelfde principe als dat van Pieter, enkel wat korter (en sneller, tot 60%): 
+
+sed "s/\(.*\)/echo \1 % $(head -n1 $1) | bc /" <(tail -n+2 $1) | bash | grep -c '0'
+
+####
+
+ANDERE INGEWIKKELDERE OPLOSSING VOOR 4
+
+#!/bin/bash
+
+bestand=$1
+
+#kijkt of het bestand wel degelijk een bestand is
+
+if [ ! -e $1 ]; then
+        echo "syntaxis: $0 <bestand met natuurlijke getallen>" 1>&2
+        exit 1
+fi
+
+#kijkt of het bestand enkel natuurlijke getallen bevat
+
+while read number
+do
+        if ! test "$number" -gt 0 2> /dev/null
+        then
+                echo "syntaxis: $0 <bestand met natuurlijke getallen>" 1>&2
+                exit 1
+        fi
+done < $bestand
+
+
+deler=$(cat $1 | head -n1)
+
+i=1
+j=0
+
+#kijkt op welke lijn een getal staat dat deelbaar is door het eerste getal, en slaat hierbij de eerste lijn over
+
+while read number
+do
+        if [ "$i" -ne 1 ]
+        then
+                if test `echo "$number % $deler" | bc` -eq 0
+                then
+                        j=$((j+1))
+                fi
+        else
+                i=$((i+1))
+        fi
+done < $bestand
+
+echo $j
+

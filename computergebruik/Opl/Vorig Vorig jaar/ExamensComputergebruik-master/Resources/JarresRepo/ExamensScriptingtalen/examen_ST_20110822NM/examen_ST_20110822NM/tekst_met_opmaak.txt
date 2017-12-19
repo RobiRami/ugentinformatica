@@ -1,0 +1,6 @@
+\s18.\bOPMAAK voorbeeld\b\s
+\*Gebruik het commando \b om vette tekst weer te geven.\*
+Gebruik het commando \\i als je iets wilt \ibenadrukken\i.
+Gebruik een \s14GROOT\s lettertype voor titels: doorgaans volstaat 14 punten.
+Onthoud dat alle commando's schakelen, behalve het commando \\s.
+Er kan \*ook \bmeerdere\b keren\* \iper\i regel \*\bgeschakeld\b worden.\*

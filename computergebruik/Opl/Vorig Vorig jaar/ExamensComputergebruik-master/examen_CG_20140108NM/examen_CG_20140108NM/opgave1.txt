@@ -1,0 +1,70 @@
+### OPGAVE 1 ##########################################################
+Rien
+
+1. cat spelout.txt | sed 's/^\([0-9]*\) \(.*\)$/echo "\2" \| cut --complement -c\1/g' | bash
+
+
+2.
+
+a)
+cat troonrede.txt | sed 's/^\(.\).*$/\1/g' | tr -d "\n"
+
+b)
+#!/bin/bash
+cat $1 | sed 's/^\(.\).*$/\L\1/g' | tr -d "\n" | comm -12 /dev/stdin <(sort words.txt)
+#Met words.txt een locale kopie van /usr/share/dict/words
+
+Mathieu:
+cat $1 | cut -c 1 | tr -d '\n' | tr "[:upper:]" "[:lower:]" | comm -12 /dev/stdin <(sort /usr/share/dict/words)
+
+3.
+#!/bin/bash
+text=$(echo $* | tr -d " " | sed 's/[x+]/ & /g')
+sum=$(echo $text | sed 's/[x+]/)&(0/g' | sed 's/[|]/+1/g' | sed 's/^.*$/(0&)/g' | tr "x" "*" | bc)
+tandestokers=$(echo $text | tr "|x+" "122" | sed 's/[^0-9]\|\([0-9]\)/\1/g' | sed 's/./+&/g' | sed 's$
+echo "$text = $sum ($tandestokers tandestokers)"
+
+4.
+#!/bin/bash
+find $1 -name "*.$2" -exec grep -n "$3" {} +
+
+#### NISTRIJB alternatief
+
+grep -nr --include \*.$2 "$3" $1
+
+#### NISTRIJB ####
+
+
+
+
+
+
+### OPGAVE 1 ##########################################################
+Julien
+
+1)
+
+<plaats hier je commando>
+
+2.a)
+
+cat $1 | cut -c 1 | tr -d '\n' | comm -12 /dev/stdin <(sort /usr/share/dict/words)
+
+2.b)
+
+#!/bin/bash
+
+cat $1 | cut -c 1 | tr -d '\n' | tr "[:upper:]" "[:lower:]" | comm -12 /dev/stdin <(sort /usr/share/dict/words)
+
+Uitkomst:
+./acrostichon troonrede.txt
+./acrostichon wakker.txt
+wakker
+
+3)
+
+<plaats hier de inhoud van het shell script tandenstokers>
+
+4)
+
+<plaats hier de inhoud van het shell script broncode>

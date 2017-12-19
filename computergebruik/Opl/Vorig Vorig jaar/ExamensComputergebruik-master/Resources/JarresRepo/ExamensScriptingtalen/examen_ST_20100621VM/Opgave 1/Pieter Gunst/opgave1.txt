@@ -1,0 +1,78 @@
+### OPGAVE 1 #########################################################
+
+# Klote wiskundige bewerkingen in bash! Iemand die weet hoe je da makkelijker doet?
+
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+        month=`date +%m`
+        year=`date +%Y`
+elif [ $# -eq 2 ]
+then
+        month=$1
+        year=$2
+else
+        echo "syntax biatch"
+        exit 1
+fi
+
+month=`echo "$month/1" | bc`
+if [ $month -lt 10 ]
+then
+        month="0$month"
+fi
+
+
+p=29.530588853
+nieuw=`echo "$p/4" | bc`
+eerste=`echo "$p/2" | bc`
+volle=`echo "$p/4*3" | bc`
+
+
+
+jdn () {
+        str=$1
+        dd=${str:0:2}
+        mm=${str:3:2}
+        jjjj=${str:6:4}
+        a=`echo "(14-$mm)/12" | bc`
+        y=`echo "$jjjj+4800-$a" | bc`
+        m=`echo "12*$a-3+$mm" | bc`
+        jdn=`echo "$dd+(153*$m+2)/5+365*$y+$y/4-$y/100+$y/400-32045" | bc`
+        echo -n $jdn
+}
+
+maanstand () {
+        str=$1
+        d1=`jdn $str`
+        d2=`jdn "06-01-2000"`
+        dr=`echo "$d1-$d2" | bc`
+        dn=`echo "($dr % $p)/1" | bc`
+        if [ $dn -le $nieuw ]
+        then
+                echo -n "@"
+        elif [ $dn -le $eerste ]
+        then
+                echo -n ")"
+        elif [ $dn -le $volle ]
+        then
+                echo -n "O"
+        else
+                echo -n "("
+        fi
+}
+
+for (( x=1; x<=31; x++ ))
+do
+        if [ $x -lt 10 ]
+        then
+                stand=`maanstand "0$x-$month-$year"`
+        else
+                stand=`maanstand "$x-$month-$year"`
+        fi
+        echo -n $x$stand
+done
+echo ""
+exit 0
+

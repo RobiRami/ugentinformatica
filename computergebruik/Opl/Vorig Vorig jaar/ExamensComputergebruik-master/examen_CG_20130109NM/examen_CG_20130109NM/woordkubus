@@ -1,0 +1,2 @@
+#!/bin/bash
+paste <(cat /usr/share/dict/words | sed "s/$1//I;s/$2//I;s/$3//I;s/$4//I;s/$5//I;s/$6//I;s/$7//I;s/$8//I;s/$9//I") /usr/share/dict/words | grep -P '^\t' | grep -i "$5" | tr -d '\t' | grep '....'

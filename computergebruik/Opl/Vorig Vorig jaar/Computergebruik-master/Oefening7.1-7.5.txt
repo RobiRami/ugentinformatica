@@ -1,0 +1,41 @@
+--------------
+|Oefening 7.2|
+-------------
+2.Branches, info, logs, objects, HEAD, ORIG_HEAD, index .... : bestanden die git nodig heeft.
+
+4.Het bestand is untracked m.a.w. git houd de geshiedenis van dit bestand niet bij en het bestand wordt
+ook niet tussen de bestanden van een branch gerekend.
+
+6.Het bestand is klaar om gecommit te worden, waardoor het door git wordt getracked.
+
+11. Je krijgt niets te zien, diff geeft de wijzigingen weer die nog niet gestaged zijn. 
+Om de wijzigingen te zien tussen commits moet je 'git show' gebruiken'.
+
+15. Met git rm kun je het bestand later nog herstelen, maar met de gewone rm verlies je het bestand definitief.
+
+--------------
+|Oefening 7.3|
+--------------
+9. De twee branches worden gemerged, maar er is een conflict.
+
+10. In het bestand README staan de regels van alletwee de bestanden opgeslagen, zodat je zelf kunt kiezen
+welke regels je wilt houden en welke niet.
+
+-------------- 
+|Oefening 7.4|
+--------------
+4. Ja, deze grafiek geeft de geschiedenis weer van de branches en commits.
+
+7. Je kunt niet pushen wanneer er al wijzigingen zijn gebeurd door iemand anders. Je moet eerst de nieuwe files
+pullen en samenvoegen met je eigen files om te kunnen pushen.
+
+11. Ik krijg geen foutmelding.
+De -f vlag zal nergens rekening mee houden, dus in geval van een foutmelding is dit niet slim, de kans dat er
+werk verloren gaat is dan groot.
+
+-------------- 
+|Oefening 7.5|
+--------------
+5. Het pushen mislukt omdat de branch niet up-to-date is. Je kunt met de -f vlag deze actie wel forceren.
+
+6. Je kunt git pull of git fetch gebruiken zodat je branch wel terug up-to-date is.

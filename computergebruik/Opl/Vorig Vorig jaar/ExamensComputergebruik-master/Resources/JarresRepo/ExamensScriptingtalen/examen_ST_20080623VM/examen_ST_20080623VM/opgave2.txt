@@ -1,0 +1,5 @@
+##### Opgave 2: script #####
+<Plaats hier code van script>
+
+##### Opgave 2: uitvoer #####
+<Plaats hier ingekorte uitvoer van script>

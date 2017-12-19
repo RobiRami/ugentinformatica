@@ -1,0 +1,33 @@
+Option Explicit
+'verticale bitmap-codering zit er nog niet in maar dat is gewoon kwestie van kleurcodes tellen in een lusje
+
+Dim numberOfConfigs As Integer
+
+Sub Bepaalbitmap()
+    ActiveSheet.Cells.ColumnWidth = 1.8
+    ActiveSheet.Cells.Interior.Color = 12632256
+    Columns("A:A").Select
+    Columns("A:A").EntireColumn.AutoFit
+    numberOfConfigs = Range("A2").End(xlDown).Row
+    Dim i As Integer
+    For i = 2 To numberOfConfigs
+        Dim config() As String
+        config = Split(Range("A" & i & ":A" & i).Value, "),(")
+        Dim x As Integer
+        For x = 0 To UBound(config)
+            config(x) = Replace(config(x), "(", "")
+            config(x) = Replace(config(x), ")", "")
+            Dim kommapos As Integer
+            kommapos = InStr(config(x), ",")
+            Dim firstIndex As Integer
+            firstIndex = Val(Mid(config(x), 1, kommapos))
+            Dim drawlength As Integer
+            drawlength = Val(Right(config(x), Len(config(x)) - kommapos))
+            kleurHokjes i, firstIndex, drawlength
+        Next x
+    Next i
+End Sub
+
+Sub kleurHokjes(rij, startkolom, lengte)
+    ActiveSheet.Range(Cells(rij, startkolom + 1), Cells(rij, startkolom + lengte)).Interior.Color = 1
+End Sub

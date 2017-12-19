@@ -1,0 +1,2 @@
+#!/bin/bash
+find $1 -name "*.$2" -exec wc -l {} + 2> /dev/null | sed -n '$p' | sed 's/ \(.*\) .*$/\1/g'

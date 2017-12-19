@@ -1,0 +1,25 @@
+### OPGAVE 3 ##########################################################
+
+1.a) commando: cat qr.txt | egrep '^ *(#+ ?)* *\|.*$'
+     aantal: 36
+
+1.b) commando: cat qr.txt | grep '\(......\).*\1.*\1.*|.*$'
+     aantal: 2539
+
+1.c) commando: cat qr.txt | egrep '^ *((##)* *)*\|.*$'
+     aantal: 13
+
+1.d) commando: cat qr.txt | egrep -v ' +(#+) +\1#.*\|'
+     aantal: 1216
+
+2.a) commando: cat qr.txt | grep '\(......\).*\1.*\1.*|.*$' | egrep '^ *(#+ ?)* *\|.*$'
+     woord: just
+
+2.b) commando: cat qr.txt | egrep '^ *((##)* *)*\|.*$' | grep '\(......\).*\1.*\1.*|.*$'
+     woord: another
+
+2.c) commando: cat qr.txt | egrep -v ' *(#+) +\1#.*\|' | egrep '^ *((##)* *)*\|.*$'
+     woord: manic
+
+2.d) commando: cat qr.txt | egrep '^ *(#+ ?)* *\|.*$' | egrep -v ' +(#+) +\1#.*\|'
+     woord: monday

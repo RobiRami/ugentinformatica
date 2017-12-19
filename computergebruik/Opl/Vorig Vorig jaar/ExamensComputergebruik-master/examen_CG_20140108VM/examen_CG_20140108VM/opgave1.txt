@@ -1,0 +1,76 @@
+### OPGAVE 1 ##########################################################
+
+1)
+
+cat letters.txt | sed 's/\(^.*\) \(.*$\)/echo \1 | cut -c\2/' | bash | tr -d '\n'
+#uitkomst: dooier
+(maakt van het bestand letters.txt een uitvoerbaar bash script)
+
+2)
+
+#!/bin/bash
+
+padnaam=$1
+
+if [ ! -f "$padnaam" ]; then
+
+	echo "syntaxis: $0 <padnaam naar bestand>" 1>&2
+	exit 1
+fi
+
+antwoord=$(cat $padnaam | tr -cd [:alpha:])
+
+3)
+---PVERSCHA: Ik heb iets efficiënter voor dit script gevonden:
+
+#! /bin/bash
+
+eval echo {1..$1} | tr ' ' '\n' | sed 's/\(.\)/\1\n/g' | sed '/^$/d' | paste -sd-+ | bc
+
+---PVERSCHA
+
+### NISTRIJB: Ik heb een nog efficiëntere oplossing gevonden:
+
+seq 1 $1 | fold -w1 | paste -sd-+ | bc
+
+### NISTRIJB ###
+
+#!/bin/bash
+
+nummer=$1
+
+if ! test "$nummer" -eq "$nummer" 2> /dev/null ; then
+	echo "syntaxis: $0 <cijfer>" 1>&2
+	exit 1
+elif [ "$nummer" -le 0 ]; then
+	echo "cijfer moet groter zijn dan 0." 1>&2
+	exit 1
+fi
+
+i="1"
+j="2"
+while [ "$j" -le "$nummer" ]
+do
+	i="$i$j"
+	j=$((j+1))
+done
+
+echo $i | sed 's/\(.\)\(.\)/\1-\2+/g' | sed 's/[-+]$//' | bc
+
+
+4)
+---PVERSCHA: Ik heb het vorig script volledig vervangen door dit script omdat hier geen problemen inzitten (normaalgezien;)
+#! /bin/bash
+
+for line in $(find $1 -type f -mtime -1)
+do
+	cp $line $line.$(date +'%Y%m%d')
+done
+---PVERSCHA
+
+### NISTRIJB - Ik heb hier de onliner van het werkcollege ###
+
+find $1 -type f -atime -1 -exec cp {} {}.$(date +%Y%m%d) \;
+
+### NISTRIJB ###
+

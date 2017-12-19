@@ -1,0 +1,3 @@
+#!/bin/bash
+cat $1 | sed 's/^\(.\).*$/\L\1/g' | tr -d "\n" | comm -12 /dev/stdin <(sort words.txt)
+

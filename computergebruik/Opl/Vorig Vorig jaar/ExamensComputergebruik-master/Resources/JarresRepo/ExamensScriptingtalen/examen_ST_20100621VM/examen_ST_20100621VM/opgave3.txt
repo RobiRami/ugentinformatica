@@ -1,0 +1,3 @@
+### OPGAVE 3 #########################################################
+
+<plak hier je code van het awk script eiwitvouwen.awk>

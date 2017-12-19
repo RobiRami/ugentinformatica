@@ -1,0 +1,9 @@
+- alles wordt in holdbuffer gestoken
+- op eerste lijn marker %
+- op eerste lijn getallen marker %
+- eenmaal de laatste lijn bereikt wordt, alles uit holdbuffer halen, substitueren
+- overbodige dingen (bv. 31 als er een maand is met minder dagen, markers, overb newlines)
+verwijderen
+- pattern space uitschrijven
+
+--> dit kan uiteraard ook lijn per lijn, maar dit was het eerste dat in me opkwam :)

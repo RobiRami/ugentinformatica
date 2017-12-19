@@ -1,0 +1,4 @@
+#!/bin/bash
+
+paste -d"\0" $* | sort | uniq -c | sort -nr | head -n26 | cut -c9-
+

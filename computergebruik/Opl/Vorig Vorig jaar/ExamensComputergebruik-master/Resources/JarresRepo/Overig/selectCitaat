@@ -1,0 +1,14 @@
+#!/bin/bash
+match=0
+match2=`expr $1 - 1`
+count=1
+while [ $match -lt $match2 ]; do
+if  [ "$(sed -n "${count}p" citaten.txt)" =  "%%" ]; then
+match=$((match+1))
+fi
+count=$((count+1))
+done
+until [ "$(sed -n "${count}p" citaten.txt)" =  "%%" ]; do
+sed -n "${count}p" citaten.txt
+count=$((count+1))
+done

@@ -1,0 +1,60 @@
+*********************************************************
+| DROPBOX MET VEEL INFO OVER EXAMEN CG, DOWNLOADEN!!!   |
+| https://www.dropbox.com/sh/6s3k8dodcns2aet/-yqdsV8LAK |
+*********************************************************
+------------------------------------------------
+ 
+BASH:
+http://www.linuxmanpages.com/                                                   //Man pages voor linux commands
+http://explainshell.com/                                                        //Unix commands ontleden
+ 
+------------------------------------------------
+ 
+VIM:
+http://www.fprintf.net/vimCheatSheet.html                                       //Lijst vim commands & shortcuts
+http://glaciated.org/vi/                                                        //VI guide
+http://www.openvim.com/                                                         //vim online leren
+------------------------------------------------
+ 
+REGEX:
+http://www.regexper.com/                                                        //Regex diagrammen
+http://regexpal.com/                                                            //Regex Tester
+http://regex101.com/                                                            //Regex Tester
+http://gskinner.com/RegExr/                                                     //Regex Tester
+http://pastebin.com/T8nLasRD                                                    //Opl. Regex v. voorgaande examens
+ 
+------------------------------------------------
+ 
+LATEX:
+http://detexify.kirelabs.org/classify.html                                      //LaTeX symbolen tekenen
+http://www.artofproblemsolving.com/Wiki/index.php/LaTeX:Commands                //Lijst LaTeX commandos
+http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf                    //Lijst met LaTeX symbolen
+http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf      //Gigantische lijst LaTeX symbolen
+http://www.tablesgenerator.com/                                                 //LaTeX tabel generator
+http://www.codecogs.com/latex/eqneditor.php                                     //LaTeX vergelijking generator
+ 
+------------------------------------------------
+ 
+XHTML:
+http://www.w3schools.com/html/default.asp                                       //HTML resources
+http://validator.w3.org/                                                        //XHTML validator
+ 
+------------------------------------------------
+ 
+CSS:
+http://www.w3schools.com/css/default.asp                                        //CSS resources
+http://www.w3schools.com/cssref/css_selectors.asp                               //CSS Selectors
+http://www.image-maps.com/                                                      //Image mapping tool
+
+------------------------------------------------
+
+GIT:
+http://git-scm.com/book/en/v2
+
+------------------------------------------------
+
+SED:
+https://www.gnu.org/software/sed/manual/sed.html#sed-Programs
+http://www.catonmat.net/blog/sed-one-liners-explained-part-one/
+http://www.catonmat.net/blog/sed-one-liners-explained-part-two/
+http://www.catonmat.net/blog/sed-one-liners-explained-part-three/

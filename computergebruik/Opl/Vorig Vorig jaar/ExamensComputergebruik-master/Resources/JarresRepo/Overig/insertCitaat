@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -z $(ls ~ | egrep '^citaten.txt$') ]; then
+	touch ~/citaten.txt
+fi
+echo "Geef de auteur van het citaat:"
+read auteur
+echo $auteur >> ~/citaten.txt
+echo "Geef de tekst van het citaar:"
+read input
+while [ "$input" != "%%" ]
+do
+	read input
+	echo $input >> ~/citaten.txt
+done
+

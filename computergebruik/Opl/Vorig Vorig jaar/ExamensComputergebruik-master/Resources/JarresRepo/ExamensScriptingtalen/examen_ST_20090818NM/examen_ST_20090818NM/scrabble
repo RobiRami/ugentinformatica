@@ -1,0 +1,7 @@
+#!/bin/sh
+
+WOORDENLIJST='./woordenboek.txt'
+
+echo $1 | cat - ${WOORDENLIJST} | gsed -n '
+...
+'

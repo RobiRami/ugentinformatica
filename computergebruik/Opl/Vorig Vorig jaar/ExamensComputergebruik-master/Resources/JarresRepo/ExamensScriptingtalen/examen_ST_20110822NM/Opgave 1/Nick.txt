@@ -1,0 +1,27 @@
+### OPGAVE 1 #########################################################
+
+# Verwijder_opmaak.sed
+# Auteur: Nick Van Haver
+# Pas op: Het 2de deel (met \* dus) werkt enkel voor het
+#         gegeven voorbeeld 
+
+# Regels die geen \* bevatten
+/\\\*/!{
+s:\([^\\]\)\\b:\1:g               # \b verwijderen
+s:\\\(\\b\):\1:g                  # \\b -> \b
+s:\([^\\]\)\\i:\1:g               # \i verwijderen
+s:\\\(\\i\):\1:g                  # \\i -> \i
+s:\(\\s\)[0-9][0-9]*\.*[0-9]*::g  # \s12.5 -> \s
+s:\([^\\]\)\\s:\1:g               # \s verwijderen
+s:\\\(\\s\):\1:g                  # \\s -> \s
+}
+
+# Regels die \* bevatten
+/\\\*/{
+s:\\\*\(.*\)\\\*\(.*\)\\i\(.*\)\\i:\\\*\1\\\*\2\3:g
+s:\\\*\(.*\)\\\*:\1:g             # \* verwijderen
+s:\\\*\(.*\)\\\*:\1:g
+}
+
+
+

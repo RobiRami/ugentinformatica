@@ -1,0 +1,10 @@
+cat > replace_tmp_1
+ex replace_tmp_1 << 'HERE'
+:1,$s/^\(..*\)\t\(..*\)$/:1,$s\/\1\/\2\/g/
+:wq
+HERE
+echo ':wq' >> replace_tmp_1
+cp $1 replace_tmp_2
+ex replace_tmp_2 < replace_tmp_1
+cat replace_tmp_2
+rm replace_tmp_1 replace_tmp_2

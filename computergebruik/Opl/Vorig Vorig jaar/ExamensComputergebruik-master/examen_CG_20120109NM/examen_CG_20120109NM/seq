@@ -1,0 +1,10 @@
+#!/bin/bash
+previous=$(paste -d'\0' <(cat $1 | bash tolines) <(cat $2 | bash tolines))
+shift 2
+
+while (( "$#" ))
+do
+        previous=$(paste -d'\0' <(echo -e "$previous") <(cat $1 |  bash tolines))
+        shift
+done
+echo -e "$previous" | sort | uniq -c | sort -rn | head -n 26 | sed '1,$s/^ *[0-9]* //'

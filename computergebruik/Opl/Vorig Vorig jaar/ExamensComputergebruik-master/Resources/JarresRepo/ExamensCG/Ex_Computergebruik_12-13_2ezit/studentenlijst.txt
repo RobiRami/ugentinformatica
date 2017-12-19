@@ -1,0 +1,245 @@
+01203043 Acar Tessa
+01205354 Acke Lars
+01107492 Adam Ine
+01202808 Ampe Adriaan
+01200437 Anthonis Steff
+01206650 Arents Helena
+01201252 Audoor Sien
+01203737 Baert Lotte
+01204969 Baets Laura
+01202475 Bakker Tim
+01202132 Baston Annelies
+01204466 Bauters Charlotte
+01200533 Beylkens Anne-Sophie
+01205613 Bhusal Araksha
+01205437 Blomme Jonas
+01200381 Bode Bram
+00905677 Boel David
+01207208 Bogaert Bram
+01202305 Bosteels Victor
+01200428 Bracke Anke
+01201303 Brouckaert Marlies
+01107021 Brouckaert Sandrien
+01205362 Browaeys Robin
+01200030 Brys Arno
+01201289 Bulcke Pieter
+01103186 Buydens Laila
+01200459 Buyse Angelique
+01203155 Buysschaert Bram
+01102773 Buysse Michiel
+01107243 Cant Zeno
+01207769 Cauwberghs Frederic
+01000797 Ceulemans Tommy
+01200039 Chan Philippe
+01200430 Claerhout Thijs
+01207120 Colle Jonas
+01201324 Colman Elke
+01104425 Conka Robert
+01207157 Coorevits Jonas
+01107692 Coppens Simon
+01200051 De Beuker Tom
+01002906 De Bisschop Jeroen
+01202771 Deblaere Filip
+01201044 De Bock Brecht
+01204841 De Boodt Charlotte
+01207284 De Brabander Devin
+00905740 De Bruycker Wouter
+01200427 Debruyne Isabelle
+01200059 Decheiver Eva
+01203028 Deckers Marie
+01105371 De Cleene Reinhard
+01201613 De Clercq Laura
+01104684 De Clercq Shana
+01200062 declercq tom
+01205158 De Cock Aaron
+01206330 De Cock Jeroen
+01202339 De Cock Laure
+01104388 De Herde Kevin
+01102189 De Jaeger-Braet Joke
+01207038 De Keukelaere Laura
+01201034 Delaey Jasper
+01200464 Delange Luna
+01207882 Delputte Eduard
+01101760 Deman Nathan
+01207945 De Meester Jasper
+01100999 Demey Johanna
+01103886 De Meyer Frédéric
+01201298 De Neef Kevin
+01200901 Deneweth Jan
+01202376 Denoyette Jeroen
+01201474 Depourcq Bernard
+01207435 De Prêtre Yoren
+01200093 Deprez Mathijs
+01100516 Deprez Maxim
+01104544 De Pryck Iben
+01206939 Depuydt Thomas
+01208621 De Raedt Greet
+01201171 Derie Ijen
+01107934 de Ruijter Alexander
+01200096 De Schrijver Linde
+01202204 De Smedt Emelie
+01204513 Desmet Pieter-Jan
+01106992 De Timmerman Hilke
+01200099 Devaux Angelo
+00905165 De Vogelaere Charlotte
+01105052 De Vos Laura
+01200102 Devos Gertjan
+01200179 Devos Simon
+20054525 De Vuyst Gilles
+01002260 De Weirdt Julie
+00900602 De Wilde Ellen
+01203699 Dezutter Olivier
+01205852 D'hooge Thibaut
+01206092 Dierick Matthias
+01204209 Dilewyns Hélène
+01210241 Dillen Tom
+01205804 Dimiaux Charles
+01002546 Dobbelaere Mike
+01203093 Dooms Elisabeth
+01202109 Driessen Joren
+01204064 Droesbeke Bert
+01203584 Dujardin Wouter
+01202930 Duyvejonck Simon
+19984655 Eeckhaut Andy
+01107758 El Houari Ilias
+00704391 Embo Brecht
+01201151 Emmaneel Annelies
+01202645 Erauw Liselotte
+01203349 Evbuomwan Pamela
+01102498 Fiers Géraldine
+01204188 Geerinckx Alexandra
+01102164 Goeminne Lana
+01205724 Goes Flore
+01202202 Hernalsteen Hannelore
+01104432 Herwegh Denia
+01200143 Hettiarachchi Gowri Amanda
+01202907 Heyman Emma
+01203464 Hofkens Stijn
+01204323 Houtave Alexander
+01201801 Huycke Axel
+01202689 Huysentruyt Tobias
+01104245 Hylebos Alexis
+01202233 Janda Vince
+01204493 Jansegers Tim
+01101378 Joly Sara
+01202035 Joos Julien
+01206163 Kalmanova Marina
+01004098 Kiekens Nick
+01108334 Lambersy Björn
+01204534 Lambert Elisabeth
+01000692 Laureyns Reinout
+01004342 Laureys Arnout
+01110586 Leemans Jari
+01200167 Lemaire Sarah
+01104292 Lerno Jonas
+01004337 Lievrouw Bert
+01106666 Luttens Andreas
+01205351 Maes Leen
+01204280 Maes Simon
+01100379 Maquestiau Elke
+01203634 Matthysen Marijke
+01206908 Meeus Mimi
+01200190 Merckx Ronald
+01200452 Merlevede Emile
+01201092 Mertens Chiel
+01202102 Minnebo Matthias
+01207743 Monsieurs Benoît
+01204277 Morlion Annelien
+01105882 Mourisse Marie
+01205160 Mylle Tybo
+01103700 Nachtergaele Simon
+01203767 Nuyts Denny
+01103792 Paepen Marieke
+00807615 Papadimitriou Irina
+01100741 Paret Lana
+01201024 Pauwels Sam
+01204859 Pellens Pierre
+01003280 Piret Loïc
+01202230 Platteau Melissa
+01201300 Plehiers Nele
+01105699 Pot Tomas
+01201245 Potters Bert
+01205612 Pradhan Anita
+01200220 Remaut Astrid
+01204068 Remes Ezra
+01200527 Reyns Nicky
+01206813 Riems Nora
+01204033 Sambaer Hélène
+01201032 Schaumont Dries
+01206981 Scheirs Geoffrey
+01203357 Schoovaerts Jolien
+01203279 Schuermans Jef
+01202816 Seffers Gaëlle
+01203501 Seynnaeve Bram
+01004855 Soens Lander
+00604064 Steurbaut Aaron
+00805131 Stock Willem
+01204667 Stockman Ruben
+01200247 Tahon Cédric
+01203215 Talloen Joy
+01102763 Tanghe Niels
+01101498 Teugels Lennert
+01205189 Thienpont Stapho
+01102106 Thooft Karel
+01108789 Tierens Lotte
+01004475 Timmerman Annelore
+01100715 Tollenaere Glenn
+01200252 Torfs Jody
+01200253 Truyens Charlotte
+01200602 Ushurova Feruza
+01203806 Van Acker Femke
+01202871 Vanbesien Pieter
+01201541 Van Coillie Julie
+01205106 Van Damme Lore
+01204040 Vandecautere Tijs
+01101007 Van den Abbeel Timo
+01202348 Van den Berge Cedric
+00903417 Van den Berghe Michèle
+01100553 Van den Bossche Simon
+01201057 Van den Broeck Mattia
+01105814 Van den Haute Steffy
+00801313 Van de Put Carolien
+01204922 Vanderbauwhede Ine
+01106928 Van der Biest Karen
+01205681 Vanderhaegen Sarah
+01204606 Vanderhaeghe Bram
+01202085 Van de Voorde Babs
+01102538 Van Dyck Thomas
+00904667 Van Goethem Delphine
+01207836 Vangroenweghe Louis
+01100649 Van Hauwaert Tycho
+01104282 Van Havere Mathieu
+01202069 Vanherpe Els
+01006484 Van Hoecke David
+01201732 Van Hoeymissen Evelien
+01202113 Van Huffel Cedric
+01207502 Van Laere Emmy
+01102011 Van Landeghem Kristof
+01201626 Van Liefferinge Evi
+01204843 Van Moer Berre
+01203278 Vannoorenberghe Marieke
+01102544 Van Schandevyl Eva
+01106201 Van Vaerenbergh Ruben
+01205386 Van Vlaenderen Wim
+00903459 Van Vlierberghe Kaatje
+01203087 Van Vooren Sander
+01100690 Velleman Jules
+01102886 Verbeurgt Jeffrey
+01203782 Vercauteren Macquel
+01201735 Verdonck Dieter
+01204871 Verest Karen
+01208695 Verhaeghe Hanne
+01203346 Verhoeven Luca
+01103798 Verleysen Yentl
+01202861 Vermassen Jonas
+01201955 Vermeiren Elias
+01202292 Vermoesen Evelien
+01207409 Verstraeten Jürgen
+01106426 Verstrepen Mischa
+01207152 Veys Sofie
+01205374 Vlasschaert Nele
+01201152 Weyts Wannes
+01203592 Willems Anneleen
+01201356 Willemsens Selina
+01100433 Wils Katleen
+01205509 Zwaenepoel Arthur

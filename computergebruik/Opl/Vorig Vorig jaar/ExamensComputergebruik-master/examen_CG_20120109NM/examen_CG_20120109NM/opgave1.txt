@@ -1,0 +1,26 @@
+### OPGAVE 1 #######################
+
+1a) commando: cat brain.txt | egrep '\[.*([^.]{9,}).*\][^.]*\.\1\.'
+    aantal: 22864
+
+1b) commando: cat brain.txt | egrep '\.([^.]{2,}\.)(\1){2,}'
+    aantal: 93
+
+1c) commando: cat brain.txt | egrep -v '[^<](<<)+[^<]|[^>](>>)+[^>]'
+    aantal: 46267
+
+1d) commando: cat brain.txt | egrep '^\+(.{6}\+)*.{1,6} '
+    aantal: 55
+
+
+2a) commando: cat brain.txt | egrep '\[.*([^.]{9,}).*\][^.]*\.\1\.' | egrep '\.([^.]{2,}\.)(\1){2,}'
+    woord: dance
+
+2b) commando: cat brain.txt | egrep '\.([^.]{2,}\.)(\1){2,}' | egrep -v '[^<](<<)+[^<]|[^>](>>)+[^>]'
+    woord: lightly
+
+2c) commando: cat brain.txt | egrep -v '[^<](<<)+[^<]|[^>](>>)+[^>]' | egrep '^\+(.{6}\+)*.{1,6} '
+    woord: with
+
+2d) commando: cat brain.txt | egrep '\[.*([^.]{9,}).*\][^.]*\.\1\.' | egrep '^\+(.{6}\+)*.{1,6} '
+    woord: life

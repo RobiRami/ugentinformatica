@@ -1,0 +1,16 @@
+##### Opgave 1: query 1 #####
+<Plaats hier query>
+
+Aantal records:
+##### Opgave 1: query 2 #####
+<Plaats hier query>
+
+Aantal records:
+##### Opgave 1: query 3 #####
+<Plaats hier query>
+
+Aantal records:
+##### Opgave 1: query 4 #####
+<Plaats hier query>
+
+Aantal records:

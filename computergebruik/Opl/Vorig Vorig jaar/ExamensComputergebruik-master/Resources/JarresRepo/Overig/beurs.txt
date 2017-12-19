@@ -1,0 +1,2 @@
+Apple Inc.:325,64:329,57
+Microsoft Corporation:28,05:27,98

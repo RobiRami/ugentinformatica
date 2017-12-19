@@ -1,0 +1,18 @@
+#!/bin/bash rubent komt niet overeen met de voorbeelden, mss zijn de genix manpages veranderd? of het script is gewoon mis... feedback?:p
+if [ $# != 4 ]; then
+  echo "Ongeldig aantal argumenten" >&2
+  echo "Vorm: $0 commando paginanr lijnnr woordnr" >&2
+  exit 1; fi
+	man $1 2> /dev/null | sed -e 's/.\x08//g' | pr | awk ' BEGIN {
+  lijn=-1
+}
+$5 ~ /Page/{
+  if($6==p){
+	lijn=NR+l
+  }
+}
+{ if(NR==lijn){
+  print $w
+  exit
+}
+}' p=$2 l=$3 w=$4

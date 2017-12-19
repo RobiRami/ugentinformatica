@@ -1,0 +1,47 @@
+# Simon Houbracken
+
+BEGIN {
+        FS=","
+}
+function toongroep(letter) {
+        split(team[letter], punten,",")
+        printf("%30s\n+----------------+-----+-------------------------+-----+\n|                |   P |   W   L   D   F   A   S | Pts |\n+----------------+-----+-------------------------+-
+----+\n","GROEP " toupper(letter))
+        for(lnd in punten) {
+                land=punten[lnd]
+                if(land in geprint) {
+                }
+                else if(lnd>1){
+                        printf("|%15s |%4d |%4d%4d%4d%4d%4d%4d |%4d |\n",land, P[land], W[land], L[land], D[land], F[land], A[land],F[land]-A[land],W[land]*3+D[land])
+                        geprint[land] = 1
+                }
+        }
+        printf("+----------------+-----+-------------------------+-----+\n\n")
+}
+/^[A-Z]/{
+        team[$4]=team[$4]","$1
+        P[$1]++
+        P[$2]++
+        split($3,punten,"-")
+        F[$1]+=punten[1]
+        A[$1]+=punten[2]
+        F[$2]+=punten[2]
+        A[$2]+=punten[1]
+        if(punten[1]>punten[2]) {
+                W[$1]++
+                L[$2]++
+        }
+        else if(punten[2]>punten[1]) {
+                W[$2]++
+                L[$1]++
+        }
+        else {
+                D[$1]++
+                D[$2]++
+        }
+}
+END {
+        for(tm in team) {
+                toongroep(tm)
+        }
+}

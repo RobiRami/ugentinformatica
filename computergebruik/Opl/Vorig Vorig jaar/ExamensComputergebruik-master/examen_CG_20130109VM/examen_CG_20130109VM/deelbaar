@@ -1,0 +1,4 @@
+#!/bin/bash
+sed '1d' $1 | sed "s/^.*$/(&%$(sed '1q' $1))/g" | bc | grep -c "0"
+
+

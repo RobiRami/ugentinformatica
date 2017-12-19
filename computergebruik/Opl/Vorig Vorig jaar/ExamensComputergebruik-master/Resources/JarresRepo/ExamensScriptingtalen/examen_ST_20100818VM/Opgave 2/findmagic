@@ -1,0 +1,51 @@
+#!/bin/bash
+#rubent
+#nog wat meer checks zijn nodig, maar die zijn niet zo moeilijk, dus heb ik ze niet gemaakt:p
+b=100
+if [ $1 == "-b" ]
+then
+  b=$2
+  shift
+  shift
+fi
+
+if [ $# -lt 2 ]
+then
+  echo "Je moet minstents 2 bestanden meegeven" 2>&1
+  exit 1;
+fi
+i=0
+while [ 1 -le $# ] ; do
+  cat $1 > /dev/null 2>&1
+  if [ $? != 0 ]
+  then
+	echo "Het bestand $1 is ongeldig" 2>&1
+	exit 1;
+  fi
+
+  j=0
+  cat $1 | gsed 's/\(.\)/\1\n/g' | head -$b > tmp
+  while read lijn; do
+  	if [ $i -eq 0 ]
+  	then
+	  letters[$j]=$lijn
+  	else
+  	  if [ "${letters[$j]}" != "$lijn" ]
+  	  then
+	  	letters[$j]=""
+  	  fi
+ 	fi
+	let j++
+  done < tmp
+  shift
+  i=1
+done
+
+i=0
+while [ $i -lt $b ] ; do
+  if [ "${letters[$i]}" != "" ]
+  then
+	echo "$i : ${letters[$i]}"
+  fi
+  let i++
+done

@@ -1,0 +1,19 @@
+LaTeX is a document markup language and document preparation system 
+for the TeX typesetting program. It is widely used by mathematicians, 
+scientists, philosophers, engineers, and scholars in academia and the 
+commercial world, and by others as a primary or intermediate format 
+(e.g. translating DocBook and other XML-based formats to PDF) because 
+of the quality of typesetting achievable by TeX. It offers programmable 
+desktop publishing features and extensive facilities for automating most 
+aspects of typesetting and desktop publishing, including numbering 
+and cross-referencing, tables and figures, page layout and 
+bibliographies.
+
+LaTeX is intended to provide a high-level language to access the 
+power of TeX. LaTeX essentially comprises a collection of TeX macros, 
+and a program to process LaTeX documents. Since TeX's formatting 
+commands are very low-level, it is usually much simpler for 
+end-users to use LaTeX. LaTeX was originally written in 1984 by 
+Leslie Lamport at SRI International and has become the dominant 
+method for using TeX. Few people write in plain TeX anymore. Like TeX, 
+LaTeX is free software.

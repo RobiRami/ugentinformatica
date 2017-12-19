@@ -1,0 +1,12 @@
+#/usr/bin/bash
+export MANPATH="/usr/local/man:/usr/man:/opt/csw/man:/opt/sfw/man:/usr/sfw/share/man/"
+while read line; do set ${line}; pakman $1 $2 $3 $4 | tr '\n' ' '; done << HERE
+tcpdmatch 1 47 1
+flex 43 13 5
+gawk 40 26 6
+wget 18 30 8
+gcc 120 50 3
+top 6 20 6
+make 15 53 2
+HERE
+echo

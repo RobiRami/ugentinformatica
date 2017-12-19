@@ -1,0 +1,29 @@
+
+1.a) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+1.b) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+1.c) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+1.d) commando: <plaats hier het gebruikte commando>
+     aantal: <plaats hier het gevonden aantal regels>
+
+
+1.a) commando: <plaats hier het gebruikte commando>
+     regel: <plaats hier het regelnummer waarop het woord gevonden werd>
+     woord: <plaats hier het gevonden woord>
+
+1.b) commando: <plaats hier het gebruikte commando>
+     regel: <plaats hier het regelnummer waarop het woord gevonden werd>
+     woord: <plaats hier het gevonden woord>
+
+1.c) commando: <plaats hier het gebruikte commando>
+     regel: <plaats hier het regelnummer waarop het woord gevonden werd>
+     woord: <plaats hier het gevonden woord>
+
+1.d) commando: <plaats hier het gebruikte commando>
+     regel: <plaats hier het regelnummer waarop het woord gevonden werd>
+     woord: <plaats hier het gevonden woord>

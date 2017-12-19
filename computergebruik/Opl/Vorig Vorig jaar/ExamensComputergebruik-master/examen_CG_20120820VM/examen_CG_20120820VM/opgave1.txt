@@ -1,0 +1,38 @@
+### OPGAVE 1 #######################
+
+1.a) <plak hier je commando>
+
+1.b)  <plak hier je commando>
+
+2.a)cat oneven.txt | sed 's/\(\w\)/4\/\1/g' | bc -l | sed 's/^\(.*\)$/\1 +/g' | tr "\n" " " | cut -c -11998 | bc -l
+##De 11998 is er om de laatste + eraf te knippen die ik bekomen heb dankzij, substitutie
+##Oplossing is nog niet correct, maar moet makkelijk te vinden zijn :/ Alternerende + en - (facepalm)
+
+### Alternatief ###
+	2a) cat oneven.txt | sed 's/.*/4\/&/' | paste -sd-+ | bc -l
+	2b) seq -f'4/%g' 1 2 999 | paste -sd-+ | bc -l
+#### NStrijbol ###	
+
+---PVERSCHA: Oplossing zonder paste
+	cat oneven.txt | sed 's,\(.*\), 4/\1 \+,' | sed '1 s/\(.*\)/scale=20; \1/' | sed '1~2 s/\(.*\)+/\1-/' | sed 's/999 +/999/' | tr -d '\n' | sed 's/\(.*\)/echo "\1" \| bc/' | bash
+---PVERSCHA: again, de oplossing van Niko is veel beter. Ik zet deze er gewoon even tussen
+2.b) 
+
+3)
+### NISTRIJB
+	find $1 -name "*.$2" -type f 2> /dev/null -exec wc -l {} \; | cut -d' ' -f1 | paste -sd+ | bc
+### NISTRIJB ###
+
+---PVERSCHA: Ik had dit
+	find "$1" -type f -name "*.$2" |  xargs cat 2> /dev/null | wc -l
+---PVERSCHA
+
+
+%%%%%%%% RBMAERTE:
+#!/bin/bash
+find $1 -name "*.$2" -exec wc -l {} + 2> /dev/null | sed -n '$p' | sed 's/ \(.*\) .*$/\1/g'
+%%%%%%%% RBMAERTE
+
+
+@Mathieu: Dan kan je nog kiezen ;)
+4) <plak hier je commando>
