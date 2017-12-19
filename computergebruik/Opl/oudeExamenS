@@ -122,7 +122,7 @@ do
         fi
 done
 
-COMMANDO="egrep '^(.){$min,$max}$' temppet"
+COMMANDO="egrep '^(.){$min,$max}$' temppept"
 
 for ((i=0 ; i< ${#pept[@]} ; i++)); do
 
