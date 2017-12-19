@@ -1,0 +1,31 @@
+### Alpha ###
+#plaats hieronder je oplossing:
+egrep -i '([^ ]{5}) .*\1[^ ]*$' diana.txt
+
+### Beta ###
+#plaats hieronder je oplossing:
+egrep -v '([A-Z])[^ ]*\1' diana.txt
+
+### Gamma ###
+#plaats hieronder je oplossing:
+egrep '^..([A-Z])..(\s..\1..){4}' diana.txt
+
+### Delta ###
+#plaats hieronder je oplossing:
+egrep '^((.)(.).(\2\3|\3\2)\s){6}' diana.txt
+
+### Eerste woord ###
+#plaats hieronder je oplossing:
+egrep -i '([^ ]{5}) .*\1[^ ]*$' diana.txt | egrep -v '([A-Z])[^ ]*\1' | egrep -o '\s[^ ]*$'
+
+### Tweede woord ###
+#plaats hieronder je oplossing: 
+egrep -v '([A-Z])[^ ]*\1' diana.txt | egrep '^..([A-Z])..(\s..\1..){4}' | egrep -o '\s[^ ]*$'
+
+### Derde woord ###
+#plaats hieronder je oplossing:
+egrep '^..([A-Z])..(\s..\1..){4}' diana.txt | egrep '^((.)(.).(\2\3|\3\2)\s){6}' | egrep -o '\s[^ ]*$'
+
+### Vierde woord ###
+#plaats hieronder je oplossing:
+egrep '^((.)(.).(\2\3|\3\2)\s){6}' diana.txt | egrep -i '([^ ]{5}) .*\1[^ ]*$' | egrep -o '\s[^ ]*$'
