@@ -1,0 +1,31 @@
+### Alpha ###
+#plaats hieronder je code:
+egrep '([.].*[?].*[!]|[.].*[!].*[?]|[?].*[.].*[!]|[?].*[!].*[.]|[!].*[?].*[.]|[!].*[.].*[?])' uuencoded.txt
+
+### Beta ###
+#plaats hieronder je code:
+egrep -v '[^A-Z0-9a-z ][^A-Z0-9a-z ][^A-Z0-9a-z ]' uuencoded.txt
+
+### Gamma ###
+#plaats hieronder je code:
+egrep -v '^([A-Z]).*?\1.*?\1.*\1' uuencoded.txt | egrep '^([A-Z]).*?\1.*?\1'
+
+### Delta ###
+#plaats hieronder je code:
+egrep -v '\([^)]*\(' uuencoded.txt | egrep -v '\)[^(]*\)' | egrep -v '^[^(]*\)' | egrep -v '\([^)]*$'
+
+### Eerste woord ###
+#plaats hieronder je code:
+egrep '([.].*[?].*[!]|[.].*[!].*[?]|[?].*[.].*[!]|[?].*[!].*[.]|[!].*[?].*[.]|[!].*[.].*[?])' uuencoded.txt | egrep -v '[^A-Z0-9a-z ][^A-Z0-9a-z ][^A-Z0-9a-z ]' | egrep -o '[^ ]*$'
+
+### Tweede woord ###
+#plaats hieronder je code:
+egrep -v '[^A-Z0-9a-z ][^A-Z0-9a-z ][^A-Z0-9a-z ]' uuencoded.txt | egrep -v '^([A-Z]).*?\1.*?\1.*\1' | egrep '^([A-Z]).*?\1.*?\1' | egrep -o '[^ ]*$'
+
+### Derde woord ###
+#plaats hieronder je code:
+egrep -v '^([A-Z]).*?\1.*?\1.*\1' uuencoded.txt | egrep '^([A-Z]).*?\1.*?\1' | egrep -v '\([^)]*\(' | egrep -v '\)[^(]*\)' | egrep -v '^[^(]*\)' | egrep -v '\([^)]*$' | egrep -o '[^ ]*$'
+
+### Vierde woord ###
+#plaats hieronder je code:
+egrep -v '\([^)]*\(' uuencoded.txt | egrep -v '\)[^(]*\)' | egrep -v '^[^(]*\)' | egrep -v '\([^)]*$' | egrep '([.].*[?].*[!]|[.].*[!].*[?]|[?].*[.].*[!]|[?].*[!].*[.]|[!].*[?].*[.]|[!].*[.].*[?])' | egrep -o '[^ ]*$'
