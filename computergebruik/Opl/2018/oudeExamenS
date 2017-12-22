@@ -386,3 +386,41 @@ fi
 rm final
 exit 0
 
+Rijmschema (credz to Winnie, bedankt Wim Onderbeke voor inspiratie)
+
+#! /bin/bash
+
+declare -i aantal=0
+alfabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ" #De letters om het rijmschema mee voor te stellen
+rijmArray=() #Een array om de uitgangen van de woorden in op te slaan
+while read -r line; do
+        if [ ! -z "$line" ] ; then #Lees het bestand, skip lege regels en doe:
+        woord=$(echo "$line" | tr -d "[[:punct:]]" | sed 's/.* \([a-z]\+\) \?$/\1/i'| tr "a-z" "A-Z")
+        #Verwijder leestekens uit de zin, neem de laatste groep letters na een spatie(eventueel een spatie na die groep)
+        #aka vervang zin door laatste woord en zet het naar hoofdletters
+        rijm=$(egrep "^$woord " $2 | egrep -o "[A-Z]+[12][^12]*$" | tr -d " 0-9")
+        #Zoek het woord in het rijmbestand en neem de uitgang(klinker met nadruk 1 of 2 tot einde, verwijder daarna cijfers
+        #Zodat alternatieve uitspraken genegeerd worden
+        rijmArray[$aantal]="$rijm"
+        #Steek ze op plaats $aantal in de array van uitgangen
+        ((aantal++))
+        fi
+done < $1
+rijmSchema=()
+#Nieuwe array om unieke uitgangen in op te slaan
+for ((i=0; i< ${#rijmArray[@]} ; i++)); do
+        j=0
+        #Overloop alle uitgangen, en kijk of je ze tegenkomt in de unieke uitgang-array
+        while [[ "$j" -lt ${#rijmSchema[@]} ]] && [[ ! "${rijmArray[$i]}" = "${rijmSchema[$j]}" ]] ; do
+                ((j++))
+        done
+        #Uitgang niet tegengekomen, dus toevoegen aan uitgangenarray
+        if [[ $j -eq ${#rijmSchema[@]} ]] ; then
+                rijmSchema[$j]="${rijmArray[$i]}"
+        fi
+        #De letter van het rijmschema wordt bepaald door de plaats van de uitgang in de unieke-uitgangenarray
+        #Een uitgang die reeds eerder bepaald werd staat meer vooraan in de array en bepaalt dus een eerdere letter uit het alfabat
+        rijmlijn+=${alfabet:$j:1}
+done
+echo "$rijmlijn"
+exit 0
