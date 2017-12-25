@@ -1,0 +1,34 @@
+
+https://dodona.ugent.be/nl/courses/19/exercises/372060010/
+Oplossing AC Meloen door Winnie
+
+#! /bin/bash
+
+if [ $# -lt 1 ] || [ $# -gt 2 ] ; then #te weinig argumenten
+        echo "Syntaxis: $(basename $0) patroon [bestand]" 1>&2
+        exit 1
+fi
+
+if [ $# -eq 1 ] ; then #stdin redirecten naar een bestand
+        tee woorden &> /dev/null
+elif [ $# -eq 2 ] ; then
+        if [ ! -r $2 ] ; then #Meegegeven bestand is niet leesbaar
+                echo "$(basename $0): bestand \"$2\" bestaat niet of is onleesbaar" 1>&2
+                exit 2
+        else
+                cat $2 > woorden #Naar tempfile doen voor eenvoud bij commando's
+        fi
+fi
+patroon=$(echo "$1" | sed 's/[AEIOUaeiou]/[AEIOUaeiou]/g') #Klinkers vervangen door interval
+grep "^$patroon$" woorden > correct #Juist woord is even lang met willekeurige klinkers
+rm woorden #temp 1 verwijderen
+sed -i '/'"$1"'/d' correct #Mag niet hetzelfde woord zijn, in-file substitution
+if [ $(cat correct | wc -l) -eq 0 ] ; then #Niets gevonden
+        echo "$(basename $0): geen uitdrukkingen gevonden die matchen met \"$1\"" 1>&2
+        rm correct
+        exit 3
+else
+        cat correct | sort #Uitschrijven en sorteren want dat moest LEL
+        rm correct
+        exit 0
+fi

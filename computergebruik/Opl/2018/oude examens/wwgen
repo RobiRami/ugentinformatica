@@ -1,0 +1,194 @@
+WWGEN Hackerman
+examen 20150817: opgave 4
+    #!bin/bash
+    head /dev/random | tr -dc 'A-Za-z0-9,.!@#$%^&*()][{};":?-_+=' | head -c 250 >> pwList
+        #geeft een aantal random chars, delete alles wat niet A-Za-z0-9,.!@#$%^&*()][{};":?-_+= is en neem dan de eerste 250 chars als
+    negaties=5 
+        #zet de default negaties op 5
+    numberOfL=$(cat $1 | grep -c 'L')
+    numberOfT=$(cat $1 | grep -c 'T')
+    numberOfC=$(cat $1 | grep -c 'C')
+        #geeft het aantal CTL's terug
+        #gaat niet met cat, $1 is een string, je moet ze anders tellen en eerst opties verwerken, hier krijg je 100% errors
+    while getopts ':cl:p:'
+    do
+        case "$opt" in
+            c ) cat pwList | tr -d 'a-z' >> pwList
+                    #verwijdert alle a-z
+                ;;
+            l ) cat pwList | head -c "$OPTARG" >> pwList
+                    #neemt een lengte $OPTARG
+                ;;
+            p ) $negaties=$OPTARG
+                    #het aantal negaties wordt OPTARG
+                ;;
+        esac
+    done
+    aantal=$(((cat pwList | wc -l) - $negaties))
+        #het aantal dat we moeten hebben na de eerste x negaties, dus tail van dat aantal
+    tail -n $aantal >> pwList
+
+    for $file in $@             #geen idee of dit werkt er moet sws een shift gebeuren na de opties wel
+    do
+        cat $@ >> words
+            #alle bestanden in een tempfile genaamd words steken
+    done
+
+    file=$pwList
+    while IFS= read line
+    do
+        echo "$line"
+        if [[ (echo "$line" | tr -dc A-Za-z) < $((numberOfL)) ]]; then
+            echo "\n1"
+                #een \n1 toevoegen als de voorwaarde voldoet
+        fi
+    done < "$pwList"
+
+    file=$pwList
+    while IFS= read line
+    do
+        echo "$line"
+        if [[ (echo "$line" | tr -dc 0-9) < $((numberOfC)) ]]; then
+            echo "\n1"
+                #een \n1 toevoegen als de voorwaarde voldoet
+        fi
+    done < "$pwList"
+
+    file=$pwList
+    while IFS= read line
+    do
+        echo "$line"
+        if [[ (echo "$line" | tr -d A-Za-z0-9) < $((numberOfT)) ]]; then
+            echo "\n1"
+                #een \n1 toevoegen als de voorwaarde voldoet
+        fi
+    done < "$pwList"
+
+    file=$pwList
+    while IFS= read line
+    do
+        echo "$line"
+        if [[ (cat words | egrep -c $line) -eq 0 ]]; then
+            echo "\n1"
+                #een \n1 toevoegen als de voorwaarde voldoet
+        fi
+    done < "$pwList"
+
+    sed 's/[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*(\n1)[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*/ zeer zwak/g'
+    sed 's/[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*(\n1){2}[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*/ zwak/g'
+    sed 's/[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*(\n1){3}[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*/ normaal/g'
+    sed 's/[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*(\n1){4}[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*/ sterk/g'
+    sed 's/[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*(\n1){5}[A-Za-z0-9,.!@#$%^&*()][{};":?-_+=]*/ zeer sterk/g'
+        #vertaal het aantal \n1's door hoe sterk het ww is
+    
+    WWGEN van le Winnie
+    
+#! /bin/bash
+
+function syntaxis() {
+        echo "Syntaxis: $(basename $0) [-c] [-p aantal ] [-l lengte ] patroon bestand..."
+}
+#lokale variabelen, caps om te checken of alles in caps moet
+#aantal te genereren wachtwoorden
+#lengte van de passwoorden
+#range is van waar tot waar ik letters mag uitkiezen uit de opgegeven string pwdstring(lengte ervan)
+pwdstring='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.!@#$%^&*()][{};":?-_+='
+declare -i caps=0
+declare -i aantal=5
+declare -i lengte=0
+declare -i range=${#pwdstring}
+while getopts ":cl:p:" opt ; do
+        case "$opt" in
+
+        c) ((caps++)) #caps aanzetten, later checken op waarde 1)
+           ;;
+        l) lengte=$OPTARG
+           ;;
+        p) if [ $OPTARG -ge 1 ] ; then
+                aantal=$OPTARG
+           else
+                echo "Te genereren aantal moet groter of gelijk zijn aan 1"
+                exit 1
+                echo $aantal
+           fi
+           ;;
+        \?) echo "Fout: onbekende optie: $OPTARG"
+                syntaxis
+            ;;
+        esac
+done
+shift $((OPTIND-1))
+if [ $# -lt 2 ] ; then
+        echo "Te weinig argumenten meegegeven"
+        syntaxis
+        exit 2
+fi
+
+patroon=$1
+#indien geen lengte opgegeven, wordt de lengte die van het patroon
+if [ $lengte -eq 0 ] ; then
+        lengte=${#patroon}
+fi
+#bestaat het patroon enkel uit L T en C?
+if [ ! -z $(echo $patroon | tr -d "LTC") ] ; then
+        echo "Het patroon mag enkel bestaan uit L, T en C"
+        exit 1
+fi
+#indien een lengte meegegeven werd, is die lang genoeg?
+if [ $lengte -lt ${#patroon} ] ; then
+        echo "Opgegeven lengte moet minstens even lang zijn als het patroon"
+        exit 1
+fi
+
+shift
+#zijn alle meegegeven bestanden leesbaar?
+for file in "$@" ; do
+        if [ ! -r $file ] ; then
+                echo "Ongeldig, onleesbaar of onbestaand bestand: $file"
+                rm tempwords &> /dev/null
+                exit 2
+        else
+                cat $file >> tempwords
+        fi
+done
+#criteria voor wachtwoordscore berekenen
+aantalL=$(echo $patroon | tr -cd "L" | wc -c)
+aantalT=$(echo $patroon | tr -cd "T" | wc -c)
+aantalC=$(echo $patroon | tr -cd "C" | wc -c)
+#array met waarden op basis van punten
+score=("zeer zwak" "zwak" "normaal" "sterk" "zeer sterk")
+function scoreberekening() { #berekent score van meegegeven argument
+         if [ $(echo $1 | tr -cd "a-zA-Z" | wc -c) -ge $aantalL ] ; then
+                punten+=1
+         fi
+         if [ $(echo $1 | tr -cd "[[:punct:]]" | wc -c) -ge $aantalT ] ; then
+                 punten+=1
+         fi
+         if [ $(echo $1 | tr -cd "0-9" | wc -c) -ge $aantalC ] ; then
+                punten+=1
+         fi
+}
+
+for (( j=0 ; j< $aantal ; j++)) ; do
+        pwd=''
+        for (( i=0 ; i< $lengte ; i++)) ; do
+        declare -i plaats=RANDOM%range #kiest een getal tussen 0 en lengte van pwdstring
+                pwd+=${pwdstring:plaats:1}
+        done
+        if [ $caps -eq 1 ] ; then
+                pwd=$(echo $pwd | tr "a-z" "A-Z") #indien -c vlag: alles naar caps
+        fi
+        declare -i punten=0
+        declare -i matches=0
+        if [ grep -q '$pwd' tempwords &> /dev/null ] ; then
+                matches+=1 #komt het wachtwoord voor in de bestanden?
+        fi
+        if [ $matches -eq 0 ] ; then
+                punten+=1
+        fi
+        scoreberekening $pwd
+        echo "$pwd ${score[$punten]}"
+done
+rm tempwords
+exit 0
+

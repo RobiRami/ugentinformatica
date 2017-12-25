@@ -1,0 +1,118 @@
+
+examen 20150108: opgave 5
+
+    #!bin\bash
+    for $file in $@   #eerst opties verwerken, dan files via shift, dit gaat niet runnen
+    do
+        if [ ! -r $file ] ; then
+            echo "Fout bestand $file bestaat niet of kan niet gelezen worden" 1>&2
+            echo "Syntaxis: pepfilter.sh [-m arg] [-M arg] [-c arg] [-l arg] file ..." 1>&2
+            exit 2
+                #kijkt na of het bestand leesbaar is en als het niet leesbaar is geeft het de error terug
+        else
+            cat $file >> tempFile
+                #anders wordt het bestand uitgeschreven naar tempFile
+        fi
+
+    done
+
+    while getopts ':m:M:c:l:'
+    do
+        case "$opt" in      #tempfile bestaat dus nog niet, dit gaat niet lukken :/
+            c ) index=0
+                while [[ index < ${#OPTARG} ]]; do
+                    subString=${string:$index:1}
+                    egrep ^[A-Z]*$subString[A-Z]*$ > tempFile
+                done
+                    #kijkt na voor alle substrings lengte 1 (letters) of het voorkomt in de lijn (met grep, bestand opslaan naar tempFile)
+                ;;
+            l ) index=0
+                while [[ index < ${#OPTARG} ]]; do
+                    subString=${string:$index:1}
+                    egrep -v ^[A-Z]*$subString[A-Z]*$ > tempFile
+                done
+                    #kijkt na voor alle substrings lengte 1 (letters) of het niet voorkomt in de lijn (met grep, bestand opslaan naar tempFile)
+                ;;
+            m ) grep ^([A-Z]){$OPTARG,}$ > tempFile
+                ;;
+                    #kijkt minimumlengte na
+            M ) grep ^([A-Z]){0,$OPTARG}$ > tempFile
+                ;;
+                    #kijkt maximumlengte na
+            \?) echo "Fout onbekende optie: $opt" 1>&2
+                echo "Syntaxis: pepfilter.sh [-m arg] [-M arg] [-c arg] [-l arg] file ..." 1>&2
+                exit 2
+                    #geeft error terug
+        esac
+
+    done
+    shift $((OPTIND -1))
+    cat tempFile
+    rm tempFile
+
+PEPFILTER alternatief 
+#! /bin/bash
+
+#lokale variabelen en error-msg
+function syntaxis() {
+        echo "Syntaxis : $(basename $0) [-m arg ] [-M arg] [-c arg] [-l arg] file ..."
+}
+min=1
+max=100
+pept=()
+niet=() #pept: welke moeten, niet:welke mogen niet
+while getopts ":m:M:c:l:" opt; do
+        case "$opt" in
+                m)  min=$OPTARG
+                ;;
+                M) max=$OPTARG
+                        ;;
+                c)for (( i=0 ; i < ${#OPTARG} ; i++ )); do
+                        pept[i]=${OPTARG:i:1};
+                        #karakter per karakter opslaan in array
+                        done
+                        ;;
+                l)for (( i=0 ; i < ${#OPTARG} ; i++ )); do
+                        niet[i]=${OPTARG:i:1};
+                        #analoog aan pept
+                        done
+                        ;;
+                \?) echo "Fout: onbekende optie: $OPTARG"
+                        syntaxis
+                        exit 1
+                        ;;
+        esac
+done
+shift $((OPTIND -1))
+if [ $# -eq 0 ] ; then
+        echo "Fout: er werden geen bestanden opgegeven"
+        syntaxis
+        exit 2
+fi
+for file in "$@"
+do
+        if [ ! -r $file ] ; then
+                echo "Fout: bestand $file bestaat niet of kan niet gelezen worden"
+                syntaxis
+                exit 3
+        else
+                cat $file >> temppept
+        fi
+done
+
+COMMANDO="egrep '^(.){$min,$max}$' temppept"
+
+for ((i=0 ; i< ${#pept[@]} ; i++)); do
+
+        COMMANDO+=" | egrep '${pept[i]}'"
+        #letters die erin moeten toevoegen
+done
+
+for ((i=0 ; i< ${#niet[@]} ; i++)); do
+COMMANDO+=" | egrep -v '${niet[i]}'"    #letters die niet mogen eruithalen
+done
+echo "$COMMANDO" | bash
+rm temppept
+exit 0
+
+

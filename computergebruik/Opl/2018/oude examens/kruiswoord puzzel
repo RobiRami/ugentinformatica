@@ -1,0 +1,64 @@
+https://dodona.ugent.be/nl/courses/19/exercises/1442451574/
+Oplossing regex-kruiswoordpuzzel (door Winnie)
+
+#! /bin/bash
+
+syntaxis="Gebruik: $(basename $0) <oplossing> <opgave horizontaal> <opgave vertikaal>"
+if [ ! $# -eq 3 ] ; then #3 bestanden zijn nodig voor dit script
+       echo "$syntaxis" 1>&2
+        exit 1
+fi
+for file in "$@" ; do
+        if [ ! -r "$file" ] ; then #Het bestand is niet leesbaar
+                echo "$file kan niet gelezen worden" 1>&2
+                exit 1
+        fi
+done
+
+lijnnummer=1 #Begin op regel 1
+while read -r line ; do #Lees de oplossing en vergelijk met de horizontale regex
+        regex="$(sed -n "$lijnnummer"p $2)"
+        if [ -z $regex ] ; then #Geen regex, maar wel een lijn?
+                echo "$(basename $0): oplossing heeft te veel rijen" 1>&2
+                exit 2
+        fi
+        if [[ ! "$line" =~ ^$regex$ ]] ; then #Regex matcht niet aan oplossing
+                echo "H$lijnnummer: fout"
+        else
+                echo "H$lijnnummer: correct"
+        fi
+        ((lijnnummer++)) #Volgende lijn nemen in regex-bestand
+done < $1 #Lezen van het oplossingenbestand
+
+if [[ $(cat $1 | wc -l) -lt $(cat $2 | wc -l) ]] ; then
+        #Het oplossingenbestand is korter dan het horizontale opgave-bestand
+        echo "$(basename $0): oplossing heeft te weinig rijen" 1>&2
+        exit 2
+fi
+lijnnummer=1
+#Gebruik het gegeven Python-script om het oplossingenbestand om te zetten naar een
+#verticale oplossing en steek dit in een tijdelijk bestand
+./transpose < $1 > rev
+while read -r line ; do #Lees nu dit bestand en vergelijk het analoog aan deel 1
+        regex="$(sed -n "$lijnnummer"p $3)"
+        if [ -z $regex ] ; then #Oplossing langer dan opgave-bestand?
+                echo "$(basename $0): oplossing heeft te veel kolommen" 1>&2
+                exit 2
+        fi
+        if [[ ! "$line" =~ ^$regex$ ]] ; then #Geen match
+                echo "V$lijnnummer: fout"
+        else
+                echo "V$lijnnummer: correct"
+        fi
+        ((lijnnummer++)) #Ga naar volgende lijn
+done < rev
+if [[ $( cat rev | wc -l) -lt $(cat $3 | wc -l) ]] ; then
+        #Het oplossingenbestand is langer dan het verticale opgavenbestand
+        echo "$(basename $0): oplossing heeft te weinig kolommen" 1>&2
+        rm rev
+        exit 2
+fi
+rm rev #Alles is correct verlopen, tijdelijk bestand verwijderen, correct afsluiten
+exit 0
+
+
