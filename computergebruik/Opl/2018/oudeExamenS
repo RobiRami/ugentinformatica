@@ -285,6 +285,7 @@ shift
 for file in "$@" ; do
         if [ ! -r $file ] ; then
                 echo "Ongeldig, onleesbaar of onbestaand bestand: $file"
+                rm tempwords &> /dev/null
                 exit 2
         else
                 cat $file >> tempwords
@@ -341,7 +342,7 @@ declare -i max=100
 syntaxis="Syntaxis: gebruikersnamen naam -i -m <int> -M <int> [woordenlijst]"
 while getopts ":im:M:" opt ; do
         case "$opt" in
-                i) case+=1
+                i) case=1
                         ;;
                 m) min=$OPTARG
                         ;;
@@ -379,11 +380,12 @@ echo "$command" | bash | sort | egrep "^.{$min,$max}$" > final #alles naar tempf
 rm tmpwd
 if [ $(cat final | wc -l) -eq 0 ] ; then
         echo "$(basename $0): geen gebruikersnamen gevonden voor \"$1\"" 1>&2
+        rm final
         exit 3
 else
 cat final
-fi
 rm final
+fi
 exit 0
 
 Rijmschema (credz to Winnie, bedankt Wim Onderbeke voor inspiratie)
