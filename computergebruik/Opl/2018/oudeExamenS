@@ -537,5 +537,10 @@ patroon=$(echo "$stokjes" | sed 's/[x+]/ & /g') #spaties voor en achter maal en 
 totaal=$(echo "$stokjes" | sed 's/\(|\+\)/(\1)/g' | sed 's/|/1+/g' | sed 's/+)/)/g' | tr "x" "*" | bc -l) #stokjes vervangen door waarde 1+, overtollige +-tekens verwijderen, x omzetten naar maal-teken en uitrekenen via bc
 echo "$patroon = $totaal ($aantal tandenstokers)" #Opmaak verzorgen en afsluiten
 exit 0
+    <--alternatief -->
+    uitdrukking=$(echo  $@ | tr -d " "| sed "s/\([+x]\)/ \1 /g")
+    tandenstokers=$(echo -n $@ | sed 's/[x+]/||/g' | tr -d " ")
+    uitkomst=$(echo "($uitdrukking)" | sed 's/x/)*(/g' | sed 's/+/)+(/g' | tr '|' '1' | sed 's/11/1+1/gm' | sed 's/11/1+1/g' | tr -d " " | bc)
+    echo "$uitdrukking = $uitkomst (${#tandenstokers} tandenstokers)"
 
 
