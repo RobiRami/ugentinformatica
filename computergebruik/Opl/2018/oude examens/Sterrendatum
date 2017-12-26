@@ -27,15 +27,12 @@ else
         day="$3"
 fi
 if [ -z "$year" ] ; then
-        #Geen jaar(en dus ook geen maand of dag, huidige waarden gebruiken)
         year=$(date +"%Y")
+fi
+if [ -z "$month" ] ; then
         month=$(date +"%m")
-        day=$(date +"%d")
-elif [ -z "$month" ] ; then
-        #Analoog aan hierboven, geen maand, dus ook geen dag meegegeven
-        month=$(date +"%m")
-        day=$(date +"%d")
-elif [ -z "$day" ] ; then #Analoog
+fi
+if [ -z "$day" ] ; then 
         day=$(date +"%d")
 fi
 if [ "$new" -eq 1 ] ; then
