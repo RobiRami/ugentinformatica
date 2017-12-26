@@ -1,1 +1,12 @@
 seq $1 | fold -w1 | paste -sd-+ | bc
+
+Poor man's version zonder seq, met een for-lus
+
+#! /bin/bash
+som=""
+for ((i=1; i<="$1"; i++)); do
+        echo "$i" | fold -w1 >> getallen
+done
+cat getallen | paste -sd -+ | bc
+rm getallen
+exit 0
