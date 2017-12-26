@@ -1,0 +1,74 @@
+https://dodona.ugent.be/nl/courses/19/exercises/927601177/
+Sterrendatum-script door Winnie
+
+#! /bin/bash
+delimiter="." #Het scheidingsteken tenzij anders meegegeven
+new=0 #Welke berekening moet gebruikt worden
+function error() {
+        echo "Syntaxis: $(basename $0) [-n] [-s teken] [jaar [maand [dag]]]" 1>&2
+        exit 1
+}
+while getopts ":ns:" opt; do
+        case "$opt" in
+        n) new=1 #Nieuwe methode gebruiken
+                ;;
+        s) delimiter="$OPTARG" #Ander scheidingsteken gebruiken
+                ;;
+        \?)error
+                ;;
+        esac
+done
+shift $((OPTIND-1))
+if [ $# -gt 3 ] ; then
+        error #Te veel argumenten
+else
+        year="$1" #Indien 1-3 argumenten meegegeven, ze in variabelen steken
+        month="$2"
+        day="$3"
+fi
+if [ -z "$year" ] ; then
+        #Geen jaar(en dus ook geen maand of dag, huidige waarden gebruiken)
+        year=$(date +"%Y")
+        month=$(date +"%m")
+        day=$(date +"%d")
+elif [ -z "$month" ] ; then
+        #Analoog aan hierboven, geen maand, dus ook geen dag meegegeven
+        month=$(date +"%m")
+        day=$(date +"%d")
+elif [ -z "$day" ] ; then #Analoog
+        day=$(date +"%d")
+fi
+if [ "$new" -eq 1 ] ; then
+        #Nieuwe methode:
+        #Huidige juliaanse dag bepalen zonder voorloopnullen
+        passed=$(date --date="$month/$day/$year" +"%j" | sed 's/^0*//')
+        if [ $(echo "$year%400" | bc) -eq 0 ] || [ $(echo "$year%4" | bc) -eq 0 -a $(echo "$year%100" | bc) -ne 0 ] ; then
+                #Het jaar is een schrikkeljaar
+                percent=$(echo "($passed -1)*100/366" | bc)
+        else
+                percent=$(echo "($passed -1)*100/365" | bc)
+        fi
+        if [ ${#percent} -eq 1 ] ; then
+                percent=(0$percent) #Voorloopnul plaatsen, kan ook anders maar goed
+        fi
+        echo "$year$delimiter$percent"
+        exit 0
+else
+        #Waarde van jaar -1900 bepalen, indien het jaar 2000 of meer is, het verschil in hondertallen vooraan nodig
+        sterrenjaar=$(echo "($year -1900)/100" | bc)
+        if [ $sterrenjaar -eq 0 ] ; then #
+                sterrenjaar=$(echo "$year -1900" | bc)
+        else
+                #Indien het jaar bijv. 1904 is, is een 0 nodig voor de 4
+                sterrenjaar+=$(echo "($year -1900)%100" | bc | sed 's/^.$/0&/')
+        fi
+        if [ ${#month} -eq 1 ] ; then
+                month=(0$month) #Voorloopnullen plaatsen
+        fi
+        if [ ${#day} -eq 1 ] ; then
+                day=(0$day)
+        fi
+        echo "$sterrenjaar$month$delimiter$day"
+        exit 0
+fi
+exit 0
