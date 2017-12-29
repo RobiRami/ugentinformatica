@@ -1,0 +1,22 @@
+HOW TO: SQL
+
+Syntaxis:
+SELECT lijst_van_kolomnamen [ AS alias] FROM tabelnaam [ INNER/OUTER JOIN ON tabel1.kolomnaam = tabel2.kolomnaam ] WHERE expressie
+GROUP BY attribuutnaam ORDER BY kolomnaam ASC/DESC
+
+Hoe pak je een vraagstelling aan:
+
+BV: previous exam questions vraag 11:
+Some tracks have never been broadcasted. List all artists,
+ordered descendingly according to the amount of their unbroadcasted tracks and the artist's name respectively.
+Mention at least the artist's name and the count.
+
+Wat wordt gevraagd: artistnaam en aantal tracks die NIET afgespeeld zijn (dus aggregatie-functie en groepering nodig
+opsplitsen in stukken: artiesten en hun tracks nodig, sommige komen niet voor dus rekening houden met null-waarden
+
+select art.name, case when count is null then 0 else count end as count #indien null , dan 0 anders aantal
+from artist art left join #left join om artiesten waarvan alles afgespeeld werd, dus count NULL aka niet in subquery
+#geneste query: alle artiesten waarvoor tracks bestaan die nooit afgespeeld werden
+(select t.artistid, count(t.title) from track t left join playlistitem pl on t.trackid = pl.trackid
+where pl.radiobroadcastid is null group by t.artistid) as x #geneste query alias geven om op te kunnen joinen
+on x.artistid = art.artistid order by count desc, art.name #sortering op telling en naam
