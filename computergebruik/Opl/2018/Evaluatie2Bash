@@ -29,7 +29,8 @@ function argumentError {
   exit 1
 }
 function getColor {
-  # getColor CARD
+  # getColor CARD 
+  #checkt in meegegeven argument ($1 dus) of de letter op de laatste plaats een c of s is via ${#} lengte -1 
   if [ "${1:$((${#1}-1)):1}" == 'C' -o "${1:$((${#1}-1)):1}" == 'S' ]; then
     echo "$zwart"
   else
@@ -39,17 +40,17 @@ function getColor {
 function writeCard {
   result="$1"
   if [ "$printDeck" -eq 1 ]; then
-    result="$((1 + $curfile)):$result"
+    result="$((1 + $curfile)):$result" #bestandnummer aanplakken, is getal ofwel 0 ofwel 1 dus nog eens +1 
   fi
   if [ "$printColor" -eq 1 ]; then
-    result="$result:$(getColor $1)"
+    result="$result:$(getColor $1)" #kleur aanplakken via bovenstaande methode
   fi
-  echo "$result"
+  echo "$result" #uitschrijven naar stdout
 }
 
 rood="rood"
 zwart="zwart"
-printDeck=0
+printDeck=0 #lokale variabelen initialiseren
 printColor=0
 
 while getopts ":skr:z:" opt; do
@@ -68,36 +69,37 @@ while getopts ":skr:z:" opt; do
       ;;
 
     \?)
-      argumentError
+      argumentError #Error uitschrijven via functie, nogal overbodig alst maar 1x gebruikt wordt maar ja stylish
       ;;
   esac
 done
 
 shift "$((OPTIND-1))"
-exec 3< "$1"
+exec 3< "$1"  #eerste bestand koppelen aan filedescriptor 3 , analoog voor bestand 2
 exec 4< "$2"
 
-filedesc=(3 4)
-curfile=0
+filedesc=(3 4)  #array maken om de bestanden te kunnen koppelen aan ofwel 0 ofwel 1
+curfile=0 #eerste bestand om te lezen is dat op plaats 0 , dus gekoppeld aan filedesc 3, dus $1
 
-while :; do
-    read -r -u${filedesc[$curfile]} card;
-    if [ $? -ne 0 ]; then
+while :; do  #while-true loop die enkel stopt als beide bestanden volledig gelezen zijn aka als een exit gebeurt (: en true geven allebei
+#infinite true terug tot je exit)
+    read -r -u${filedesc[$curfile]} card; #u-vlag om te lezen van een file gekoppeld aan een filedescriptor
+    if [ $? -ne 0 ]; then 
       # encountered end of file, swich sides and print rest of the other file
-      curfile=$(( 1 - $curfile ))
+      curfile=$(( 1 - $curfile )) #indie curfile 1, wordt 0, anders 1 => switchen tussen filedescriptors
       while :; do
         read -r -u${filedesc[$curfile]} card;
-        if [ $? -ne 0 ]; then
+        if [ $? -ne 0 ]; then #tweede bestand is ook volledig gelezen
           exit 0
         fi
         if [ ! -z "$card" ]; then
           # skip empty lines
-          writeCard "$card"
+          writeCard "$card" #functie oproepen met gelezen regel
         fi
       done
     fi
     if [ -z "$card" ]; then
-      # empty line, switch sides
+      # na lege regel begin je uit het andere bestand te lezen, dit blijf je doen totdat een bestand volledig gelezen is
       curfile=$(( 1 - $curfile ))
     else
       writeCard "$card"
