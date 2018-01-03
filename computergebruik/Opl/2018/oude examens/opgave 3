@@ -27,7 +27,7 @@ examen 20150108: opgave 3
             #verwijder de lijnen die in het veld waar de plaats in 2013 was een - is
             #delete is zonder g-vlag, en opletten met starglobbing,
             #aangezien je enkel koppelteken zoekt in veld 2 werk je best met ^ dus
-            :2,$/[^,]*,-/d
+            :2,$/^[^,]*,-/d
 
     5)  :2,$!sort -t "," -k3,3n -k2,2rn
             #sorteer op de kollomen met als scheidingsteken "," eerst numeriek op de 3e kollom (jaar van uitgave)
