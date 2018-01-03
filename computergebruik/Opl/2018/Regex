@@ -1,0 +1,114 @@
+Uuencode : https://dodona.ugent.be/nl/courses/19/exercises/624938797/
+
+### Alpha ###
+
+egrep "\." uuencoded.txt | egrep "\?" | egrep "\!"
+Moet ".", ? en ! bevatten
+### Beta ###
+egrep -v "[[:punct:]]{3,}" uuencoded.txt
+geen 3 of meer leestekens na elkaar
+
+### Gamma ###
+egrep "^([A-Z]).*\1.*\1" uuencoded.txt | egrep -v "^([A-Z]).*\1.*\1.*\1.*"
+eerste hoofdletter 3x juist 3x, dus eerst minstens 3 en dan hoogstens 3
+
+### Delta ###
+grep "^[^()]*\(([^()]*)[^()]*\)* " uuencoded.txt 
+vanaf het begin geen haakjes, dan * keer ( iets ) iets
+
+
+
+### Eerste woord ###
+#plaats hieronder je code:
+egrep "\." uuencoded.txt | egrep "\?" | egrep "\!" | egrep -v "[[:punct:]]{3,}" | cut -f2 -d" "
+
+### Tweede woord ###
+#plaats hieronder je code:
+egrep -v "[[:punct:]]{3,}" uuencoded.txt | egrep "^([A-Z]).*\1.*\1" | egrep -v "^([A-Z]).*\1.*\1.*\1.*" | cut -f2 -d" "
+
+
+### Derde woord ###
+#plaats hieronder je code:
+egrep "^([A-Z]).*\1.*\1" uuencoded.txt | egrep -v "^([A-Z]).*\1.*\1.*\1.*" | grep "^[^()]*\(([^()]*)[^()]*\)* " | cut -f2 -d" "
+
+### Vierde woord ###
+#plaats hieronder je code:
+grep "^[^()]*\(([^()]*)[^()]*\)* " uuencoded.txt | egrep "\." | egrep "\?" | egrep "\!" | cut -f2 -d" "
+
+
+
+Diana cryptosysteem: https://dodona.ugent.be/nl/courses/19/exercises/376715040/
+
+### Alpha ###
+#plaats hieronder je oplossing:
+egrep -i "([A-Z]{5}) .*\1[^ ]*$" diana.txt 
+een groep van 5 hoofdletters komt ook voor achteraan(case insensitive)
+### Beta ###
+#plaats hieronder je oplossing:
+egrep -v " ?[A-Z]*([A-Z])[A-Z]*\1" diana.txt 
+Alles verschillend: niet een letter dubbel
+### Gamma ###
+#plaats hieronder je oplossing:
+egrep "^..(.).. (..\1.. ){5}" diana.txt
+middelste letter van eerste groep moet 6maal voorkomen
+### Delta ###
+#plaats hieronder je oplossing:
+egrep "^((.)(.).(\2\3|\3\2) ){6}" diana.txt
+6x herhalen van eerste 2 letters opnieuw achteraan in willekeurige volgorde
+
+### Eerste woord ###
+#plaats hieronder je oplossing:
+egrep -i "([A-Z]{5}) .*\1[^ ]*$" diana.txt | egrep -v " ?[A-Z]*([A-Z])[A-Z]*\1" | tr -cd "a-z" 
+
+### Tweede woord ###
+#plaats hieronder je oplossing:
+egrep -v " ?[A-Z]*([A-Z])[A-Z]*\1" diana.txt | egrep "^..(.).. (..\1.. ){5}" | tr -cd "a-z"
+
+### Derde woord ###
+#plaats hieronder je oplossing:
+egrep "^((.)(.).\2\3 |(.)(.).\5\4 ){6}" diana.txt | egrep "^..(.).. (..\1.. ){5}" | tr -cd "a-z"
+
+### Vierde woord ###
+#plaats hieronder je oplossing:
+egrep "^((.)(.).\2\3 |(.)(.).\5\4 ){6}" diana.txt | egrep -i "([A-Z]{5}) .*\1[^ ]*$" | tr -cd "a-z"
+
+Priemgetal van de Ugent: https://dodona.ugent.be/nl/courses/46/exercises/1071405416/
+
+### Alpha ###
+
+#Geen cijfers tussen letters dus zoeken op patroon : vanaf het begin :(eventueel cijfers) een groep letters, vervolgens cijfers
+#tot het einde van de lijn
+egrep "^[0-9]*[a-z]*[0-9]*$" hidden_words.txt
+
+### Beta ###
+# Er zijn slechts 3 mogelijkheden voor 3 opeenvolgende oneven cijfers, dus egrep met | om al deze opties te behandelen
+egrep "135|357|579" hidden_words.txt
+
+### Gamma ###
+# Minstens 5 groepen, maar de lijn kan eindigen met een groep, dus we zoeken naar het 4x voorkomen van letters en cijfers, en
+# vervolgens weer letters 
+egrep "([a-z]+[0-9]+){4}[a-z]" hidden_words.txt
+
+### Delta ###
+# Willekeurige cijfers vanaf het begin tot het eerste cijfer vlak voor een letter, dat opgenomen wordt in \1.
+# Vervolgens willekeurige tekens tot het laatste voorkomen van een letter, waarna \1 herhaald moet worden.
+# Daarna volgen eventueel nog cijfers, maar zeker geen letters tot het einde van de lijn
+egrep "^[0-9]*([0-9])[a-z]+.*[a-z]\1[0-9]*$" hidden_words.txt
+
+
+### Eerste woord ###
+#Doorsnede nemen via egrep-na-egrep middels een pipe
+egrep "^[^a-z]*[a-z]*[^a-z]*$" hidden_words.txt | egrep "135|357|579" |tr -d "[0-9]"
+
+
+### Tweede woord ###
+
+egrep "135|357|579" hidden_words.txt | egrep "[a-z]{1,}[^a-z]+[a-z]{1,}[^a-z]{1,}[a-z]{1,}[^a-z]{1,}[a-z]{1,}[^a-z]{1,}[a-z]{1,}" | tr -d "[0-9]"
+
+### Derde woord ###
+
+egrep "([a-z]+[^a-z]+){4}[a-z]" hidden_words.txt | egrep "^[^a-z]*([^a-z])[a-z]+.*[a-z]\1[^a-z]*$" | tr -d "[0-9]"
+
+### Vierde woord ###
+
+egrep "^[^a-z]*([^a-z])[a-z]+.*[a-z]\1[^a-z]*$" hidden_words.txt | egrep "^[^a-z]*[a-z]*[^a-z]*$" | tr -d "[0-9]"
