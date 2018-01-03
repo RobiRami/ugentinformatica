@@ -1,0 +1,105 @@
+Ontcijfer (Winnie) 
+
+#! /bin/bash
+boodschap=""
+if [ $# -lt 2 ] || [ ! -r $1 ]; then
+        echo "Syntaxis: $(basename $0) FILE CODE [code]..." 1>&2
+        exit 1
+fi
+bestand=$1
+shift
+for code in "$@" ; do
+        afkorting=$(echo "$code" | tr -d "0-9")
+        plaats=$(echo "$code-1" | tr -d "A-Z" | bc)
+        naam=$(egrep ",$afkorting$" $bestand | cut -f1 -d"," | tr -d "[[:punct:]] ")
+        if [[ ! $code =~ [A-Z]+[0-9]+$ ]] || [[ -z $naam ]] || [[ $plaats -gt ${#naam} ]] ; then
+                echo "$(basename $0):ongeldige code:$code" 1>&2
+                exit 2
+        fi
+        boodschap+=$(echo "${naam:$plaats:1}" | tr "a-z" "A-Z")
+done
+echo "$boodschap"
+exit 0
+
+Zwaluwstaart (credits Jasper)
+
+#! /bin/bash
+function argumentError {
+  echo "Syntaxis: zwaluwstaart [-ks] [-r COLOR] [-z COLOR] FILE FILE" >&2
+  exit 1
+}
+function getColor {
+  # getColor CARD
+  if [ "${1:$((${#1}-1)):1}" == 'C' -o "${1:$((${#1}-1)):1}" == 'S' ]; then
+    echo "$zwart"
+  else
+    echo "$rood"
+  fi
+}
+function writeCard {
+  result="$1"
+  if [ "$printDeck" -eq 1 ]; then
+    result="$((1 + $curfile)):$result"
+  fi
+  if [ "$printColor" -eq 1 ]; then
+    result="$result:$(getColor $1)"
+  fi
+  echo "$result"
+}
+
+rood="rood"
+zwart="zwart"
+printDeck=0
+printColor=0
+
+while getopts ":skr:z:" opt; do
+  case $opt in
+    s)
+      printDeck=1
+      ;;
+    k)
+      printColor=1
+      ;;
+    r)
+      rood=$OPTARG
+      ;;
+    z)
+      zwart=$OPTARG
+      ;;
+
+    \?)
+      argumentError
+      ;;
+  esac
+done
+
+shift "$((OPTIND-1))"
+exec 3< "$1"
+exec 4< "$2"
+
+filedesc=(3 4)
+curfile=0
+
+while :; do
+    read -r -u${filedesc[$curfile]} card;
+    if [ $? -ne 0 ]; then
+      # encountered end of file, swich sides and print rest of the other file
+      curfile=$(( 1 - $curfile ))
+      while :; do
+        read -r -u${filedesc[$curfile]} card;
+        if [ $? -ne 0 ]; then
+          exit 0
+        fi
+        if [ ! -z "$card" ]; then
+          # skip empty lines
+          writeCard "$card"
+        fi
+      done
+    fi
+    if [ -z "$card" ]; then
+      # empty line, switch sides
+      curfile=$(( 1 - $curfile ))
+    else
+      writeCard "$card"
+    fi
+done
