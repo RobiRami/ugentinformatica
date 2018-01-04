@@ -11,14 +11,14 @@ tr 'qwertasdfgzxcvyuiophjkl;bnm,QWERTASDFGZXCVYUIOPHJKL;BNM,' 'yuiophjkl;bnm,qwe
     a)	find -name "*_*" -type f -print | rename 's/\/([^_]*)_([^_]*)$/\/$1$2/g'
     of
     a) find -name "*_*" -type f -print | sed 'p;'s/\/\([^_]*\)_\([^_]*\)$/\/\1\2/g' | xargs -n2 mv
-    
+
     b) find -name "*_*" -print | sed 'p;'s/_//g' | xargs -n2 mv
-    
-#### NISTRIJB ####  
+
+#### NISTRIJB ####
 
     a) find testdir -regex '.*/.*_[^/]*$' -type f  | sed 's,^\(.*\)/\([^/]*\)_\([^/]*\)$,mv \1/\2_\3 \1/\2\3,' | bash
 		Mlucouss: Is het mijne niet simpeler? find . -type f| sed 's/_//g'
-    b) find testdir | sed 's/_//g' 
+    b) find testdir | sed 's/_//g'
 
 3)
 
@@ -51,7 +51,7 @@ Mathieu's oplossing:
 	#Opslaan vd variablen
 	input1=$1
 	input2=$2
-	
+
 	#Berekeningen
 	x=0
 	y=${#input1}
@@ -71,6 +71,6 @@ Mathieu's oplossing:
 4)
 
 #!/bin/bash
-paste <(cat /usr/share/dict/words | sed "s/$1//I;s/$2//I;s/$3//I;s/$4//I;s/$5//I;s/$6//I;s/$7//I;s/$8//I;s/$9//I") /usr/share/dict/words | grep -P '^\t' | grep -i "$5" | tr -d '\t' | grep '....'
+paste <(cat words | sed "s/$1//I;s/$2//I;s/$3//I;s/$4//I;s/$5//I;s/$6//I;s/$7//I;s/$8//I;s/$9//I") words | grep -P '^\t' | grep -i "$5" | tr -d '\t' | grep '....'
 
 #Thnx to Jaques
