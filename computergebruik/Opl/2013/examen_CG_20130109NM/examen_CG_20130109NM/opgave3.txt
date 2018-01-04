@@ -5,7 +5,7 @@
 1.a) commando:	grep -E '^([ 2468]|([13579])[ ]*\2)+[a-Z]' multitap.txt
 		grep -E '^([^13579]* *(([13579]) *\3)*)*[^0123456789]*$' multitap.txt #FB
      aantal: 2158
-     
+
      #Mlucouss: grep -E '([13579])[ ]*[02468]*\1[ ]*' multitap.txt | wc -l
      Aantal: 30463
 
@@ -17,19 +17,18 @@
      #Thinking outside the box: grep -E '[^def]d([^def]|$)' multitap.txt aantal: 6499
 	# Werkt dus niet, "you" zou ook in deze verzameling moeten zitten, maar op de lijn "43392663 you" staan de cijgers voor "gewane" ipv you...
 
-1.d) commando: grep -Ev '(.) *\1 *\1 *\1|(.) *\2 *\2.*(.) *\3|(.) *\4.*(.) *\5 *\5|(.) *\6.*(.) *\7.*(.) *\8' multitap.txt 
+1.d) commando: grep -Ev '(.) *\1 *\1 *\1|(.) *\2 *\2.*(.) *\3|(.) *\4.*(.) *\5 *\5|(.) *\6.*(.) *\7.*(.) *\8' multitap.txt
      aantal: 639
 
 
-1.a) commando: <plaats hier het gebruikte commando>
+1.a) commando: grep -E '^([ 2468]|([13579])[ ]*\2)+[a-Z]' multitap.txt | grep -E '^(([13579])( *\2)* *)?(([24680])( *\5)* *([13579])( *\7)* *)*(([24680])( *\10)*)? [^0123456789]*$'
      woord: come
 
-1.b) commando: <plaats hier het gebruikte commando>
+1.b) commando: grep -E '^(([13579])( *\2)* *)?(([24680])( *\5)* *([13579])( *\7)* *)*(([24680])( *\10)*)? [^0123456789]*$' multitap.txt | grep -E '(^|[^ 3] *)3 *[^ 3]'
      woord: as
 
-1.c) commando: <plaats hier het gebruikte commando>
+1.c) commando: grep -E '(^|[^ 3] *)3 *[^ 3]' multitap.txt | grep -Ev '(.) *\1 *\1 *\1|(.) *\2 *\2.*(.) *\3|(.) *\4.*(.) *\5 *\5|(.) *\6.*(.) *\7.*(.) *\8'
      woord: you
 
-1.d) commando: <plaats hier het gebruikte commando>
+1.d) commando: grep -Ev '(.) *\1 *\1 *\1|(.) *\2 *\2.*(.) *\3|(.) *\4.*(.) *\5 *\5|(.) *\6.*(.) *\7.*(.) *\8' multitap.txt | grep -E '^([ 2468]|([13579])[ ]*\2)+[a-Z]'
      woord: are
-
