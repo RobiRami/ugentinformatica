@@ -1,26 +1,27 @@
 #oplossingen van fb gehaald, dank aan Jorg
 
-1.a) commando: grep -Ev '(^. |2. .[^6]|3. .[^5]|5. .[^3]|6. .[^2]| .{,3} |[4789]. .[23456789]).*[^23456789]' multitap.txt 
+1.a) commando: grep -Ev '(^. |2. .[^6]|3. .[^5]|5. .[^3]|6. .[^2]| .{,3} |[4789]. .[23456789]).*[^23456789]' multitap.txt
      aantal: 2635
 
-1.b) commando: grep -E '^(2 *)*(3 *)*(4 *)*(5 *)*(6 *)*(7 *)*(8 *)*(9 *)*[^23456789]*$' multitap.txt 
+1.b) commando: grep -E '^(2 *)*(3 *)*(4 *)*(5 *)*(6 *)*(7 *)*(8 *)*(9 *)*[^23456789]*$' multitap.txt
      aantal: 644
 
-1.c) commando: grep -E '((.)( *\2){3,}.*){2,}' multitap.txt 
+1.c) commando: grep -E '((.)( *\2){3,}.*){2,}' multitap.txt
      aantal: 13210
 
-1.d) commando: grep -E '^((.)( *\2)+)* [^23456789]*$' multitap.txt 
+1.d) commando: grep -E '^((.)( *\2)+)* [^23456789]*$' multitap.txt
      aantal: 1570
 
 
-1.a) commando: <plaats hier het gebruikte commando>
+1.a) commando: grep -Ev '(^. |2. .[^6]|3. .[^5]|5. .[^3]|6. .[^2]| .{,3} |[4789]. .[23456789]).*[^23456789]' multitap.txt | grep -E
+ '^(2 *)*(3 *)*(4 *)*(5 *)*(6 *)*(7 *)*(8 *)*(9 *)*[^23456789]*$'
      woord: zet
 
-1.b) commando: <plaats hier het gebruikte commando>
+1.b) commando: grep -E '^(2 *)*(3 *)*(4 *)*(5 *)*(6 *)*(7 *)*(8 *)*(9 *)*[^23456789]*$' multitap.txt | grep -E '((.)( *\2){3,}.*){2,}'
      woord: die
 
-1.c) commando: <plaats hier het gebruikte commando>
+1.c) commando: grep -E '((.)( *\2){3,}.*){2,}' multitap.txt | grep -E '^((.)( *\2)+)* [^23456789]*$'
      woord: ploat
 
-1.d) commando: <plaats hier het gebruikte commando>
+1.d) commando: grep -Ev '(^. |2. .[^6]|3. .[^5]|5. .[^3]|6. .[^2]| .{,3} |[4789]. .[23456789]).*[^23456789]' multitap.txt | grep -E '^((.)( *\2)+)* [^23456789]*$' 
      woord: af
