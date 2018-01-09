@@ -1,8 +1,11 @@
 ### OPGAVE 1 #######################
 
-1.a) <plak hier je commando>
+1.a) echo {b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z} | tr " " "\n" | egrep "(b.*){6}" | egrep "(z.*){4}" | sort --unique | wc -l
+210 aka combinatie van 4 uit 10 (10! / (4!*6!)) = 7*8*9*10/(2*3*4) = 7*3*10
 
-1.b)  <plak hier je commando>
+
+1.b)  echo {b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z}{b,z} | tr " " "\n" | egrep "(b.*){6}" | egrep "(z.*){4}" | egrep -v "zz" | sort --unique | wc -l
+35 = 4 kiezen uit 7 plaatsen (6 blauw gezet, 7 posities mogelijk om een zwarte te plaatsen , daarvan 4 kiezen : 5*6*7/6 
 
 2.a)cat oneven.txt | sed 's/\(\w\)/4\/\1/g' | bc -l | sed 's/^\(.*\)$/\1 +/g' | tr "\n" " " | cut -c -11998 | bc -l
 ##De 11998 is er om de laatste + eraf te knippen die ik bekomen heb dankzij, substitutie
