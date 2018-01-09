@@ -16,7 +16,7 @@ elif [ $# -eq 2 ] ; then
                 echo "$(basename $0): bestand \"$2\" bestaat niet of is onleesbaar" 1>&2
                 exit 2
         else
-                cat $2 > woorden #Naar tempfile doen voor eenvoud bij commando's
+                cp $2 woorden #Naar tempfile doen voor eenvoud bij commando's
         fi
 fi
 
