@@ -4,7 +4,7 @@ Oplossing AC Meloen door Winnie
 
 #! /bin/bash
 
-if [ $# -lt 1 ] || [ $# -gt 2 ] ; then #te weinig argumenten
+if [ $# -lt 1 ] || [ $# -gt 2 ] ; then #te weinig/veel argumenten
         echo "Syntaxis: $(basename $0) patroon [bestand]" 1>&2
         exit 1
 fi
@@ -19,16 +19,15 @@ elif [ $# -eq 2 ] ; then
                 cat $2 > woorden #Naar tempfile doen voor eenvoud bij commando's
         fi
 fi
+
 patroon=$(echo "$1" | sed 's/[AEIOUaeiou]/[AEIOUaeiou]/g') #Klinkers vervangen door interval
-grep "^$patroon$" woorden > correct #Juist woord is even lang met willekeurige klinkers
-rm woorden #temp 1 verwijderen
-sed -i '/'"$1"'/d' correct #Mag niet hetzelfde woord zijn, in-file substitution
-if [ $(cat correct | wc -l) -eq 0 ] ; then #Niets gevonden
+
+if [ $(grep "^$patroon$" woorden | grep -cv "$1") -eq 0 ] ; then #Niets gevonden
         echo "$(basename $0): geen uitdrukkingen gevonden die matchen met \"$1\"" 1>&2
-        rm correct
+        rm woorden
         exit 3
 else
-        cat correct | sort #Uitschrijven en sorteren want dat moest LEL
-        rm correct
+        grep "^$patroon$" woorden | grep -v "$1" | sort
+        rm woorden
         exit 0
 fi
