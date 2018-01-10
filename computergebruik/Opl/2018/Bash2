@@ -284,5 +284,68 @@ fi
 exit 0
 
 
+Uitslover door Wim Onderbeke
+
+#!/bin/bash
+emmy=0
+grammy=0
+oscar=0
+tony=0
+awardcounter=0
+while getopts ":EGOT" opt
+do
+        case $opt in
+                E)      (( emmy++ ))
+                        ;;
+                G)      (( grammy++ ))
+                        ;;
+                O)      (( oscar++ ))
+                        ;;
+                T)      (( tony++ ))
+                        ;;
+                \?)     echo "Syntaxis: uitslover -EGOT" 1>&2
+                        exit 1
+                        ;;
+        esac
+done
+shift $((OPTIND-1))
+if [ $# -gt 0 ]
+then
+        echo "Syntaxis: uitslover -EGOT" 1>&2
+        exit 1
+fi
+if [ $((emmy + grammy + tony + oscar)) -le 1 ]
+then
+        echo "uitslover: minder dan twee awards opgegeven" 1>&2
+        exit 2
+fi
+for award in emmy grammy oscar tony
+do
+        # dubbele expansion $award=emmy ${!award}=waarde van emmy; zorgt dage geen extra loop nodig hebt
+        if [ ${!award} -ge 2 ]
+        then
+                echo "Syntaxis: uitslover -EGOT" 1>&2
+                exit 1
+        elif [ ${!award} -eq 1 ]
+        then
+                if [ $awardcounter -eq 0 ]
+                then
+                        cat "$award.txt" | sort -t$'\t' -k1 > "$$.tmp"
+                        commando="cat $$.tmp"
+                        (( awardcounter++ ))
+                        header="NAAM-ACTEUR\t$(echo $award| tr 'a-z' 'A-Z')"
+                else
+                        sorted+=("<(sort $award..)")
+                        commando="${commando}|join -t$'\t' - ${sorted[$((awardcounter-1))]}"
+                        (( awardcounter++ ))
+                        header+="\t$(echo $award| tr 'a-z' 'A-Z')"
+                fi
+        fi
+done
+echo -e "$header"| tr '-' ' '
+echo -e "$header" |tr 'A-Z-' '='
+echo "$commando" |sed 's/\.\./.txt/g'| bash
+rm "$$.tmp"
+exit 0
 
 
