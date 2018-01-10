@@ -1,40 +1,43 @@
+veranderLetter(){
+     echo $1 | tr 'A-Za-z' 'B-ZAb-za'
+}
+
 rijmschema=""
 
 gedicht=$1
 woorden=$2
 
-A=""
-B=""
-C=""
+staartlijst=""
 
 while read line; do
-    line=$(echo $line | sed 's/[-;]//g')
+
+    line=$(echo $line | sed 's/[-;]//g' | sed '/^\s*$/d')
+
+if [[ -z $line ]]
+then
+continue;
+fi
     
-    eindwoord=$(echo $line | grep -o '[^ ]*$' | grep -o "[^.,? \"]*")
+    eindwoord=$(echo $line | grep -o '[^ ]*$' | grep -o "[^.,? \";:]*")
     staart=$(grep -i "^$eindwoord " $woorden | egrep -io "[^ ]*[1-2][^12]*?$" | sed 's/[012]//')
     
-    if [[ $A == "" ]]; then
-        A=$staart
-        rijmschema=$rijmschema"A"
+    if [[ $staartlijst == "" ]]; then
+        staartlijst="$staart@A;"
+        rijmschema="A"
     else
-        if [[ $A == $staart ]]; then
-            rijmschema=$rijmschema"A"
-        elif [[ $B == "" ]]; then
-            B=$staart
-            rijmschema=$rijmschema"B"
-        elif [[ $B == $staart ]]; then
-            rijmschema=$rijmschema"B"
-        elif [[ $C == "" ]]; then
-            C=$staart
-            rijmschema=$rijmschema"C"
-        elif [[ $C == $staart ]]; then
-            rijmschema=$rijmschema"C"
-        fi
+    
+    grep "$staart@" <<< $staartlijst 2> /dev/null 1>&2
+    
+    if [[ $? -eq 0 ]]
+    then
+        rijmschema+=$(grep -o "$staart@[^@;];" <<< $staartlijst | sed -e "s/$staart@//g" -e 's/;//g')
+    else
+        l=$(veranderLetter $(grep -o "@[^@;];$" <<< $staartlijst | sed -e 's/;//g' -e 's/@//g'))
+        staartlijst+="$staart@$l;"
+        rijmschema+="$l"
+    fi
     fi
     
 done < $gedicht
 
 echo $rijmschema
-
-
-
