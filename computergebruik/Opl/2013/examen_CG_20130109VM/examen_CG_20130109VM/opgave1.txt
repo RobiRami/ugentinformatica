@@ -30,6 +30,8 @@ find ~ -name "*game*.pdf" -exec pdfinfo -meta {} \; 2> /dev/null | sed '/Pages:/
 @Mathieu: Ik heb jouw commando even verwijdert omdat het toch niet helemaal werkt zoals hoort ;)
 
 3)
+BESTE OPLOSSING VOOR SANGERSEQ : credits Tibo
+paste <(fold -w1 sanger.a) <(fold -w1 sanger.c) | paste - <(fold -w1 sanger.g) | paste - <(fold -w1 sanger.t) | tr -cd "ACTG"
 
 lines=(
     A----A----------A----A-A--AAAA-
