@@ -10,7 +10,7 @@ bestand=$1
 shift
 for code in "$@" ; do
         afkorting=$(echo "$code" | tr -d "0-9")
-        plaats=$(echo "$code-1" | tr -d "A-Z" | bc)
+        plaats=$(($(echo "$code" | tr -d "A-Z")-1))
         naam=$(egrep ",$afkorting$" $bestand | cut -f1 -d"," | tr -d "[[:punct:]] ")
         if [[ ! $code =~ [A-Z]+[0-9]+$ ]] || [[ -z $naam ]] || [[ $plaats -gt ${#naam} ]] ; then
                 echo "$(basename $0):ongeldige code:$code" 1>&2
